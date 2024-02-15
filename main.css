@@ -29,8 +29,3 @@ h1 {
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
-
-@keyframes fadein {
-    50% { opacity: 0; }
-    0%, 100% { opacity: 1; }
-}
