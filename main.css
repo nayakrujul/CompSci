@@ -1,130 +1,25 @@
-/* Image formatting */
-
-.icon {
-    height: 20px;
-    padding-right: 5px;
-    vertical-align: top;
+body {
+    font-family: Helvetica, Arial, sans-serif;
 }
 
-
-/* Types of text */
-
-p.definition,
-p.code,
-p.question,
-p.diagram,
-p.table,
-p.graph {
-    font-size: 20px;
+#sub {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffffff;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
-p.code code {
-    font-family: 'Courier New', Courier, monospace;
+a {
+    color: #3366cc;
+    font-style: italic;
 }
 
-p.spoiler:not(.show-spoiler) .default {
-    display: block;
+li {
+    padding-bottom: 10px;
 }
 
-p.spoiler:not(.show-spoiler) .answer {
-    display: none;
-}
-
-p.spoiler.show-spoiler .default {
-    display: none;
-}
-
-p.spoiler.show-spoiler .answer {
-    display: block;
-}
-
-
-/* Code formatting */
-
-.keyword {
-    color: blue;
-}
-
-.function {
-    color: hotpink;
-}
-
-.number {
-    color: lightseagreen;
-}
-
-.string {
-    color: #e47d00;
-}
-
-.comment {
-    color: grey;
-}
-
-.error {
-    color: #ed4337;
-}
-
-.valid {
-    color: #3cb043;
-}
-
-.other {
-    color: darkgoldenrod;
-}
-
-
-/* Table formatting */
-
-p.table {
-    margin-bottom: 0px;
-}
-
-table, th, td {
-    border: 1px solid black;
-}
-
-th, td {
-    padding: 5px;
-    text-align: left;
-}
-
-
-/* Miscellaneous */
-
-strong {
-    color: red;
-}
-
-h3.home-link a {
-    font-style: normal;
-    color: #404040;
-}
-
-.noselect {
-    -webkit-touch-callout: none; /* iOS Safari */
-      -webkit-user-select: none; /* Safari */
-       -khtml-user-select: none; /* Konqueror HTML */
-         -moz-user-select: none; /* Old versions of Firefox */
-          -ms-user-select: none; /* Internet Explorer/Edge */
-              user-select: none; /* Non-prefixed version, currently
-                                    supported by Chrome, Edge, Opera and Firefox */
-}
-
-.pseudo-code {
-    font-size: 20px;
-}
-
-.pseudo-code code {
-    font-family: 'Courier New', Courier, monospace;
-}
-
-.small-code {
-    font-size: 1rem;
-}
-
-ul.less-padding-left {
-    padding-left: 25px;
+img {
+    max-width: 95vw;
 }
