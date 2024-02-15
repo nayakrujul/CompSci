@@ -16,4 +16,4 @@
 
 <hr />
 
-**[Computer Science Revision](https/cs.rujulnayak.com/)** by Rujul Nayak: an online, mobile-friendly revision guide for GCSE Computer Science students.
+**[Computer Science Revision](https/cs.rujulnayak.com/)** by Rujul Nayak: an online, mobile-friendly revision guide for AQA GCSE Computer Science students.
