@@ -1,0 +1,1 @@
+document.getElementById("year").innerHTML = "2024" + ((a = ("-" + new Date().getFullYear()).slice(-2)) !== "24" ? a : "");
