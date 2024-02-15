@@ -52,12 +52,12 @@
             <img src="../icons/code.svg" class="icon" />
             Example 1 <br />
             <code>
-                age &larr; <el class="function">USERINPUT</el> <br />
-                <el class="keyword">IF</el> age ≥ <el class="number">18</el> <el class="keyword">THEN</el> <br />
-                &ensp; <el class="function">OUTPUT</el> <el class="string">&quot;OK&quot;</el> <br />
-                <el class="keyword">ELSE</el> <br />
-                &ensp; <el class="function">OUTPUT</el> <el class="string">&quot;Too young&quot;</el> <br />
-                <el class="keyword">ENDIF</el>
+                age &larr; <span class="function">USERINPUT</span> <br />
+                <span class="keyword">IF</span> age ≥ <span class="number">18</span> <span class="keyword">THEN</span> <br />
+                &ensp; <span class="function">OUTPUT</span> <span class="string">&quot;OK&quot;</span> <br />
+                <span class="keyword">ELSE</span> <br />
+                &ensp; <span class="function">OUTPUT</span> <span class="string">&quot;Too young&quot;</span> <br />
+                <span class="keyword">ENDIF</span>
             </code>
         </p>
 
@@ -72,12 +72,12 @@
             <img src="../icons/code.svg" class="icon" />
             Example 2 <br />
             <code>
-                total &larr; <el class="number">0</el> <br />
-                <el class="keyword">FOR</el> count &larr; <el class="number">1</el> <el class="keyword">TO</el> <el class="number">5</el> <br />
-                &ensp; num &larr; <el class="function">USERINPUT</el> <br />
+                total &larr; <span class="number">0</span> <br />
+                <span class="keyword">FOR</span> count &larr; <span class="number">1</span> <span class="keyword">TO</span> <span class="number">5</span> <br />
+                &ensp; num &larr; <span class="function">USERINPUT</span> <br />
                 &ensp; total &larr; total + num <br />
-                <el class="keyword">ENDFOR</el> <br />
-                <el class="function">OUTPUT</el> total
+                <span class="keyword">ENDFOR</span> <br />
+                <span class="function">OUTPUT</span> total
             </code>
         </p>
 
@@ -87,12 +87,12 @@
             <img src="../icons/code.svg" class="icon" />
             Example 3 <br />
             <code>
-                count &larr; <el class="number">0</el> <br />
-                <el class="keyword">REPEAT</el> <br />
-                &ensp; count &larr; count + <el class="number">1</el> <br />
-                &ensp; <el class="function">OUTPUT</el> count <br />
-                &ensp; end &larr; <el class="function">USERINPUT</el> <br />
-                <el class="keyword">UNTIL</el> end = <el class="string">&quot;yes&quot;</el>
+                count &larr; <span class="number">0</span> <br />
+                <span class="keyword">REPEAT</span> <br />
+                &ensp; count &larr; count + <span class="number">1</span> <br />
+                &ensp; <span class="function">OUTPUT</span> count <br />
+                &ensp; end &larr; <span class="function">USERINPUT</span> <br />
+                <span class="keyword">UNTIL</span> end = <span class="string">&quot;yes&quot;</span>
             </code>
         </p>
 
@@ -102,12 +102,12 @@
             <img src="../icons/code.svg" class="icon" />
             Example 4 <br />
             <code>
-                password &larr; <el class="function">USERINPUT</el> <br />
-                <el class="keyword">WHILE</el> password ≠ <el class="string">&quot;abcd&quot;</el> <br />
-                &ensp; <el class="function">OUTPUT</el> <el class="string">&quot;Try again&quot;</el> <br />
-                &ensp; password &larr; <el class="function">USERINPUT</el> <br />
-                <el class="keyword">ENDWHILE</el> <br />
-                <el class="function">OUTPUT</el> <el class="string">&quot;Correct password&quot;</el>
+                password &larr; <span class="function">USERINPUT</span> <br />
+                <span class="keyword">WHILE</span> password ≠ <span class="string">&quot;abcd&quot;</span> <br />
+                &ensp; <span class="function">OUTPUT</span> <span class="string">&quot;Try again&quot;</span> <br />
+                &ensp; password &larr; <span class="function">USERINPUT</span> <br />
+                <span class="keyword">ENDWHILE</span> <br />
+                <span class="function">OUTPUT</span> <span class="string">&quot;Correct password&quot;</span>
             </code>
         </p>
 
@@ -135,13 +135,13 @@
             <img src="../icons/code.svg" class="icon" />
             Example 5 <br />
             <code>
-                result &larr; <el class="number">1</el> <br />
-                <el class="keyword">FOR</el> num &larr; <el class="number">1</el> <el class="keyword">TO</el> <el class="number">10</el> <br />
-                &ensp; <el class="keyword">IF</el> num <el class="other">MOD</el> <el class="number">2</el> = <el class="number">0</el> <el class="keyword">THEN</el> <br />
+                result &larr; <span class="number">1</span> <br />
+                <span class="keyword">FOR</span> num &larr; <span class="number">1</span> <span class="keyword">TO</span> <span class="number">10</span> <br />
+                &ensp; <span class="keyword">IF</span> num <span class="other">MOD</span> <span class="number">2</span> = <span class="number">0</span> <span class="keyword">THEN</span> <br />
                 &ensp; &ensp; result &larr; result * num <br />
-                &ensp; <el class="keyword">ENDIF</el> <br />
-                <el class="keyword">ENDFOR</el> <br />
-                <el class="function">OUTPUT</el> result
+                &ensp; <span class="keyword">ENDIF</span> <br />
+                <span class="keyword">ENDFOR</span> <br />
+                <span class="function">OUTPUT</span> result
             </code>
         </p>
 
@@ -153,8 +153,8 @@
         <p><i>Hint: <code>num MOD 2</code> means the remainder from dividing <code>num</code> by <code>2</code>.</i><br />&nbsp;</p>
 
         <p class="spoiler noselect">
-            <el class="default">Tap/click to reveal</el>
-            <el class="answer">Multiplies all the even numbers from 1 to 10 and outputs the result.</el>
+            <span class="default">Tap/click to reveal</span>
+            <span class="answer">Multiplies all the even numbers from 1 to 10 and outputs the result.</span>
         </p>
 
         <br />
@@ -168,7 +168,7 @@
         <br /> <br />
         <br /> <br />
 
-        <div id="sub">© Rujul Nayak <el id="year">2024-</el></div>
+        <div id="sub">© Rujul Nayak <span id="year">2024-</span></div>
         <script src="../../year.js"></script>
 
         <script src="../spoilers.js"></script>

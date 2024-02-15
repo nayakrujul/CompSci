@@ -35,7 +35,7 @@
             <img src="../icons/code.svg" class="icon" />
             Example 1 <br />
             <code>
-                <el class="string">&quot;abc&quot;</el> + <el class="string">&quot;def&quot;</el> &nbsp; <el class="comment">#&nbsp;"abcdef"</el> <br />
+                <span class="string">&quot;abc&quot;</span> + <span class="string">&quot;def&quot;</span> &nbsp; <span class="comment">#&nbsp;"abcdef"</span> <br />
             </code>
         </p>
 
@@ -66,20 +66,20 @@
             <tr>
                 <td><code class="other">LEN</code></td>
                 <td>Length: returns the number of characters in a string.</td>
-                <td><code><el class="other">LEN</el>(<el class="string">"Hello,&nbsp;World!"</el>)</code></td>
+                <td><code><span class="other">LEN</span>(<span class="string">"Hello,&nbsp;World!"</span>)</code></td>
                 <td><code class="number">13</code></td>
             </tr>
             <tr>
                 <td><code class="other">POSITION</code></td>
                 <td>Returns the index of the first occurrence of a character in a string.</td>
-                <td><code><el class="other">POSITION</el>(<el class="string">"Hello,&nbsp;World!"</el>, <el class="string">'o'</el>)</code></td>
+                <td><code><span class="other">POSITION</span>(<span class="string">"Hello,&nbsp;World!"</span>, <span class="string">'o'</span>)</code></td>
                 <td><code class="number">4</code></td>
             </tr>
             <tr>
                 <td><code class="other">SUBSTRING</code></td>
                 <td>Returns the part of the string from the start index to the end index.</td>
-                <td><code><el class="other">SUBSTRING</el>(<el class="number">3</el>, <el class="number">7</el>, <el class="string">"Hello,&nbsp;World!"</el>)</code></td>
-                <td><code><el class="string">"lo,&nbsp;W"</el></code></td>
+                <td><code><span class="other">SUBSTRING</span>(<span class="number">3</span>, <span class="number">7</span>, <span class="string">"Hello,&nbsp;World!"</span>)</code></td>
+                <td><code><span class="string">"lo,&nbsp;W"</span></code></td>
             </tr>
         </table>
 
@@ -102,13 +102,13 @@
             <tr>
                 <td><code class="other">CHAR_TO_CODE</code></td>
                 <td>Converts a character to its ASCII value.</td>
-                <td><code><el class="other">CHAR_TO_CODE</el>(<el class="string">'A'</el>)</code></td>
+                <td><code><span class="other">CHAR_TO_CODE</span>(<span class="string">'A'</span>)</code></td>
                 <td><code class="number">65</code></td>
             </tr>
             <tr>
                 <td><code class="other">CODE_TO_CHAR</code></td>
                 <td>Converts an ASCII value to its character.</td>
-                <td><code><el class="other">CODE_TO_CHAR</el>(<el class="number">65</el>)</code></td>
+                <td><code><span class="other">CODE_TO_CHAR</span>(<span class="number">65</span>)</code></td>
                 <td><code class="string">'A'</code></td>
             </tr>
         </table>
@@ -120,14 +120,14 @@
 
         <p class="question">
             <img src="../icons/question.svg" class="icon" />
-            What is the output of <code class="small-code"><el class="other">SUBSTRING</el>(<el class="other">POSITION</el>(a, <el class="string">'l'</el>), <el class="other">LEN</el>(a)-<el class="number">1</el>, a)</code> when <code class="small-code">a = <el class="string">"Hello"</el></code>?
+            What is the output of <code class="small-code"><span class="other">SUBSTRING</span>(<span class="other">POSITION</span>(a, <span class="string">'l'</span>), <span class="other">LEN</span>(a)-<span class="number">1</span>, a)</code> when <code class="small-code">a = <span class="string">"Hello"</span></code>?
         </p>
 
         <p class="spoiler noselect">
-            <el class="default">Tap/click to reveal</el>
-            <el class="answer">
+            <span class="default">Tap/click to reveal</span>
+            <span class="answer">
                 <code class="string small-code">"llo"</code>
-            </el>
+            </span>
         </p>
 
         <br />
@@ -141,7 +141,7 @@
         <br /> <br />
         <br /> <br />
 
-        <div id="sub">© Rujul Nayak <el id="year">2024-</el></div>
+        <div id="sub">© Rujul Nayak <span id="year">2024-</span></div>
         <script src="../../year.js"></script>
 
         <script src="../spoilers.js"></script>

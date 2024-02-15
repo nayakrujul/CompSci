@@ -32,12 +32,12 @@
             <img src="../icons/code.svg" class="icon" />
             Example 1 <br />
             <code>
-                passcode &larr; <el class="function">USERINPUT</el> <br />
-                <el class="keyword">IF</el> passcode = <el class="number">1234</el> <el class="keyword">THEN</el> <br />
-                &ensp; <el class="function">OUTPUT</el> <el class="string">&quot;OK&quot;</el> <br />
-                <el class="keyword">ELSE</el> <br />
-                &ensp; <el class="function">OUTPUT</el> <el class="string">&quot;Wrong password&quot;</el> <br />
-                <el class="keyword">ENDIF</el>
+                passcode &larr; <span class="function">USERINPUT</span> <br />
+                <span class="keyword">IF</span> passcode = <span class="number">1234</span> <span class="keyword">THEN</span> <br />
+                &ensp; <span class="function">OUTPUT</span> <span class="string">&quot;OK&quot;</span> <br />
+                <span class="keyword">ELSE</span> <br />
+                &ensp; <span class="function">OUTPUT</span> <span class="string">&quot;Wrong password&quot;</span> <br />
+                <span class="keyword">ENDIF</span>
             </code>
         </p>
 
@@ -51,17 +51,17 @@
             <img src="../icons/code.svg" class="icon" />
             Example 2 <br />
             <code>
-                user &larr; <el class="function">USERINPUT</el> <br />
-                passcode &larr; <el class="function">USERINPUT</el> <br />
-                <el class="keyword">IF</el> passcode = <el class="number">1234</el> <el class="keyword">THEN</el> <br />
-                &ensp; <el class="keyword">IF</el> user = <el class="string">&quot;admin&quot;</el> <el class="keyword">THEN</el> <br />
-                &ensp; &ensp; <el class="function">OUTPUT</el> <el class="string">&quot;Full access&quot;</el> <br />
-                &ensp; <el class="keyword">ELSE</el> <br />
-                &ensp; &ensp; <el class="function">OUTPUT</el> <el class="string">&quot;Restricted access&quot;</el> <br />
-                &ensp; <el class="keyword">ENDIF</el> <br />
-                <el class="keyword">ELSE</el> <br />
-                &ensp; <el class="function">OUTPUT</el> <el class="string">&quot;Wrong password&quot;</el> <br />
-                <el class="keyword">ENDIF</el>
+                user &larr; <span class="function">USERINPUT</span> <br />
+                passcode &larr; <span class="function">USERINPUT</span> <br />
+                <span class="keyword">IF</span> passcode = <span class="number">1234</span> <span class="keyword">THEN</span> <br />
+                &ensp; <span class="keyword">IF</span> user = <span class="string">&quot;admin&quot;</span> <span class="keyword">THEN</span> <br />
+                &ensp; &ensp; <span class="function">OUTPUT</span> <span class="string">&quot;Full access&quot;</span> <br />
+                &ensp; <span class="keyword">ELSE</span> <br />
+                &ensp; &ensp; <span class="function">OUTPUT</span> <span class="string">&quot;Restricted access&quot;</span> <br />
+                &ensp; <span class="keyword">ENDIF</span> <br />
+                <span class="keyword">ELSE</span> <br />
+                &ensp; <span class="function">OUTPUT</span> <span class="string">&quot;Wrong password&quot;</span> <br />
+                <span class="keyword">ENDIF</span>
             </code>
         </p>
 
@@ -73,18 +73,18 @@
             <img src="../icons/code.svg" class="icon" />
             Example 3 <br />
             <code>
-                option &larr; <el class="function">USERINPUT</el> <br />
-                <el class="keyword">IF</el> option = <el class="number">1</el> <el class="keyword">THEN</el> <br />
-                &ensp; <el class="other">option_1</el>() <br />
-                <el class="keyword">ELSE IF</el> option = <el class="number">2</el> <el class="keyword">THEN</el> <br />
-                &ensp; <el class="other">option_2</el>() <br />
-                <el class="keyword">ELSE IF</el> option = <el class="number">3</el> <el class="keyword">THEN</el> <br />
-                &ensp; <el class="other">option_3</el>() <br />
-                <el class="keyword">ELSE IF</el> option = <el class="number">4</el> <el class="keyword">THEN</el> <br />
-                &ensp; <el class="other">option_4</el>() <br />
-                <el class="keyword">ELSE</el> <br />
-                &ensp; <el class="function">OUTPUT</el> <el class="string">&quot;Invalid&quot;</el> <br />
-                <el class="keyword">ENDIF</el>
+                option &larr; <span class="function">USERINPUT</span> <br />
+                <span class="keyword">IF</span> option = <span class="number">1</span> <span class="keyword">THEN</span> <br />
+                &ensp; <span class="other">option_1</span>() <br />
+                <span class="keyword">ELSE IF</span> option = <span class="number">2</span> <span class="keyword">THEN</span> <br />
+                &ensp; <span class="other">option_2</span>() <br />
+                <span class="keyword">ELSE IF</span> option = <span class="number">3</span> <span class="keyword">THEN</span> <br />
+                &ensp; <span class="other">option_3</span>() <br />
+                <span class="keyword">ELSE IF</span> option = <span class="number">4</span> <span class="keyword">THEN</span> <br />
+                &ensp; <span class="other">option_4</span>() <br />
+                <span class="keyword">ELSE</span> <br />
+                &ensp; <span class="function">OUTPUT</span> <span class="string">&quot;Invalid&quot;</span> <br />
+                <span class="keyword">ENDIF</span>
             </code>
         </p>
 
@@ -96,14 +96,14 @@
             <img src="../icons/code.svg" class="icon" />
             Example 3 <br />
             <code>
-                option &larr; <el class="function">USERINPUT</el> <br />
-                <el class="keyword">CASE</el> option <el class="keyword">OF</el> <br />
-                &ensp; <el class="number">1</el>: <el class="other">option_1</el>() <br />
-                &ensp; <el class="number">2</el>: <el class="other">option_2</el>() <br />
-                &ensp; <el class="number">3</el>: <el class="other">option_3</el>() <br />
-                &ensp; <el class="number">4</el>: <el class="other">option_4</el>() <br />
-                &ensp; <el class="keyword">DEFAULT</el>: <el class="function">OUTPUT</el> <el class="string">&quot;Invalid&quot;</el> <br />
-                <el class="keyword">ENDCASE</el>
+                option &larr; <span class="function">USERINPUT</span> <br />
+                <span class="keyword">CASE</span> option <span class="keyword">OF</span> <br />
+                &ensp; <span class="number">1</span>: <span class="other">option_1</span>() <br />
+                &ensp; <span class="number">2</span>: <span class="other">option_2</span>() <br />
+                &ensp; <span class="number">3</span>: <span class="other">option_3</span>() <br />
+                &ensp; <span class="number">4</span>: <span class="other">option_4</span>() <br />
+                &ensp; <span class="keyword">DEFAULT</span>: <span class="function">OUTPUT</span> <span class="string">&quot;Invalid&quot;</span> <br />
+                <span class="keyword">ENDCASE</span>
             </code>
         </p>
 
@@ -117,10 +117,10 @@
         </p>
 
         <p class="spoiler noselect">
-            <el class="default">Tap/click to reveal</el>
-            <el class="answer">
+            <span class="default">Tap/click to reveal</span>
+            <span class="answer">
                 It's a good idea to make sure the program knows what to do if it receives an unexpected input. Otherwise, it might crash.
-            </el>
+            </span>
         </p>
 
         <br />
@@ -134,7 +134,7 @@
         <br /> <br />
         <br /> <br />
 
-        <div id="sub">© Rujul Nayak <el id="year">2024-</el></div>
+        <div id="sub">© Rujul Nayak <span id="year">2024-</span></div>
         <script src="../../year.js"></script>
 
         <script src="../spoilers.js"></script>

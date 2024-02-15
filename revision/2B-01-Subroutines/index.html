@@ -47,13 +47,13 @@
             <img src="../icons/code.svg" class="icon" />
             Example 1 <br />
             <code>
-                <el class="keyword">SUBROUTINE</el> <el class="other">greeting1</el>() <br />
-                &ensp; <el class="function">OUTPUT</el> <el class="string">&quot;Hello&quot;</el> <br />
-                <el class="keyword">ENDSUBROUTINE</el>
+                <span class="keyword">SUBROUTINE</span> <span class="other">greeting1</span>() <br />
+                &ensp; <span class="function">OUTPUT</span> <span class="string">&quot;Hello&quot;</span> <br />
+                <span class="keyword">ENDSUBROUTINE</span>
             </code>
         </p>
 
-        <p>Now, when we want to use this procedure, we can call it like this: <code><el class="other">greeting1</el>()</code></p>
+        <p>Now, when we want to use this procedure, we can call it like this: <code><span class="other">greeting1</span>()</code></p>
 
         <p><br />Subroutines can also take <b>parameters</b> (inputs)</p>
         
@@ -63,15 +63,15 @@
             <img src="../icons/code.svg" class="icon" />
             Example 2 <br />
             <code>
-                <el class="keyword">SUBROUTINE</el> <el class="other">greeting2</el>(name) <br />
-                &ensp; <el class="function">OUTPUT</el> <el class="string">&quot;Hello&quot;</el> + name <br />
-                <el class="keyword">ENDSUBROUTINE</el>
+                <span class="keyword">SUBROUTINE</span> <span class="other">greeting2</span>(name) <br />
+                &ensp; <span class="function">OUTPUT</span> <span class="string">&quot;Hello&quot;</span> + name <br />
+                <span class="keyword">ENDSUBROUTINE</span>
             </code>
         </p>
 
         <p>
             Now, if this procedure is called with the code
-            <code><el class="other">greeting2</el>(<el class="string">&quot;Rujul&quot;</el>)</code>,
+            <code><span class="other">greeting2</span>(<span class="string">&quot;Rujul&quot;</span>)</code>,
             it will output <code class="string">&quot;Hello Rujul&quot;</code>.
         </p>
 
@@ -95,13 +95,13 @@
             <img src="../icons/code.svg" class="icon" />
             Example 3 <br />
             <code>
-                <el class="keyword">SUBROUTINE</el> <el class="other">inches_to_cms</el>(inches) <br />
-                &ensp; <el class="function">RETURN</el> inches * <el class="number">2.54</el> <br />
-                <el class="keyword">ENDSUBROUTINE</el> <br />
+                <span class="keyword">SUBROUTINE</span> <span class="other">inches_to_cms</span>(inches) <br />
+                &ensp; <span class="function">RETURN</span> inches * <span class="number">2.54</span> <br />
+                <span class="keyword">ENDSUBROUTINE</span> <br />
                 <br />
-                input &larr; <el class="function">USERINPUT</el> <br />
-                cms &larr; <el class="other">inches_to_cms</el>(input) <br />
-                <el class="function">OUTPUT</el> cms, <el class="string">&quot;cm&quot;</el>
+                input &larr; <span class="function">USERINPUT</span> <br />
+                cms &larr; <span class="other">inches_to_cms</span>(input) <br />
+                <span class="function">OUTPUT</span> cms, <span class="string">&quot;cm&quot;</span>
             </code>
         </p>
 
@@ -111,13 +111,13 @@
             <img src="../icons/code.svg" class="icon" />
             Example 4 <br />
             <code>
-                <el class="keyword">SUBROUTINE</el> <el class="other">max</el>(a, b) <br />
-                &ensp; <el class="keyword">IF</el> a > b <el class="keyword">THEN</el> <br />
-                &ensp; &ensp; <el class="function">RETURN</el> a <br />
-                &ensp; <el class="keyword">ELSE</el> <br />
-                &ensp; &ensp; <el class="function">RETURN</el> b <br />
-                &ensp; <el class="keyword">ENDIF</el> <br />
-                <el class="keyword">ENDSUBROUTINE</el>
+                <span class="keyword">SUBROUTINE</span> <span class="other">max</span>(a, b) <br />
+                &ensp; <span class="keyword">IF</span> a > b <span class="keyword">THEN</span> <br />
+                &ensp; &ensp; <span class="function">RETURN</span> a <br />
+                &ensp; <span class="keyword">ELSE</span> <br />
+                &ensp; &ensp; <span class="function">RETURN</span> b <br />
+                &ensp; <span class="keyword">ENDIF</span> <br />
+                <span class="keyword">ENDSUBROUTINE</span>
             </code>
         </p>
 
@@ -131,10 +131,10 @@
         </p>
 
         <p class="spoiler noselect">
-            <el class="default">Tap/click to reveal</el>
-            <el class="answer">
+            <span class="default">Tap/click to reveal</span>
+            <span class="answer">
                 Change <code>a > b</code> to <code>a &lt; b</code>.
-            </el>
+            </span>
         </p>
 
         <br />
@@ -148,7 +148,7 @@
         <br /> <br />
         <br /> <br />
 
-        <div id="sub">© Rujul Nayak <el id="year">2024-</el></div>
+        <div id="sub">© Rujul Nayak <span id="year">2024-</span></div>
         <script src="../../year.js"></script>
 
         <script src="../spoilers.js"></script>
