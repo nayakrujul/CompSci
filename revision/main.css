@@ -75,6 +75,10 @@ p.spoiler.show-spoiler .answer {
     color: darkgoldenrod;
 }
 
+.override {
+    color: black;
+}
+
 
 /* Table formatting */
 
