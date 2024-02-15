@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+        <link rel="stylesheet" href="../main.css">
+
+        <title>Computer Science Revision</title>
+
+        <link rel="icon" type="image/png" href="../icons/logo.svg"/>
+        <meta property="og:image" content="../icons/logo.png" />
+        <meta property="og:image:width" content="640" />
+        <meta property="og:image:height" content="512" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="2B.08 - Translators | Computer Science Revision">
+    </head>
+
+    <body>
+        <h1>2B.08 &ndash; Translators</h1>
+        <h3 class="home-link"><a href="../">Computer Science Revision</a></h3>
+        <br />
+
+        <a class="prev-link" href="../2B-07-Programming-Language-Classification/">Previous: 2B.07 - Programming Language Classification</a>
+        <br /> <br />
+
+        <p>Only <b>machine code</b> can be understood by the computer. Everything else has to be <b>translated</b> (converted) into machine code.</p>
+
+        <p class="definition">
+            <img src="../icons/book.svg" class="icon" />
+            <strong>Translators</strong> are a type of software which translate (convert) code into machine code that the computer can run.
+        </p>
+
+        <p>
+            There are three types of translator: <b>compilers, interpreters, and assemblers</b>. <br />
+            Compilers and interpreters work on high-level languages. Assemblers work on assembly language.
+        </p>
+
+        <p><br />Table 1 shows the differences between compilers and interpreters.</p>
+
+        <p class="table">
+            <img src="../icons/table.svg" class="icon" />
+            Table 1
+        </p>
+
+        <table>
+            <tr>
+                <th><strong>Compilers</strong></th>
+                <th><strong>Interpreters</strong></th>
+            </tr>
+            <tr>
+                <td>
+                    Translates the whole source code <b>at the same time</b>
+                    and creates an <b>executable file</b>.
+                </td>
+                <td>
+                    Translates and runs the source code <b>one instruction
+                    at a time</b>, without creating an executable file.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Only needed <b>once</b> to create the executable file.
+                    Then, the file <b>can be run again and again</b> without
+                    the compiler.
+                </td>
+                <td>
+                    Needed <b>every time the program is run</b> because no
+                    executable file created.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Compiled program <b>executes faster</b> because it is in
+                    machine code.
+                </td>
+                <td>
+                    Runs <b>slower</b> because program <b>needs to be translated
+                    each time</b>.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Other people <b>cannot see the original source code</b> once
+                    program has been compiled.
+                </td>
+                <td>
+                    Other people <b>can see and copy the source code</b> if
+                    distributing an interpreted program.
+                </td>
+            </tr>
+        </table>
+
+        <br />
+
+        <p>
+            <b>Note:</b> interpreters don't translate directly into machine code &mdash;
+            instead, they take each instruction in the code and call machine code
+            subroutines within their own code to carry out that instruction.
+        </p>
+
+        <br />
+
+        <hr />
+
+        <p class="question">
+            <img src="../icons/question.svg" class="icon" />
+            Which translator is better for code which will be distributed: compiler or interpreter?
+        </p>
+
+        <p class="spoiler noselect">
+            <el class="default">Tap/click to reveal</el>
+            <el class="answer">
+                Compiler: <br />
+                - Customers will not need to have the translator installed on their computer <br />
+                - Other people will not be able to see and copy the source code <br />
+                - The program will execute faster as it is in machine code
+            </el>
+        </p>
+
+        <br />
+
+        <hr />
+
+        <br /> <br />
+
+        <a class="next-link" href="../2B-Summary-Questions/">Next: Section 2B Summary Questions</a>
+
+        <br /> <br />
+        <br /> <br />
+
+        <div id="sub">© Rujul Nayak <el id="year">2024-</el></div>
+        <script src="../../year.js"></script>
+
+        <script src="../spoilers.js"></script>
+    </body>
+</html>

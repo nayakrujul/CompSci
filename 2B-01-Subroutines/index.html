@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+        <link rel="stylesheet" href="../main.css">
+
+        <title>Computer Science Revision</title>
+
+        <link rel="icon" type="image/png" href="../icons/logo.svg"/>
+        <meta property="og:image" content="../icons/logo.png" />
+        <meta property="og:image:width" content="640" />
+        <meta property="og:image:height" content="512" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="2B.01 - Subroutines | Computer Science Revision">
+    </head>
+
+    <body>
+        <h1>2B.01 &ndash; Subroutines</h1>
+        <h3 class="home-link"><a href="../">Computer Science Revision</a></h3>
+        <br />
+
+        <a class="prev-link" href="../2A-Summary-Questions/">Previous: Section 2A Summary Questions</a>
+        <br /> <br />
+
+        <p class="definition">
+            <img src="../icons/book.svg" class="icon" />
+            A <strong>subroutine</strong> is a set of instructions inside an algorthm stored under one name.
+        </p>
+
+        <p>
+            Subroutines save us from repeating the same code over and over again.
+            They give your program more structure and readability whilst reducing the amount of code you have to write.
+        </p>
+
+        <p>There are two types of subroutines: functions and procedures.</p>
+
+        <p class="definition">
+            <img src="../icons/book.svg" class="icon" />
+            A <strong>procedure</strong> is a subroutine which doesn't return a value.
+        </p>
+
+        <p>Example 1 shows a procedure to output the string "Hello".</p>
+
+        <p class="code">
+            <img src="../icons/code.svg" class="icon" />
+            Example 1 <br />
+            <code>
+                <el class="keyword">SUBROUTINE</el> <el class="other">greeting1</el>() <br />
+                &ensp; <el class="function">OUTPUT</el> <el class="string">&quot;Hello&quot;</el> <br />
+                <el class="keyword">ENDSUBROUTINE</el>
+            </code>
+        </p>
+
+        <p>Now, when we want to use this procedure, we can call it like this: <code><el class="other">greeting1</el>()</code></p>
+
+        <p><br />Subroutines can also take <b>parameters</b> (inputs)</p>
+        
+        <p>Example 2 shows a procedure to output the string "Hello " + the user's name.</p>
+
+        <p class="code">
+            <img src="../icons/code.svg" class="icon" />
+            Example 2 <br />
+            <code>
+                <el class="keyword">SUBROUTINE</el> <el class="other">greeting2</el>(name) <br />
+                &ensp; <el class="function">OUTPUT</el> <el class="string">&quot;Hello&quot;</el> + name <br />
+                <el class="keyword">ENDSUBROUTINE</el>
+            </code>
+        </p>
+
+        <p>
+            Now, if this procedure is called with the code
+            <code><el class="other">greeting2</el>(<el class="string">&quot;Rujul&quot;</el>)</code>,
+            it will output <code class="string">&quot;Hello Rujul&quot;</code>.
+        </p>
+
+        <p class="definition">
+            <img src="../icons/book.svg" class="icon" />
+            A <strong>function</strong> is a subroutine which does return a value.
+        </p>
+
+        <p>The return value of a function can be assigned to a variable.</p>
+
+        <p><b>
+            <br />
+            We have already looked at and used several built-in functions in pseudo-code,
+            including </b><code class="other">LEN</code>, <code class="other">POSITION</code>, <code class="other">STRING_TO_INT</code>,
+            <b>and many more.
+        </b></p>
+
+        <p><br />Example 3 shows a function to convert inches to centimeters.</p>
+
+        <p class="code">
+            <img src="../icons/code.svg" class="icon" />
+            Example 3 <br />
+            <code>
+                <el class="keyword">SUBROUTINE</el> <el class="other">inches_to_cms</el>(inches) <br />
+                &ensp; <el class="function">RETURN</el> inches * <el class="number">2.54</el> <br />
+                <el class="keyword">ENDSUBROUTINE</el> <br />
+                <br />
+                input &larr; <el class="function">USERINPUT</el> <br />
+                cms &larr; <el class="other">inches_to_cms</el>(input) <br />
+                <el class="function">OUTPUT</el> cms, <el class="string">&quot;cm&quot;</el>
+            </code>
+        </p>
+
+        <p><br />Example 4 shows a function to return the maximum of two numbers.</p>
+
+        <p class="code">
+            <img src="../icons/code.svg" class="icon" />
+            Example 4 <br />
+            <code>
+                <el class="keyword">SUBROUTINE</el> <el class="other">max</el>(a, b) <br />
+                &ensp; <el class="keyword">IF</el> a > b <el class="keyword">THEN</el> <br />
+                &ensp; &ensp; <el class="function">RETURN</el> a <br />
+                &ensp; <el class="keyword">ELSE</el> <br />
+                &ensp; &ensp; <el class="function">RETURN</el> b <br />
+                &ensp; <el class="keyword">ENDIF</el> <br />
+                <el class="keyword">ENDSUBROUTINE</el>
+            </code>
+        </p>
+
+        <br />
+
+        <hr />
+
+        <p class="question">
+            <img src="../icons/question.svg" class="icon" />
+            Make one change to the body of the <code class="other">max</code> function in Example 4 to make it return the minimum instead of the maximum.
+        </p>
+
+        <p class="spoiler noselect">
+            <el class="default">Tap/click to reveal</el>
+            <el class="answer">
+                Change <code>a > b</code> to <code>a &lt; b</code>.
+            </el>
+        </p>
+
+        <br />
+
+        <hr />
+
+        <br /> <br />
+
+        <a class="next-link" href="../2B-02-Local-and-Global-Variables/">Next: 2B.02 - Local and Global Variables</a>
+
+        <br /> <br />
+        <br /> <br />
+
+        <div id="sub">© Rujul Nayak <el id="year">2024-</el></div>
+        <script src="../../year.js"></script>
+
+        <script src="../spoilers.js"></script>
+    </body>
+</html>

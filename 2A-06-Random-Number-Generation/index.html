@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+        <link rel="stylesheet" href="../main.css">
+
+        <title>Computer Science Revision</title>
+
+        <link rel="icon" type="image/png" href="../icons/logo.svg"/>
+        <meta property="og:image" content="../icons/logo.png" />
+        <meta property="og:image:width" content="640" />
+        <meta property="og:image:height" content="512" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="2A.06 - Random Number Generation | Computer Science Revision">
+    </head>
+
+    <body>
+        <h1>2A.06 &ndash; Random Number Generation</h1>
+        <h3 class="home-link"><a href="../">Computer Science Revision</a></h3>
+        <br />
+
+        <a class="prev-link" href="../2A-05-Arrays/">Previous: 2A.05 - Arrays</a>
+        <br /> <br />
+
+        <p>Random numbers are often used in games when the programmer wants an unknown element in the code.</p>
+
+        <p>In pseudo-code we use <code><el class="other">RANDOM_INT</el>(x, y)</code> to generate a random integer from <code>x</code> to <code>y</code></p>
+
+        <p>Example 1 shows how the <code class="other">RANDOM_INT</code> function can be used to simulate rolling a die.</p>
+
+        <p class="code">
+            <img src="../icons/code.svg" class="icon" />
+            Example 1 <br />
+            <code>
+                num &larr; <el class="other">RANDOM_INT</el>(<el class="number">1</el>, <el class="number">6</el>) <br />
+                <el class="function">OUTPUT</el> num
+            </code>
+        </p>
+
+        <p>Example 2 shows how the <code class="other">RANDOM_INT</code> function can be used to simulate a coin toss.</p>
+
+        <p class="code">
+            <img src="../icons/code.svg" class="icon" />
+            Example 2 <br />
+            <code>
+                coin = [<el class="string">&quot;Heads&quot;</el>, <el class="string">&quot;Tails&quot;</el>] <br />
+                num &larr; <el class="other">RANDOM_INT</el>(<el class="number">0</el>, <el class="number">1</el>) <br />
+                <el class="function">OUTPUT</el> coin[num]
+            </code>
+        </p>
+
+        <br />
+
+        <hr />
+
+        <p class="question">
+            <img src="../icons/question.svg" class="icon" />
+            How would we simulate rolling a 20-sided die in pseudo-code?
+        </p>
+
+        <p class="spoiler noselect">
+            <el class="default">Tap/click to reveal</el>
+            <el class="answer">
+                <code><el class="other">RANDOM_INT</el>(<el class="number">1</el>, <el class="number">20</el>)</code>
+            </el>
+        </p>
+
+        <br />
+
+        <hr />
+
+        <br /> <br />
+
+        <a class="next-link" href="../2A-07-Selection/">Next: 2A.07 - Selection</a>
+
+        <br /> <br />
+        <br /> <br />
+        
+        <div id="sub">© Rujul Nayak <el id="year">2024-</el></div>
+        <script src="../../year.js"></script>
+
+        <script src="../spoilers.js"></script>
+    </body>
+</html>

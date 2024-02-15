@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+        <link rel="stylesheet" href="../main.css">
+
+        <title>Computer Science Revision</title>
+
+        <link rel="icon" type="image/png" href="../icons/logo.svg"/>
+        <meta property="og:image" content="../icons/logo.png" />
+        <meta property="og:image:width" content="640" />
+        <meta property="og:image:height" content="512" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="3.02 - Binary and Hexadecimal | Computer Science Revision">
+    </head>
+
+    <body>
+        <h1>3.02 &ndash; Binary and Hexadecimal</h1>
+        <h3 class="home-link"><a href="../">Computer Science Revision</a></h3>
+        <br />
+
+        <a class="prev-link" href="../3-01-Storage-Units/">Previous: 3.01 - Storage Units</a>
+        <br /> <br />
+
+        <p>Counting in binary (also called base-2) is similar to counting in decimal (our normal number system, also called base-10).</p>
+
+        <p>The only difference is that instead of the digits representing powers of 10 (..., 1000, 100, 10, 1) <b>they represent powers of 2 (..., 8, 4, 2, 1)</b>.</p>
+
+        <p class="definition">
+            <img src="../icons/book.svg" class="icon" />
+            The <strong>hexadecimal number system</strong> (also called base-16) is a way of writing numbers using 16 different digits.
+        </p>
+
+        <p>The digits are: <code>0123456789ABCDEF</code>. <b><code>A = 10</code>, <code>B = 11</code>, ..., <code>F = 15</code></b>.</p>
+
+        <p>In hexadecimal, the digits represent powers of 16 (..., 4096, 256, 16, 1).</p>
+
+        <p>
+            <b>
+                Each digit in hexadecimal exactly corresponds to one nibble (four bits).
+            </b> <br />
+            This means that it is very easy to convert between binary and hexadecimal,
+            as each group of four binary digits con be converted to one hexadecimal digit.
+        </p>
+
+        <p><br/>Diagram 1 shows the number 206 in decimal, binary, and hexadecimal.</p>
+
+        <p class="diagram">
+            <img src="../icons/image.svg" class="icon" />
+            Diagram 1 <br /> <br />
+            <img src="./diagram.png" width="400px" />
+        </p>
+
+        <p>
+            A computer can only understand binary machine code, but programmers often write machine code in hexadecimal because: <br />
+            - Hexadecimal is four times shorter than binary <br />
+            - It's easy to convert from hexadecimal into binary
+        </p>
+
+        <p class="definition">
+            <img src="../icons/book.svg" class="icon" />
+            <strong>Subscript notation</strong> is a way of writing the base a number has been represented in so that we don't get confused.
+        </p>
+
+        <p>
+            <b>The base is written next to the number in a small font:</b> <br />
+            - <code>206</code><sub>10</sub> means <i>"206 in base-10 (decimal)"</i> <br />
+            - <code>11001110</code><sub>2</sub> means <i>"11001110 in base-2 (binary)"</i> <br />
+            - <code>CE</code><sub>16</sub> means <i>"CE in base-16 (hexadecimal)"</i>
+        </p>
+
+        <br />
+
+        <hr />
+
+        <p class="question">
+            <img src="../icons/question.svg" class="icon" />
+            Convert <code>9D</code><sub>16</sub> to binary.
+        </p>
+
+        <p class="spoiler noselect">
+            <el class="default">Tap/click to reveal</el>
+            <el class="answer">
+                Because each hexadecimal digit is equivalent to a nibble, we can convert each digit to four binary digits: <br />
+                &nbsp;<code>9<sub>16</sub></code> = <code>9<sub>10</sub></code> = 8 + 1 = <code>1001<sub>2</sub></code> <br />
+                &nbsp;<code>D<sub>16</sub></code> = <code>13<sub>10</sub></code> = 8 + 4 + 1 = <code>1101<sub>2</sub></code> <br />
+                So, <code>9D<sub>16</sub></code> = <code>10011101<sub>2</sub></code>
+            </el>
+        </p>
+
+        <br />
+
+        <hr />
+
+        <br /> <br />
+
+        <div id="sub">© Rujul Nayak <el id="year">2024-</el></div>
+        <script src="../../year.js"></script>
+
+        <script src="../spoilers.js"></script>
+    </body>
+</html>

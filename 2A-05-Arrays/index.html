@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+        <link rel="stylesheet" href="../main.css">
+
+        <title>Computer Science Revision</title>
+
+        <link rel="icon" type="image/png" href="../icons/logo.svg"/>
+        <meta property="og:image" content="../icons/logo.png" />
+        <meta property="og:image:width" content="640" />
+        <meta property="og:image:height" content="512" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="2A.05 - Arrays | Computer Science Revision">
+    </head>
+
+    <body>
+        <h1>2A.05 &ndash; Arrays</h1>
+        <h3 class="home-link"><a href="../">Computer Science Revision</a></h3>
+        <br />
+
+        <a class="prev-link" href="../2A-04-Strings/">Previous: 2A.04 - Strings</a>
+        <br /> <br />
+
+        <p class="definition">
+            <img src="../icons/book.svg" class="icon" />
+            <strong>Data structures</strong> are formats for storing data - like arrays, records, and files.
+        </p>
+
+        <p class="definition">
+            <img src="../icons/book.svg" class="icon" />
+            An <strong>array</strong> is a data structure that can store a group of data of the same type under a single identifier.
+        </p>
+
+        <p>
+            Each piece of data within an array is called an <b>element</b>. Each element can be accessed by its index (position) in the array.
+        </p>
+
+        <p>Example 1 shows how to create and manipulate arrays in pseudo-code.</p>
+
+        <p class="code">
+            <img src="../icons/code.svg" class="icon" />
+            Example 1 <br />
+            <code>
+                <el class="comment">Use square brackets to define an array</el> <br />
+                names &larr; [<el class="string">&quot;Adam&quot;</el>, <el class="string">&quot;Bob&quot;</el>, <el class="string">&quot;Charlie&quot;</el>, <el class="string">&quot;Daniel&quot;</el>] <br />
+                <br />
+                <el class="comment">Elements in arrays can be retrieved just like characters in strings</el> <br />
+                <el class="function">OUTPUT</el> names[<el class="number">2</el>] <br />
+                <el class="comment">>>> &quot;Charlie&quot;</el> <br />
+                <br />
+                <el class="comment">Remember: indexing starts at 0</el> <br />
+                <br />
+                <el class="comment">Elements can be changed as well</el> <br />
+                names[<el class="number">1</el>] = <el class="string">&quot;Ben&quot;</el> <br />
+                <el class="function">OUTPUT</el> names <br />
+                <el class="comment">>>> [&quot;Adam&quot;, &quot;Ben&quot;, &quot;Charlie&quot;, &quot;Daniel&quot;]</el> <br />
+                <br />
+                <el class="comment">Just like with strings, LEN returns the length of an array</el> <br />
+                <el class="function">OUTPUT</el> <el class="other">LEN</el>(names) <br />
+                <el class="comment">>>> 4</el>
+            </code>
+        </p>
+
+        <p>Two-dimensional arrays are arrays of arrays.</p>
+
+        <p>Example 2 shows the manipulation of a 2D array.</p>
+
+        <p class="code">
+            <img src="../icons/code.svg" class="icon" />
+            Example 2 <br />
+            <code>
+                <el class="comment">Five students' Maths and English scores are shown in this 2D array</el> <br />
+                <el class="comment">Each array inside this 2D array contains a certain student's two test scores</el> <br />
+                scores &larr; [[<el class="number">9</el>, <el class="number">15</el>],
+                               [<el class="number">18</el>, <el class="number">8</el>],
+                               [<el class="number">12</el>, <el class="number">14</el>],
+                               [<el class="number">13</el>, <el class="number">7</el>],
+                               [<el class="number">10</el>, <el class="number">17</el>]] <br />
+                <br />
+                <el class="comment">Retrieve the fourth student's scores</el> <br />
+                <el class="function">OUTPUT</el> scores[<el class="number">3</el>] <br />
+                <el class="comment">>>> [13, 7]</el> <br />
+                <br />
+                <el class="comment">Retrieve the second student's first score</el> <br />
+                <el class="function">OUTPUT</el> scores[<el class="number">1</el>][<el class="number">0</el>] <br />
+                <el class="comment">>>> 18</el> <br />
+                <br />
+                <el class="comment">Get the length of the 2D array</el> <br />
+                <el class="function">OUTPUT</el> <el class="other">LEN</el>(scores) <br />
+                <el class="comment">>>> 5</el> <br />
+                <br />
+                <el class="comment">Get the length of the first element</el> <br />
+                <el class="function">OUTPUT</el> <el class="other">LEN</el>(scores[<el class="number">0</el>]) <br />
+                <el class="comment">>>> 2</el> <br />
+            </code>
+        </p>
+
+        <br />
+
+        <hr />
+
+        <p class="question">
+            <img src="../icons/question.svg" class="icon" />
+            Can you think of other uses for 2D arrays?
+        </p>
+
+        <p class="spoiler noselect">
+            <el class="default">Tap/click to reveal</el>
+            <el class="answer">
+                Storing the pixel data of images, board games where the board is a grid, and much more.
+            </el>
+        </p>
+
+        <br />
+
+        <hr />
+
+        <br /> <br />
+        
+        <a class="next-link" href="../2A-06-Random-Number-Generation/">Next: 2A.06 - Random Number Generation</a>
+
+        <br /> <br />
+        <br /> <br />
+
+        <div id="sub">© Rujul Nayak <el id="year">2024-</el></div>
+        <script src="../../year.js"></script>
+
+        <script src="../spoilers.js"></script>
+    </body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+        <link rel="stylesheet" href="../main.css">
+
+        <title>Computer Science Revision</title>
+
+        <link rel="icon" type="image/png" href="../icons/logo.svg"/>
+        <meta property="og:image" content="../icons/logo.png" />
+        <meta property="og:image:width" content="640" />
+        <meta property="og:image:height" content="512" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="2A.08 - Records | Computer Science Revision">
+    </head>
+
+    <body>
+        <h1>2A.08 &ndash; Records</h1>
+        <h3 class="home-link"><a href="../">Computer Science Revision</a></h3>
+        <br />
+
+        <a class="prev-link" href="../2A-07-Selection/">Previous: 2A.07 - Selection</a>
+        <br /> <br />
+
+        <p class="definition">
+            <img src="../icons/book.svg" class="icon" />
+            A <strong>record</strong> is a data structure (like an array) which can store values with different data types.
+        </p>
+
+        <p>Each item in a record is called an <b>attribute</b> (or field). Each attribute is given an <b>identifier</b> (name) and <b>data type</b>.</p>
+        <p>Records are fixed in length. Attributes cannot be added or deleted, but they can be changed.</p>
+
+        <p><br />Example 1 shows how to create a record structure.</p>
+
+        <p class="code">
+            <img src="../icons/code.svg" class="icon" />
+            Example 1 <br />
+            <code>
+                <el class="keyword">RECORD</el> film <br />
+                &ensp; name: <el class="other">STRING</el> <br />
+                &ensp; releaseYear: <el class="other">INT</el> <br />
+                &ensp; duration: <el class="other">INT</el> <br />
+                &ensp; rating: <el class="other">REAL</el> <br />
+                <el class="keyword">ENDRECORD</el>
+            </code>
+        </p>
+
+        <p><br />Example 2 shows how to assign values to the record.</p>
+
+        <p class="code">
+            <img src="../icons/code.svg" class="icon" />
+            Example 2 <br />
+            <code>
+                film.name &larr; <el class="string">&quot;Avengers: Endgame&quot;</el> <br />
+                film.releaseYear &larr; <el class="number">2019</el> <br />
+                film.duration &larr; <el class="number">182</el> <br />
+                film.rating &larr; <el class="number">8.4</el> <br />
+            </code>
+        </p>
+
+        <p><br />Example 3 shows how to manipulate records.</p>
+
+        <p class="code">
+            <img src="../icons/code.svg" class="icon" />
+            Example 3 <br />
+            <code>
+                <el class="function">OUTPUT</el> film <br />
+                <el class="comment">>>>
+                    {name:&nbsp;"Avengers:&nbsp;Endgame", <br />
+                    &nbsp;&nbsp; &nbsp; releaseYear:&nbsp;2019, <br />
+                    &nbsp;&nbsp; &nbsp; duration:&nbsp;182, <br />
+                    &nbsp;&nbsp; &nbsp; rating:&nbsp;8.4}
+                </el> <br />
+                <br />
+                <el class="function">OUTPUT</el> film.rating <br />
+                <el class="comment">>>> 8.4</el> <br />
+                <br />
+                film.rating &larr; <el class="number">8.3</el> <br />
+                <el class="function">OUTPUT</el> film.rating <br />
+                <el class="comment">>>> 8.3</el>
+            </code>
+        </p>
+
+        <br />
+
+        <hr />
+
+        <p class="question">
+            <img src="../icons/question.svg" class="icon" />
+            What would be wrong with writing <code>film.rating &larr; "8.5"</code>?
+        </p>
+
+        <p class="spoiler noselect">
+            <el class="default">Tap/click to reveal</el>
+            <el class="answer">
+                The <code>rating</code> attribute needs to be of the <code>REAL</code> type, but <code>"8.5"</code> is a string.
+            </el>
+        </p>
+
+        <br />
+
+        <hr />
+
+        <br /> <br />
+
+        <a class="next-link" href="../2A-09-Files/">Next: 2A.09 - Files</a>
+
+        <br /> <br />
+        <br /> <br />
+
+        <div id="sub">© Rujul Nayak <el id="year">2024-</el></div>
+        <script src="../../year.js"></script>
+
+        <script src="../spoilers.js"></script>
+    </body>
+</html>

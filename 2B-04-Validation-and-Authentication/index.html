@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+        <link rel="stylesheet" href="../main.css">
+
+        <title>Computer Science Revision</title>
+
+        <link rel="icon" type="image/png" href="../icons/logo.svg"/>
+        <meta property="og:image" content="../icons/logo.png" />
+        <meta property="og:image:width" content="640" />
+        <meta property="og:image:height" content="512" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="2B.04 - Validation and Authentication | Computer Science Revision">
+    </head>
+
+    <body>
+        <h1>2B.04 &ndash; Validation and Authentication</h1>
+        <h3 class="home-link"><a href="../">Computer Science Revision</a></h3>
+        <br />
+
+        <a class="prev-link" href="../2B-03-Structured-Programming/">Previous: 2B.03 - Structured Programming</a>
+        <br /> <br />
+
+        <p class="definition">
+            <img src="../icons/book.svg" class="icon" />
+            <strong>Validating</strong> inputs prevents the user from accidentally or intentionally misusing a program.
+        </p>
+
+        <p>
+            Table 1 shows the five main types of validation checks.
+        </p>
+
+        <p class="table">
+            <img src="../icons/table.svg" class="icon" />
+            Table 1
+        </p>
+
+        <table>
+            <tr>
+                <th><strong>Check</strong></th>
+                <th><strong>Description</strong></th>
+            </tr>
+            <tr>
+                <td>Range check</td>
+                <td>Checks whether the input <em>(usually numerical or date)</em> is within a given range</td>
+            </tr>
+            <tr>
+                <td>Type check</td>
+                <td>Checks whether the input is of the correct data type <em>(integer, string, real, etc.)</em></td>
+            </tr>
+            <tr>
+                <td>Length check</td>
+                <td>Checks the length of the input <em>(e.g. longer than 8 characters)</em></td>
+            </tr>
+            <tr>
+                <td>Presence check</td>
+                <td>Checks that the input has not been left blank</td>
+            </tr>
+            <tr>
+                <td>Format check</td>
+                <td>Checks the format of the input <em>(e.g. email address must contain '@')</em></td>
+            </tr>
+        </table>
+
+        <br />
+
+        <p class="definition">
+            <img src="../icons/book.svg" class="icon" />
+            <strong>Authentication</strong> is the process of checking that a particular user is permitted to use a system and, if so, which parts of that system they can use.
+        </p>
+
+        <p><em>(i.e., authentication makes sure that a person is actually who they say they are)</em></p>
+
+        <p>A common example of an authentication measure is the <b>username/password</b> combination.</p>
+
+        <br />
+
+        <hr />
+
+        <p class="question">
+            <img src="../icons/question.svg" class="icon" />
+            A website wants to only accept usernames which are 5 to 10 characters and start with a letter.
+            Which two validation checks would they need to use?
+        </p>
+
+        <p class="spoiler noselect">
+            <el class="default">Tap/click to reveal</el>
+            <el class="answer">
+                Length check to make sure it's 5 to 10 characters <br />
+                Format check to make sure it starts with a letter
+            </el>
+        </p>
+
+        <br />
+
+        <hr />
+
+        <br /> <br />
+
+        <a class="next-link" href="../2B-05-Errors/">Next: 2B.05 - Errors</a>
+
+        <br /> <br />
+        <br /> <br />
+
+        <div id="sub">© Rujul Nayak <el id="year">2024-</el></div>
+        <script src="../../year.js"></script>
+
+        <script src="../spoilers.js"></script>
+    </body>
+</html>

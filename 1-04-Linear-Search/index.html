@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+        <link rel="stylesheet" href="../main.css">
+
+        <title>Computer Science Revision</title>
+
+        <link rel="icon" type="image/png" href="../icons/logo.svg"/>
+        <meta property="og:image" content="../icons/logo.png" />
+        <meta property="og:image:width" content="640" />
+        <meta property="og:image:height" content="512" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="1.04 - Linear Search | Computer Science Revision">
+    </head>
+
+    <body>
+        <h1>1.04 &ndash; Linear Search</h1>
+        <h3 class="home-link"><a href="../">Computer Science Revision</a></h3>
+        <br />
+
+        <a class="prev-link" href="../1-03-Flowcharts/">Previous: 1.03 - Flowcharts</a>
+        <br /> <br />
+
+        <p class="definition">
+            <img src="../icons/book.svg" class="icon" />
+            A <strong>searching algorithm</strong> is an algorithm to find the index of an item in a list.
+        </p>
+
+        <p>
+            For example, the index of 51 in the list <code>[61, 7, 26, 51, 39, 35, 18, 65]</code> is 3. <br />
+            <b>NOTE: in Computer Science, the first item of a list is at index 0, NOT index 1.</b>
+        </p>
+
+        <p class="definition">
+            <img src="../icons/book.svg" class="icon" />
+            <strong>Linear search</strong> is a searching algorithm which checks each item in order.
+        </p>
+
+        <p>Example 1 shows an implementation of linear search in pseudo-code.</p>
+
+        <p class="code">
+            <img src="../icons/code.svg" class="icon" />
+            Example 1 <br />
+            <code>
+                <el class="keyword">SUBROUTINE</el> <el class="other">linearSearch</el>(list, item) <br />
+                &nbsp; <el class="keyword">FOR</el> i &larr; <el class="number">0</el> <el class="keyword">TO</el> <el class="other">LEN</el>(list)-<el class="number">1</el> <br/>
+                &nbsp; &nbsp; <el class="keyword">IF</el> list[i] = item <el class="keyword">THEN</el> <br />
+                &nbsp; &nbsp; &nbsp; <el class="function">RETURN</el> i <br />
+                &nbsp; &nbsp; <el class="keyword">ENDIF</el> <br />
+                &nbsp; <el class="keyword">ENDFOR</el> <br />
+                &nbsp; <el class="function">RETURN</el> <el class="number">-1</el> <br />
+                <el class="keyword">ENDSUBROUTINE</el>
+            </code>
+        </p>
+
+        <p>Diagram 4 in <a href="../1-03-Flowcharts/">1.03 (Flowcharts)</a> shows a flowchart implementation of linear search.</p>
+
+        <p>
+            The steps to do a linear search are as follows:
+            <br /> &emsp; 1. Look at the first item in your list
+            <br /> &emsp; 2. Check if this is the item that you are looking for
+            <br /> &emsp; 3. If it is, output the index and exit
+            <br /> &emsp; 4. Otherwise, move on to the next item in the list
+            <br /> &emsp; 5. Repeat steps 2 to 4 until you find the item, or you reach the end of the list
+        </p>
+
+        <br />
+
+        <hr />
+
+        <p class="question">
+            <img src="../icons/question.svg" class="icon" />
+            What is the maximum number of comparisons linear search would need to do for a list of length <code>n</code>?
+        </p>
+
+        <p class="spoiler noselect">
+            <el class="default">Tap/click to reveal</el>
+            <el class="answer"><code>n</code> comparisons (if the item isn't in the list, or it is at the very end). This is called the worst case <b>time complexity</b>, and is written as <code>O(n)</code>.</el>
+        </p>
+
+        <br />
+
+        <hr />
+
+        <br /> <br />
+
+        <a class="next-link" href="../1-05-Binary-Search/">Next: 1.05 - Binary Search</a>
+
+        <br /> <br />
+        <br /> <br />
+
+        <div id="sub">© Rujul Nayak <el id="year">2024-</el></div>
+        <script src="../../year.js"></script>
+
+        <script src="../spoilers.js"></script>
+    </body>
+</html>

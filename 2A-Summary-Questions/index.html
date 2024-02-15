@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+        <link rel="stylesheet" href="../main.css">
+
+        <title>Computer Science Revision</title>
+
+        <link rel="icon" type="image/png" href="../icons/logo.svg"/>
+        <meta property="og:image" content="../icons/logo.png" />
+        <meta property="og:image:width" content="640" />
+        <meta property="og:image:height" content="512" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Section 2A Summary Questions | Computer Science Revision">
+    </head>
+
+    <body>
+        <h1>Section 2A Summary Questions</h1>
+        <h3 class="home-link"><a href="../">Computer Science Revision</a></h3>
+        <br />
+
+        <a class="prev-link" href="../2A-09-Files/">Previous: 2A.09 - Files</a>
+        <br /> <br />
+        
+        <br />
+
+        <hr />
+
+        <p><br />Table 1 shows some the descriptions of five variables.</p>
+
+        <p class="table">
+            <img src="../icons/table.svg" class="icon" />
+            Table 1
+        </p>
+
+        <table>
+            <tr>
+                <th><strong>Variable</strong></th>
+                <th><strong>Data Type</strong></th>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Age</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Height (m)</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Phone number</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Employed?</td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+
+        <p class="question">
+            <img src="../icons/question.svg" class="icon" />
+            Complete Table 1 by adding the most appropriate data types. [5]
+        </p>
+
+        <p class="spoiler noselect">
+            <el class="default">Tap/click to reveal</el>
+            <el class="answer">
+                Name: &nbsp; <b>String</b> &check; &nbsp; (names are collections of characters) <br />
+                Age: &nbsp; <b>Integer</b> &check; &nbsp; (an age is usuall represented as a whole number) <br />
+                Height: &nbsp; <b>Float / Real</b> &check; &nbsp; (height in metres is usually a number with a decimal part) <br />
+                Phone number: &nbsp; <b>String</b> &check; &nbsp; (phone numbers start with a 0, which would not be possible to represent as an integer) <br />
+                Employed?: &nbsp; <b>Boolean</b> &check; &nbsp; (there are only two possible options here: true or false)
+            </el>
+        </p>
+
+        <br />
+
+        <hr />
+
+        <p class="question">
+            <img src="../icons/question.svg" class="icon" />
+            Which of the following can be changed as a program runs? [1] <br />
+            <el class="small-code">
+                &nbsp; (a) The data type of a variable <br />
+                &nbsp; (b) The data type of a constant <br />
+                &nbsp; (c) The value of a variable <br />
+                &nbsp; (d) The value of a constant
+            </el>
+        </p>
+
+        <p class="spoiler noselect">
+            <el class="default">Tap/click to reveal</el>
+            <el class="answer">
+                (c) The value of a variable &check;
+            </el>
+        </p>
+
+        <br />
+
+        <hr />
+
+        <p><br />Example 1 shows an algorithm written in pseudo-code.</p>
+
+        <p class="code">
+            <img src="../icons/code.svg" class="icon" />
+            Example 1 <br />
+            <code>
+                date &larr; <el class="string" id="js-target-1">&quot;Thu, 1 Jan 1970&quot;</el> <br />
+                <el class="function">OUTPUT</el> <el class="other">LEN</el>(date) <br />
+                <el class="function">OUTPUT</el> <el class="other">POSITION</el>(date, <el class="string" id="js-target-2">'a'</el>) <br />
+                <el class="function">OUTPUT</el> <el class="other">SUBSTRING</el>(<el class="number" id="js-target-3">1</el>, <el class="number" id="js-target-4">7</el>, date)
+            </code>
+        </p>
+
+        <p class="question">
+            <img src="../icons/question.svg" class="icon" />
+            What is the output of Example 1? [3]
+        </p>
+
+        <p class="spoiler noselect">
+            <el class="default">Tap/click to reveal</el>
+            <el class="answer">
+                <el class="number" id="js-target-5">15</el> &check; <br />
+                <el class="number" id="js-target-6">8</el> &check; <br />
+                <el class="string" id="js-target-7">&quot;hu, 1 J&quot;</el> &check;
+            </el>
+        </p>
+
+        <br />
+
+        <hr />
+
+        <p class="question">
+            <img src="../icons/question.svg" class="icon" />
+            What is the output of <code class="small-code">NOT(5 ≤ 9 AND 4 > 7) OR (6 ≠ 2 AND 8 &lt; 1)</code>? [1]
+        </p>
+
+        <p class="spoiler noselect">
+            <el class="default">Tap/click to reveal</el>
+            <el class="answer">
+                False &check;
+            </el>
+        </p>
+
+        <br />
+
+        <hr />
+
+        <p class="question">
+            <img src="../icons/question.svg" class="icon" />
+            Give two reasons why a developer might want to include random number in their game. [2]
+        </p>
+
+        <p class="spoiler noselect">
+            <el class="default">Tap/click to reveal</el>
+            <el class="answer">
+                Any two from: <br />
+                - So that the game is different every time it is played &check; <br />
+                - To simulate something that is random in real life &check; <br />
+                - So that the game is unpredictable and challenging &check; <br />
+                - [Other valid answers] &check;
+            </el>
+        </p>
+
+        <br />
+
+        <hr />
+
+        <p class="question">
+            <img src="../icons/question.svg" class="icon" />
+            Why would a 2D array be used to store the top three athletes in each event at a sports day? [1]
+        </p>
+
+        <p class="spoiler noselect">
+            <el class="default">Tap/click to reveal</el>
+            <el class="answer">
+                Because the data is split by two categories: in each event there is a list of three athletes to store. &check;
+            </el>
+        </p>
+
+        <br />
+
+        <hr />
+
+        <br /> <br />
+
+        <a class="next-link" href="../2B-01-Subroutines/">Next: 2B.01 - Subroutines</a>
+
+        <br /> <br />
+        <br /> <br />
+
+        <div id="sub">© Rujul Nayak <el id="year">2024-</el></div>
+        <script src="../../year.js"></script>
+
+        <script src="../spoilers.js"></script>
+        <script src="./main.js"></script>
+    </body>
+</html>

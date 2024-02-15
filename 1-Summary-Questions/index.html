@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+        <link rel="stylesheet" href="../main.css">
+
+        <title>Computer Science Revision</title>
+
+        <link rel="icon" type="image/png" href="../icons/logo.svg"/>
+        <meta property="og:image" content="../icons/logo.png" />
+        <meta property="og:image:width" content="640" />
+        <meta property="og:image:height" content="512" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Section 1 Summary Questions | Computer Science Revision">
+    </head>
+
+    <body>
+        <h1>Section 1 Summary Questions</h1>
+        <h3 class="home-link"><a href="../">Computer Science Revision</a></h3>
+        <br />
+
+        <a class="prev-link" href="../1-09-Sorting-Algorithms-Comparison/">Previous: 1.09 - Sorting Algorithms Comparison</a>
+        <br /> <br />
+        
+        <br />
+
+        <hr />
+
+        <p class="question">
+            <img src="../icons/question.svg" class="icon" />
+            Define decomposition. [2]
+        </p>
+
+        <p class="spoiler noselect">
+            <el class="default">Tap/click to reveal</el>
+            <el class="answer">
+                Breaking down a complex problem into smaller subtasks &check;
+                <br /> and solving each one individually &check;
+            </el>
+        </p>
+
+        <br />
+
+        <hr />
+
+        <p><br />Example 1 shows an algorithm written in pseudo-code.</p>
+
+        <p class="code">
+            <img src="../icons/code.svg" class="icon" />
+            Example 1 <br />
+            <code>
+                height &larr; <el class="function">USERINPUT</el> <br />
+                width &larr; <el class="function">USERINPUT</el> <br />
+                area &larr; height * width <br />
+                <el class="function">OUTPUT</el> area
+            </code>
+        </p>
+
+        <p class="question">
+            <img src="../icons/question.svg" class="icon" />
+            Describe what the code in Example 1 does. [3]
+        </p>
+
+        <p class="spoiler noselect">
+            <el class="default">Tap/click to reveal</el>
+            <el class="answer">
+                Takes in the height and width as input, &check;
+                <br /> multiplies them together, &check;
+                <br /> and outputs the resulting area &check;
+            </el>
+        </p>
+
+        <br />
+
+        <hr />
+
+        <p><br />A parcel number is valid if it has exactly 8 characters.</p>
+
+        <p class="question">
+            <img src="../icons/question.svg" class="icon" />
+            Write an algorithm in pseudo-code to output whether or not a parcel number is valid. [5]
+        </p>
+
+        <p class="spoiler noselect">
+            <el class="default">Tap/click to reveal</el>
+            <el class="answer pseudo-code">
+                <code>
+                    number &larr; <el class="function">USERINPUT</el> &check; <br />
+                    <el class="keyword">IF</el> <el class="other">LEN</el>(number) = <el class="number">8</el> <el class="keyword">THEN</el> &check; <br />
+                    &nbsp; <el class="function">OUTPUT</el> <el class="string">&quot;Valid&quot;</el> &check; <br />
+                    <el class="keyword">ELSE</el> <br />
+                    &nbsp; <el class="function">OUTPUT</el> <el class="string">&quot;Invalid&quot;</el> &check; <br />
+                    <el class="keyword">ENDIF</el> &check;
+                </code>
+            </el>
+        </p>
+
+        <br />
+
+        <hr />
+
+        <p><br/>Diagram 1 shows a flowchart of an algorithm.</p>
+
+        <p class="diagram">
+            <img src="../icons/image.svg" class="icon" />
+            Diagram 1 <br /> <br />
+            <img src="./flowchart1.png" />
+        </p>
+
+        <p class="question">
+            <img src="../icons/question.svg" class="icon" />
+            What is the mistake in Diagram 1? [1]
+        </p>
+
+        <p class="spoiler noselect">
+            <el class="default">Tap/click to reveal</el>
+            <el class="answer">There should be a box to input "miles" &check;</el>
+        </p>
+
+        <br />
+
+        <hr />
+
+        <p class="question">
+            <img src="../icons/question.svg" class="icon" />
+            Why can a binary search not be used on the list <code>[2, 3, 5, 7, 13, 11]</code>? [1]
+        </p>
+
+        <p class="spoiler noselect">
+            <el class="default">Tap/click to reveal</el>
+            <el class="answer">
+                The list is not sorted &check;
+            </el>
+        </p>
+
+        <br />
+
+        <hr />
+
+        <p class="question">
+            <img src="../icons/question.svg" class="icon" />
+            Describe the stages of a binary search to find the string <code>"ford"</code> in the list <code>["audi", "bmw", "ford", "mercedes", "tesla", "toyota", "volkswagen"]. [3]</code>
+        </p>
+
+        <p class="spoiler noselect">
+            <el class="default">Tap/click to reveal</el>
+            <el class="answer">
+                Compare "ford" to "mercedes" (the middle item). "ford" is smaller, so take only the left half &check;
+                <br /> Compare "ford" to "bmw" (the new middle item). "ford" is greater, so take only the right half &check;
+                <br /> Compare "ford" to "ford" (the new middle item). They are equal, so stop searching &check;
+            </el>
+        </p>
+
+        <br />
+
+        <hr />
+
+        <p class="question">
+            <img src="../icons/question.svg" class="icon" />
+            Explain two benefits of using bubble sort over merge sort. [4]</code>
+        </p>
+
+        <p class="spoiler noselect">
+            <el class="default">Tap/click to reveal</el>
+            <el class="answer">
+                In bubble sort, all the sorting is done on the original list &check;
+                <br /> and therefore bubble sort uses less memory than merge sort &check;
+                <br /> Merge sort always goes through the whole splitting and merging process, whereas bubble sort exits early once the list is sorted &check;
+                <br /> so bubble sort is quicker for lists which are nearly ordered already &check;
+            </el>
+        </p>
+
+        <br />
+
+        <hr />
+
+        <p class="question">
+            <img src="../icons/question.svg" class="icon" />
+            Why does merge sort split the list into single items, then merge them [2]</code>
+        </p>
+
+        <p class="spoiler noselect">
+            <el class="default">Tap/click to reveal</el>
+            <el class="answer">
+                Smaller lists are easier to sort than larger lists &check;
+                <br /> Ordered lists are easier to merge and sort than unordered lists &check;
+            </el>
+        </p>
+
+        <br />
+
+        <hr />
+
+        <br /> <br />
+
+        <a class="next-link" href="../2A-01-Variables/">Next: 2A.01 - Variables</a>
+
+        <br /> <br />
+        <br /> <br />
+
+        <div id="sub">© Rujul Nayak <el id="year">2024-</el></div>
+        <script src="../../year.js"></script>
+
+        <script src="../spoilers.js"></script>
+    </body>
+</html>

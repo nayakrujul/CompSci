@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+        <link rel="stylesheet" href="../main.css">
+
+        <title>Computer Science Revision</title>
+
+        <link rel="icon" type="image/png" href="../icons/logo.svg"/>
+        <meta property="og:image" content="../icons/logo.png" />
+        <meta property="og:image:width" content="640" />
+        <meta property="og:image:height" content="512" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="2B.06 - Testing | Computer Science Revision">
+    </head>
+
+    <body>
+        <h1>2B.06 &ndash; Testing</h1>
+        <h3 class="home-link"><a href="../">Computer Science Revision</a></h3>
+        <br />
+
+        <a class="prev-link" href="../2B-05-Errors/">Previous: 2B.05 - Errors</a>
+        <br /> <br />
+
+        <p class="definition">
+            <img src="../icons/book.svg" class="icon" />
+            <strong>Testing</strong> a program means giving it some example inputs to make sure that there are no logic errors.
+        </p>
+
+        <p class="definition">
+            <img src="../icons/book.svg" class="icon" />
+            A <strong>test plan</strong> should outline exactly what will be tested.
+        </p>
+
+        <p>The test data from your test plan should cover all three categories of data:</p>
+
+        <ul class="less-padding-left">
+            <li><b>Normal data</b> = valid data that a user is expected to input</li>
+            <li><b>Boundary data</b> = data on either side of the boundary between valid and invalid</li>
+            <li><b>Erroneous data</b> = invalid data that your program should reject</li>
+        </ul>
+
+        <p><br />Table 1 shows an example test plan for a program which should accept a four-digit numeric input.</p>
+
+        <p class="table">
+            <img src="../icons/table.svg" class="icon" />
+            Table 1
+        </p>
+
+        <table>
+            <tr>
+                <th><strong>Type</strong></th>
+                <th><strong>Input</strong></th>
+                <th><strong>Expected output</strong></th>
+            </tr>
+            <tr>
+                <td>Normal</td>
+                <td><code class="string">1234</code></td>
+                <td><code class="valid">Valid.</code></td>
+            </tr>
+            <tr>
+                <td>Boundary</td>
+                <td><code class="string">0000</code></td>
+                <td><code class="valid">Valid.</code></td>
+            </tr>
+            <tr>
+                <td>Boundary</td>
+                <td><code class="string">9999</code></td>
+                <td><code class="valid">Valid.</code></td>
+            </tr>
+            <tr>
+                <td>Boundary</td>
+                <td><code class="string">10000</code></td>
+                <td><code class="error">Reject: too long</code></td>
+            </tr>
+            <tr>
+                <td>Boundary</td>
+                <td><code class="string">999</code></td>
+                <td><code class="error">Reject: too short</code></td>
+            </tr>
+            <tr>
+                <td>Erroneous</td>
+                <td><code class="string">12ab</code></td>
+                <td><code class="error">Reject: not numeric</code></td>
+            </tr>
+        </table>
+
+        <p><br />Trace tables can help you pin-point exactly what went wrong if the actual output doesn't match the expected output.</p>
+
+        <br />
+
+        <hr />
+
+        <p class="question">
+            <img src="../icons/question.svg" class="icon" />
+            Why do we need to test programs?
+        </p>
+
+        <p class="spoiler noselect">
+            <el class="default">Tap/click to reveal</el>
+            <el class="answer">
+                Many issues arise if your software doesn't work, including: <br />
+                &bullet; Competition with other software providers <br />
+                &bullet; Reputational damage <br />
+                &bullet; Legal obligations <br />
+                &bullet; Safety <br />
+            </el>
+        </p>
+
+        <br />
+
+        <hr />
+
+        <br /> <br />
+
+        <a class="next-link" href="../2B-07-Programming-Language-Classification/">Next: 2B.07 - Programming Language Classification</a>
+
+        <br /> <br />
+        <br /> <br />
+
+        <div id="sub">© Rujul Nayak <el id="year">2024-</el></div>
+        <script src="../../year.js"></script>
+
+        <script src="../spoilers.js"></script>
+    </body>
+</html>

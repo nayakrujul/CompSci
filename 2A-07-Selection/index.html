@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+        <link rel="stylesheet" href="../main.css">
+
+        <title>Computer Science Revision</title>
+
+        <link rel="icon" type="image/png" href="../icons/logo.svg"/>
+        <meta property="og:image" content="../icons/logo.png" />
+        <meta property="og:image:width" content="640" />
+        <meta property="og:image:height" content="512" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="2A.07 - Selection | Computer Science Revision">
+    </head>
+
+    <body>
+        <h1>2A.07 &ndash; Selection</h1>
+        <h3 class="home-link"><a href="../">Computer Science Revision</a></h3>
+        <br />
+
+        <a class="prev-link" href="../2A-06-Random-Number-Generation/">Previous: 2A.06 - Random Number Generation</a>
+        <br /> <br />
+
+        <p>We looked at the basic programming constructs of sequence, selection, and iteration in <a href="../1-02-Pseudocode/">1.02 (Pseudocode)</a> and <a href="../1-03-Flowcharts/">1.03 (Flowcharts)</a>. We will go into more detail here.</p>
+
+        <p>Example 1 shows a basic <code>IF</code> statement.</p>
+
+        <p class="code">
+            <img src="../icons/code.svg" class="icon" />
+            Example 1 <br />
+            <code>
+                passcode &larr; <el class="function">USERINPUT</el> <br />
+                <el class="keyword">IF</el> passcode = <el class="number">1234</el> <el class="keyword">THEN</el> <br />
+                &ensp; <el class="function">OUTPUT</el> <el class="string">&quot;OK&quot;</el> <br />
+                <el class="keyword">ELSE</el> <br />
+                &ensp; <el class="function">OUTPUT</el> <el class="string">&quot;Wrong password&quot;</el> <br />
+                <el class="keyword">ENDIF</el>
+            </code>
+        </p>
+
+        <p>
+            A <b>nested</b> <code>IF</code> statement means an <code>IF</code> statement inside another <code>IF</code> statement.
+        </p>
+
+        <p>Example 2 shows a nested <code>IF</code> statement.</p>
+
+        <p class="code">
+            <img src="../icons/code.svg" class="icon" />
+            Example 2 <br />
+            <code>
+                user &larr; <el class="function">USERINPUT</el> <br />
+                passcode &larr; <el class="function">USERINPUT</el> <br />
+                <el class="keyword">IF</el> passcode = <el class="number">1234</el> <el class="keyword">THEN</el> <br />
+                &ensp; <el class="keyword">IF</el> user = <el class="string">&quot;admin&quot;</el> <el class="keyword">THEN</el> <br />
+                &ensp; &ensp; <el class="function">OUTPUT</el> <el class="string">&quot;Full access&quot;</el> <br />
+                &ensp; <el class="keyword">ELSE</el> <br />
+                &ensp; &ensp; <el class="function">OUTPUT</el> <el class="string">&quot;Restricted access&quot;</el> <br />
+                &ensp; <el class="keyword">ENDIF</el> <br />
+                <el class="keyword">ELSE</el> <br />
+                &ensp; <el class="function">OUTPUT</el> <el class="string">&quot;Wrong password&quot;</el> <br />
+                <el class="keyword">ENDIF</el>
+            </code>
+        </p>
+
+        <p><code>ELSE IF</code> statements can be used to chain together multiple conditions.</p>
+
+        <p>Example 3 shows an <code>IF</code> statement with multiple <code>ELSE IF</code> statements.</p>
+
+        <p class="code">
+            <img src="../icons/code.svg" class="icon" />
+            Example 3 <br />
+            <code>
+                option &larr; <el class="function">USERINPUT</el> <br />
+                <el class="keyword">IF</el> option = <el class="number">1</el> <el class="keyword">THEN</el> <br />
+                &ensp; <el class="other">option_1</el>() <br />
+                <el class="keyword">ELSE IF</el> option = <el class="number">2</el> <el class="keyword">THEN</el> <br />
+                &ensp; <el class="other">option_2</el>() <br />
+                <el class="keyword">ELSE IF</el> option = <el class="number">3</el> <el class="keyword">THEN</el> <br />
+                &ensp; <el class="other">option_3</el>() <br />
+                <el class="keyword">ELSE IF</el> option = <el class="number">4</el> <el class="keyword">THEN</el> <br />
+                &ensp; <el class="other">option_4</el>() <br />
+                <el class="keyword">ELSE</el> <br />
+                &ensp; <el class="function">OUTPUT</el> <el class="string">&quot;Invalid&quot;</el> <br />
+                <el class="keyword">ENDIF</el>
+            </code>
+        </p>
+
+        <p><code>ELSE IF</code> statements can often be simplified by using <code>CASE</code> statements.</p>
+
+        <p>Example 4 shows an algorithm which performs exactly the same task as the one in Example 3.</p>
+
+        <p class="code">
+            <img src="../icons/code.svg" class="icon" />
+            Example 3 <br />
+            <code>
+                option &larr; <el class="function">USERINPUT</el> <br />
+                <el class="keyword">CASE</el> option <el class="keyword">OF</el> <br />
+                &ensp; <el class="number">1</el>: <el class="other">option_1</el>() <br />
+                &ensp; <el class="number">2</el>: <el class="other">option_2</el>() <br />
+                &ensp; <el class="number">3</el>: <el class="other">option_3</el>() <br />
+                &ensp; <el class="number">4</el>: <el class="other">option_4</el>() <br />
+                &ensp; <el class="keyword">DEFAULT</el>: <el class="function">OUTPUT</el> <el class="string">&quot;Invalid&quot;</el> <br />
+                <el class="keyword">ENDCASE</el>
+            </code>
+        </p>
+
+        <br />
+
+        <hr />
+
+        <p class="question">
+            <img src="../icons/question.svg" class="icon" />
+            How does including a <code>DEFAULT</code> case in a <code>CASE</code> statement make the code more robust?
+        </p>
+
+        <p class="spoiler noselect">
+            <el class="default">Tap/click to reveal</el>
+            <el class="answer">
+                It's a good idea to make sure the program knows what to do if it receives an unexpected input. Otherwise, it might crash.
+            </el>
+        </p>
+
+        <br />
+
+        <hr />
+
+        <br /> <br />
+
+        <a class="next-link" href="../2A-08-Records/">Next: 2A.08 - Records</a>
+
+        <br /> <br />
+        <br /> <br />
+
+        <div id="sub">© Rujul Nayak <el id="year">2024-</el></div>
+        <script src="../../year.js"></script>
+
+        <script src="../spoilers.js"></script>
+    </body>
+</html>

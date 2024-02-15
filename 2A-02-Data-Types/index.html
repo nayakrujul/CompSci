@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+        <link rel="stylesheet" href="../main.css">
+
+        <title>Computer Science Revision</title>
+
+        <link rel="icon" type="image/png" href="../icons/logo.svg"/>
+        <meta property="og:image" content="../icons/logo.png" />
+        <meta property="og:image:width" content="640" />
+        <meta property="og:image:height" content="512" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="2A.02 - Data Types | Computer Science Revision">
+    </head>
+
+    <body>
+        <h1>2A.02 &ndash; Data Types</h1>
+        <h3 class="home-link"><a href="../">Computer Science Revision</a></h3>
+        <br />
+
+        <a class="prev-link" href="../2A-01-Variables/">Previous: 2A.01 - Variables</a>
+        <br /> <br />
+
+        <p>
+            Data is stored in memory in binary form, but this raises a problem:
+        </p>
+        <p>
+            The binary form of the integer 36 is the same as the binary form of the character '$'.
+        </p>
+        <p>
+            How does the computer decide which of these interpretations is correct?
+        </p>
+
+        <p class="definition">
+            <img src="../icons/book.svg" class="icon" />
+            The <strong>data type</strong> of a variable determines how its binary form in memory is interpreted.
+        </p>
+
+        <p>Table 1 shows the five main data types.</p>
+
+        <p class="table">
+            <img src="../icons/table.svg" class="icon" />
+            Table 1
+        </p>
+
+        <table>
+            <tr>
+                <th><strong>Name</strong></th>
+                <th><strong>Pseudo-code</strong></th>
+                <th><strong>Python</strong></th>
+                <th><strong>Description</strong></th>
+                <th><strong>Examples</strong></th>
+            </tr>
+            <tr>
+                <td>Integer</td>
+                <td><code>INT</code></td>
+                <td><code>int</code></td>
+                <td>A whole number.</td>
+                <td>5, -123, 0</td>
+            </tr>
+            <tr>
+                <td>Float (or real)</td>
+                <td><code>REAL</code></td>
+                <td><code>float</code></td>
+                <td>A number with a decimal part.</td>
+                <td>1.23, -10.0, 0.15</td>
+            </tr>
+            <tr>
+                <td>Boolean</td>
+                <td><code>BOOL</code></td>
+                <td><code>bool</code></td>
+                <td>Either "true" or "false".</td>
+                <td>True, False</td>
+            </tr>
+            <tr>
+                <td>Character</td>
+                <td><code>CHAR</code></td>
+                <td>N/A</td>
+                <td>A single character.</td>
+                <td>'a', '5', '?'</td>
+            </tr>
+            <tr>
+                <td>String</td>
+                <td><code>STRING</code></td>
+                <td><code>str</code></td>
+                <td>A collection of characters.</td>
+                <td>"abcd", "!@#", ""</td>
+            </tr>
+        </table>
+
+        <br />
+
+        <p>Data types can be changed, as shown in Example 1 (pseudo-code) and Example 2 (Python)</p>
+
+        <p class="code">
+            <img src="../icons/code.svg" class="icon" />
+            Example 1 <br />
+            <code>
+                <el class="other">INT_TO_STRING</el>(<el class="number">123</el>) &nbsp; &nbsp; <el class="comment">"123"</el> <br />
+                <el class="other">STRING_TO_INT</el>(<el class="string">&quot;123&quot;</el>) &nbsp; <el class="comment">123</el> <br />
+                <el class="other">REAL_TO_STRING</el>(<el class="number">1.23</el>) &nbsp; <el class="comment">"1.23"</el> <br />
+                <el class="other">STRING_TO_REAL</el>(<el class="string">&quot;1.23&quot;</el>) <el class="comment">1.23</el> <br />
+            </code>
+        </p>
+
+        <p class="code">
+            <img src="../icons/code.svg" class="icon" />
+            Example 2 <br />
+            <code>
+                <el class="other">str</el>(<el class="number">123</el>) &nbsp; &nbsp;&nbsp; <el class="comment">#&nbsp;"123"</el> <br />
+                <el class="other">int</el>(<el class="string">&quot;123&quot;</el>) &nbsp;&nbsp; <el class="comment">#&nbsp;123</el> <br />
+                <el class="other">str</el>(<el class="number">1.23</el>) &nbsp; &nbsp; <el class="comment">#&nbsp;"1.23"</el> <br />
+                <el class="other">float</el>(<el class="string">&quot;1.23&quot;</el>) <el class="comment">#&nbsp;1.23</el> <br />
+            </code>
+        </p>
+
+        <br />
+
+        <hr />
+
+        <p class="question">
+            <img src="../icons/question.svg" class="icon" />
+            Which data type do we use as the condition of an <code>IF</code> statement?
+        </p>
+
+        <p class="spoiler noselect">
+            <el class="default">Tap/click to reveal</el>
+            <el class="answer">
+                A boolean: it needs to evaluate to either True or False.
+            </el>
+        </p>
+
+        <br />
+
+        <hr />
+
+        <br /> <br />
+
+        <a class="next-link" href="../2A-03-Operations/">Next: 2A.03 - Operations</a>
+
+        <br /> <br />
+        <br /> <br />
+
+        <div id="sub">© Rujul Nayak <el id="year">2024-</el></div>
+        <script src="../../year.js"></script>
+
+        <script src="../spoilers.js"></script>
+    </body>
+</html>
