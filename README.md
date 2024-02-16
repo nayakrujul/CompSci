@@ -9,6 +9,10 @@
         <img src="https://img.shields.io/website/https/cs.rujulnayak.com/index.html.svg" />
     </a>
     <br />
+    <a href="https://github.com/nayakrujul/CompSci/commits/main/" style="text-decoration: none;">
+        <img src="https://img.shields.io/github/last-commit/nayakrujul/CompSci" />
+    </a>
+    <br />
     <a href="https://github.com/nayakrujul/CompSci/blob/main/LICENSE" style="text-decoration: none;">
         <img src="https://img.shields.io/github/license/nayakrujul/CompSci" />
     </a>
