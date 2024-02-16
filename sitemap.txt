@@ -36,3 +36,4 @@ https://cs.rujulnayak.com/revision/3-04-Binary-Shifts/
 https://cs.rujulnayak.com/revision/3-05-ASCII-and-Unicode/
 https://cs.rujulnayak.com/revision/3-06-Images/
 https://cs.rujulnayak.com/revision/3-07-Sound/
+https://cs.rujulnayak.com/revision/3-08-Compression/
