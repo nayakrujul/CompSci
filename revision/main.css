@@ -129,6 +129,10 @@ h3.home-link a {
     font-size: 1rem;
 }
 
-ul.less-padding-left {
+ul.less-padding-left, ol.less-padding-left {
     padding-left: 25px;
+}
+
+img.img-render {
+    image-rendering: pixelated;
 }

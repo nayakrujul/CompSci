@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+        <link rel="stylesheet" href="../main.css">
+
+        <title>3.09 - Run-Length Encoding | Computer Science Revision</title>
+
+        <link rel="icon" type="image/png" href="../icons/logo.svg"/>
+        <meta property="og:image" content="../icons/logo.png" />
+        <meta property="og:image:width" content="640" />
+        <meta property="og:image:height" content="512" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="3.09 - Run-Length Encoding | Computer Science Revision (an online, mobile-friendly revision guide for GCSE Computer Science students)">
+    </head>
+
+    <body>
+        <h1>3.09 &ndash; Run-Length Encoding</h1>
+        <h3 class="home-link"><a href="../">Computer Science Revision</a></h3>
+        <br />
+
+        <a class="prev-link" href="../3-08-Compression/">Previous: 3.08 - Compression</a>
+        <br /> <br />
+
+        <p class="definition">
+            <img src="../icons/book.svg" class="icon" />
+            <strong>Run-Length Encoding</strong> (RLE) is a form of lossless compression where "runs" (groups) of consecutive data which have the same value are grouped together in length/data pairs.
+        </p>
+
+        <p>Basically, that means we group together identical items which are next to each other, and then we store each group as its length and the item.</p>
+
+        <p><br />So, if we were compressing the string <code class="string">"aabbbacc"</code> using RLE, we would use the following steps:</p>
+
+        <ol class="less-padding-left">
+            <li>
+                Group together runs of identical characters: <br />
+                <code class="string">"aa"</code>, <code class="string">"bbb"</code>, <code class="string">"a"</code>, <code class="string">"cc"</code>
+            </li>
+            <li>
+                Get the length of each group: <br />
+                <code class="string">"aa"</code> (<code class="number">2</code>), <code class="string">"bbb"</code> (<code class="number">3</code>),
+                <code class="string">"a"</code> (<code class="number">1</code>), <code class="string">"cc"</code> (<code class="number">2</code>)
+            </li>
+            <li>
+                Put them into length/character pairs: <br />
+                (<code class="number">2</code>, <code class="string">a</code>) (<code class="number">3</code>, <code class="string">b</code>)
+                (<code class="number">1</code>, <code class="string">a</code>) (<code class="number">2</code>, <code class="string">c</code>)
+            </li>
+        </ol>
+
+        <p><br />If we used 7-bit ASCII to encode the string, we would have needed <code>7 &times; 8 = <b>56 bits</b></code>.</p>
+
+        <p>Assuming we use 2 bits for the number and 7 bits for the character, using RLE we need <code>(2 + 7) &times; 4 = <b>36 bits</b></code>.</p>
+
+        <p>This means that RLE saved <b>20 bits</b> in this example.</p>
+
+        <p><br /><b>RLE can also be used on images.</b></p>
+
+        <p>Diagram 1 shows an example 10&times;7 black-and-white image.</p>
+
+        <p class="diagram">
+            <img src="../icons/image.svg" class="icon" />
+            Diagram 1 <br /> <br />
+            <img src="./logo-small.png" class="img-render" width="200px" />
+        </p>
+
+        <p>With <code>0</code> representing black and <code class="comment">1</code> representing white, the uncompressed data would look like this (<b>70 bits</b>):</p>
+
+        <p><code id="js-target">
+            0 0 0 0 0 0 1 0 0 0 <br />
+            0 1 1 1 1 0 1 0 1 0 <br />
+            0 1 1 1 1 0 1 0 0 0 <br />
+            0 1 1 1 1 0 1 0 0 0 <br />
+            0 0 0 0 0 0 1 0 0 0 <br />
+            1 1 0 0 1 1 1 0 1 0 <br />
+            1 0 0 0 0 1 1 0 0 0 <br />
+        </code></p>
+
+        <p>However, with RLE, the compressed file would look like this (<b>145 bits</b> assuming 4 bits per number):</p>
+
+        <p>
+            (<code class="number">6</code>, <code class="string">0</code>) (<code class="number">1</code>, <code class="string">1</code>) (<code class="number">4</code>, <code class="string">0</code>)
+            (<code class="number">4</code>, <code class="string">1</code>) (<code class="number">1</code>, <code class="string">0</code>) (<code class="number">1</code>, <code class="string">1</code>)
+            (<code class="number">1</code>, <code class="string">0</code>) (<code class="number">1</code>, <code class="string">1</code>) (<code class="number">2</code>, <code class="string">0</code>)
+            (<code class="number">4</code>, <code class="string">1</code>) (<code class="number">1</code>, <code class="string">0</code>) (<code class="number">1</code>, <code class="string">1</code>)
+            (<code class="number">4</code>, <code class="string">0</code>) (<code class="number">4</code>, <code class="string">1</code>) (<code class="number">1</code>, <code class="string">0</code>)
+            (<code class="number">1</code>, <code class="string">1</code>) (<code class="number">9</code>, <code class="string">0</code>) (<code class="number">1</code>, <code class="string">1</code>)
+            (<code class="number">3</code>, <code class="string">0</code>) (<code class="number">2</code>, <code class="string">1</code>) (<code class="number">2</code>, <code class="string">0</code>)
+            (<code class="number">3</code>, <code class="string">1</code>) (<code class="number">1</code>, <code class="string">0</code>) (<code class="number">1</code>, <code class="string">1</code>)
+            (<code class="number">1</code>, <code class="string">0</code>) (<code class="number">1</code>, <code class="string">1</code>) (<code class="number">4</code>, <code class="string">0</code>)
+            (<code class="number">2</code>, <code class="string">1</code>) (<code class="number">3</code>, <code class="string">0</code>)
+        </p>
+
+        <p><br />Yes: in this example the RLE version is <b>longer</b> than the original. This does happen sometimes if there aren't many long runs of identical items.</p>
+
+        <br />
+
+        <hr />
+
+        <p class="question">
+            <img src="../icons/question.svg" class="icon" />
+            Use RLE to encode the following binary sequence: <code class="small-code">1111 1100 0001 1010</code>.
+        </p>
+
+        <p class="spoiler noselect">
+            <span class="default">Tap/click to reveal</span>
+            <span class="answer">
+                (<code class="number">6</code>, <code class="string">1</code>) (<code class="number">5</code>, <code class="string">0</code>) (<code class="number">2</code>, <code class="string">1</code>)
+                (<code class="number">1</code>, <code class="string">0</code>) (<code class="number">1</code>, <code class="string">1</code>) (<code class="number">1</code>, <code class="string">0</code>)
+            </span>
+        </p>
+
+        <br />
+
+        <hr />
+
+        <br /> <br />
+
+        <div id="sub">© Rujul Nayak <span id="year">2024-</span></div>
+        <script src="../../year.js"></script>
+
+        <script src="../spoilers.js"></script>
+        <script src="./main.js"></script>
+    </body>
+</html>
