@@ -1,0 +1,47 @@
+body {
+    height: 100vh;
+    text-align: center;
+    color: lightgray;
+    background: linear-gradient(135deg, #e66465, #9198e5);
+}
+
+h1#heading {
+    color: rgb(0, 55, 255);
+    width: 100%;
+    vertical-align: middle;
+    font-size: 5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+p {
+    font-size: 1.5rem;
+    padding-top: 2rem;
+}
+
+p#link {
+    font-size: 2rem;
+    padding-top: 4rem;
+}
+
+a.homepage-override {
+    font-style: normal;
+}
+
+@media (max-width: 800px) {
+    h1#heading {
+        font-size: 3rem;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+        padding-top: 1.5rem;
+    }
+
+    p#link {
+        font-size: 1.5rem;
+        padding-top: 2.5rem;
+    }
+}
