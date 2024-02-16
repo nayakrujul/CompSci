@@ -1,12 +1,11 @@
 body {
     text-align: center;
     color: lightgray;
-    background: linear-gradient(135deg, #e66465, #9198e5);
+    background: linear-gradient(135deg, #800000, #000080);
     background-size: 100vw 100vh;
 }
 
 h1#heading {
-    color: rgb(0, 55, 255);
     width: 100%;
     vertical-align: middle;
     font-size: 5rem;
@@ -26,6 +25,7 @@ p#link {
 
 a.homepage-override {
     font-style: normal;
+    color: lightblue;
 }
 
 @media (max-width: 800px) {
