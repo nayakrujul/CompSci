@@ -1,8 +1,8 @@
 body {
-    height: 100vh;
     text-align: center;
     color: lightgray;
     background: linear-gradient(135deg, #e66465, #9198e5);
+    background-size: 100vw 100vh;
 }
 
 h1#heading {
