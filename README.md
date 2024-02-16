@@ -1,7 +1,7 @@
 <div align="center">
     <a href="https://cs.rujulnayak.com/">
       <img
-        src="https://raw.githubusercontent.com/nayakrujul/CompSci/main/revision/icons/logo.svg"
+        src="https://github.com/nayakrujul/CompSci/assets/55329600/43878b7a-6220-4cfe-b79a-a8cc6b5494db"
         height="200px" alt="CS logo" title="https://cs.rujulnayak.com/" />
     </a>
     <br />
@@ -11,6 +11,10 @@
     <br />
     <a href="https://github.com/nayakrujul/CompSci/blob/main/LICENSE" style="text-decoration: none;">
         <img src="https://img.shields.io/github/license/nayakrujul/CompSci" />
+    </a>
+    <br />
+    <a href="https://www.aqa.org.uk/subjects/computer-science-and-it/gcse/computer-science-8525" style="text-decoration: none;">
+        <img src="https://img.shields.io/badge/exam_board-AQA-purple" />
     </a>
 </div>
 
