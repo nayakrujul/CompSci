@@ -2,7 +2,7 @@ body {
     text-align: center;
     color: lightgray;
     background: linear-gradient(135deg, #800000, #000080);
-    background-size: 100vw 100vh;
+    background-size: 100vw max(100%, 100vh);
 }
 
 h1#heading {
