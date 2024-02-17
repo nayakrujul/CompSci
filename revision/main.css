@@ -138,11 +138,11 @@ img.img-render {
 }
 
 .tip {
-    display: none;
+    display: block;
 }
 
-@media (pointer: coarse) {
+@media (hover: hover) {
     .tip {
-        display: block;
+        display: none;
     }
 }
