@@ -136,3 +136,13 @@ ul.less-padding-left, ol.less-padding-left {
 img.img-render {
     image-rendering: pixelated;
 }
+
+.tip {
+    display: none;
+}
+
+@media (hover: none) {
+    .tip {
+        display: inline;
+    }
+}

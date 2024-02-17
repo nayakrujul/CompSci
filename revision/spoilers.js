@@ -84,9 +84,17 @@ function checkDirection() {
 
 document.addEventListener('touchstart', e => {
     touchstartX = e.changedTouches[0].screenX;
-})
+});
 
 document.addEventListener('touchend', e => {
     touchendX = e.changedTouches[0].screenX;
     checkDirection();
-})
+});
+
+let home_link = document.querySelector(".home-link");
+
+let tip = document.createElement("p");
+tip.innerHTML = "<br /><i>Tip: you can swipe to navigate between pages on a touchscreen.</i>";
+tip.classList.add("tip");
+
+document.body.insertBefore(tip, home_link.nextSibling);
