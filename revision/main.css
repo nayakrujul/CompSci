@@ -141,8 +141,8 @@ img.img-render {
     display: none;
 }
 
-@media (hover: none) {
+@media (pointer: coarse) {
     .tip {
-        display: inline;
+        display: block;
     }
 }
