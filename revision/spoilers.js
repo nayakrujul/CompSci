@@ -57,6 +57,7 @@ const pages = [
     "3-08-Compression",
     "3-09-Run-Length-Encoding",
     "3-10-Huffman-Coding",
+    "3-Summary-Questions",
 ]
 
 const temp = location.href.split("/");
