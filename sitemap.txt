@@ -38,3 +38,4 @@ https://cs.rujulnayak.com/revision/3-06-Images/
 https://cs.rujulnayak.com/revision/3-07-Sound/
 https://cs.rujulnayak.com/revision/3-08-Compression/
 https://cs.rujulnayak.com/revision/3-09-Run-Length-Encoding/
+https://cs.rujulnayak.com/revision/3-10-Huffman-Coding/
