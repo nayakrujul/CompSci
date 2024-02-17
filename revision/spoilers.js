@@ -64,10 +64,15 @@ const index = pages.indexOf(this_page);
 
 let touchstartX = 0;
 let touchendX = 0;
+let startTime = 0;
+let endTime = 0;
     
 function checkDirection() {
     let diff = touchendX - touchstartX;
-    if (Math.abs(diff) > screen.width * 0.2) {
+    if (
+        Math.abs(diff) > screen.width * 0.2
+        && endTime - startTime <= 750
+    ) {
         if (diff < 0) {
             // Next page
             if (index !== pages.length - 1) {
@@ -84,10 +89,12 @@ function checkDirection() {
 
 document.addEventListener('touchstart', e => {
     touchstartX = e.changedTouches[0].screenX;
+    startTime = e.timeStamp;
 });
 
 document.addEventListener('touchend', e => {
     touchendX = e.changedTouches[0].screenX;
+    endTime = e.timeStamp;
     checkDirection();
 });
 
