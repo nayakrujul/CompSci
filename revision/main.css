@@ -141,7 +141,7 @@ img.img-render {
     display: block;
 }
 
-@media (hover: hover) {
+@media (pointer: fine) {
     .tip {
         display: none;
     }
