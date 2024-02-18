@@ -5,6 +5,10 @@
         height="200px" alt="CS logo" title="https://cs.rujulnayak.com/" />
     </a>
     <br />
+    <a href="https://github.com/nayakrujul/CompSci/actions/workflows/pages/pages-build-deployment" style="text-decoration: none;">
+        <img src="https://github.com/nayakrujul/CompSci/actions/workflows/pages/pages-build-deployment/badge.svg" />
+    </a>
+    <br />
     <a href="https://cs.rujulnayak.com/" style="text-decoration: none;">
         <img src="https://img.shields.io/website/https/cs.rujulnayak.com/index.html.svg" />
     </a>
