@@ -17,52 +17,8 @@
 
 // Swipes
 
-const pages = [
-    "1-01-Computational-Thinking",
-    "1-02-Pseudocode",
-    "1-03-Flowcharts",
-    "1-04-Linear-Search",
-    "1-05-Binary-Search",
-    "1-06-Searching-Algorithms-Comparison",
-    "1-07-Bubble-Sort",
-    "1-08-Merge-Sort",
-    "1-09-Sorting-Algorithms-Comparison",
-    "1-Summary-Questions",
-    "2A-01-Variables",
-    "2A-02-Data-Types",
-    "2A-03-Operations",
-    "2A-04-Strings",
-    "2A-05-Arrays",
-    "2A-06-Random-Number-Generation",
-    "2A-07-Selection",
-    "2A-08-Records",
-    "2A-09-Files",
-    "2A-Summary-Questions",
-    "2B-01-Subroutines",
-    "2B-02-Local-and-Global-Variables",
-    "2B-03-Structured-Programming",
-    "2B-04-Validation-and-Authentication",
-    "2B-05-Errors",
-    "2B-06-Testing",
-    "2B-07-Programming-Language-Classification",
-    "2B-08-Translators",
-    "2B-Summary-Questions",
-    "3-01-Storage-Units",
-    "3-02-Binary-and-Hexadecimal",
-    "3-03-Binary-Arithmetic",
-    "3-04-Binary-Shifts",
-    "3-05-ASCII-and-Unicode",
-    "3-06-Images",
-    "3-07-Sound",
-    "3-08-Compression",
-    "3-09-Run-Length-Encoding",
-    "3-10-Huffman-Coding",
-    "3-Summary-Questions",
-]
-
-const temp = location.href.split("/");
-const this_page = temp[temp.length - 2];
-const index = pages.indexOf(this_page);
+const prev = document.querySelector(".prev-link");
+const next = document.querySelector(".next-link");
 
 let touchstartX = 0;
 let touchendX = 0;
@@ -77,13 +33,13 @@ function checkDirection() {
     ) {
         if (diff < 0) {
             // Next page
-            if (index !== pages.length - 1) {
-                location.replace("../" + pages[index + 1] + "/");
+            if (next !== null) {
+                location.replace(next.href);
             }
         } else {
             // Previous page
-            if (index !== 0) {
-                location.replace("../" + pages[index - 1] + "/");
+            if (prev !== null) {
+                location.replace(prev.href);
             }
         }
     }
