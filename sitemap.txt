@@ -43,3 +43,4 @@ https://cs.rujulnayak.com/revision/3-Summary-Questions/
 https://cs.rujulnayak.com/revision/4-01-Logic-Gates/
 https://cs.rujulnayak.com/revision/4-02-Simple-Truth-Tables/
 https://cs.rujulnayak.com/revision/4-03-Complex-Truth-Tables/
+https://cs.rujulnayak.com/revision/4-04-Logic-Diagrams/
