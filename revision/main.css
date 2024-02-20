@@ -146,3 +146,7 @@ img.img-render {
         display: none;
     }
 }
+
+.no-bold {
+    font-weight: normal;
+}

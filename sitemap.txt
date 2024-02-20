@@ -41,3 +41,4 @@ https://cs.rujulnayak.com/revision/3-09-Run-Length-Encoding/
 https://cs.rujulnayak.com/revision/3-10-Huffman-Coding/
 https://cs.rujulnayak.com/revision/3-Summary-Questions/
 https://cs.rujulnayak.com/revision/4-01-Logic-Gates/
+https://cs.rujulnayak.com/revision/4-02-Simple-Truth-Tables/
