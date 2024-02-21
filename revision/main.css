@@ -150,3 +150,7 @@ img.img-render {
 .no-bold {
     font-weight: normal;
 }
+
+.overbar {
+    text-decoration: overline;
+}
