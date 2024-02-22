@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+        <link rel="stylesheet" href="../main.css">
+
+        <title>4.07 - The Operating System | Computer Science Revision</title>
+
+        <link rel="icon" type="image/png" href="../icons/logo.svg"/>
+        <meta property="og:image" content="../icons/logo.png" />
+        <meta property="og:image:width" content="640" />
+        <meta property="og:image:height" content="512" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="4.07 - The Operating System | Computer Science Revision (an online, mobile-friendly revision guide for GCSE Computer Science students)">
+    </head>
+
+    <body>
+        <h1>4.07 &ndash; The Operating System</h1>
+        <h3 class="home-link"><a href="../">Computer Science Revision</a></h3>
+        <br />
+
+        <a class="prev-link" href="../4-05-Logic-Symbols/">Previous: 4.05 - Logic Symbols</a>
+        <br /> <br />
+
+        <p class="definition">
+            <img src="../icons/book.svg" class="icon" />
+            The <strong>Operating System</strong> (OS) is a complex piece of system software found on general-purpose computer systems.
+        </p>
+
+        <p>Common operating systems include Android, iOS, macOS, and Windows. <span id="js-target"></span></p>
+
+        <p><br /><b>The OS has six main jobs:</b></p>
+
+        <ul class="spaced-out less-padding-left">
+            <li>
+                <b>Processor management</b> <br />
+                Each CPU core can only process one instruction at a time, so if you have multiple applications running,
+                it's the OS's job to tell the CPU which application's instructions to process. Operating Systems
+                schedule different tasks, using a priority system to make some applications' tasks wait in a queue.
+            </li>
+
+            <li>
+                <b>Memory management</b> <br />
+                The OS manages which bits of RAM each application is allowed to use. This makes sure that applications
+                don't interfere with or overwrite each other's data. When applications are closed, the OS removes their
+                data from RAM.
+            </li>
+
+            <li>
+                <b>Input/Output device management</b> <br />
+                I/O devices (like keyboards, microphones, or speakers), also called "peripherals", allow computers to
+                take inputs and give outputs. Operating Systems use device drivers to communicate with I/O devices.
+            </li>
+
+            <li>
+                <b>Application management</b> <br />
+                The OS has to install an application onto your computer when you download it. It also communicates
+                with an Applications Program Interface (API) to allow the application to interact with your computer.
+                The OS also provides an interface through which applications can be accessed.
+            </li>
+
+            <li>
+                <b>Disk management</b> <br />
+                Your files aren't stored in folders in your computer. They're all stored in the same place on your hard
+                drive. The OS has to keep track of where each file is stored on your hard drive, and also your folder
+                structure. 
+            </li>
+
+            <li>
+                <b>Security management</b> <br />
+                The OS manages login details for different users on your computer, as well as user access permissions.
+                It also encrypts files on the hard drive to keep them secure.
+            </li>
+        </ul>
+
+        <br />
+
+        <hr />
+
+        <p class="question">
+            <img src="../icons/question.svg" class="icon" />
+            Why don't embedded systems have an OS?
+        </p>
+
+        <p class="spoiler noselect">
+            <span class="default">Tap/click to reveal</span>
+            <span class="answer">
+                Their memory is too small to store an OS, and they don't need one because none of the six tasks above
+                apply to an embedded system.
+            </span>
+        </p>
+
+        <br />
+
+        <hr />
+
+        <br /> <br />
+
+        <div id="sub">© Rujul Nayak <span id="year">2024-</span></div>
+        <script src="../../year.js"></script>
+
+        <script src="../spoilers.js"></script>
+        <script src="./main.js"></script>
+    </body>
+</html>

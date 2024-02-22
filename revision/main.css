@@ -133,6 +133,10 @@ ul.less-padding-left, ol.less-padding-left {
     padding-left: 25px;
 }
 
+ul.spaced-out li {
+    padding-top: 20px;
+}
+
 img.img-render {
     image-rendering: pixelated;
 }
