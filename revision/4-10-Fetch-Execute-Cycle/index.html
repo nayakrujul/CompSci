@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+        <link rel="stylesheet" href="../main.css">
+
+        <title>4.10 - Fetch-Execute Cycle | Computer Science Revision</title>
+
+        <link rel="icon" type="image/png" href="../icons/logo.svg"/>
+        <meta property="og:image" content="../icons/logo.png" />
+        <meta property="og:image:width" content="640" />
+        <meta property="og:image:height" content="512" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="4.10 - Fetch-Execute Cycle | Computer Science Revision (an online, mobile-friendly revision guide for GCSE Computer Science students)">
+    </head>
+
+    <body>
+        <h1>4.10 &ndash; Fetch-Execute Cycle</h1>
+        <h3 class="home-link"><a href="../">Computer Science Revision</a></h3>
+        <br />
+
+        <a class="prev-link" href="../4-09-The-CPU/">Previous: 4.09 - The CPU</a>
+        <br /> <br />
+
+        <p class="definition">
+            <img src="../icons/book.svg" class="icon" />
+            The <strong>Fetch-Execute Cycle</strong> (sometimes called the Fetch-Decode-Execute Cycle) describes how a CPU carries out instructions
+        </p>
+
+        <p>The cycle consists of three stages:</p>
+
+        <ul class="spaced-out less-padding-left">
+            <li>
+                The <b>Fetch</b> Stage <br />
+                The next instruction is loaded from main memory into the Instruction Register in the CPU. The Program
+                Counter (the register that stores what memory address the next instruction is at) is incremented to
+                point to the next instruction. 
+            </li>
+
+            <li>
+                The <b>Decode</b> Stage <br />
+                The CPU works out what needs to be done in order to carry out the instruction.
+            </li>
+
+            <li>
+                The <b>Execute</b> Stage <br />
+                The operation is carried out by the CPU. If necessary, data is sent between the CU and the ALU. Data may
+                be written to or read from main memory. Any relevant registers are updated.
+            </li>
+        </ul>
+
+        <p><br />Then, the cycle starts again. Each stage takes exactly one clock tick.</p>
+
+        <br />
+
+        <hr />
+
+        <p class="question">
+            <img src="../icons/question.svg" class="icon" />
+            How will the clock speed of a CPU affect its performance?
+        </p>
+
+        <p class="spoiler noselect">
+            <span class="default">Tap/click to reveal</span>
+            <span class="answer">
+                If the clock speed is higher, the Fetch-Execute Cycle takes less time and therefore the CPU performs
+                better. However, increasing the clock speed above the recommended level is called "overclocking" -
+                which could be dangerous for your computer.
+            </span>
+        </p>
+
+        <br />
+
+        <hr />
+
+        <br /> <br />
+
+        <div id="sub">© Rujul Nayak <span id="year">2024-</span></div>
+        <script src="../../year.js"></script>
+
+        <script src="../spoilers.js"></script>
+    </body>
+</html>
