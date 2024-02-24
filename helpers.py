@@ -14,6 +14,7 @@ with open("revision/index.html", "r", encoding='utf-8') as e:
         if ("." not in s) and (s[0].isdigit()) and (s not in lst):
             t = rreplace(t, "</ul>", f"""    <li><a href="./{s}/">{s.replace('-', '.', 1).replace('-', chr(92), 1).replace('-', ' ').replace(chr(92), ' - ')}</a></li>
         </ul>""")
+            lst.append(s)
 
 with open("revision/index.html", "w") as f:
     f.write(t)

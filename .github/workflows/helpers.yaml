@@ -27,4 +27,4 @@ jobs:
     - name: Commit and push
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
-        commit_message: "Update sitemap.txt"
+        commit_message: "Helper function updated homepage and/or sitemap"
