@@ -53,6 +53,7 @@ switch (os) {
     case 'Mac OS X':
     case 'Android':
         osVersion = /(?:Android|Mac OS|Mac OS X|MacPPC|MacIntel|Mac_PowerPC|Macintosh) ([\.\_\d]+)/.exec(nAgt)[1].replaceAll("_", ".");
+        if (os === 'Android' && osVersion === '10') osVersion = '10 or later'; // for Chrome users
         break;
 
     case 'iOS':
