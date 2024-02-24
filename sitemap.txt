@@ -48,3 +48,4 @@ https://cs.rujulnayak.com/revision/4-05-Logic-Symbols/
 https://cs.rujulnayak.com/revision/4-06-Hardware-and-Software/
 https://cs.rujulnayak.com/revision/4-07-The-Operating-System/
 https://cs.rujulnayak.com/revision/4-08-Utility-Software/
+https://cs.rujulnayak.com/revision/4-09-The-CPU/
