@@ -1,0 +1,29 @@
+name: Update sitemap
+
+on:
+  push:
+    paths-ignore:
+      - "sitemap.txt"
+
+jobs:
+  py:
+    name: Run main.py
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.9]
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Run Python file
+      run: |
+        python main.py
+    - name: Stage changes
+      run: git add .
+    - name: Commit and push
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: "Update sitemap.txt"
