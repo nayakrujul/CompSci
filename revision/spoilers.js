@@ -63,3 +63,12 @@ tip.innerHTML = "<br /><i>Tip: you can swipe to navigate between pages on a touc
 tip.classList.add("tip");
 
 document.body.insertBefore(tip, home_link.nextSibling);
+
+
+// Navbar
+
+const div = document.getElementById("sub");
+
+div.innerHTML += ` &ensp; ` +
+    (prev !== null ? `<a class="navbar-link" href="${prev.href}">&#9664;</a> &ensp; ` : ``) +
+    (next !== null ? `<a class="navbar-link" href="${next.href}">&#9654;</a> &ensp; ` : ``)

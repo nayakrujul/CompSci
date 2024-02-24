@@ -158,3 +158,8 @@ img.img-render {
 .overbar {
     text-decoration: overline;
 }
+
+a.navbar-link {
+    font-style: normal;
+    text-decoration: none;
+}
