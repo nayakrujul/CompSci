@@ -70,5 +70,5 @@ document.body.insertBefore(tip, home_link.nextSibling);
 const div = document.getElementById("sub");
 
 div.innerHTML += ` &ensp; ` +
-    (prev !== null ? `<a class="navbar-link" href="${prev.href}">&#9664;</a> &ensp; ` : ``) +
-    (next !== null ? `<a class="navbar-link" href="${next.href}">&#9654;</a> &ensp; ` : ``)
+    (prev !== null ? `<a class="navbar-link" href="${prev.href}">&#9664;</a>` : `&#9664;`) + ` &ensp; ` +
+    (next !== null ? `<a class="navbar-link" href="${next.href}">&#9654;</a>` : `&#9654`);
