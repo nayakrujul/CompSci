@@ -26,7 +26,22 @@
         <a class="prev-link" href="../4-12-RAM-and-ROM/">Previous: 4.12 - RAM and ROM</a>
         <br /> <br />
             
-        <!-- -->
+        <p><b><i>Note: this is a small but interesting extension topic that will not be assessed in the exam.</i></b></p>
+
+        <p class="definition">
+            <img src="../icons/book.svg" class="icon" />
+            <strong>Virtual Memory</strong> refers to a slice of secondary storage which is used like main memory.
+        </p>
+
+        <p>
+            When RAM becomes full, data and instructions for <b>open but inactive</b> applications are temporarily moved
+            to secondary storage. This frees up RAM for immediate tasks.
+        </p>
+
+        <p>
+            When the inactive application is needed again, its data and instructions must be moved back from secondary
+            storage into RAM for them to be accessed by the CPU.
+        </p>
 
         <br />
 
@@ -34,13 +49,14 @@
 
         <p class="question">
             <img src="../icons/question.svg" class="icon" />
-            
+            How would using Virtual Memory affect the computer's performance?
         </p>
 
         <p class="spoiler noselect">
             <span class="default">Tap/click to reveal</span>
             <span class="answer">
-
+                The computer would run much more slowly because accessing secondary storage is so much slower than
+                accessing RAM.
             </span>
         </p>
 
