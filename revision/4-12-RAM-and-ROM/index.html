@@ -26,7 +26,33 @@
         <a class="prev-link" href="../4-11-CPU-Performance/">Previous: 4.11 - CPU Performance</a>
         <br /> <br />
             
-        <!-- -->
+        <p class="definition">
+            <img src="../icons/book.svg" class="icon" />
+            <strong>Random Access Memory</strong> (RAM) is used as a form of main memory in computer systems.
+        </p>
+
+        <p>
+            Main memory can be directly accessed by the CPU, so when an application is started up its data and
+            instructions must be loaded into RAM.
+        </p>
+
+        <p class="definition">
+            <img src="../icons/book.svg" class="icon" />
+            <strong>Volatile</strong> memory loses its contents when the power is switched off.
+        </p>
+
+        <p>RAM is volatile, so anything that was in RAM is not saved when the computer is shut down.</p>
+
+        <p class="definition">
+            <img src="../icons/book.svg" class="icon" />
+            <strong>Read Only Memory</strong> (ROM) is a non-volatile form of main memory.
+        </p>
+
+        <p>
+            However, as the name suggests, it can only be read from and not written to. Because of this, instructions
+            that are not meant to be changed (like BIOS, the instructions for how to start the computer) are stored on
+            ROM.
+        </p>
 
         <br />
 
@@ -34,13 +60,15 @@
 
         <p class="question">
             <img src="../icons/question.svg" class="icon" />
-            
+            Would embedded systems have a higher or lower proportion of ROM than general-purpose systems?
         </p>
 
         <p class="spoiler noselect">
             <span class="default">Tap/click to reveal</span>
             <span class="answer">
-
+                Higher: almost all of an embedded system's memory is ROM, as their instructions don't need to be
+                changed (the firmware can't be updated), and they don't need to store as much data as general-purpose
+                systems.
             </span>
         </p>
 
