@@ -56,3 +56,4 @@ https://cs.rujulnayak.com/revision/4-13-Virtual-Memory/
 https://cs.rujulnayak.com/revision/4-14-Magnetic-Storage/
 https://cs.rujulnayak.com/revision/4-15-Flash-Storage/
 https://cs.rujulnayak.com/revision/4-16-Optical-Storage/
+https://cs.rujulnayak.com/revision/4-17-Secondary-Storage-Summary/
