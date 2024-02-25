@@ -51,3 +51,4 @@ https://cs.rujulnayak.com/revision/4-08-Utility-Software/
 https://cs.rujulnayak.com/revision/4-09-The-CPU/
 https://cs.rujulnayak.com/revision/4-10-Fetch-Execute-Cycle/
 https://cs.rujulnayak.com/revision/4-11-CPU-Performance/
+https://cs.rujulnayak.com/revision/4-12-RAM-and-ROM/
