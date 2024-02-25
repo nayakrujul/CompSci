@@ -105,3 +105,14 @@ with open(path + "/index.html", "w+") as h:
         <script src="../spoilers.js"></script>
     </body>
 </html>""")
+
+with open("revision/" + p + "/index.html", "r") as i:
+    txt = i.read().replace('<div id="sub"', f'''<a class="next-link" href="../{filename}/">Next: {n} - {t}</a>
+
+        <br /> <br />
+        <br /> <br />
+
+        <div id="sub"''')
+
+with open("revision/" + p + "/index.html", "w") as j:
+    j.write(txt)
