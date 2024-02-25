@@ -7,29 +7,8 @@ on:
       - "sitemap.txt"
 
 jobs:
-  newpage:
-    name: Create a new page
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: [3.9]
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v2
-      with:
-        python-version: ${{ matrix.python-version }}
-    - name: Run Python file
-      run: |
-        python newpage.py
-    - name: Stage changes
-      run: git add .
-    - name: Commit and push
-      uses: stefanzweifel/git-auto-commit-action@v4
-      with:
-        commit_message: "Add new page"
-  sitemap:
-    name: Update homepage and sitemap
+  helpers:
+    name: Helper functions
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -48,4 +27,4 @@ jobs:
     - name: Commit and push
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
-        commit_message: "Update index and/or sitemap"
+        commit_message: "Helper function updates"
