@@ -107,7 +107,7 @@ with open(path + "/index.html", "w+") as h:
 </html>""")
 
 with open("revision/" + p + "/index.html", "r") as i:
-    txt = i.read().replace('<div id="sub"', f'''<a class="next-link" href="../{filename}/">Next: {n} - {t}</a>
+    txt = i.read().replace('<div id="sub"', f'''<a class="next-link" href="../{filename}/">Next: {n} - {r}</a>
 
         <br /> <br />
         <br /> <br />
