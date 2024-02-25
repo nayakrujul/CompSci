@@ -163,3 +163,15 @@ a.navbar-link {
     font-style: normal;
     text-decoration: none;
 }
+
+.colour-best {
+    color: #3cb043
+}
+
+.colour-mid {
+    color: darkgoldenrod;
+}
+
+.colour-worst {
+    color: #ed4337;
+}
