@@ -63,5 +63,5 @@ switch (os) {
 }
 
 if (os !== undefined) {
-    target.innerHTML = "The operating system of this device is <b>" + os + (osVersion !== undefined ? ` (version ${osVersion})` : "") + "</b>.";
+    target.innerHTML = "The operating system of this device is <b>" + os + (osVersion !== undefined ? ` ${osVersion}` : "") + "</b>.";
 }
