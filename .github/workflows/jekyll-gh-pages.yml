@@ -26,12 +26,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: skip-workflow
-        id: skip-workflow # id used for referencing step
-        uses: saulmaldonado/skip-workflow@v1
-        with:
-          phrase: 'no-pages'
-          github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Checkout
         uses: actions/checkout@v3
       - name: Setup Pages
