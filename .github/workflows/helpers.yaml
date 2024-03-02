@@ -8,7 +8,7 @@ on:
 
 jobs:
   helpers:
-    name: Helper functions on ${{ env.sha_short }}
+    name: Helper functions
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -22,9 +22,13 @@ jobs:
     - name: Run Python file
       run: |
         python helpers.py
+    - name: Set variables
+      shell: bash
+      run: |
+        echo "sha_short=$(git rev-parse --short "$GITHUB_SHA")" >> "$GITHUB_ENV"
     - name: Stage changes
       run: git add .
     - name: Commit and push
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
-        commit_message: Helper function updates (${{ env.sha_short }} ${{ github.event.head_commit.message }})
+        commit_message: Helper function updates (${{ steps.vars.outputs.sha_short }} ${{ github.event.head_commit.message }})
