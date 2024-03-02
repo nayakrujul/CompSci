@@ -26,7 +26,45 @@
         <a class="prev-link" href="../5-02-Wired-and-Wireless-Networks/">Previous: 5.02 - Wired and Wireless Networks</a>
         <br /> <br />
             
-        <!-- -->
+        <p class="definition">
+            <img src="../icons/book.svg" class="icon" />
+            The <strong>topology</strong> of a network refers to the how the devices on that network are arranged.
+        </p>
+
+        <p>The most common network topologies in use today are the <b>bus</b> and <b>star</b> topologies.</p>
+
+        <p><br />Diagram 1 shows a bus topology.</p>
+
+        <p class="diagram">
+            <img src="../icons/image.svg" class="icon" />
+            Diagram 1 <br /> <br />
+            <img src="./bus.png" width="500px" />
+        </p>
+
+        <p>
+            The backbone cable is called the "bus" (highlighted in red on the diagram). All the data that is sent across
+            the network travels along the bus. Only one device can communicate at a time in order to avoid collisions.
+            The terminators at either end stop signals reflecting and causing interference.
+        </p>
+
+        <p><br />Diagram 2 shows a star topology.</p>
+
+        <p class="diagram">
+            <img src="../icons/image.svg" class="icon" />
+            Diagram 2 <br /> <br />
+            <img src="./star.png" width="500px" />
+        </p>
+
+        <p>
+            Each device is connected to a central switch or hub (highlighted in red on the diagram). Each device has to
+            be individually connected to the switch, so the failure of one device will not affect the rest of the
+            network. Because of the switch, each device can exchange data with every other device without collisions.
+        </p>
+
+        <p>
+            Note that while bus topology networks need to be wired, star topology networks can be either wired or
+            wireless.
+        </p>
 
         <br />
 
@@ -34,13 +72,21 @@
 
         <p class="question">
             <img src="../icons/question.svg" class="icon" />
-            
+            What are the advantages and disadvantages of using a star topology instead of a bus topology?
         </p>
 
         <p class="spoiler noselect">
             <span class="default">Tap/click to reveal</span>
             <span class="answer">
-
+                Advantages: <br />
+                &bullet; There are less data collisions on star topology networks than on bus topology networks <br />
+                &bullet; Data transmission is usually quicker on star topology networks <br />
+                &bullet; Star topology networks are more secure because the data is only sent to its intended recipient <br />
+                &bullet; It is easier to add new devices to a star topology network <br /> <br />
+                Disadvantages: <br />
+                &bullet; Star topology networks use more cable than bus topology networks <br />
+                &bullet; The whole network fails if the central switch fails (single point of failure) <br />
+                &bullet; Star topologies can be harder and more expensive to install than bus topologies
             </span>
         </p>
 
