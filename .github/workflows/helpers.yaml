@@ -1,10 +1,6 @@
 name: Helper functions
 
-on:
-  push:
-    paths-ignore:
-      - "revision/index.html"
-      - "sitemap.txt"
+on: push
 
 jobs:
   helpers:
