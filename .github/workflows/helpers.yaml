@@ -1,4 +1,4 @@
-name: Some helper functions
+name: Helper functions
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
 
 jobs:
   helpers:
-    name: Helper functions
+    name: Helper functions on ${{ env.sha_short }}
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -27,4 +27,4 @@ jobs:
     - name: Commit and push
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
-        commit_message: "Helper function updates"
+        commit_message: Helper function updates (${{ env.sha_short }} ${{ github.event.head_commit.message }})
