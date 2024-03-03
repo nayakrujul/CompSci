@@ -26,7 +26,107 @@
         <a class="prev-link" href="../5-04-Protocols/">Previous: 5.04 - Protocols</a>
         <br /> <br />
             
-        <!-- -->
+        <p>Despite their many advantages, networks can pose a security risk to organisations.</p>
+
+        <p>
+            Data can be stolen or leaked by either outsiders ("<b>hackers</b>") or insiders (in what's known as an
+            "<b>insider attack</b>"). Organisations must protect against this because of legal requirements, and
+            possible reputational damage.
+        </p>
+
+        <p>
+            Multiple security methods can be used together in order to protect networks against these threats. <br />
+            &nbsp;
+        </p>
+
+        <p class="definition">
+            <img src="../icons/book.svg" class="icon" />
+            <strong>Authentication</strong> systems determine who you are and what you can access.
+        </p>
+
+        <p>Methods of authentication include:</p>
+
+        <ul class="less-padding-left">
+            <li>Username and password combinations</li>
+            <li>Biometric authentication (like facial recognition)</li>
+            <li>Physical access keys (like USB dongles)</li>
+        </ul>
+
+        <p>
+            Once you have been authenticated, user access levels are used to determine what files, applications and
+            resources you can access on the network. For example, some files on a school network might be only for
+            teachers. User access levels would determine who can access these files and who should be restricted.
+        </p>
+
+        <p>To keep your passwords secure, you should:</p>
+
+        <ul class="less-padding-left">
+            <li>Use strong passwords (numbers, letters, and symbols; at least 8 characters long)</li>
+            <li>Use a different password for each website</li>
+            <li>Change your passwords regularly</li>
+            <li>Never share your password with anyone</li>
+            <li>Use a password manager</li>
+        </ul>
+
+        <p>
+            To clear any confusion: hacking a password manager will <b>NOT</b> give you someone's passwords, as the
+            passwords are encrypted. You will get the useless ciphertext version of their passwords. We'll learn more
+            about encryption right now &darr; <br /> &nbsp;
+        </p>
+
+        <p class="definition">
+            <img src="../icons/book.svg" class="icon" />
+            <strong>Encryption</strong> provides protection against data being read if it is stolen or intercepted.
+        </p>
+
+        <p>
+            Encryption cannot stop data from being stolen or intercepted: it just makes the stolen data useless to the
+            hacker.
+        </p>
+
+        <p>
+            Encryption algorithms convert the original <b>plaintext</b> data into the encrypted <b>ciphertext</b> data.
+            A password (called a "<b>key</b>") is needed to decrypt the ciphertext back into the plaintext.
+        </p>
+
+        <p>
+            Unless a hacker also steals the key (which is pretty much impossible), they can't decrypt the data. <br />
+            &nbsp;
+        </p>
+
+        <p class="definition">
+            <img src="../icons/book.svg" class="icon" />
+            <strong>Firewalls</strong> are devices that act as barriers between the network and the outside world.
+        </p>
+
+        <p>
+            They inspect both incoming and outgoing packets, and aim to stop hackers and malware getting into the
+            network, as well as packets from spyware going out of the network.
+        </p>
+
+        <p>
+            Note that firewalls can only reduce the likelihood of unauthorised access and that they do not directly
+            protect against either the spread of malware within a network or the risk of downloading malware from
+            external sources (like websites).
+        </p>
+
+        <p>This means that a firewall will not prevent you from downloading a virus from the internet. <br /> &nbsp;</p>
+
+        <p class="definition">
+            <img src="../icons/book.svg" class="icon" />
+            <strong>MAC Address Filtering</strong> limits network access to only whitelisted devices.
+        </p>
+
+        <p>
+            Each device has a unique <b>Media Access Control (MAC) address</b> on its Network Interface Card. The MAC
+            addresses of accepted devices are whitelisted (allowlisted?) on the switch or Wireless Access Point. If a
+            device has a MAC address which is not on the whitelist, it will be denied access to the network.
+        </p>
+
+        <p>
+            However, it does not identify who is using the device: just because a device is authenticated doesn't mean
+            the user of that device is trustworthy. Also you can "spoof" (fake) a MAC address to join a network.
+        </p>
 
         <br />
 
@@ -34,13 +134,19 @@
 
         <p class="question">
             <img src="../icons/question.svg" class="icon" />
-            
+            What are the advantages and disadvantages of biometric authentication methods?
         </p>
 
         <p class="spoiler noselect">
             <span class="default">Tap/click to reveal</span>
             <span class="answer">
-
+                Advantages: <br />
+                &bullet; It is impossible to forget your access credentials <br />
+                &bullet; Biometric authentication is often much faster than other methods <br />
+                &bullet; The access credentials cannot be (easily) stolen <br /> <br />
+                Disadvantages: <br />
+                &bullet; Biometric authentication often requires expensive hardware <br />
+                &bullet; There is a much higher rate of false positives in biometric authentication
             </span>
         </p>
 
