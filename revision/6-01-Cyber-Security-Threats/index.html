@@ -23,10 +23,90 @@
         <h3 class="home-link"><a href="../">Computer Science Revision</a></h3>
         <br />
 
-        <a class="prev-link" href="../5-Summary-Questions/">Previous: 5.Summary - Questions</a>
+        <a class="prev-link" href="../5-Summary-Questions/">Previous: Section 5 Summary Questions</a>
         <br /> <br />
             
-        <!-- -->
+        <p class="definition">
+            <img src="../icons/book.svg" class="icon" />
+            <strong>Cyber Security</strong> is an approach to computer security covering processes, practices, and technologies designed to protect networks, computers, programs, and data from attack, damage, and unauthorised access.
+        </p>
+
+        <p>
+            It would be nice to learn the whole thing, but in an exam you would get away with saying "the processes of
+            protecting networks from attacks". [See June 2023 - Question 16.1]
+        </p>
+
+        <p><br />There are four main threats that we will look at in detail.</p>
+
+        <p class="definition">
+            <img src="../icons/book.svg" class="icon" />
+            Using <strong>weak or default passwords</strong> provides an easy way into a network for hackers.
+        </p>
+
+        <p>
+            When a device needs a username and password to log on, a default password is usually provided that allows
+            the device to be accessed during setup. Some users are careless and do not change this default password.
+        </p>
+
+        <p>
+            The top four most common passwords are: <code>123456</code>, <code>password</code>, <code>12345678</code>,
+            and <code>qwerty</code>. Hackers will often have lists of the most common passwords and check these first.
+            Using a common password therefore significantly increases the likelihood of a hacker correctly guessing your
+            password.
+        </p>
+
+        <p class="definition">
+            <img src="../icons/book.svg" class="icon" />
+            <strong>Misconfigured access rights</strong> can open up a network to an insider attack.
+        </p>
+
+        <p>
+            In an organisation, different users should be able to access different things. This idea is called user
+            access levels. For example, students and teachers will have different access rights on a school network.
+        </p>
+
+        <p>
+            Misconfigured access rights are when a user can access something they're not supposed to be able to access.
+            For example, students on a school network should not be able to access the terminal. But, by running the
+            Python code in Example 1, they might have access. And, if a malicious student used the code, they may be
+            able to coordinate an insider attack.
+        </p>
+
+        <p><br />Example 1 shows some Python code which may or may not be able to load up a terminal window.</p>
+
+        <p class="code">
+            <img src="../icons/code.svg" class="icon" />
+            Example 1 <br />
+            <code>
+                <span class="keyword">import</span> os <br />
+                os.<span class="other">system</span>(<span class="string">&quot;powershell&quot;</span>)
+            </code>
+        </p>
+
+        <p class="definition">
+            <img src="../icons/book.svg" class="icon" />
+            <strong>Removable media devices</strong> pose two main risks to network security.
+        </p>
+
+        <p>They allow users to bring malware into the network, and to take data out of the network.</p>
+
+        <p>Organisations can protect themselves by disabling USB read/write to users altogether.</p>
+
+        <p class="definition">
+            <img src="../icons/book.svg" class="icon" />
+            Using <strong>unpatched or outdated software</strong> can leave devices vulnerable to attack through known exploits in that software.
+        </p>
+
+        <p>
+            When exploits are discovered, patches are released almost immediately, but devices that haven't updated the
+            software are still vulnerable.
+        </p>
+
+        <p>
+            Antivirus software must be kept up-to-date to be able to provide protection against the latest viruses and
+            malware. This is because antivirus software relies on an up-to-date database of virus 'signatures' to help
+            it detect and remove new viruses.
+        </p>
 
         <br />
 
@@ -34,13 +114,14 @@
 
         <p class="question">
             <img src="../icons/question.svg" class="icon" />
-            
+            How would an ethical hacker test a network's security?
         </p>
 
         <p class="spoiler noselect">
             <span class="default">Tap/click to reveal</span>
             <span class="answer">
-
+                By attempting to hack into the network in what's called a penetration test: we'll learn more about them
+                on the next page.
             </span>
         </p>
 
