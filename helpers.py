@@ -1,6 +1,7 @@
 import re
 import os
 import sys
+import datetime
 
 
 ld = os.listdir("revision/")
@@ -21,13 +22,24 @@ with open("revision/index.html", "r", encoding='utf-8') as e:
 with open("revision/index.html", "w") as f:
     f.write(t)
 
-with open("sitemap.txt", "r", encoding='utf-8') as g, \
-        open("sitemap.txt", "a") as h:
-    sitemap = re.findall(r'revision/(.*)/', g.read())
+with open("sitemap.xml", "r", encoding='utf-8') as g:
+    x = g.read()
+    sitemap = re.findall(r'revision/(.*)/', x)
     for string in lst:
         if string not in sitemap:
-            h.write("\nhttps://cs.rujulnayak.com/revision/" + string + "/")
+            lastmod = os.path.getmtime("./revision/" + string)
+            x = x.replace("</urlset>", f"""
+  <url>
+    <loc>https://cs.rujulnayak.com/revision/{string}/</loc>
+    <lastmod>{datetime.datetime.fromtimestamp(lastmod).strftime('%Y-%m-%d')}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+</urlset>""")
+    x = re.sub(r"<lastmod>(.*)</lastmod> <!-- marker -->", f"<lastmod>{datetime.datetime.today().strftime('%Y-%m-%d')}</lastmod> <!-- marker -->", x)
 
+with open("sitemap.xml", "w") as h:
+    h.write(x)
 
 with open("newfile.txt", "r") as f:
     filename = f.read()
