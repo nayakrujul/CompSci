@@ -62,7 +62,6 @@ https://cs.rujulnayak.com/revision/4-Summary-Questions/
 https://cs.rujulnayak.com/revision/5-01-Network-Types/
 https://cs.rujulnayak.com/revision/5-02-Wired-and-Wireless-Networks/
 https://cs.rujulnayak.com/revision/5-03-Network-Topologies/
-https://cs.rujulnayak.com/revision/5-04-Packet-Switching/
 https://cs.rujulnayak.com/revision/5-04-Protocols/
 https://cs.rujulnayak.com/revision/5-05-Network-Security/
 https://cs.rujulnayak.com/revision/5-Summary-Questions/
