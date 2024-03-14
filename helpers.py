@@ -24,7 +24,7 @@ with open("revision/index.html", "w") as f:
 
 with open("sitemap.xml", "r", encoding='utf-8') as g:
     x = g.read()
-    sitemap = re.findall(r'revision/(.*)/', x)
+    sitemap = re.findall(r'revision/(.*)/<', x)
     for string in lst:
         if string not in sitemap:
             lastmod = os.path.getmtime("./revision/" + string)
