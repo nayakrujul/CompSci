@@ -471,7 +471,7 @@
 
   <url>
     <loc>https://cs.rujulnayak.com/revision/6-01-Cyber-Security-Threats/</loc>
-    <lastmod>2024-03-08</lastmod>
+    <lastmod>2024-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -480,6 +480,6 @@
     <loc>https://cs.rujulnayak.com/revision/6-02-Penetration-Testing/</loc>
     <lastmod>2024-03-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
 </urlset>
