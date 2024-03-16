@@ -23,9 +23,3 @@ li {
 img {
     max-width: 95vw;
 }
-
-h1 {
-    animation: fadein ease 0.5s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-}
