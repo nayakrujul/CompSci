@@ -86,7 +86,7 @@ with open(path + "/index.html", "w+") as h:
 
         <a class="prev-link" href="../{p}/">Previous: {a}.{b} - {' '.join(c)}</a>
         <br /> <br />
-            
+
         <!-- -->
 
         <br />
@@ -101,7 +101,7 @@ with open(path + "/index.html", "w+") as h:
         <p class="spoiler noselect">
             <span class="default">Tap/click to reveal</span>
             <span class="answer">
-
+                
             </span>
         </p>
 
