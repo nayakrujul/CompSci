@@ -9,7 +9,7 @@
 
   <url>
     <loc>https://cs.rujulnayak.com/revision/</loc>
-    <lastmod>2024-03-20</lastmod> <!-- marker -->
+    <lastmod>2024-03-18</lastmod> <!-- marker -->
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -481,12 +481,5 @@
     <lastmod>2024-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://cs.rujulnayak.com/revision/6-03-Social-Engineering/</loc>
-    <lastmod>2024-03-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
 </urlset>
