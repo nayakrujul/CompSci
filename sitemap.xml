@@ -9,7 +9,7 @@
 
   <url>
     <loc>https://cs.rujulnayak.com/revision/</loc>
-    <lastmod>2024-04-01</lastmod> <!-- marker -->
+    <lastmod>2024-04-04</lastmod> <!-- marker -->
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -500,6 +500,13 @@
   <url>
     <loc>https://cs.rujulnayak.com/revision/6-05-Preventing-Threats/</loc>
     <lastmod>2024-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://cs.rujulnayak.com/revision/6-Summary-Questions/</loc>
+    <lastmod>2024-04-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
