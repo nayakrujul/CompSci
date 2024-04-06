@@ -26,7 +26,26 @@
         <a class="prev-link" href="../7-03-Where-Clauses/">Previous: 7.03 - Where Clauses</a>
         <br /> <br />
 
-        <!-- -->
+        <p>
+            When you need to sort the results of a <code class="keyword">SELECT</code> statement, you can use the
+            <code class="keyword">ORDER BY</code> keyword. You can use <code class="keyword">ASC</code> for "ascending",
+            or <code class="keyword">DESC</code> for "descending".
+        </p>
+
+        <p>Example 1 shows a use of the <code class="keyword">ORDER BY</code> keyword.</p>
+
+        <p class="code">
+            <img src="../icons/code.svg" class="icon" />
+            Example 1 <br />
+            <code>
+                <span class="keyword">SELECT</span> <span class="other">*</span>
+                <span class="keyword">FROM</span> <span class="other">Students</span> <br />
+                <span class="keyword">WHERE</span> <span class="other">FirstName</span>
+                = <span class="string">"William"</span> <br />
+                <span class="keyword">ORDER BY</span> <span class="other">LastName</span>
+                <span class="keyword">ASC</span>
+            </code>
+        </p>
 
         <br />
 
@@ -34,13 +53,20 @@
 
         <p class="question">
             <img src="../icons/question.svg" class="icon" />
-            
+            Change the code in Example 1 to show the results from youngest to oldest.
         </p>
 
         <p class="spoiler noselect">
             <span class="default">Tap/click to reveal</span>
             <span class="answer">
-                
+                <code>
+                    <span class="keyword">SELECT</span> <span class="other">*</span>
+                    <span class="keyword">FROM</span> <span class="other">Students</span> <br />
+                    <span class="keyword">WHERE</span> <span class="other">FirstName</span>
+                    = <span class="string">"William"</span> <br />
+                    <span class="keyword">ORDER BY</span> <span class="other">DateOfBirth</span>
+                    <span class="keyword">DESC</span>
+                </code>
             </span>
         </p>
 
