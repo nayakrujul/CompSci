@@ -26,7 +26,41 @@
         <a class="prev-link" href="../7-01-Databases/">Previous: 7.01 - Databases</a>
         <br /> <br />
 
-        <!-- -->
+        <p class="definition">
+            <img src="../icons/book.svg" class="icon" />
+            <strong>Structured Query Language</strong> (SQL, pronounced "sequel") provides an efficient way to retrieve information from a database.
+        </p>
+
+        <p>
+            The most basic SQL command is the <code class="keyword">SELECT</code> statement, which can retrieve data
+            from a database.
+        </p>
+
+        <p>Example 1 shows the SQL statement to <code class="keyword">SELECT</code> all date of births from <code>Students</code>.</p>
+
+        <p class="code">
+            <img src="../icons/code.svg" class="icon" />
+            Example 1 <br />
+            <code>
+                <span class="keyword">SELECT</span> <span class="other">DateOfBirth</span>
+                <span class="keyword">FROM</span> <span class="other">Students</span>
+            </code>
+        </p>
+
+        <p>To select multiple fields, use commas to separate them.</p>
+
+        <p>Example 2 shows the SQL statement to <code class="keyword">SELECT</code> all first names and date of births from <code>Students</code>.</p>
+
+        <p class="code">
+            <img src="../icons/code.svg" class="icon" />
+            Example 2 <br />
+            <code>
+                <span class="keyword">SELECT</span> <span class="other">FirstName</span>, <span class="other">DateOfBirth</span>
+                <span class="keyword">FROM</span> <span class="other">Students</span>
+            </code>
+        </p>
+
+        <p>Finally, use <code class="other">*</code> to <code class="keyword">SELECT</code> all the fields.</p>
 
         <br />
 
@@ -34,13 +68,16 @@
 
         <p class="question">
             <img src="../icons/question.svg" class="icon" />
-            
+            How would you select all the fields from <code class="small-code">Students</code>?
         </p>
 
         <p class="spoiler noselect">
             <span class="default">Tap/click to reveal</span>
             <span class="answer">
-                
+                <code>
+                    <span class="keyword">SELECT</span> <span class="other">*</span>
+                    <span class="keyword">FROM</span> <span class="other">Students</span>
+                </code>
             </span>
         </p>
 
