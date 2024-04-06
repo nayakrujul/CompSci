@@ -26,7 +26,56 @@
         <a class="prev-link" href="../7-02-Select-Statements/">Previous: 7.02 - Select Statements</a>
         <br /> <br />
 
-        <!-- -->
+        <p>
+            After <code class="keyword">SELECT</code>ing some data, you can filter it using
+            <code class="keyword">WHERE</code>.
+        </p>
+
+        <p>Example 1 shows the SQL statement to <code class="keyword">SELECT</code> all fields from <code>Students</code> <code class="keyword">WHERE</code> the first name is "William".</p>
+
+        <p class="code">
+            <img src="../icons/code.svg" class="icon" />
+            Example 1 <br />
+            <code>
+                <span class="keyword">SELECT</span> <span class="other">*</span>
+                <span class="keyword">FROM</span> <span class="other">Students</span> <br />
+                <span class="keyword">WHERE</span> <span class="other">FirstName</span>
+                = <span class="string">"William"</span>
+            </code>
+        </p>
+
+        <p>Table 1 shows the output of Example 1.</p>
+
+        <p class="table">
+            <img src="../icons/table.svg" class="icon" />
+            Table 1
+        </p>
+
+        <table>
+            <tr>
+                <th><strong>StudentID</strong></th>
+                <th><strong>FirstName</strong></th>
+                <th><strong>LastName</strong></th>
+                <th><strong>DateOfBirth</strong></th>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>William</td>
+                <td>Smith</td>
+                <td>15/04/2009</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>William</td>
+                <td>Jones</td>
+                <td>13/09/2008</td>
+            </tr>
+        </table>
+
+        <p><br />
+            The boolean operators <code class="keyword">AND</code> and <code class="keyword">OR</code> can also be used
+            in <code class="keyword">WHERE</code> clauses.
+        </p>
 
         <br />
 
@@ -34,13 +83,19 @@
 
         <p class="question">
             <img src="../icons/question.svg" class="icon" />
-            
+            Write a SQL statement to <code class="small-code keyword">SELECT</code> the first and last names of all students called William, <code class="small-code keyword">OR</code> whose ID is equal to 2.
         </p>
 
         <p class="spoiler noselect">
             <span class="default">Tap/click to reveal</span>
             <span class="answer">
-                
+                <code>
+                    <span class="keyword">SELECT</span> <span class="other">FirstName</span>, <span class="other">LastName</span>
+                    <span class="keyword">FROM</span> <span class="other">Students</span> <br />
+                    <span class="keyword">WHERE</span> <span class="other">FirstName</span>
+                    = <span class="string">"William"</span> <span class="keyword">OR</span>
+                    <span class="other">StudentID</span> = <span class="number">2</span>
+                </code>
             </span>
         </p>
 
