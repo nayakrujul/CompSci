@@ -23,10 +23,98 @@
         <h3 class="home-link"><a href="../">Computer Science Revision</a></h3>
         <br />
 
-        <a class="prev-link" href="../6-Summary-Questions/">Previous: 6.Summary - Questions</a>
+        <a class="prev-link" href="../6-Summary-Questions/">Previous: Section 6 Summary Questions</a>
         <br /> <br />
 
-        <!-- -->
+        <p class="definition">
+            <img src="../icons/book.svg" class="icon" />
+            <strong>Databases</strong> are used to store large amounts of data, organised into tables.
+        </p>
+
+        <!--
+        <p class="definition">
+            <img src="../icons/book.svg" class="icon" />
+            <strong>Structured Query Language</strong> (SQL, pronounced "sequel") provides an efficient way to retrieve the information from a database.
+        </p>
+        -->
+
+        <p>Table 1 shows an example table, called <code>Students</code>.</p>
+
+        <p class="table">
+            <img src="../icons/table.svg" class="icon" />
+            Table 1
+        </p>
+
+        <table>
+            <tr>
+                <th><strong>StudentID</strong></th>
+                <th><strong>FirstName</strong></th>
+                <th><strong>LastName</strong></th>
+                <th><strong>DateOfBirth</strong></th>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>William</td>
+                <td>Smith</td>
+                <td>15/04/2009</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Sid</td>
+                <td>Chopra</td>
+                <td>04/11/2008</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Freddie</td>
+                <td>Brown</td>
+                <td>28/01/2009</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>William</td>
+                <td>Jones</td>
+                <td>13/09/2008</td>
+            </tr>
+        </table>
+
+        <br />
+
+        <p>
+            <b>Tables</b> are the basis of databases. The columns of a table (<code>StudentID</code>,
+            <code>FirstName</code>, <code>LastName</code>, <code>DateOfBirth</code>) are called <b>fields</b>, and the
+            rows are called <b>records</b>.
+        </p>
+
+        <p>
+            Each table have a table name, and each field has a field name. Each record can usually be identified by a
+            <b>primary key</b>.
+        </p>
+
+        <p class="definition">
+            <img src="../icons/book.svg" class="icon" />
+            The <strong>primary key</strong> of a table is a field (column) which can uniquely identify each record.
+        </p>
+
+        <p>
+            This means that each record has a different value in the primary key field. In Table 1, the primary key is
+            the <code>StudentID</code> field. The primary key will usually be the first column in the table.
+        </p>
+
+        <p><br />
+            Fields in tables have their own data type, which work just like normal programming languages. The main data
+            types are:
+        </p>
+
+        <ul class="less-padding-left">
+            <li><code>Integer</code> (whole number)</li>
+            <li><code>Float</code>/<code>Real</code> (number with a decimal part)</li>
+            <li><code>Date</code>, <code>Time</code> (exactly what it sounds like)</li>
+            <li><code>Char</code> (fixed length string)</li>
+            <li><code>Varchar</code> (variable length string)</li>
+        </ul>
+
+        <p>(See also: <a href="../2A-02-Data-Types/">2A.02 - Data Types</a>)</p>
 
         <br />
 
@@ -34,13 +122,16 @@
 
         <p class="question">
             <img src="../icons/question.svg" class="icon" />
-            
+            What would the data types be for each field in Table 1?
         </p>
 
         <p class="spoiler noselect">
             <span class="default">Tap/click to reveal</span>
             <span class="answer">
-                
+                <code>StudentID</code> - <code>Integer</code> <br />
+                <code>FirstName</code> - <code>Varchar</code> <br />
+                <code>LastName</code> - <code>Varchar</code> <br />
+                <code>DateOfBirth</code> - <code>Date</code> <br />
             </span>
         </p>
 
