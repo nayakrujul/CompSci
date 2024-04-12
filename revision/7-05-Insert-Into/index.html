@@ -26,7 +26,25 @@
         <a class="prev-link" href="../7-04-Order-By/">Previous: 7.04 - Order By</a>
         <br /> <br />
 
-        <!-- -->
+        <p>You can add records into a table using the <code class="keyword">INSERT INTO</code> command.</p>
+
+        <p>Example 1 shows a use of the <code class="keyword">INSERT INTO</code> command.</p>
+
+        <p class="code">
+            <img src="../icons/code.svg" class="icon" />
+            Example 1 <br />
+            <code>
+                <span class="keyword">INSERT INTO</span> <span class="other">Students</span>
+                <span class="keyword">VALUES</span> <br /> (<span class="number">4</span>,
+                <span class="string">"Greg"</span>, <span class="string">"Hill"</span>,
+                <span class="number">21/07/2009</span>)
+            </code>
+        </p>
+
+        <p>
+            This will add a record at the bottom of the table <code class="other">Students</code>, with the four values
+            provided as its fields.
+        </p>
 
         <br />
 
@@ -34,13 +52,18 @@
 
         <p class="question">
             <img src="../icons/question.svg" class="icon" />
-            
+            Write a SQL command to <code class="small-code keyword">INSERT</code> another student <code class="small-code keyword">INTO</code> the <code class="small-code other">Students</code> table, called Joe Frazer, born on 9th March 2009.
         </p>
 
         <p class="spoiler noselect">
             <span class="default">Tap/click to reveal</span>
             <span class="answer">
-                
+                <code>
+                    <span class="keyword">INSERT INTO</span> <span class="other">Students</span>
+                    <span class="keyword">VALUES</span> <br /> (<span class="number">6</span>,
+                    <span class="string">"Joe"</span>, <span class="string">"Frazer"</span>,
+                    <span class="number">09/03/2009</span>)
+                </code>
             </span>
         </p>
 
