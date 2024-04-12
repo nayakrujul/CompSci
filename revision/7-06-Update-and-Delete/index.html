@@ -26,7 +26,44 @@
         <a class="prev-link" href="../7-05-Insert-Into/">Previous: 7.05 - Insert Into</a>
         <br /> <br />
 
-        <!-- -->
+        <p>
+            You can change the fields of existing records using <code class="keyword">UPDATE
+            <span class="override">...</span> SET <span class="override">...</span> WHERE</code>.
+        </p>
+
+        <p>Example 1 shows a use of the <code class="keyword">UPDATE</code> command.</p>
+
+        <p class="code">
+            <img src="../icons/code.svg" class="icon" />
+            Example 1 <br />
+            <code>
+                <span class="keyword">UPDATE</span> <span class="other">Students</span> <br />
+                <span class="keyword">SET</span> <span class="other">DateOfBirth</span> = <span class="number">04/12/2008</span> <br />
+                <span class="keyword">WHERE</span> <span class="other">StudentID</span> = <span class="number">1</span>
+            </code>
+        </p>
+
+        <p>
+            Note that the <code>=</code> symbol can mean two different things: in a <code class="keyword">WHERE</code>
+            clause, it checks if two things are equal, but in a <code class="keyword">SET</code> clause, it changes the
+            value of a field.
+        </p>
+
+        <p>
+            <br />SQL also allows us to delete records from a table using <code class="keyword">DELETE FROM
+            <span class="override">...</span> WHERE</code>.
+        </p>
+
+        <p>Example 2 shows a use of the <code class="keyword">DELETE FROM</code> command.</p>
+
+        <p class="code">
+            <img src="../icons/code.svg" class="icon" />
+            Example 1 <br />
+            <code>
+                <span class="keyword">DELETE FROM</span> <span class="other">Students</span> <br />
+                <span class="keyword">WHERE</span> <span class="other">StudentID</span> = <span class="number">3</span>
+            </code>
+        </p>
 
         <br />
 
@@ -34,13 +71,17 @@
 
         <p class="question">
             <img src="../icons/question.svg" class="icon" />
-            
+            Use the <code class="keyword small-code">UPDATE</code> command to subtract 1 from the <code class="other small-code">StudentID</code> of all records where it is greater than 2.
         </p>
 
         <p class="spoiler noselect">
             <span class="default">Tap/click to reveal</span>
             <span class="answer">
-                
+                <code>
+                    <span class="keyword">UPDATE</span> <span class="other">Students</span> <br />
+                    <span class="keyword">SET</span> <span class="other">StudentID</span> = <span class="other">StudentID</span> - <span class="number">1</span> <br />
+                    <span class="keyword">WHERE</span> <span class="other">StudentID</span> > <span class="number">2</span>
+                </code>
             </span>
         </p>
 
