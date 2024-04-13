@@ -96,6 +96,28 @@ th, td {
 }
 
 
+/* Copy button */
+
+input.copybtn {
+    width: 15px;
+    height: 20px;
+    background-image: url("icons/copy.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 0;
+    background-color: white;
+    margin-left: 5px;
+}
+
+input.copybtn.donebtn:hover {
+    background-image: url("icons/done.svg");
+}
+
+input.copybtn:hover {
+    filter: brightness(200%);
+}
+
+
 /* Miscellaneous */
 
 strong {

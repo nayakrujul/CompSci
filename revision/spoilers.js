@@ -76,3 +76,26 @@ div.innerHTML += ` &ensp; ` +
     (next !== null ?
         `<a class="navbar-link" href="${next.href}">&#9654;</a>`
         : `<span class="comment">&#9654;</span>`);
+
+
+// Copy definitions button
+
+const defs = document.querySelectorAll("p.definition");
+
+[...defs].map(p => {
+    let cont = p.innerText.trim();
+    let btn = document.createElement("input");
+    btn.type = "button";
+    btn.classList.add("copybtn");
+    btn.setAttribute("copyval", cont);
+    btn.addEventListener("click", (event) => {
+        let q = event.target;
+        navigator.clipboard.writeText(q.getAttribute("copyval"));
+        q.classList.add("donebtn");
+    });
+    btn.addEventListener("mouseenter", (event) => {
+        let q = event.target;
+        q.classList.remove("donebtn");
+    })
+    p.appendChild(btn);
+});
