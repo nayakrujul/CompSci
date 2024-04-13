@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+        <link rel="stylesheet" href="../main.css">
+
+        <title>Section 7 Summary Questions | Computer Science Revision</title>
+
+        <link rel="icon" type="image/png" href="../icons/logo.svg"/>
+        <meta property="og:image" content="../icons/logo.png" />
+        <meta property="og:image:width" content="640" />
+        <meta property="og:image:height" content="512" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Section 7 Summary Questions | Computer Science Revision (an online, mobile-friendly revision guide for GCSE Computer Science students)">
+    </head>
+
+    <body>
+        <h1>Section 7 Summary Questions</h1>
+        <h3 class="home-link"><a href="../">Computer Science Revision</a></h3>
+        <br />
+
+        <a class="prev-link" href="../7-07-Relational-Databases/">Previous: 7.07 - Relational Databases</a>
+        <br /> <br />
+        
+        <br />
+
+        <hr />
+
+        <p>Table 1 shows part of a <code>Students</code> table that a school has created.</p>
+
+        <p class="table">
+            <img src="../icons/table.svg" class="icon" />
+            Table 1
+        </p>
+
+        <table>
+            <tr>
+                <th><strong>StudentID</strong></th>
+                <th><strong>FirstName</strong></th>
+                <th><strong>LastName</strong></th>
+                <th><strong>DateOfBirth</strong></th>
+            </tr>
+            <tr>
+                <td>1225</td>
+                <td>William</td>
+                <td>Smith</td>
+                <td>15/04/2009</td>
+            </tr>
+            <tr>
+                <td>1226</td>
+                <td>Sid</td>
+                <td>Chopra</td>
+                <td>04/11/2008</td>
+            </tr>
+            <tr>
+                <td>1227</td>
+                <td>Freddie</td>
+                <td>Brown</td>
+                <td>28/01/2009</td>
+            </tr>
+            <tr>
+                <td>1228</td>
+                <td>William</td>
+                <td>Jones</td>
+                <td>13/09/2008</td>
+            </tr>
+        </table>
+
+        <p><br />Table 2 shows part of a <code>Grades</code> table in the same database.</p>
+
+        <p class="table">
+            <img src="../icons/table.svg" class="icon" />
+            Table 2
+        </p>
+
+        <table>
+            <tr>
+                <th><strong>StudentID</strong></th>
+                <th><strong>Subject</strong></th>
+                <th><strong>Percentage</strong></th>
+                <th><strong>Grade</strong></th>
+            </tr>
+            <tr>
+                <td>1225</td>
+                <td>Maths</td>
+                <td>78</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>1227</td>
+                <td>Computer Science</td>
+                <td>61</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>1226</td>
+                <td>Chemistry</td>
+                <td>94</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>1227</td>
+                <td>Chemistry</td>
+                <td>81</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>1228</td>
+                <td>Geography</td>
+                <td>69</td>
+                <td>7</td>
+            </tr>
+        </table>
+
+        <br />
+
+        <br />
+
+        <hr />
+
+        <p class="question">
+            <img src="../icons/question.svg" class="icon" />
+            State the name of the primary key of the <code>Students</code> table. [1]
+        </p>
+
+        <p class="spoiler noselect">
+            <span class="default">Tap/click to reveal</span>
+            <span class="answer">
+                <code>StudentID</code> &check;
+            </span>
+        </p>
+
+        <br />
+
+        <hr />
+
+        <p class="question">
+            <img src="../icons/question.svg" class="icon" />
+            What is the most appropriate data type for the <code>Subject</code> field? [1]
+        </p>
+
+        <p class="spoiler noselect">
+            <span class="default">Tap/click to reveal</span>
+            <span class="answer">
+                Varchar &check;
+            </span>
+        </p>
+
+        <br />
+
+        <hr />
+
+        <p class="question">
+            <img src="../icons/question.svg" class="icon" />
+            Define the term "foreign key". [1]
+        </p>
+
+        <p class="spoiler noselect">
+            <span class="default">Tap/click to reveal</span>
+            <span class="answer">
+                The foreign key of a table is the primary key of another table. &check;
+            </span>
+        </p>
+
+        <br />
+
+        <hr />
+
+        <p class="question">
+            <img src="../icons/question.svg" class="icon" />
+            Write a SQL statement to retrieve the StduentID, FirstName, LastName, Subject, and Percentage of any record
+            in the Grades table with a score of at least 70%. The results should be sorted by surname, A to Z. [5]
+        </p>
+
+        <p class="spoiler noselect">
+            <span class="default">Tap/click to reveal</span>
+            <span class="answer">
+                <code>
+                    <span class="keyword">SELECT</span> <span class="other">FirstName</span>,
+                    <span class="other">LastName</span>, <span class="other">Subject</span>,
+                    <span class="other">Percentage</span> &check; <br /> <span class="keyword">FROM</span>
+                    <span class="function">Students</span>, <span class="function">Grades</span> &check; <br />
+                    <span class="keyword">WHERE</span>
+                    <span class="function">Students</span>.<span class="other">StudentID</span> =
+                    <span class="function">Grades</span>.<span class="other">StudentID</span> &check; <br />
+                    <span class="keyword">AND</span> <span class="other">Percentage</span> >=
+                    <span class="number">70</span> &check; <br /> <span class="keyword">ORDER BY</span>
+                    <span class="other">LastName</span> <span class="keyword">ASC</span> &check;
+                </code>
+            </span>
+        </p>
+
+        <br />
+
+        <hr />
+
+        <br /> <br />
+
+        <div id="sub">© Rujul Nayak <span id="year">2024-</span></div>
+        <script src="../../year.js"></script>
+
+        <script src="../spoilers.js"></script>
+    </body>
+</html>

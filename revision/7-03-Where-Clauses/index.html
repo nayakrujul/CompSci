@@ -38,7 +38,7 @@
             Example 1 <br />
             <code>
                 <span class="keyword">SELECT</span> <span class="other">*</span>
-                <span class="keyword">FROM</span> <span class="other">Students</span> <br />
+                <span class="keyword">FROM</span> <span class="function">Students</span> <br />
                 <span class="keyword">WHERE</span> <span class="other">FirstName</span>
                 = <span class="string">"William"</span>
             </code>
@@ -59,13 +59,13 @@
                 <th><strong>DateOfBirth</strong></th>
             </tr>
             <tr>
-                <td>0</td>
+                <td>1225</td>
                 <td>William</td>
                 <td>Smith</td>
                 <td>15/04/2009</td>
             </tr>
             <tr>
-                <td>3</td>
+                <td>1228</td>
                 <td>William</td>
                 <td>Jones</td>
                 <td>13/09/2008</td>
@@ -83,7 +83,7 @@
 
         <p class="question">
             <img src="../icons/question.svg" class="icon" />
-            Write a SQL statement to <code class="small-code keyword">SELECT</code> the first and last names of all students called William, <code class="small-code keyword">OR</code> whose ID is equal to 2.
+            Write a SQL statement to <code class="small-code keyword">SELECT</code> the first and last names of all students called William, <code class="small-code keyword">OR</code> whose ID is equal to 1227.
         </p>
 
         <p class="spoiler noselect">
@@ -91,10 +91,10 @@
             <span class="answer">
                 <code>
                     <span class="keyword">SELECT</span> <span class="other">FirstName</span>, <span class="other">LastName</span>
-                    <span class="keyword">FROM</span> <span class="other">Students</span> <br />
+                    <span class="keyword">FROM</span> <span class="function">Students</span> <br />
                     <span class="keyword">WHERE</span> <span class="other">FirstName</span>
                     = <span class="string">"William"</span> <span class="keyword">OR</span>
-                    <span class="other">StudentID</span> = <span class="number">2</span>
+                    <span class="other">StudentID</span> = <span class="number">1227</span>
                 </code>
             </span>
         </p>

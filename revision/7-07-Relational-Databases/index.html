@@ -36,7 +36,7 @@
             A <strong>relational database</strong> is a database containing multiple tables, in order to reduce data inconsistency and redundancy.
         </p>
 
-        <p>Table 1 shows the <code>Students</code> table, copied over from 7.01.</p>
+        <p>Table 1 shows part of the <code>Students</code> table, copied over from 7.01.</p>
 
         <p class="table">
             <img src="../icons/table.svg" class="icon" />
@@ -51,25 +51,25 @@
                 <th><strong>DateOfBirth</strong></th>
             </tr>
             <tr>
-                <td>0</td>
+                <td>1225</td>
                 <td>William</td>
                 <td>Smith</td>
                 <td>15/04/2009</td>
             </tr>
             <tr>
-                <td>1</td>
+                <td>1226</td>
                 <td>Sid</td>
                 <td>Chopra</td>
                 <td>04/11/2008</td>
             </tr>
             <tr>
-                <td>2</td>
+                <td>1227</td>
                 <td>Freddie</td>
                 <td>Brown</td>
                 <td>28/01/2009</td>
             </tr>
             <tr>
-                <td>3</td>
+                <td>1228</td>
                 <td>William</td>
                 <td>Jones</td>
                 <td>13/09/2008</td>
@@ -91,31 +91,31 @@
                 <th><strong>Grade</strong></th>
             </tr>
             <tr>
-                <td>0</td>
+                <td>1225</td>
                 <td>Maths</td>
                 <td>78</td>
                 <td>8</td>
             </tr>
             <tr>
-                <td>2</td>
+                <td>1227</td>
                 <td>Computer Science</td>
                 <td>61</td>
                 <td>6</td>
             </tr>
             <tr>
-                <td>1</td>
+                <td>1226</td>
                 <td>Chemistry</td>
                 <td>94</td>
                 <td>9</td>
             </tr>
             <tr>
-                <td>2</td>
+                <td>1227</td>
                 <td>Chemistry</td>
                 <td>81</td>
                 <td>8</td>
             </tr>
             <tr>
-                <td>3</td>
+                <td>1228</td>
                 <td>Geography</td>
                 <td>69</td>
                 <td>7</td>
@@ -139,6 +139,61 @@
             primary key of the <code>Students</code> table).
         </p>
 
+        <p><br />You can also use SQL to extract data from relational databases.</p>
+
+        <p>Example 1 shows a SQL command to <code class="keyword">SELECT</code> information about all grades which are at least an 8.</p>
+
+        <p class="code">
+            <img src="../icons/code.svg" class="icon" />
+            Example 1 <br />
+            <code>
+                <span class="keyword">SELECT</span> <span class="other">FirstName</span>,
+                <span class="other">LastName</span>, <span class="other">Subject</span>,
+                <span class="other">Grade</span> <br /> <span class="keyword">FROM</span>
+                <span class="function">Students</span>, <span class="function">Grades</span> <br />
+                <span class="keyword">WHERE</span>
+                <span class="function">Students</span>.<span class="other">StudentID</span> =
+                <span class="function">Grades</span>.<span class="other">StudentID</span> <br />
+                <span class="keyword">AND</span> <span class="other">Grade</span> >= <span class="number">8</span>
+            </code>
+        </p>
+
+        <p>Table 3 shows the output of Example 1.</p>
+
+        <p class="table">
+            <img src="../icons/table.svg" class="icon" />
+            Table 3
+        </p>
+
+        <table>
+            <tr>
+                <th><strong>FirstName</strong></th>
+                <th><strong>LastName</strong></th>
+                <th><strong>Subject</strong></th>
+                <th><strong>Grade</strong></th>
+            </tr>
+            <tr>
+                <td>William</td>
+                <td>Smith</td>
+                <td>Maths</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>Sid</td>
+                <td>Chopra</td>
+                <td>Chemistry</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>Freddie</td>
+                <td>Brown</td>
+                <td>Chemistry</td>
+                <td>8</td>
+            </tr>
+        </table>
+
+        <p><br/>We have got data from both tables because we linked them together with the primary and foreign key.</p>
+
         <br />
 
         <hr />
@@ -161,6 +216,11 @@
 
         <hr />
 
+        <br /> <br />
+
+        <a class="next-link" href="../7-Summary-Questions/">Next: Section 7 Summary Questions</a>
+
+        <br /> <br />
         <br /> <br />
 
         <div id="sub">© Rujul Nayak <span id="year">2024-</span></div>
