@@ -8,3 +8,5 @@ if (matches.length > 0) {
     let x = matches[0][1];
     location.replace(`https://cs.rujulnayak.com/${LATEST}/${x}`);
 }
+
+document.getElementById("heading").innerHTML = "Error 404 - Page Not Found";
