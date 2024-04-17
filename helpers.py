@@ -4,13 +4,13 @@ import sys
 import datetime
 
 
-ld = os.listdir("revision/")
+ld = os.listdir("v1/")
 
 def rreplace(s, old, new):
     li = s.rsplit(old, 1) #Split only once
     return new.join(li)
 
-with open("revision/index.html", "r", encoding='utf-8') as e:
+with open("v1/index.html", "r", encoding='utf-8') as e:
     t = e.read()
     lst = re.findall(r'<a href="\./(.*)/">', t)
     for s in ld:
@@ -19,18 +19,18 @@ with open("revision/index.html", "r", encoding='utf-8') as e:
         </ul>""")
             lst.append(s)
 
-with open("revision/index.html", "w") as f:
+with open("v1/index.html", "w") as f:
     f.write(t)
 
 with open("sitemap.xml", "r", encoding='utf-8') as g:
     x = g.read()
-    sitemap = re.findall(r'revision/(.*)/<', x)
+    sitemap = re.findall(r'v1/(.*)/<', x)
     for string in lst:
         if string not in sitemap:
-            lastmod = os.path.getmtime("./revision/" + string)
+            lastmod = os.path.getmtime("./v1/" + string)
             x = x.replace("</urlset>", f"""
   <url>
-    <loc>https://cs.rujulnayak.com/revision/{string}/</loc>
+    <loc>https://cs.rujulnayak.com/v1/{string}/</loc>
     <lastmod>{datetime.datetime.fromtimestamp(lastmod).strftime('%Y-%m-%d')}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -49,13 +49,13 @@ with open("newfile.txt", "r") as f:
 with open("newfile.txt", "w") as g:
     pass
 
-path = "revision/" + filename.replace(".", "-").replace(" ", "-")
+path = "v1/" + filename.replace(".", "-").replace(" ", "-")
 os.mkdir(path)
 
 n, *t = filename.split()
 r = " ".join(t)
 
-p = sorted(os.listdir("revision/"))[-6]
+p = sorted(os.listdir("v1/"))[-6]
 a, b, *c = p.split("-")
 
 with open(path + "/index.html", "w+") as h:
@@ -118,7 +118,7 @@ with open(path + "/index.html", "w+") as h:
     </body>
 </html>""")
 
-with open("revision/" + p + "/index.html", "r") as i:
+with open("v1/" + p + "/index.html", "r") as i:
     txt = i.read().replace('<div id="sub"', f'''<a class="next-link" href="../{path.split("/")[1]}/">Next: {n} - {r}</a>
 
         <br /> <br />
@@ -126,5 +126,5 @@ with open("revision/" + p + "/index.html", "r") as i:
 
         <div id="sub"''')
 
-with open("revision/" + p + "/index.html", "w") as j:
+with open("v1/" + p + "/index.html", "w") as j:
     j.write(txt)
