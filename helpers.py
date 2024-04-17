@@ -24,9 +24,9 @@ with open("v1/index.html", "w") as f:
 
 with open("sitemap.xml", "r", encoding='utf-8') as g:
     x = g.read()
-    sitemap = re.findall(r'v1/(.*)/<', x)
+    sitemap = re.findall(r'(?:v1|revision)/(.*)/<', x)
     for string in lst:
-        if string not in sitemap and (string.replace("v1", "revision") not in sitemap):
+        if string not in sitemap:
             lastmod = os.path.getmtime("./v1/" + string)
             x = x.replace("</urlset>", f"""
   <url>
