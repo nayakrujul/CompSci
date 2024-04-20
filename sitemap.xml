@@ -566,4 +566,11 @@
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
+
+  <url>
+    <loc>https://cs.rujulnayak.com/v1/8-01-Ethical-Issues/</loc>
+    <lastmod>2024-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
