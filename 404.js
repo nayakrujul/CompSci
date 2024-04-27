@@ -9,4 +9,5 @@ if (matches.length > 0) {
     location.replace(`https://cs.rujulnayak.com/${LATEST}/${x}`);
 } else {
     document.getElementById("heading").innerHTML = "Error 404 - Page Not Found";
+    document.getElementById("text").hidden = false;
 }
