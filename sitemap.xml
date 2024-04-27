@@ -587,4 +587,11 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <url>
+    <loc>https://cs.rujulnayak.com/v1/8-Summary-Questions/</loc>
+    <lastmod>2024-04-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
