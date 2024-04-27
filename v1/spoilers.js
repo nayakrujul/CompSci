@@ -82,6 +82,12 @@ div.innerHTML += ` &ensp; ` +
 
 const defs = document.querySelectorAll("p.definition");
 
+function remove(target) {
+    return () => {
+        target.classList.remove("donebtn");
+    };
+}
+
 [...defs].map(p => {
     let cont = p.innerText.trim();
     let btn = document.createElement("input");
@@ -92,10 +98,7 @@ const defs = document.querySelectorAll("p.definition");
         let q = event.target;
         navigator.clipboard.writeText(q.getAttribute("copyval"));
         q.classList.add("donebtn");
+        setTimeout(remove(q), 2000);
     });
-    btn.addEventListener("mouseenter", (event) => {
-        let q = event.target;
-        q.classList.remove("donebtn");
-    })
     p.appendChild(btn);
 });

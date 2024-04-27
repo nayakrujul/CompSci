@@ -109,7 +109,7 @@ input.copybtn {
     margin-left: 5px;
 }
 
-input.copybtn.donebtn:hover {
+input.copybtn.donebtn {
     background-image: url("icons/done.svg");
 }
 
@@ -196,4 +196,8 @@ a.navbar-link {
 
 .colour-worst {
     color: #ed4337;
+}
+
+b {
+    text-decoration: underline;
 }
