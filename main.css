@@ -1,5 +1,29 @@
+@font-face {
+    font-family: Chevin;
+    src: url("fonts/ChevinLight.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Chevin;
+    font-style: italic;
+    src: url("fonts/ChevinLightItalic.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Chevin;
+    font-weight: bold;
+    src: url("fonts/ChevinDemiBold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Chevin;
+    font-style: italic;
+    font-weight: bold;
+    src: url("fonts/ChevinBoldItalic.otf") format("opentype");
+}
+
 body {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Chevin, Helvetica, Arial, sans-serif;
 }
 
 #sub {
