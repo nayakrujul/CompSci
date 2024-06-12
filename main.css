@@ -1,29 +1,83 @@
 @font-face {
-    font-family: Chevin;
-    src: url("fonts/ChevinLight.otf") format("opentype");
+    font-family: ChevinPro;
+    font-weight: 100;
+    src: url("fonts/Chevin_Pro_Thin.otf") format("opentype");
 }
 
 @font-face {
-    font-family: Chevin;
+    font-family: ChevinPro;
+    font-weight: 100;
     font-style: italic;
-    src: url("fonts/ChevinLightItalic.otf") format("opentype");
+    src: url("fonts/Chevin_Pro_Thin_Italic.otf") format("opentype");
 }
 
 @font-face {
-    font-family: Chevin;
-    font-weight: bold;
-    src: url("fonts/ChevinDemiBold.otf") format("opentype");
+    font-family: ChevinPro;
+    font-weight: 400;
+    src: url("fonts/Chevin_Pro_Light.otf") format("opentype");
 }
 
 @font-face {
-    font-family: Chevin;
+    font-family: ChevinPro;
+    font-weight: 400;
     font-style: italic;
-    font-weight: bold;
-    src: url("fonts/ChevinBoldItalic.otf") format("opentype");
+    src: url("fonts/Chevin_Pro_Light_Italic.otf") format("opentype");
+}
+
+@font-face {
+    font-family: ChevinPro;
+    font-weight: 500;
+    src: url("fonts/Chevin_Pro_Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: ChevinPro;
+    font-weight: 500;
+    font-style: italic;
+    src: url("fonts/Chevin_Pro_Medium_Italic.otf") format("opentype");
+}
+
+@font-face {
+    font-family: ChevinPro;
+    font-weight: 600;
+    src: url("fonts/Chevin_Pro_DemiBold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: ChevinPro;
+    font-weight: 600;
+    font-style: italic;
+    src: url("fonts/Chevin_Pro_DemiBold_Italic.otf") format("opentype");
+}
+
+@font-face {
+    font-family: ChevinPro;
+    font-weight: 700;
+    src: url("fonts/Chevin_Pro_Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: ChevinPro;
+    font-weight: 700;
+    font-style: italic;
+    src: url("fonts/Chevin_Pro_Bold_Italic.otf") format("opentype");
+}
+
+@font-face {
+    font-family: ChevinPro;
+    font-weight: 800;
+    src: url("fonts/Chevin_Pro_ExtraBold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: ChevinPro;
+    font-weight: 800;
+    font-style: italic;
+    src: url("fonts/Chevin_Pro_ExtraBold_Italic.otf") format("opentype");
 }
 
 body {
-    font-family: Chevin, Helvetica, Arial, sans-serif;
+    font-family: ChevinPro, Helvetica, Arial, sans-serif;
 }
 
 #sub {
