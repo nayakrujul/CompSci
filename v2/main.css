@@ -1,0 +1,111 @@
+@font-face {
+    font-family: ChevinPro;
+    font-weight: 100;
+    src: url("fonts/Chevin_Pro_Thin.otf") format("opentype");
+}
+
+@font-face {
+    font-family: ChevinPro;
+    font-weight: 100;
+    font-style: italic;
+    src: url("fonts/Chevin_Pro_Thin_Italic.otf") format("opentype");
+}
+
+@font-face {
+    font-family: ChevinPro;
+    font-weight: 400;
+    src: url("fonts/Chevin_Pro_Light.otf") format("opentype");
+}
+
+@font-face {
+    font-family: ChevinPro;
+    font-weight: 400;
+    font-style: italic;
+    src: url("fonts/Chevin_Pro_Light_Italic.otf") format("opentype");
+}
+
+@font-face {
+    font-family: ChevinPro;
+    font-weight: 500;
+    src: url("fonts/Chevin_Pro_Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: ChevinPro;
+    font-weight: 500;
+    font-style: italic;
+    src: url("fonts/Chevin_Pro_Medium_Italic.otf") format("opentype");
+}
+
+@font-face {
+    font-family: ChevinPro;
+    font-weight: 600;
+    src: url("fonts/Chevin_Pro_DemiBold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: ChevinPro;
+    font-weight: 600;
+    font-style: italic;
+    src: url("fonts/Chevin_Pro_DemiBold_Italic.otf") format("opentype");
+}
+
+@font-face {
+    font-family: ChevinPro;
+    font-weight: 700;
+    src: url("fonts/Chevin_Pro_Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: ChevinPro;
+    font-weight: 700;
+    font-style: italic;
+    src: url("fonts/Chevin_Pro_Bold_Italic.otf") format("opentype");
+}
+
+@font-face {
+    font-family: ChevinPro;
+    font-weight: 800;
+    src: url("fonts/Chevin_Pro_ExtraBold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: ChevinPro;
+    font-weight: 800;
+    font-style: italic;
+    src: url("fonts/Chevin_Pro_ExtraBold_Italic.otf") format("opentype");
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: ChevinPro, Helvetica, Arial, sans-serif;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+div#header {
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+
+    img#logo {
+        content: url("./logos/banner.png");
+        max-height: 60px;
+        margin: 20px;
+    }
+}
+
+div#margin {
+    height: 50px;
+    width: 100%;
+}
+
+@media (max-width: 500px) {
+    div#header img#logo {
+        content: url("./logos/square.png");
+    }
+}
