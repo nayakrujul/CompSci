@@ -1,79 +1,79 @@
 @font-face {
     font-family: ChevinPro;
     font-weight: 100;
-    src: url("fonts/Chevin_Pro_Thin.otf") format("opentype");
+    src: url("../fonts/Chevin_Pro_Thin.otf") format("opentype");
 }
 
 @font-face {
     font-family: ChevinPro;
     font-weight: 100;
     font-style: italic;
-    src: url("fonts/Chevin_Pro_Thin_Italic.otf") format("opentype");
+    src: url("../fonts/Chevin_Pro_Thin_Italic.otf") format("opentype");
 }
 
 @font-face {
     font-family: ChevinPro;
     font-weight: 400;
-    src: url("fonts/Chevin_Pro_Light.otf") format("opentype");
+    src: url("../fonts/Chevin_Pro_Light.otf") format("opentype");
 }
 
 @font-face {
     font-family: ChevinPro;
     font-weight: 400;
     font-style: italic;
-    src: url("fonts/Chevin_Pro_Light_Italic.otf") format("opentype");
+    src: url("../fonts/Chevin_Pro_Light_Italic.otf") format("opentype");
 }
 
 @font-face {
     font-family: ChevinPro;
     font-weight: 500;
-    src: url("fonts/Chevin_Pro_Medium.otf") format("opentype");
+    src: url("../fonts/Chevin_Pro_Medium.otf") format("opentype");
 }
 
 @font-face {
     font-family: ChevinPro;
     font-weight: 500;
     font-style: italic;
-    src: url("fonts/Chevin_Pro_Medium_Italic.otf") format("opentype");
+    src: url("../fonts/Chevin_Pro_Medium_Italic.otf") format("opentype");
 }
 
 @font-face {
     font-family: ChevinPro;
     font-weight: 600;
-    src: url("fonts/Chevin_Pro_DemiBold.otf") format("opentype");
+    src: url("../fonts/Chevin_Pro_DemiBold.otf") format("opentype");
 }
 
 @font-face {
     font-family: ChevinPro;
     font-weight: 600;
     font-style: italic;
-    src: url("fonts/Chevin_Pro_DemiBold_Italic.otf") format("opentype");
+    src: url("../fonts/Chevin_Pro_DemiBold_Italic.otf") format("opentype");
 }
 
 @font-face {
     font-family: ChevinPro;
     font-weight: 700;
-    src: url("fonts/Chevin_Pro_Bold.otf") format("opentype");
+    src: url("../fonts/Chevin_Pro_Bold.otf") format("opentype");
 }
 
 @font-face {
     font-family: ChevinPro;
     font-weight: 700;
     font-style: italic;
-    src: url("fonts/Chevin_Pro_Bold_Italic.otf") format("opentype");
+    src: url("../fonts/Chevin_Pro_Bold_Italic.otf") format("opentype");
 }
 
 @font-face {
     font-family: ChevinPro;
     font-weight: 800;
-    src: url("fonts/Chevin_Pro_ExtraBold.otf") format("opentype");
+    src: url("../fonts/Chevin_Pro_ExtraBold.otf") format("opentype");
 }
 
 @font-face {
     font-family: ChevinPro;
     font-weight: 800;
     font-style: italic;
-    src: url("fonts/Chevin_Pro_ExtraBold_Italic.otf") format("opentype");
+    src: url("../fonts/Chevin_Pro_ExtraBold_Italic.otf") format("opentype");
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -91,6 +91,7 @@ div#header {
     top: 0px;
     left: 0px;
     z-index: 1000;
+    background-color: white;
 
     img#logo {
         content: url("./logos/banner.png");
@@ -104,8 +105,63 @@ div#margin {
     width: 100%;
 }
 
+div#content {
+    position: absolute;
+    top: 125px;
+    left: 0px;
+    width: 100%;
+
+    div.section-flex {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    div.section-flexbox {
+        display: flex;
+        box-sizing: border-box;
+        width: calc(50% - 20px);
+        border-radius: 10px;
+        border: 3px solid;
+        margin: 10px;
+        text-align: center;
+
+        a.section-link {
+            width: 100%;
+            color: inherit;
+        }
+    }
+
+    div.section-flexbox:not(.disabled):hover {
+        background-color: #eeeeee;
+    }
+
+    div.section-flexbox.disabled {
+        background-color: lightgray;
+
+        a.section-link {
+            pointer-events: none;
+        }
+    }
+}
+
+.no-underline {
+    text-decoration: none !important;
+}
+
+.centred {
+    text-align: center;
+}
+
 @media (max-width: 500px) {
     div#header img#logo {
         content: url("./logos/square.png");
+    }
+}
+
+@media (max-width: 999px) {
+    div#content div.section-flexbox {
+        width: calc(100% - 20px);
     }
 }
