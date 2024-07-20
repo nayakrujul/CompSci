@@ -158,6 +158,21 @@ div#content {
     }
 }
 
+div#footer {
+    height: 1em;
+    width: calc(100% - 20px);
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    padding: 10px;
+    background-color: white;
+    text-align: center;
+}
+
+a {
+    color: #3366cc;
+}
+
 .no-underline {
     text-decoration: none !important;
 }
