@@ -201,3 +201,19 @@ a.navbar-link {
 b {
     text-decoration: underline;
 }
+
+input#v2-button {
+    width: 80px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 20px;
+    position: absolute;
+    top: 20px;
+    right: 8px;
+    background-color: white;
+    transition: background-color 200ms;
+}
+
+input#v2-button:hover {
+    background-color: #e0f0f0;
+}

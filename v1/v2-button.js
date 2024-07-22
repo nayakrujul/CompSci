@@ -1,0 +1,1 @@
+document.getElementById("v2-button").addEventListener("click", () => window.open("../v2/", "_self"));

@@ -102,3 +102,36 @@ function remove(target) {
     });
     p.appendChild(btn);
 });
+
+
+// v1 --> v2 button
+
+let v2btn = document.createElement("input");
+v2btn.type = "button";
+v2btn.id = "v2-button";
+v2btn.value = "v1 → v2";
+document.body.appendChild(v2btn);
+
+let [a, b] = location.href
+    .replaceAll("/index.html", "/")
+    .split("/").slice(-2, -1)[0].split("-")
+    .slice(0, 2);
+let url = null;
+if (a.length === 1) {
+    if (b !== "Summary") {
+        url = a + "/" + b + "/"; 
+    } else {
+        url = a + "/qs/";
+    }
+} else {
+    if (b !== "Summary") {
+        if (a === "2A") {
+            url = "2/" + b + "/";
+        } else {
+            url = "2/" + (+b + 9) + "/";
+        }
+    } else {
+        url = "2/qs/";
+    }
+}
+v2btn.addEventListener("click", () => window.open("../../v2/" + url, "_self"));
