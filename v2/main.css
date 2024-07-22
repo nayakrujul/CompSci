@@ -158,6 +158,14 @@ div#content {
     }
 }
 
+div#page {
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    width: calc(100% - 16px);
+    margin: 8px;
+}
+
 div#footer {
     height: 1em;
     width: calc(100% - 20px);
@@ -179,6 +187,105 @@ a {
 
 .centred {
     text-align: center;
+}
+
+.icon {
+    height: 25px;
+    padding-right: 5px;
+    vertical-align: top;
+}
+
+p.definition,
+p.code,
+p.question,
+p.diagram,
+p.table,
+p.graph {
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+p.code code {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+b {
+    text-decoration: underline;
+}
+
+.blue {
+    --bold-colour: #1c96c5;
+    --button-background: #20a7db;
+    --button-bg-accent: #1c96c5;
+}
+
+.green {
+    --bold-colour: #3b8358;
+    --button-background: #35754f;
+    --button-bg-accent: #2f6846;
+}
+
+.purple {
+    --bold-colour: #9e268a;
+    --button-background: #8e227c;
+    --button-bg-accent: #7e1e6e;
+}
+
+b {
+    color: var(--bold-colour)
+}
+
+p.definition strong {
+    color: red;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
+span.answer:not(.show) {
+    display: none;
+}
+
+input.q-button {
+    background-color: var(--button-background);
+    border-radius: 8px;
+    border-style: none;
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    display: block;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    height: 40px;
+    line-height: 20px;
+    list-style: none;
+    margin: 0;
+    outline: none;
+    padding: 10px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 200ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+input.q-button:hover {
+    background-color: var(--button-bg-accent);
+}
+
+p.summary-question {
+    margin-bottom: 20px;
 }
 
 @media (max-width: 500px) {
