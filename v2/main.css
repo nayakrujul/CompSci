@@ -215,7 +215,7 @@ b {
 }
 
 .blue {
-    --bold-colour: #1c96c5;
+    --bold-colour: #36afde;
     --button-background: #20a7db;
     --button-bg-accent: #1c96c5;
 }
@@ -230,6 +230,18 @@ b {
     --bold-colour: #9e268a;
     --button-background: #8e227c;
     --button-bg-accent: #7e1e6e;
+}
+
+.yellow {
+    --bold-colour: #cc8700;
+    --button-background: #ffa900;
+    --button-bg-accent: #e59800;
+}
+
+.pink {
+    --bold-colour: #ff69b4;
+    --button-background: #ff78bb;
+    --button-bg-accent: #e56ca8;
 }
 
 b {
