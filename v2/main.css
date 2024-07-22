@@ -175,6 +175,24 @@ div#footer {
     padding: 10px;
     background-color: white;
     text-align: center;
+
+    a#prev-link, a#next-link {
+        text-decoration: none;
+        color: var(--button-background);
+    }
+
+    a#prev-link.disabled, a#next-link.disabled {
+        pointer-events: none;
+        color: grey;
+    }
+
+    a#prev-link {
+        float: left;
+    }
+
+    a#next-link {
+        float: right;
+    }
 }
 
 a {

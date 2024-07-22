@@ -1,6 +1,39 @@
 const THEMES = ["blue", "green", "purple", "yellow", "pink"];
 let rand = THEMES[Math.floor(Math.random() * 3)];
-document.getElementById("page").classList.add(rand);
+document.body.classList.add(rand);
+
+
+let [x, y] = location.href
+    .replaceAll("/index.html", "/")
+    .split("/").slice(-3, -1);
+let [p, n] = [null, null];
+
+let last = [null, 9, 17, 10, 18, 5, 5, 7, 3]
+
+if (y === "01") {
+    if (x !== "1") {
+        p = (x - 1) + "/qs/";
+    }
+} else {
+    p = x + "/" + ((y - 1) + "")
+        .padStart(2, "0") + "/";
+}
+
+if (+y === last[+x]) {
+    n = x + "/qs/";
+} else if (y === "qs") {
+    n = (x + 1) + "/01/";
+} else {
+    n = x + "/" + ((+y + 1) + "")
+        .padStart(2, "0") + "/";
+}
+
+let ft = document.getElementById("footer");
+ft.innerHTML =
+    `<a id="prev-link" ${p === null ? 'class="disabled"' : ''} href="../../${p}">◀</a>` +
+    ft.innerHTML +
+    `<a id="next-link" ${n === null ? 'class="disabled"' : ''} href="../../${n}">▶</a>`;
+
 
 [...document.querySelectorAll(".summary-question")].map(qs => {
     qs.innerHTML += `
