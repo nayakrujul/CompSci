@@ -1,5 +1,5 @@
 const THEMES = ["blue", "green", "purple", "yellow", "pink"];
-let rand = THEMES[Math.floor(Math.random() * 3)];
+let rand = THEMES[Math.floor(Math.random() * THEMES.length)];
 document.body.classList.add(rand);
 
 
