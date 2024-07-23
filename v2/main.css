@@ -199,6 +199,14 @@ a {
     color: #3366cc;
 }
 
+img {
+    max-height: 75vh;
+}
+
+img:not(.icon):not(.no-zoom) {
+    cursor: zoom-in;
+}
+
 .no-underline {
     text-decoration: none !important;
 }
@@ -211,6 +219,42 @@ a {
     height: 25px;
     padding-right: 5px;
     vertical-align: top;
+}
+
+.keyword {
+    color: blue;
+}
+
+.function {
+    color: hotpink;
+}
+
+.number {
+    color: lightseagreen;
+}
+
+.string {
+    color: #e47d00;
+}
+
+.comment {
+    color: grey;
+}
+
+.error {
+    color: #ed4337;
+}
+
+.valid {
+    color: #3cb043;
+}
+
+.other {
+    color: darkgoldenrod;
+}
+
+.override {
+    color: black;
 }
 
 p.definition,
@@ -280,6 +324,10 @@ p.definition strong {
                                     supported by Chrome, Edge, Opera and Firefox */
 }
 
+span.answer.show {
+    animation: fadeIn 1000ms;
+}
+
 span.answer:not(.show) {
     display: none;
 }
@@ -328,4 +376,9 @@ p.summary-question {
     div#content div.section-flexbox {
         width: calc(100% - 20px);
     }
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }

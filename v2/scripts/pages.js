@@ -1,7 +1,11 @@
+// Themes
+
 const THEMES = ["blue", "green", "purple", "yellow", "pink"];
 let rand = THEMES[Math.floor(Math.random() * THEMES.length)];
 document.body.classList.add(rand);
 
+
+// Navbar arrows
 
 let [x, y] = location.href
     .replaceAll("/index.html", "/")
@@ -35,7 +39,9 @@ ft.innerHTML =
     `<a id="next-link" ${n === null ? 'class="disabled"' : ''} href="../../${n}">▶</a>`;
 
 
-[...document.querySelectorAll(".summary-question")].map(qs => {
+// Summary question buttons
+
+[...document.querySelectorAll(".summary-question")].forEach(qs => {
     qs.innerHTML += `
         <input type="button" class="q-button" value="Reveal answer" />
     `;
@@ -52,4 +58,13 @@ ft.innerHTML =
             el.value = "Hide answer";
         }
     })
+});
+
+
+// Image zoom in
+
+[...document.querySelectorAll("img:not(.icon):not(.no-zoom)")].forEach(img => {
+    img.addEventListener("click", (evt) => {
+        window.open(evt.target.src, "_blank").focus();
+    });
 });

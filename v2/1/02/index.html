@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>1.02 - Pseudo-code | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Study the usage of pseudo-code and the three basic programming constructs (sequence, selection and iteration) for your GCSE Computer Science exam on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Pseudo-code</strong> is a way of writing algorithms that reads like code written in actual programming languages. 
+            </p>
+    
+            <p>
+                <b>Pseudo-code is not a real programming language.</b>
+                The idea is that pseudo-code clearly <b>shows an algorithm's steps</b> without worrying about the syntax (finer details) of any particular programming language.
+            </p>
+    
+            <p><br />There are <b>three basic programming constructs</b> which we use when writing pseudo-code:</p>
+    
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Sequence</strong> is just a matter of writing of writing down the steps in the correct order.
+            </p>
+    
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Selection</strong> allows you to choose between multiple options.
+            </p>
+    
+            <p>Example 1 shows how an <code>IF</code> statement can be used in pseudo-code.</p>
+    
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 1 <br />
+                <code>
+                    age &larr; <span class="function">USERINPUT</span> <br />
+                    <span class="keyword">IF</span> age ≥ <span class="number">18</span> <span class="keyword">THEN</span> <br />
+                    &ensp; <span class="function">OUTPUT</span> <span class="string">&quot;OK&quot;</span> <br />
+                    <span class="keyword">ELSE</span> <br />
+                    &ensp; <span class="function">OUTPUT</span> <span class="string">&quot;Too young&quot;</span> <br />
+                    <span class="keyword">ENDIF</span>
+                </code>
+            </p>
+    
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Iteration</strong> means looping. There are three different types of loops in pseudo-code.
+            </p>
+    
+            <p>Example 2 shows an algorithm containing a <code>FOR ... ENDFOR</code> loop. The algorithm asks the user for five numbers and <b>outputs their sum</b>.</p>
+    
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 2 <br />
+                <code>
+                    total &larr; <span class="number">0</span> <br />
+                    <span class="keyword">FOR</span> count &larr; <span class="number">1</span> <span class="keyword">TO</span> <span class="number">5</span> <br />
+                    &ensp; num &larr; <span class="function">USERINPUT</span> <br />
+                    &ensp; total &larr; total + num <br />
+                    <span class="keyword">ENDFOR</span> <br />
+                    <span class="function">OUTPUT</span> total
+                </code>
+            </p>
+    
+            <p>Example 3 shows an algorithm containing a <code>REPEAT ... UNTIL</code> loop. The algorithm <b>counts up until the user stops it</b>.</p>
+    
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 3 <br />
+                <code>
+                    count &larr; <span class="number">0</span> <br />
+                    <span class="keyword">REPEAT</span> <br />
+                    &ensp; count &larr; count + <span class="number">1</span> <br />
+                    &ensp; <span class="function">OUTPUT</span> count <br />
+                    &ensp; end &larr; <span class="function">USERINPUT</span> <br />
+                    <span class="keyword">UNTIL</span> end = <span class="string">&quot;yes&quot;</span>
+                </code>
+            </p>
+    
+            <p>Example 4 shows an algorithm containing a <code>WHILE ... ENDWHILE</code> loop. The algorithm <b>keeps asking the user for a password</b> until they get it correct.</p>
+    
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 4 <br />
+                <code>
+                    password &larr; <span class="function">USERINPUT</span> <br />
+                    <span class="keyword">WHILE</span> password ≠ <span class="string">&quot;abcd&quot;</span> <br />
+                    &ensp; <span class="function">OUTPUT</span> <span class="string">&quot;Try again&quot;</span> <br />
+                    &ensp; password &larr; <span class="function">USERINPUT</span> <br />
+                    <span class="keyword">ENDWHILE</span> <br />
+                    <span class="function">OUTPUT</span> <span class="string">&quot;Correct password&quot;</span>
+                </code>
+            </p>
+    
+            <p>
+                <code>REPEAT ... UNTIL</code> loops and <code>WHILE ... ENDWHILE</code> loops are very similar, but there are some key differences.
+            </p>
+    
+            <p>
+                Firstly, <code>REPEAT ... UNTIL</code> loops keep looping <b><em>until</em></b> the condition is true,
+                whereas <code>WHILE ... ENDWHILE</code> loops keep looping <b><em>while</em></b> the condition is true.
+            </p>
+    
+            <p>
+                Secondly, <code>REPEAT ... UNTIL</code> loops check the condition at the end, so <b>will always run at least once</b>,
+                but <code>WHILE ... ENDWHILE</code> loops check their condition at the start, so <b>won't run if the condition starts off as false</b>.
+            </p>
+    
+            <p><br />Example 5 shows an algorithm written in pseudo-code.</p>
+    
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 5 <br />
+                <code>
+                    result &larr; <span class="number">1</span> <br />
+                    <span class="keyword">FOR</span> num &larr; <span class="number">1</span> <span class="keyword">TO</span> <span class="number">10</span> <br />
+                    &ensp; <span class="keyword">IF</span> num <span class="other">MOD</span> <span class="number">2</span> = <span class="number">0</span> <span class="keyword">THEN</span> <br />
+                    &ensp; &ensp; result &larr; result * num <br />
+                    &ensp; <span class="keyword">ENDIF</span> <br />
+                    <span class="keyword">ENDFOR</span> <br />
+                    <span class="function">OUTPUT</span> result
+                </code>
+            </p>
+
+            <p>
+                Note: <code>num <span class="other">MOD</span> <span class="number">2</span></code> means the remainder from dividing <code>num</code> by <code class="number">2</code>.
+                We'll learn more about this in <a href="../../2/03/">2.03 (Operations)</a>.
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                What does the code in Example 5 do?
+            </p>
+    
+            <p class="summary-question noselect">
+                <span class="answer">Multiplies all the even numbers from 1 to 10 and outputs the result.</span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = "1-02-Pseudocode/";</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>
