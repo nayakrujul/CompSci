@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>1.04 - Linear Search | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn the Linear Search algorithm and see an example implementation for GCSE Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>searching algorithm</strong> is an algorithm to find the index of an item in a list.
+            </p>
+    
+            <p>
+                For example, the index of 51 in the list <code>[61, 7, 26, 51, 39, 35, 18, 65]</code> is 3. <br />
+                Note: in Computer Science, the first item of a list is at <b>index 0, NOT index 1.</b>
+            </p>
+    
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Linear search</strong> is a searching algorithm which checks each item in order.
+            </p>
+    
+            <p>Example 1 shows an implementation of linear search in pseudo-code.</p>
+    
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 1 <br />
+                <code>
+                    <span class="keyword">SUBROUTINE</span> <span class="other">linearSearch</span>(list, item) <br />
+                    &nbsp; <span class="keyword">FOR</span> i &larr; <span class="number">0</span> <span class="keyword">TO</span> <span class="other">LEN</span>(list)-<span class="number">1</span> <br/>
+                    &nbsp; &nbsp; <span class="keyword">IF</span> list[i] = item <span class="keyword">THEN</span> <br />
+                    &nbsp; &nbsp; &nbsp; <span class="function">RETURN</span> i <br />
+                    &nbsp; &nbsp; <span class="keyword">ENDIF</span> <br />
+                    &nbsp; <span class="keyword">ENDFOR</span> <br />
+                    &nbsp; <span class="function">RETURN</span> <span class="number">-1</span> <br />
+                    <span class="keyword">ENDSUBROUTINE</span>
+                </code>
+            </p>
+    
+            <p>Diagram 4 in <a href="../03/">1.03 (Flowcharts)</a> shows a flowchart implementation of linear search.</p>
+    
+            <p>
+                The steps to do a linear search are as follows:
+                <br /> &emsp; 1. Look at the <b>first item</b> in your list
+                <br /> &emsp; 2. <b>Check</b> if this is the item that you are looking for
+                <br /> &emsp; 3. If it is, <b>output the index</b> and exit
+                <br /> &emsp; 4. Otherwise, <b>move on</b> to the next item in the list
+                <br /> &emsp; 5. <b>Repeat</b> steps 2 to 4 until you find the item, or you reach the end of the list
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                What is the maximum number of comparisons linear search would need to do for a list of length <code>n</code>?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer"><code>n</code> comparisons (if the item isn't in the list, or it is at the very end). This is called the worst case <b>time complexity</b>, and is written as <code>O(n)</code>.</span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = "1-04-Linear-Search/";</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>

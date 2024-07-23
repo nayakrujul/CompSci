@@ -366,6 +366,29 @@ p.summary-question {
     margin-bottom: 20px;
 }
 
+p#sort {
+    font-size: 20px;
+    padding: 20px 0px;
+
+    span#select {
+        padding: 10px;
+
+        span {
+            cursor: pointer;
+            padding: 10px;
+            color: lightgray;
+            transition: color 500ms, background-color 500ms;
+            background-color: white;
+            border-radius: 5px;
+        }
+
+        .active {
+            color: black;
+            background-color: #ffa900;
+        }
+    }
+}
+
 @media (max-width: 500px) {
     div#header img#logo {
         content: url("./logos/square.png");
