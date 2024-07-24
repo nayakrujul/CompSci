@@ -341,7 +341,6 @@ input.q-button {
     color: white;
     cursor: pointer;
     display: block;
-    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 14px;
     font-weight: 500;
     height: 40px;
@@ -414,6 +413,52 @@ table {
 
 code.small-code {
     font-size: 16px;
+}
+
+div#revision-questions {
+    margin-top: 25px;
+
+    div.rq:not(.show) {
+        display: none;
+    }
+
+    span.pretext {
+        display: block;
+    }
+
+    span.question {
+        display: block;
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    textarea.rq-textbox {
+        height: auto;
+        width: 100%;
+        box-sizing: border-box;
+        resize: none;
+        font-family: inherit;
+        font-size: 16px;
+        margin-bottom: 16px;
+    }
+
+    input.rq-checkbox {
+        margin-right: 5px;
+        accent-color: var(--button-background);
+    }
+
+    span.rq-answer:not(.show) {
+        display: none;
+    }
+
+    span.rq-answer.show {
+        display: block;
+        animation: fadeIn 1000ms;
+    }
+
+    input.rq-button {
+        margin-top: 16px;
+    }
 }
 
 @media (max-width: 500px) {

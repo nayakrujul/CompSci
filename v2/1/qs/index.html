@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>Section 1 Revision Questions | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Revise Section 1 (Algorithms) with exam-style GCSE Computer Science questions on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+
+            <h1 id="score">Score: 0/0</h1>
+
+            <h2 id="q-num">Question 1 of &infin;</h2>
+    
+            <div id="revision-questions">
+                <div class="rq" marks="2">
+                    <span class="question">Define decomposition.</span>
+                    <span class="rq-answer">Breaking down a complex problem into smaller subtasks</span>
+                    <span class="rq-answer">And solving each one individually</span>
+                </div>
+                <div class="rq" marks="3">
+                    <span class="pretext">
+                        <p>Example 1 shows an algorithm written in pseudo-code.</p>
+                        <p class="code">
+                            <img src="../../icons/code.svg" class="icon" />
+                            Example 1 <br />
+                            <code>
+                                height &larr; <span class="function">USERINPUT</span> <br />
+                                width &larr; <span class="function">USERINPUT</span> <br />
+                                area &larr; height * width <br />
+                                <span class="function">OUTPUT</span> area
+                            </code>
+                        </p>
+                    </span>
+                    <span class="question">Describe what the code in Example 1 does.</span>
+                    <span class="rq-answer">Takes in the height and width as input</span>
+                    <span class="rq-answer">Multiplies them together</span>
+                    <span class="rq-answer">Outputs the resulting area</span>
+                </div>
+                <div class="rq" marks="5">
+                    <span class="pretext">
+                        <p>A parcel number is valid if it has exactly 8 characters.</p>
+                    </span>
+                    <span class="question">
+                        Write an algorithm in pseudo-code to output whether or not a parcel number is valid.
+                    </span>
+                    <span class="rq-answer"><code>number &larr; <span class="function">USERINPUT</span></code></span>
+                    <span class="rq-answer">
+                        <code><span class="keyword">IF</span> <span class="other">LEN</span>(number) =
+                            <span class="number">8</span> <span class="keyword">THEN</span></code>
+                    </span>
+                    <span class="rq-answer">
+                        <code>&nbsp;<span class="function">OUTPUT</span> <span class="string">&quot;Valid&quot;</span></code>
+                    </span>
+                    <span class="rq-answer">
+                        <code><span class="keyword">ELSE</span> <br /> &nbsp; &nbsp; <span class="function">OUTPUT</span>
+                            <span class="string">&quot;Invalid&quot;</span></code>
+                    </span>
+                    <span class="rq-answer">
+                        <code><span class="keyword">ENDIF</span></code>
+                    </span>
+                </div>
+                <div class="rq" marks="1">
+                    <span class="pretext">
+                        <p>Diagram 1 shows a flowchart of an algorithm.</p>
+
+                        <p class="diagram">
+                            <img src="../../icons/image.svg" class="icon" />
+                            Diagram 1 <br /> <br />
+                            <img src="./flowchart.png" />
+                        </p>
+                    </span>
+                    <span class="question">What is the mistake in Diagram 1?</span>
+                    <span class="rq-answer">There should be a box to input <code>miles</code></span>
+                </div>
+                <div class="rq" marks="1">
+                    <span class="question">
+                        Why can a binary search not be used on the list
+                        <code class="small-code">[2, 3, 5, 7, 13, 11]</code>?
+                    </span>
+                    <span class="rq-answer">The list is not sorted</span>
+                </div>
+                <div class="rq" marks="3">
+                    <span class="question">
+                        Describe the stages of a binary search to find the string <code class="small-code">"ford"</code>
+                        in the list <code class="small-code">["Audi", "BMW", "Ford", "Mercedes", "Tesla", "Toyota",
+                        "Volkswagen"]</code>.
+                    </span>
+                    <span class="rq-answer">
+                        Compare "Ford" to "Mercedes" (the middle item). "Ford" is smaller, so take only the left half.
+                    </span>
+                    <span class="rq-answer">
+                        Compare "Ford" to "BMW" (the new middle item). "Ford" is greater, so take only the right half.
+                    </span>
+                    <span class="rq-answer">
+                        Compare "Ford" to "Ford" (the new middle item). They are equal, so stop searching.
+                    </span>
+                </div>
+                <div class="rq" marks="4">
+                    <span class="question">Explain two benefits of using bubble sort over merge sort.</span>
+                    <span class="rq-answer">In bubble sort, all the sorting is done on the original list</span>
+                    <span class="rq-answer">Therefore bubble sort uses less memory than merge sort</span>
+                    <span class="rq-answer">
+                        Merge sort always goes through the whole splitting and merging process,
+                        whereas bubble sort exits early once the list is sorted
+                    </span>
+                    <span class="rq-answer">So bubble sort is quicker for lists which are nearly ordered already</span>
+                </div>
+                <div class="rq" marks="2">
+                    <span class="question">Why does merge sort split the list into single items, then merge them?</span>
+                    <span class="rq-answer">Smaller lists are easier to sort than larger lists</span>
+                    <span class="rq-answer">Ordered lists are easier to merge and sort than unordered lists</span>
+                </div>
+            </div>
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = "1-Summary-Questions/";</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+        <script src="../../scripts/rqs.js"></script>
+
+    </body>
+</html>
