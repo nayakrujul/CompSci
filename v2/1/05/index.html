@@ -47,6 +47,30 @@
                 <br /> &emsp; 7. <b>Keep repeating</b> until you find the item or the list has just one element
             </p>
 
+            <p><br />Example 1 shows an implementation of binary search in pseudo-code.</p>
+    
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 1 <br />
+                <code>
+                    <span class="keyword">SUBROUTINE</span> <span class="other">binarySearch</span>(list, item) <br />
+                    &nbsp; left &larr; <span class="number">0</span> <br />
+                    &nbsp; right &larr; <span class="other">LEN</span>(list) - <span class="number">1</span> <br />
+                    &nbsp; <span class="keyword">WHILE</span> left &le; right <br />
+                    &nbsp; &nbsp; middle &larr; (left + right) / <span class="number">2</span> <br />
+                    &nbsp; &nbsp; <span class="keyword">IF</span> list[middle] = item <span class="keyword">THEN</span> <br />
+                    &nbsp; &nbsp; &nbsp; <span class="function">RETURN</span> middle <br />
+                    &nbsp; &nbsp; <span class="keyword">ELSE IF</span> list[middle] < item <span class="keyword">THEN</span> <br />
+                    &nbsp; &nbsp; &nbsp; right &larr; middle - <span class="number">1</span> <br />
+                    &nbsp; &nbsp; <span class="keyword">ELSE</span> <br />
+                    &nbsp; &nbsp; &nbsp; left &larr; middle + <span class="number">1</span> <br />
+                    &nbsp; &nbsp; <span class="keyword">ENDIF</span> <br />
+                    &nbsp; <span class="keyword">ENDWHILE</span> <br />
+                    &nbsp; <span class="function">RETURN</span> <span class="number">-1</span> <br />
+                    <span class="keyword">ENDSUBROUTINE</span>
+                </code>
+            </p>
+
             <br />
     
             <hr />

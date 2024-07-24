@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>1.07 - Bubble Sort | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn the details of Bubble Sort, the simplest sorting algorithm, and an example implementation that you need for GCSE Computer Science, on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>sorting algorithm</strong> is an algorithm to put the items of a list in order.
+            </p>
+    
+            <p>
+                For example, the list <code>[4, 2, 3, 1]</code> can be sorted to get the list <code>[1, 2, 3, 4]</code>.
+            </p>
+    
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Bubble sort</strong> is a simple sorting algorithm.
+            </p>
+    
+            <p>
+                The steps to do a bubble sort are as follows:
+                <br /> &emsp; 1. Look at the <b>first pair</b> of numbers in the list
+                <br /> &emsp; 2. If they're in the wrong order, <b>swap them</b>
+                <br /> &emsp; 3. <b>Move on</b> to the next pair of items
+                <br /> &emsp; 4. <b>Repeat</b> steps 2 and 3 until you reach the end of the list
+                <br /> &emsp; 5. Repeat steps 1 to 4 until there are <b>no swaps</b> in the pass
+            </p>
+    
+            <p>On each pass, the <b>next largest number "bubbles"</b> up to the end.</p>
+    
+            <p>
+                Diagram 1 shows an example run of bubble sort on a list of numbers.
+            </p>
+    
+            <p class="diagram">
+                <img src="../../icons/image.svg" class="icon" />
+                Diagram 1 <br /> <br />
+                <img src="./diagram1.png" width="250px" />
+                <br /> <br />
+                <img src="./diagram2.png" width="250px" />
+            </p>
+
+            <p><br />Example 1 shows an implementation of bubble sort in pseudo-code.</p>
+    
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 1 <br />
+                <code>
+                    <span class="keyword">SUBROUTINE</span> <span class="other">bubbleSort</span>(list) <br />
+                    &nbsp; <span class="keyword">FOR</span> i &larr; <span class="number">0</span> <span class="keyword">TO</span> <span class="other">LEN</span>(list)-<span class="number">1</span> <br/>
+                    &nbsp; &nbsp; <span class="keyword">FOR</span> j &larr; <span class="number">1</span> <span class="keyword">TO</span> <span class="other">LEN</span>(list)-i+<span class="number">1</span> <br/>
+                    &nbsp; &nbsp; &nbsp; <span class="keyword">IF</span> list[j - <span class="number">1</span>] > list[j] <span class="keyword">THEN</span> <br />
+                    &nbsp; &nbsp; &nbsp; &nbsp; temp &larr; list[j - <span class="number">1</span>] <br />
+                    &nbsp; &nbsp; &nbsp; &nbsp; list[j - <span class="number">1</span>] &larr; list[j] <br />
+                    &nbsp; &nbsp; &nbsp; &nbsp; list[j] &larr; temp <br />
+                    &nbsp; &nbsp; &nbsp; <span class="keyword">ENDIF</span> <br />
+                    &nbsp; &nbsp; <span class="keyword">ENDFOR</span> <br />
+                    &nbsp; <span class="keyword">ENDFOR</span> <br />
+                    &nbsp; <span class="function">RETURN</span> list <br />
+                    <span class="keyword">ENDSUBROUTINE</span>
+                </code>
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                What is the maximum number of passes required for a list of length <code>n</code>?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    <code>n</code> passes, and in the <code>x<sup>th</sup></code> pass, there can be up to <code>n - x</code> swaps.
+                    So, the maximum number of swaps in bubble sort is <code>&half;(n<sup>2</sup> - n)</code>,
+                    and the worst case <b>time complexity</b> is said to be <b>"on the order of <code>O(n<sup>2</sup>)</code>"</b>.
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = "1-07-Bubble-Sort/";</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>
