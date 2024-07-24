@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>1.06 - Searching Algorithms Comparison | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="See the comparison of the two searching algorithms, Linear Search and Binary Search, for GCSE Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p>Table 1 shows the differences between linear search and binary search.</p>
+
+            <p class="table">
+                <img src="../../icons/table.svg" class="icon" />
+                Table 1
+            </p>
+
+            <table>
+                <tr>
+                    <th>&nbsp;</th>
+                    <th><strong>Linear Search</strong></th>
+                    <th><strong>Binary Search</strong></th>
+                </tr>
+                <tr>
+                    <td><em>Works on...</em></td>
+                    <td class="best">All lists</td>
+                    <td class="worst">Sorted lists only</td>
+                </tr>
+                <tr>
+                    <td><em>Efficiency</em></td>
+                    <td class="worst">Less efficient</td>
+                    <td class="best">More efficient</td>
+                </tr>
+                <tr>
+                    <td><em>Simplicity</em></td>
+                    <td class="best">Very simple</td>
+                    <td class="worst">More complicated</td>
+                </tr>
+            </table>
+
+            <p><br />Graph 1 shows the maximum number of comparisons against the length of the list for binary and linear search (lower means more efficient).</p>
+
+            <p class="graph">
+                <img src="../../icons/graph.svg" class="icon" />
+                Graph 1 <br /> <br />
+                <img src="./graph.png" />
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                How many comparisons would be needed to find 89 in the list <code class="small-code">[11, 15, 25, 28, 36, 46, 49, 53, 65, 79, 80, 84, 89, 93, 97]</code> for each algorithm?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">13 for linear search (because 89 is the 13<sup>th</sup> item in the list) and 4 for binary search (53, 84, 93, 89).</span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = "1-06-Searching-Algorithms-Comparison/";</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>

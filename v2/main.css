@@ -201,6 +201,7 @@ a {
 
 img {
     max-height: 75vh;
+    max-width: 75vw;
 }
 
 img:not(.icon):not(.no-zoom) {
@@ -387,6 +388,32 @@ p#sort {
             background-color: #ffa900;
         }
     }
+}
+
+table {
+    border: 1px solid black;
+    
+    th, td {
+        border: 1px solid black;
+        text-align: left;
+        padding: 5px;
+    }
+}
+
+.best {
+    color: #3cb043
+}
+
+.mid {
+    color: darkgoldenrod;
+}
+
+.worst {
+    color: #ed4337;
+}
+
+code.small-code {
+    font-size: 16px;
 }
 
 @media (max-width: 500px) {
