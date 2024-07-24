@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>1.08 - Merge Sort | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Revise for your GCSE Computer Science exam by seeing how splitting the list allows Merge Sort to be quicker than Bubble Sort in the worst case on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Merge sort</strong> is a more complicated but sometimes more efficient sorting algorithm.
+            </p>
+    
+            <p>
+                The steps to do a merge sort are as follows:
+                <br /> &emsp; 1. Keep splitting the list in half until all sublists contain one item
+                <br /> &emsp; 2. Repeatedly merge and sort pairs of sublists into larger sublists
+                <br /> &emsp; 3. Eventually, the whole list will be reconstructed in order
+            </p>
+    
+            <p>
+                Diagram 1 shows an example run of merge sort on a list of numbers.
+            </p>
+    
+            <p class="diagram">
+                <img src="../../icons/image.svg" class="icon" />
+                Diagram 1 <br /> <br />
+                <img src="./diagram.png" />
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                Which sorting algorithm is more efficient in the worst case: merge sort or bubble sort?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    Merge sort (with a worst case <b>time complexity</b> on the order of <code>O(n log n)</code>) is much more efficient than
+                    bubble sort (worst case on the order of <code>O(n<sup>2</sup>)</code>), especially for larger lists. However, if the
+                    list is already close to sorted, you may find that bubble sort performs better than merge sort (see the graph on the next page).
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = "1-08-Merge-Sort/";</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>
