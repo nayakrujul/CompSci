@@ -204,7 +204,7 @@ img {
     max-width: 75vw;
 }
 
-img:not(.icon):not(.no-zoom) {
+img:not(.icon):not(#logo):not(.no-zoom) {
     cursor: zoom-in;
 }
 
@@ -278,7 +278,7 @@ b {
 }
 
 .blue {
-    --bold-colour: #36afde;
+    --bold-colour: #1c96c5;
     --button-background: #20a7db;
     --button-bg-accent: #1c96c5;
 }
@@ -302,7 +302,7 @@ b {
 }
 
 .pink {
-    --bold-colour: #ff69b4;
+    --bold-colour: #ff4fa7;
     --button-background: #ff78bb;
     --button-bg-accent: #e56ca8;
 }
@@ -376,7 +376,7 @@ p#sort {
         span {
             cursor: pointer;
             padding: 10px;
-            color: lightgray;
+            color: lightgrey;
             transition: color 500ms, background-color 500ms;
             background-color: white;
             border-radius: 5px;
@@ -385,6 +385,11 @@ p#sort {
         .active {
             color: black;
             background-color: #ffa900;
+        }
+
+        span:not(.active):hover {
+            background-color: #ffd47f;
+            color: darkgrey;
         }
     }
 }
@@ -459,6 +464,29 @@ div#revision-questions {
     input.rq-button {
         margin-top: 16px;
     }
+}
+
+input.copybtn {
+    width: 15px;
+    height: 20px;
+    background-image: url("icons/copy.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 0;
+    background-color: white;
+    margin-left: 5px;
+}
+
+input.copybtn.donebtn {
+    background-image: url("icons/done.svg");
+}
+
+input.copybtn:hover {
+    filter: brightness(200%);
+}
+
+p.definition i a {
+    margin-right: 5px;
 }
 
 @media (max-width: 500px) {

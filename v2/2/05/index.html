@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>2.05 - Arrays | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn about how arrays can be used to store multiple items in a single data structure for GCSE Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Data structures</strong> are formats for storing data - like arrays, records, and files.
+            </p>
+    
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                An <strong>array</strong> is a data structure that can store a group of data of the same type under a single identifier.
+            </p>
+    
+            <p>
+                Each piece of data within an array is called an <b>element</b>. Each element can be accessed by its index (position) in the array.
+            </p>
+    
+            <p>Example 1 shows how to create and manipulate arrays in pseudo-code.</p>
+    
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 1 <br />
+                <code>
+                    <span class="comment">Use square brackets to define an array</span> <br />
+                    names &larr; [<span class="string">&quot;Adam&quot;</span>, <span class="string">&quot;Bob&quot;</span>, <span class="string">&quot;Charlie&quot;</span>, <span class="string">&quot;Daniel&quot;</span>] <br />
+                    <br />
+                    <span class="comment">Elements in arrays can be retrieved just like characters in strings</span> <br />
+                    <span class="function">OUTPUT</span> names[<span class="number">2</span>] <br />
+                    <span class="comment">>>> &quot;Charlie&quot;</span> <br />
+                    <br />
+                    <span class="comment">Remember: indexing starts at 0</span> <br />
+                    <br />
+                    <span class="comment">Elements can be changed as well</span> <br />
+                    names[<span class="number">1</span>] = <span class="string">&quot;Ben&quot;</span> <br />
+                    <span class="function">OUTPUT</span> names <br />
+                    <span class="comment">>>> [&quot;Adam&quot;, &quot;Ben&quot;, &quot;Charlie&quot;, &quot;Daniel&quot;]</span> <br />
+                    <br />
+                    <span class="comment">Just like with strings, LEN returns the length of an array</span> <br />
+                    <span class="function">OUTPUT</span> <span class="other">LEN</span>(names) <br />
+                    <span class="comment">>>> 4</span>
+                </code>
+            </p>
+    
+            <p>Two-dimensional (2D) arrays are <b>arrays of arrays</b>.</p>
+    
+            <p>Example 2 shows the manipulation of a 2D array.</p>
+    
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 2 <br />
+                <code>
+                    <span class="comment">Five students' Maths and English scores are shown in this 2D array</span> <br />
+                    <span class="comment">Each array inside this 2D array contains a certain student's two test scores</span> <br />
+                    scores &larr; [[<span class="number">9</span>, <span class="number">15</span>],
+                                   [<span class="number">18</span>, <span class="number">8</span>],
+                                   [<span class="number">12</span>, <span class="number">14</span>],
+                                   [<span class="number">13</span>, <span class="number">7</span>],
+                                   [<span class="number">10</span>, <span class="number">17</span>]] <br />
+                    <br />
+                    <span class="comment">Retrieve the fourth student's scores</span> <br />
+                    <span class="function">OUTPUT</span> scores[<span class="number">3</span>] <br />
+                    <span class="comment">>>> [13, 7]</span> <br />
+                    <br />
+                    <span class="comment">Retrieve the second student's first score</span> <br />
+                    <span class="function">OUTPUT</span> scores[<span class="number">1</span>][<span class="number">0</span>] <br />
+                    <span class="comment">>>> 18</span> <br />
+                    <br />
+                    <span class="comment">Get the length of the 2D array</span> <br />
+                    <span class="function">OUTPUT</span> <span class="other">LEN</span>(scores) <br />
+                    <span class="comment">>>> 5</span> <br />
+                    <br />
+                    <span class="comment">Get the length of the first element</span> <br />
+                    <span class="function">OUTPUT</span> <span class="other">LEN</span>(scores[<span class="number">0</span>]) <br />
+                    <span class="comment">>>> 2</span> <br />
+                </code>
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                Can you think of other uses for 2D arrays?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">Storing the pixel data of images, board games where the board is a grid, and much more.</span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = "2A-05-Arrays/";</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>

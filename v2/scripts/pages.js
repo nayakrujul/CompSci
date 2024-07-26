@@ -63,8 +63,34 @@ ft.innerHTML =
 
 // Image zoom in
 
-[...document.querySelectorAll("img:not(.icon):not(.no-zoom)")].forEach(img => {
+[...document.querySelectorAll("img:not(.icon):not(#logo):not(.no-zoom)")].forEach(img => {
     img.addEventListener("click", (evt) => {
         window.open(evt.target.src, "_blank").focus();
     });
+});
+
+
+// Definition copy button
+
+const list = document.querySelectorAll("p.definition");
+
+function remove(target) {
+    return () => {
+        target.classList.remove("donebtn");
+    };
+}
+
+[...list].map(p => {
+    let cont = p.innerText.trim();
+    let btn = document.createElement("input");
+    btn.type = "button";
+    btn.classList.add("copybtn");
+    btn.setAttribute("copyval", cont);
+    btn.addEventListener("click", (event) => {
+        let q = event.target;
+        navigator.clipboard.writeText(q.getAttribute("copyval"));
+        q.classList.add("donebtn");
+        setTimeout(remove(q), 2000);
+    });
+    p.appendChild(btn);
 });

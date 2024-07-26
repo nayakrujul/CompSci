@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>2.02 - Data Types | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Study the five main data types (Integer, Float, Boolean, Character and String) that you need to know for GCSE Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p>
+                All data is stored in memory in binary form, but this raises a problem:
+            </p>
+            <p>
+                The binary form of the integer 36 is the same as the binary form of the character '$' (see <a href="../../3/05/">3.05 - ASCII and Unicode</a>).
+            </p>
+            <p>
+                <b>How does the computer decide</b> which of these interpretations is correct?
+            </p>
+    
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                The <strong>data type</strong> of a variable determines how its binary form in memory is interpreted.
+            </p>
+    
+            <p>Table 1 shows the five main data types.</p>
+    
+            <p class="table">
+                <img src="../../icons/table.svg" class="icon" />
+                Table 1
+            </p>
+    
+            <table>
+                <tr>
+                    <th><strong>Name</strong></th>
+                    <th><strong>Pseudo-code</strong></th>
+                    <th><strong>Python</strong></th>
+                    <th><strong>Description</strong></th>
+                    <th><strong>Examples</strong></th>
+                </tr>
+                <tr>
+                    <td>Integer</td>
+                    <td><code class="other">INT</code></td>
+                    <td><code class="other">int</code></td>
+                    <td>A whole number.</td>
+                    <td><code class="number">5</code>, <code class="number">-123</code>, <code class="number">0</code></td>
+                </tr>
+                <tr>
+                    <td>Float (or real)</td>
+                    <td><code class="other">REAL</code></td>
+                    <td><code class="other">float</code></td>
+                    <td>A number with a decimal part.</td>
+                    <td><code class="number">1.23</code>, <code class="number">-10.0</code>, <code class="number">0.15</code></td>
+                </tr>
+                <tr>
+                    <td>Boolean</td>
+                    <td><code class="other">BOOL</code></td>
+                    <td><code class="other">bool</code></td>
+                    <td>Either "true" or "false".</td>
+                    <td><code class="number">True</code>, <code class="number">False</code></td>
+                </tr>
+                <tr>
+                    <td>Character</td>
+                    <td><code class="other">CHAR</code></td>
+                    <td>N/A</td>
+                    <td>A single character.</td>
+                    <td><code class="string">'a'</code>, <code class="string">'5'</code>, <code class="string">'?'</code></td>
+                </tr>
+                <tr>
+                    <td>String</td>
+                    <td><code class="other">STRING</code></td>
+                    <td><code class="other">str</code></td>
+                    <td>A collection of characters.</td>
+                    <td><code class="string">"abcd"</code>, <code class="string">"!@#"</code>, <code class="string">""</code></td>
+                </tr>
+            </table>
+    
+            <br />
+    
+            <p>You can <b>convert between different data types</b>, as shown in Example 1 (pseudo-code) and Example 2 (Python)</p>
+    
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 1 <br />
+                <code>
+                    <span class="other">INT_TO_STRING</span>(<span class="number">123</span>) &nbsp; &nbsp; <span class="comment">"123"</span> <br />
+                    <span class="other">STRING_TO_INT</span>(<span class="string">&quot;123&quot;</span>) &nbsp; <span class="comment">123</span> <br />
+                    <span class="other">REAL_TO_STRING</span>(<span class="number">1.23</span>) &nbsp; <span class="comment">"1.23"</span> <br />
+                    <span class="other">STRING_TO_REAL</span>(<span class="string">&quot;1.23&quot;</span>) <span class="comment">1.23</span> <br />
+                </code>
+            </p>
+    
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 2 <br />
+                <code>
+                    <span class="other">str</span>(<span class="number">123</span>) &nbsp; &nbsp;&nbsp; <span class="comment">#&nbsp;"123"</span> <br />
+                    <span class="other">int</span>(<span class="string">&quot;123&quot;</span>) &nbsp;&nbsp; <span class="comment">#&nbsp;123</span> <br />
+                    <span class="other">str</span>(<span class="number">1.23</span>) &nbsp; &nbsp; <span class="comment">#&nbsp;"1.23"</span> <br />
+                    <span class="other">float</span>(<span class="string">&quot;1.23&quot;</span>) <span class="comment">#&nbsp;1.23</span> <br />
+                </code>
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                Which data type do we use as the condition of an <code>IF</code> statement?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">A boolean: it needs to evaluate to either True or False.</span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = "2A-02-Data-Types/";</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>

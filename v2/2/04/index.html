@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>2.04 - Strings | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn everything that you need to know about strings for GCSE Computer Science, including operations and functions that can be applied to them, on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Strings</strong> are collections of characters.
+            </p>
+    
+            <p>Operations can be used on strings as well as numbers. Example 1 shows the <b>concatenation</b> (joining) of two strings using the <code>+</code> operator.</p>
+    
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 1 <br />
+                <code>
+                    <span class="string">&quot;abc&quot;</span> + <span class="string">&quot;def&quot;</span> &nbsp; <span class="comment">#&nbsp;"abcdef"</span> <br />
+                </code>
+            </p>
+    
+            <p>Strings can be represented <b>as arrays of characters</b>, and we can index them starting from 0.</p>
+    
+            <p>Diagram 1 shows how the string <code>"Hello, World!"</code> is indexed.</p>
+    
+            <p class="diagram">
+                <img src="../../icons/image.svg" class="icon" />
+                Diagram 1 <br /> <br />
+                <img src="./diagram.png" width="500px" />
+            </p>
+    
+            <p>Table 1 shows the string manipulation functions in pseudo-code.</p>
+    
+            <p class="table">
+                <img src="../../icons/table.svg" class="icon" />
+                Table 1
+            </p>
+    
+            <table>
+                <tr>
+                    <th><strong>Function</strong></th>
+                    <th><strong>Description</strong></th>
+                    <th><strong>Example</strong></th>
+                    <th><strong>Result</strong></th>
+                </tr>
+                <tr>
+                    <td><code class="other">LEN</code></td>
+                    <td>Length: returns the number of characters in a string.</td>
+                    <td><code><span class="other">LEN</span>(<span class="string">"Hello,&nbsp;World!"</span>)</code></td>
+                    <td><code class="number">13</code></td>
+                </tr>
+                <tr>
+                    <td><code class="other">POSITION</code></td>
+                    <td>Returns the index of the first occurrence of a character in a string.</td>
+                    <td><code><span class="other">POSITION</span>(<span class="string">"Hello,&nbsp;World!"</span>, <span class="string">'o'</span>)</code></td>
+                    <td><code class="number">4</code></td>
+                </tr>
+                <tr>
+                    <td><code class="other">SUBSTRING</code></td>
+                    <td>Returns the part of the string from the start index to the end index.</td>
+                    <td><code><span class="other">SUBSTRING</span>(<span class="number">3</span>, <span class="number">7</span>, <span class="string">"Hello,&nbsp;World!"</span>)</code></td>
+                    <td><code><span class="string">"lo,&nbsp;W"</span></code></td>
+                </tr>
+            </table>
+    
+            <p><br />ASCII is a code which assigns each character a unique number. It will be explained further in <a href="../3-05-ASCII-and-Unicode/">3.05 (ASCII and Unicode)</a>.</p>
+    
+            <p>Table 2 shows the ASCII functions in pseudo-code.</p>
+    
+            <p class="table">
+                <img src="../../icons/table.svg" class="icon" />
+                Table 2
+            </p>
+    
+            <table>
+                <tr>
+                    <th><strong>Function</strong></th>
+                    <th><strong>Description</strong></th>
+                    <th><strong>Example</strong></th>
+                    <th><strong>Result</strong></th>
+                </tr>
+                <tr>
+                    <td><code class="other">CHAR_TO_CODE</code></td>
+                    <td>Converts a character to its ASCII value.</td>
+                    <td><code><span class="other">CHAR_TO_CODE</span>(<span class="string">'A'</span>)</code></td>
+                    <td><code class="number">65</code></td>
+                </tr>
+                <tr>
+                    <td><code class="other">CODE_TO_CHAR</code></td>
+                    <td>Converts an ASCII value to its character.</td>
+                    <td><code><span class="other">CODE_TO_CHAR</span>(<span class="number">65</span>)</code></td>
+                    <td><code class="string">'A'</code></td>
+                </tr>
+            </table>
+    
+            <br />
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                What is the output of <code class="small-code"><span class="other">SUBSTRING</span>(<span class="other">POSITION</span>(a, <span class="string">'l'</span>), <span class="other">LEN</span>(a)-<span class="number">1</span>, a)</code> when <code class="small-code">a = <span class="string">"Hello"</span></code>?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer"><code class="string small-code">"llo"</code></span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = "2A-04-Strings/";</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>
