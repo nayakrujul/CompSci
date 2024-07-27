@@ -29,8 +29,7 @@
                 developed by Microsoft in 2000.
             </p>
             <p>
-                This C# tutorial is aimed at students who have previously coded primarily in Python. It contains
-                everything you need to know about C# for A Level Computer Science.
+                This C# tutorial is aimed at students who have previously coded primarily in Python.
             </p>
             <p>Throughout this tutorial, you will see a Python program, and then the equivalent C# program.</p>
 
@@ -64,6 +63,10 @@ namespace PrintHelloWorld {
                 <code class="language-csharp hl-this">static void</code> that comes before it shows that the function
                 will return nothing (<code class="language-csharp hl-this">void</code>).
             </p>
+            <p>
+                Also, you may have noticed the semicolon at the end of the line. This is necessary in C#, and the
+                program will not run if you don't have semicolons separating lines.
+            </p>
 
             <h2 id="output">Output</h2>
             <p>
@@ -79,12 +82,33 @@ namespace PrintHelloWorld {
 print("This is all ", end="")
 print("on the same line!", end="")</code></pre>
             <pre><code class="language-csharp">// C#
-// (Boilerplate here)
 Console.Write("This is all ");
-Console.Write("on the same line!");
-// (...)</code></pre>
+Console.Write("on the same line!");</code></pre>
             <p>Output:</p>
             <pre><code class="hljs no-highlight">This is all on the same line!</code></pre>
+
+            <p>
+                Note: the C# example here is missing the boilerplate. From now on, the boilerplate will not be displayed
+                in any C# example.
+            </p>
+
+            <h2 id="input">Input</h2>
+            <p>
+                The C# equivalent of Python's <code class="language-python hl-this">input</code> function is the
+                <code class="language-csharp hl-this">Console.ReadLine()</code> method.
+            </p>
+            <pre><code class="language-python"># Python
+name = input("Enter your name: ")
+print("Hello " + name)</code></pre>
+            <pre><code class="language-csharp">// C#
+Console.Write("Enter your name: ");
+string name = Console.ReadLine();
+Console.WriteLine("Hello " + name);
+            </code></pre>
+            <p>
+                Just like with <code class="language-python hl-this">input</code>,
+                <code class="language-csharp hl-this">Console.ReadLine()</code> will always return a string.
+            </p>
 
             <h2 id="comments">Comments</h2>
             <p>Python supports two types of comments, one of which is not supposed to be used as a comment.</p>
@@ -111,13 +135,155 @@ and ends with an asterisk and a slash. */
  *  You can even do   *
  * some cool patterns *
  * with these multi-  *
- *  line comments :)  *
+ *  line comments :D  *
  **********************/</code></pre>
+
+            <h2 id="data-types">Data Types</h2>
+            <p>Here are the basic data types in C#.</p>
+            <pre><code class="language-csharp">// C#
+
+int  // A 32-bit integer
+     // Stores whole numbers between -2^31 and +2^31
+
+long  // A 64-bit integer
+      // Stores whole numbers between -2^63 and +2^63
+
+float  // A single-precision (32-bit) floating point
+       // Stores fractional numbers with single-precision
+
+double  // A double-precision (64-bit) floating point
+        // Stores fractional numbers with double-precision
+
+char  // A single character
+      // Surrounded by single quotes
+
+string  // A collection of characters
+        // Surrounded by double quotes
+
+bool  // A true or false value
+      // Use lowercase: true and false</code></pre>
+            <p>
+                Firstly, integers don't actually have a limit in Python, but they do in C#. You will mostly need to use
+                <code class="language-csharp hl-this">int</code>, but in some cases (where your number goes above 2^31),
+                you may need to use <code class="language-csharp hl-this">long</code>.
+            </p>
+            <p>
+                Secondly, Python's <code class="language-python hl-this">float</code> is equivalent to C#'s
+                <code class="language-csharp hl-this">double</code>. Python doesn't have a data type for
+                single-precision floats, but C# does. In any case, it will probably be better to use
+                <code class="language-csharp hl-this">double</code> for the extra precision.
+            </p>
+            <p>
+                Thirdly, Python does not have a separate data type for a single character, but C# does. In Python,
+                single and double quotes are interchangeable, but in C#, you must use single quotes for
+                <code class="language-csharp hl-this">char</code>s and double quotes for
+                <code class="language-csharp hl-this">string</code>s.
+            </p>
+            <p>
+                And finally, in Python, the boolean values are <code class="language-python hl-this">True</code> and
+                <code class="language-python hl-this">False</code>. In C#, they are lowercased:
+                <code class="language-csharp hl-this">true</code> and
+                <code class="language-csharp hl-this">false</code>.
+            </p>
+
+            <h2 id="variables">Variables</h2>
+            <p>
+                C# is a "statically typed" language, meaning that variables cannot change data type. You must state the
+                type of each variable when it is declared.
+            </p>
+            <p>
+                Declaring a variable in C# is easy: you can just state the type and then declare it just like in Python.
+            </p>
+            <pre><code class="language-csharp">// C#
+string text = "Hello, World!";
+int age = 16;</code></pre>
+            <p>Assigning a new value to an existing variable is the same as Python.</p>
+            <pre><code class="language-csharp">// C#
+int age = 16;
+Console.WriteLine(age);  // Outputs 16
+
+age = 17;
+Console.WriteLine(age);  // Outputs 17</code></pre>
+            
+            <h2 id="constants">Constants</h2>
+            <p>
+                C# also supports constants, which are variables that cannot be changed. To declare a constant, just add
+                the keyword <code class="language-csharp hl-this">const</code> in front of the declaration.
+            </p>
+            <pre><code class="language-csharp">// C#
+const double PI = 3.141592653589793;
+Console.WriteLine(PI);  // Outputs 3.141592653589793</code></pre>
+            <p>If you try to change the value of a constant, the program will error.</p>
+
+            <h2 id="type-casting">Type Casting</h2>
+            <p>In Python, you can convert between types using the type name.</p>
+            <pre><code class="language-python"># Python
+num1 = 12.34
+print(num1)  # 12.34
+
+num2 = int(num2)
+print(num2)  # 12</code></pre>
+            <p>In C#, you can do a similar thing.</p>
+            <pre><code class="language-csharp">// C#
+double num1 = 12.34;
+Console.WriteLine(num1);  // 12.34
+
+int num2 = (int) num1;
+Console.WriteLine(num2);  // 12</code></pre>
+
+            <h2 id="operations">Operations</h2>
+            <p>In C#, addition, subtraction, and multiplication work the same way as in Python.</p>
+            <p>However, division and modulus work a bit differently.</p>
+            <pre><code class="language-python"># Python
+a = 5
+b = 2
+print(a // b)  # 2
+print(a / b)  # 2.5</code></pre>
+            <pre><code class="language-csharp">// C#
+int a = 5;
+int b = 2;
+Console.WriteLine(a / b);  // 2
+
+double c = 5;
+int d = 2;
+Console.WriteLine(c / d);  // 2.5</code></pre>
+            <p>
+                C# does not have a separate integer division operator. Instead, if both operands are integers, it
+                automatically performs integer division. If at least one operand is a float, it performs normal
+                division.
+            </p>
+            <pre><code class="language-python"># Python
+print(15 % 6)  # 3
+print(-15 % 6)  # 3</code></pre>
+            <pre><code class="language-csharp">// C#
+Console.WriteLine(15 % 6);  // 3
+Console.WriteLine(-15 % 6);  // -3</code></pre>
+            <p>The result of a modulus in Python will always be nonnegative, but it can be negative in C#.</p>
+            <p>
+                Also, C# has the <code class="hljs">++</code> (increment) and <code class="hljs">--</code> (decrement)
+                operators.
+            </p>
+            <pre><code class="language-python"># Python
+num = 123
+num -= 1
+print(num)  # 122</code></pre>
+            <pre><code class="language-csharp">// C#
+int num = 123;
+num--;
+Console.WriteLine(num);  // 122</code></pre>
+            <p>And finally, the logical operators are also different in C#.</p>
+            <pre><code class="language-python"># Python
+a and b
+a or b
+not a</code></pre>
+            <pre><code class="language-csharp">// C#
+a && b
+a || b
+!a</code></pre>
 
             <h2 id="braces">Braces</h2>
             <p>
                 Instead of Python's indentation, C# (along with many other languages in the C family) uses braces.
-                See the examples below of <code>if</code> statements in both languages.
             </p>
             <pre><code class="language-python"># Python
 # ...
@@ -128,6 +294,73 @@ if a > b:
 if (a > b) {
     Console.WriteLine("Yay");
 }</code></pre>
+
+            <h2 id="if-statements">If Statements</h2>
+            <p>
+                Apart from braces vs indentation, the only other differences are that C# uses
+                <code class="language-csharp hl-this">else if</code> instead of
+                <code class="language-python hl-this">elif</code>, and the parentheses around the condition are required
+                in C#.
+            </p>
+            <pre><code class="language-python"># Python
+if condition:
+    ...
+elif condition:
+    ...
+else:
+    ...</code></pre>
+            <pre><code class="language-csharp">// C#
+if (condition) {
+    // ...
+} else if (condition) {
+    // ...
+} else {
+    // ...
+}</code></pre>
+            <p>C# also has a ternary operator just like Python.</p>
+            <pre><code class="language-python"># Python
+result = x if condition else y</code></pre>
+            <pre><code class="language-csharp">// C#
+int result = condition ? x : y;</code></pre>
+            <p>Note that the order is different.</p>
+
+            <h2 id="switch-case">Switch-Case</h2>
+            <p>C#'s switch-case statements work similarly to Python's match-case statements (introduced in 3.10).</p>
+            <pre><code class="language-csharp">// C#, using if-else
+if (x == 1) {
+    // ...
+} else if (x == 2) {
+    // ...
+} else if (x == 3) {
+    // ...
+} else if (x == 4) {
+    // ...
+} else {
+    // ...
+}</code></pre>
+            <pre><code class="language-csharp">// C#, using switch-case
+switch (x) {
+    case 1:
+        // ...
+        break;
+    case 2:
+        // ...
+        break;
+    case 3:
+        // ...
+        break;
+    case 4:
+        // ...
+        break;
+    default:
+        // ...
+}</code></pre>
+            <p>Remember to add in the <code class="language-csharp hl-this">break</code>s!</p>
+
+            <br /> <hr />
+
+            <p><i>More coming soon!</i></p>
+
             <div id="margin"></div>
         </div>
         <div id="footer"></div>
