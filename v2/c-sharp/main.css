@@ -1,0 +1,22 @@
+div#tutorial {
+    position: absolute;
+    top: 60px;
+    left: 0px;
+    width: calc(100% - 16px);
+    margin: 8px;
+}
+
+h2 {
+    padding-top: 20px;
+    scroll-margin-top: 100px;
+}
+
+a.h2-link {
+    color: initial;
+}
+
+a.h2-link:hover {
+    text-decoration: none;
+}
+
+p > code.hljs { display: inline; }

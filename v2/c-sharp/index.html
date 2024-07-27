@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../main.css">
+        <link rel="stylesheet" href="./main.css" />
+        <link rel="stylesheet" href="../highlight/styles/atom-one-light.css">
+
+        <title>C# Tutorial | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../logos/square.png"/>
+        <meta property="og:image" content="../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="An online C# (C sharp) tutorial aimed at students who have previously coded primarily in Python on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="tutorial">
+            <h2 id="intro">Intro</h2>
+            <p>
+                C# (pronounced C-Sharp, like the musical note) is a programming language loosely based on C that was
+                developed by Microsoft in 2000.
+            </p>
+            <p>
+                This C# tutorial is aimed at students who have previously coded primarily in Python. It contains
+                everything you need to know about C# for A Level Computer Science.
+            </p>
+            <p>Throughout this tutorial, you will see a Python program, and then the equivalent C# program.</p>
+
+            <h2 id="hello-world">Hello, World!</h2>
+            <p>Let's start with the basic <code>"Hello, World!"</code> program. In Python, it's only one line:</p>
+            <pre><code class="language-python"># Python
+print("Hello, World!")</code></pre>
+            <p>But in C# it's a bit more complicated.</p>
+            <pre><code class="language-csharp">// C#
+using System;
+
+namespace PrintHelloWorld {
+  class MyProgram {
+    static void Main(string[] args) {
+      Console.WriteLine("Hello, World!");    
+    }
+  }
+}</code></pre>
+            <p>
+                Let's unpack this. The line <code class="language-csharp hl-this">Console.WriteLine("Hello, World!");</code> is what's actually
+                outputting the text.
+            </p>
+            <p>
+                Everything else is what's referred to as the "boilerplate": it's just there because that's how the
+                language works. Almost every C# program will need this boilerplate.
+            </p>
+            <p>
+                In C#, code is organised using <code class="language-csharp hl-this">namespace</code>s and
+                <code class="language-csharp hl-this">class</code>es. Inside the class, we have a
+                <code class="language-csharp hl-this hljs-title">Main</code> function. The
+                <code class="language-csharp hl-this">static void</code> that comes before it shows that the function
+                will return nothing (<code class="language-csharp hl-this">void</code>).
+            </p>
+
+            <h2 id="output">Output</h2>
+            <p>
+                You have seen the <code class="language-csharp hl-this">Console.WriteLine()</code> method in the
+                previous example. There is also a <code class="language-csharp hl-this">Console.Write()</code> method
+                which outputs some text without a trailing newline.
+            </p>
+            <p>
+                This is equivalent to using Python's <code class="language-python hl-this">print()</code> function using
+                <code class="language-python hl-this">end=""</code>.
+            </p>
+            <pre><code class="language-python"># Python
+print("This is all ", end="")
+print("on the same line!", end="")</code></pre>
+            <pre><code class="language-csharp">// C#
+// (Boilerplate here)
+Console.Write("This is all ");
+Console.Write("on the same line!");
+// (...)</code></pre>
+            <p>Output:</p>
+            <pre><code class="hljs no-highlight">This is all on the same line!</code></pre>
+
+            <h2 id="comments">Comments</h2>
+            <p>Python supports two types of comments, one of which is not supposed to be used as a comment.</p>
+            <pre><code class="language-python"># Python
+
+# This is a single-line comment.
+# Each line starts with a hashtag/octothorpe.
+
+"""This is a docstring (technically not a multi-line comment),
+but it can be used as a multi-line comment.
+It starts and ends with three quotes
+(single or double, but start and end must match)."""</code></pre>
+            <p>C#, like many other programming languages, fully supports single-line and multi-line comments.</p>
+            <pre><code class="language-csharp">// C#
+
+// This is a single-line comment.
+// Each line starts with two forward-slashes.
+
+/* This is a multi-line comment.
+It starts with a slash and an asterisk,
+and ends with an asterisk and a slash. */
+
+/**********************
+ *  You can even do   *
+ * some cool patterns *
+ * with these multi-  *
+ *  line comments :)  *
+ **********************/</code></pre>
+
+            <h2 id="braces">Braces</h2>
+            <p>
+                Instead of Python's indentation, C# (along with many other languages in the C family) uses braces.
+                See the examples below of <code>if</code> statements in both languages.
+            </p>
+            <pre><code class="language-python"># Python
+# ...
+if a > b:
+    print("Yay")</code></pre>
+            <pre><code class="language-csharp">// C#
+// ...
+if (a > b) {
+    Console.WriteLine("Yay");
+}</code></pre>
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../scripts/version.js"></script>
+        <script src="../scripts/footer.js"></script>
+        <script src="../highlight/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
+        <script src="../scripts/tutorial.js"></script>
+    </body>
+</html>

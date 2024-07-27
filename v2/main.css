@@ -76,6 +76,10 @@
     src: url("../fonts/Chevin_Pro_ExtraBold_Italic.otf") format("opentype");
 }
 
+:root {
+    scroll-behavior: smooth;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: ChevinPro, Helvetica, Arial, sans-serif;
 }
