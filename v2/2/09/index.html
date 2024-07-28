@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>2.09 - Files | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn how to read from and write to files in pseudo-code, something that you need to know for GCSE Computer Science, on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p><b>Text files</b> contain text that is in lines. There is no other structure.</p>
+
+            <p>Example 1 shows how to read a text file in pseudo-code.</p>
+
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 1 <br />
+                <code>
+                    file &larr; <span class="other">OPENREAD</span>(<span class="string">&quot;students.txt&quot;</span>) <br />
+                    <span class="keyword">FOR</span> n &larr; <span class="number">0</span> <span class="keyword">TO</span> <span class="other">LEN</span>(file)-<span class="number">1</span> <br />
+                    &ensp; line &larr; file.<span class="other">READLINE</span>() <br />
+                    &ensp; <span class="function">OUTPUT</span> line <br />
+                    <span class="keyword">ENDFOR</span> <br />
+                    file.<span class="other">CLOSE</span>()
+                </code>
+            </p>
+
+            <p>Example 2 shows how to write to a text file in pseudo-code.</p>
+
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 2 <br />
+                <code>
+                    file &larr; <span class="other">OPENWRITE</span>(<span class="string">&quot;students.txt&quot;</span>) <br />
+                    <span class="keyword">FOR</span> n &larr; <span class="number">0</span> <span class="keyword">TO</span> <span class="number">9</span> <br />
+                    &ensp; name &larr; <span class="function">USERINPUT</span> <br />
+                    &ensp; file.<span class="other">WRITELINE</span>(name) <br />
+                    <span class="keyword">ENDFOR</span> <br />
+                    file.<span class="other">CLOSE</span>()
+                </code>
+            </p>
+
+            <p>
+                <b>Comma-separated value</b> (CSV) files provide a bit more structure. In each line, the fields are separated by commas. They are handled exactly the same way as regular text files.
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                What are the disadvantages of using CSV files instead of regular text files?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">They need more string processing and manipulation when reading and writing.</span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = "2A-09-Files/";</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>

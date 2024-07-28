@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>2.08 - Records | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="On this page you will find all the information you need to know for your GCSE Computer Science exam about records in pseudo-code, on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>record</strong> is a data structure (like an array) which can store values with different data types.
+            </p>
+    
+            <p>Each item in a record is called an <b>attribute</b> (or field). Each attribute is given an <b>identifier</b> (name) and <b>data type</b>.</p>
+            <p><b>Records are fixed in length.</b> Attributes cannot be added or deleted, but they can be changed.</p>
+    
+            <p><br />Example 1 shows how to create a record structure.</p>
+    
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 1 <br />
+                <code>
+                    <span class="keyword">RECORD</span> film <br />
+                    &ensp; name: <span class="other">STRING</span> <br />
+                    &ensp; releaseYear: <span class="other">INT</span> <br />
+                    &ensp; duration: <span class="other">INT</span> <br />
+                    &ensp; rating: <span class="other">REAL</span> <br />
+                    <span class="keyword">ENDRECORD</span>
+                </code>
+            </p>
+    
+            <p><br />Example 2 shows how to assign values to the record.</p>
+    
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 2 <br />
+                <code>
+                    film.name &larr; <span class="string">&quot;Avengers: Endgame&quot;</span> <br />
+                    film.releaseYear &larr; <span class="number">2019</span> <br />
+                    film.duration &larr; <span class="number">182</span> <br />
+                    film.rating &larr; <span class="number">8.4</span> <br />
+                </code>
+            </p>
+    
+            <p><br />Example 3 shows how to manipulate records.</p>
+    
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 3 <br />
+                <code>
+                    <span class="function">OUTPUT</span> film <br />
+                    <span class="comment">>>>
+                        {name:&nbsp;"Avengers:&nbsp;Endgame", <br />
+                        &nbsp;&nbsp; &nbsp; releaseYear:&nbsp;2019, <br />
+                        &nbsp;&nbsp; &nbsp; duration:&nbsp;182, <br />
+                        &nbsp;&nbsp; &nbsp; rating:&nbsp;8.4}
+                    </span> <br />
+                    <br />
+                    <span class="function">OUTPUT</span> film.rating <br />
+                    <span class="comment">>>> 8.4</span> <br />
+                    <br />
+                    film.rating &larr; <span class="number">8.3</span> <br />
+                    <span class="function">OUTPUT</span> film.rating <br />
+                    <span class="comment">>>> 8.3</span>
+                </code>
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                What would be wrong with writing <code>film.rating &larr; "8.5"</code>?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    The <code>rating</code> attribute needs to be of the <code>REAL</code> type, but <code>"8.5"</code>
+                    is a string.
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = "2A-08-Records/";</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>
