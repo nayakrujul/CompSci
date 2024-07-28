@@ -33,6 +33,16 @@
             </p>
             <p>Throughout this tutorial, you will see a Python program, and then the equivalent C# program.</p>
 
+            <h2 id="get-started">Get Started</h2>
+            <p>
+                Firstly, you need to download a C# compiler. To do this, first download
+                <a href="https://visualstudio.microsoft.com/downloads/">Visual Studio</a> and then add the
+                <a href="https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp">C# extension</a>.
+            </p>
+            <p>
+                Alternatively, you can use an online compiler like <a href="https://dotnetfiddle.net/">.NET Fiddle</a>.
+            </p>
+
             <h2 id="hello-world">Hello, World!</h2>
             <p>Let's start with the basic <code>"Hello, World!"</code> program. In Python, it's only one line:</p>
             <pre><code class="language-python"># Python
@@ -286,11 +296,9 @@ a || b
                 Instead of Python's indentation, C# (along with many other languages in the C family) uses braces.
             </p>
             <pre><code class="language-python"># Python
-# ...
 if a > b:
     print("Yay")</code></pre>
             <pre><code class="language-csharp">// C#
-// ...
 if (a > b) {
     Console.WriteLine("Yay");
 }</code></pre>
@@ -357,9 +365,115 @@ switch (x) {
 }</code></pre>
             <p>Remember to add in the <code class="language-csharp hl-this">break</code>s!</p>
 
-            <br /> <hr />
+            <h2 id="while-loops">While Loops</h2>
+            <p>
+                While loops in C# are the same as in Python, except that they use parentheses and braces (like if
+                statements).
+            </p>
+            <pre><code class="language-python"># Python
+while condition:
+    ...</code></pre>
+            <pre><code class="language-csharp">// C#
+while (condition) {
+    // ...
+}</code></pre>
 
-            <p><i>More coming soon!</i></p>
+            <h2 id="arrays">Arrays</h2>
+            <p>
+                Arrays in C# are similar to lists in Python, but they have one main difference: all elements of an array
+                must be of the same type.
+            </p>
+            <p>
+                You define an array using braces instead of square brackets. Also, you need to put empty square brackets
+                after the type.
+            </p>
+            <pre><code class="language-python"># Python
+num_list = [2, 3, 5, 7, 11]</code></pre>
+            <pre><code class="language-csharp">// C#
+int[] num_list = {2, 3, 5, 7, 11};</code></pre>
+            <p>Use two sets of empty square brackets for nested (2D) arrays.</p>
+            <pre><code class="language-python"># Python
+nested_list = [[1, 2], [3, 4]]</code></pre>
+            <pre><code class="language-csharp">// C#
+int[][] nested_list = {{1, 2}, {3, 4}};</code></pre>
+
+            <h2 id="foreach-loops">ForEach Loops</h2>
+            <p>ForEach in C# is the equivalent of Python's for loop. It iterates through each element in an array.</p>
+            <pre><code class="language-python"># Python
+for num in num_list:
+    ...</code></pre>
+            <pre><code class="language-csharp">// C#
+foreach (int num in num_list) {
+    // ...
+}</code></pre>
+
+            <h2 id="for-loops">For Loops</h2>
+            <p>
+                The <code class="language-csharp hl-this">for</code> loop in C# is sort of like a
+                <code class="language-csharp hl-this">while</code> loop. These two C# examples both output the whole
+                numbers from 1 to 10.
+            </p>
+            <pre><code class="language-csharp">// C#
+int i = 1;
+while (i <= 10) {
+    Console.WriteLine(i);
+    i++;
+}</code></pre>
+            <pre><code class="language-csharp">// C#
+for (int i = 1; i <= 10; i++;) {
+    Console.WriteLine(i);
+}</code></pre>
+            <p>
+                The <code class="language-csharp hl-this">for</code> loop is made up of three statements. The first is
+                executed once before the loop begins. The second is the condition for the loop. And the third is
+                executed at the end of each run through.
+            </p>
+            <p>
+                You will use the <code class="language-csharp hl-this">for</code> loop a lot, as it replaces Python's
+                <code class="language-python hl-this">for i in range(...)</code> construct.
+            </p>
+
+            <h2 id="fizzbuzz">FizzBuzz</h2>
+            <p>
+                We're now ready to do an example program of <a href="https://en.wikipedia.org/wiki/Fizz_buzz#:~:text=Fizz%20buzz%20is%20a%20group,with%20the%20word%20%22fizzbuzz%22.">FizzBuzz</a>.
+            </p>
+            <p>
+                The Python example is given below. See if you can write your own C# code before you look at the program
+                provided here.
+            </p>
+            <pre><code class="language-python"># Python
+for i in range(1, 100):
+    if i % 3 == 0:
+        if i % 5 == 0:
+            print("FizzBuzz")
+        else:
+            print("Fizz")
+    elif i % 5 == 0:
+        print("Buzz")
+    else:
+        print(i)</code></pre>
+            <p>Here's the C# example:</p>
+            <pre><code class="language-csharp">// C#
+for (int i = 1; i <= 100; i++;) {
+    if (i % 3 == 0) {
+        if (i % 5 == 0) {
+            Console.WriteLine("FizzBuzz");
+        } else {
+            Console.WriteLine("Fizz");
+        }
+    } else if (i % 5 == 0) {
+        Console.WriteLine("Buzz");
+    } else {
+        Console.WriteLine(i);
+    }
+}</code></pre>
+            <p>As an additional challenge, how small can you make it? I got my solution to just 84 characters.</p>
+            <pre><code class="language-csharp">// C#
+for(int i=0;i++&lt;100;)Console.WriteLine((i%3&lt;1?"Fizz":"")+(i%5&lt;1?"Buzz":i%3&lt;1?"":x));</code></pre>
+            <p>
+                Try it online <a href="https://dotnetfiddle.net/WDYRaA">here</a>. Note: this solution requires the
+                latest version of C#.
+            </p>
 
             <div id="margin"></div>
         </div>
