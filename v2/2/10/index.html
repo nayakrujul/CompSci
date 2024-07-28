@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>2.10 - Subroutines | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="See how subroutines can be used to make coding less repetitive, as part of the GCSE Computer Science specification, on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>subroutine</strong> is a set of instructions inside an algorithm stored under one name.
+            </p>
+    
+            <p>
+                Subroutines <b>save us from repeating the same code</b> over and over again.
+                They give your program <b>more structure and readability</b> whilst reducing the amount of code you have to write.
+            </p>
+    
+            <p>There are two types of subroutines: procedures and functions.</p>
+    
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>procedure</strong> is a subroutine which doesn't return a value.
+            </p>
+    
+            <p>Example 1 shows a procedure to output the string "Hello".</p>
+    
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 1 <br />
+                <code>
+                    <span class="keyword">SUBROUTINE</span> <span class="other">greeting1</span>() <br />
+                    &ensp; <span class="function">OUTPUT</span> <span class="string">&quot;Hello&quot;</span> <br />
+                    <span class="keyword">ENDSUBROUTINE</span>
+                </code>
+            </p>
+    
+            <p>Now, when we want to use this procedure, we can call it like this: <code><span class="other">greeting1</span>()</code></p>
+    
+            <p><br />Subroutines can also take <b>parameters</b> (inputs)</p>
+            
+            <p>Example 2 shows a procedure to output the string "Hello " + the user's name.</p>
+    
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 2 <br />
+                <code>
+                    <span class="keyword">SUBROUTINE</span> <span class="other">greeting2</span>(name) <br />
+                    &ensp; <span class="function">OUTPUT</span> <span class="string">&quot;Hello&quot;</span> + name <br />
+                    <span class="keyword">ENDSUBROUTINE</span>
+                </code>
+            </p>
+    
+            <p>
+                Now, if this procedure is called with the code
+                <code><span class="other">greeting2</span>(<span class="string">&quot;Rujul&quot;</span>)</code>,
+                it will output <code class="string">&quot;Hello Rujul&quot;</code>.
+            </p>
+    
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>function</strong> is a subroutine which does return a value.
+            </p>
+    
+            <p>The return value of a function can be assigned to a variable.</p>
+    
+            <p>
+                <br />
+                We have already looked at and used several built-in functions in pseudo-code,
+                including <code class="other">LEN</code>, <code class="other">POSITION</code>, <code class="other">STRING_TO_INT</code>,
+                and many more.
+            </p>
+    
+            <p><br />Example 3 shows a function to convert inches to centimetres.</p>
+    
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 3 <br />
+                <code>
+                    <span class="keyword">SUBROUTINE</span> <span class="other">inches_to_cms</span>(inches) <br />
+                    &ensp; <span class="function">RETURN</span> inches * <span class="number">2.54</span> <br />
+                    <span class="keyword">ENDSUBROUTINE</span> <br />
+                    <br />
+                    input &larr; <span class="function">USERINPUT</span> <br />
+                    cms &larr; <span class="other">inches_to_cms</span>(input) <br />
+                    <span class="function">OUTPUT</span> cms, <span class="string">&quot;cm&quot;</span>
+                </code>
+            </p>
+    
+            <p><br />Example 4 shows a function to return the maximum of two numbers.</p>
+    
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 4 <br />
+                <code>
+                    <span class="keyword">SUBROUTINE</span> <span class="other">max</span>(a, b) <br />
+                    &ensp; <span class="keyword">IF</span> a > b <span class="keyword">THEN</span> <br />
+                    &ensp; &ensp; <span class="function">RETURN</span> a <br />
+                    &ensp; <span class="keyword">ELSE</span> <br />
+                    &ensp; &ensp; <span class="function">RETURN</span> b <br />
+                    &ensp; <span class="keyword">ENDIF</span> <br />
+                    <span class="keyword">ENDSUBROUTINE</span>
+                </code>
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                Make one change to the body of the <code class="other">max</code> function in Example 4 to make it return the minimum instead of the maximum.
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">Change <code>a > b</code> to <code>a &lt; b</code>.</span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = "2B-01-Subroutines/";</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>
