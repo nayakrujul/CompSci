@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>2.15 - Testing | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn about testing, the best way of finding errors, which is also part of the GCSE Computer Science specification, on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Testing</strong> a program means giving it some example inputs to make sure that there are no logic errors.
+            </p>
+    
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>test plan</strong> should outline exactly what will be tested.
+            </p>
+    
+            <p>The test data from your test plan should cover <b>all three categories</b> of data:</p>
+    
+            <ul class="less-padding-left">
+                <li><b>Normal data</b> = valid data that a user is expected to input</li>
+                <li><b>Boundary data</b> = data on either side of the boundary between valid and invalid</li>
+                <li><b>Erroneous data</b> = invalid data that your program should reject</li>
+            </ul>
+    
+            <p><br />Table 1 shows an example test plan for a program which should accept a four-digit numeric input.</p>
+    
+            <p class="table">
+                <img src="../../icons/table.svg" class="icon" />
+                Table 1
+            </p>
+    
+            <table>
+                <tr>
+                    <th><strong>Type</strong></th>
+                    <th><strong>Input</strong></th>
+                    <th><strong>Expected output</strong></th>
+                </tr>
+                <tr>
+                    <td>Normal</td>
+                    <td><code class="function">1234</code></td>
+                    <td><code class="valid">Valid.</code></td>
+                </tr>
+                <tr>
+                    <td>Boundary</td>
+                    <td><code class="function">0000</code></td>
+                    <td><code class="valid">Valid.</code></td>
+                </tr>
+                <tr>
+                    <td>Boundary</td>
+                    <td><code class="function">9999</code></td>
+                    <td><code class="valid">Valid.</code></td>
+                </tr>
+                <tr>
+                    <td>Boundary</td>
+                    <td><code class="function">10000</code></td>
+                    <td><code class="error">Reject: too long</code></td>
+                </tr>
+                <tr>
+                    <td>Boundary</td>
+                    <td><code class="function">999</code></td>
+                    <td><code class="error">Reject: too short</code></td>
+                </tr>
+                <tr>
+                    <td>Erroneous</td>
+                    <td><code class="function">12ab</code></td>
+                    <td><code class="error">Reject: not numeric</code></td>
+                </tr>
+            </table>
+    
+            <p><br />Trace tables can help you <b>pin-point exactly what went wrong</b> if the actual output doesn't match the expected output.</p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                Why is it important to test programs?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    Many issues arise if your software doesn't work, including: <br />
+                    &bullet; Competition with other software providers <br />
+                    &bullet; Reputational damage <br />
+                    &bullet; Legal obligations <br />
+                    &bullet; Safety
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = "2B-06-Testing/";</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>

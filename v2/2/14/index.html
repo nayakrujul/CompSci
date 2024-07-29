@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>2.14 - Errors | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn about the different type of errors that you need to know about for your GCSE Computer Science exam on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Errors</strong> (or bugs) are accidental mistakes in the code.
+            </p>
+    
+            <p><b>They should not be confused with malware</b> (deliberate attempts to bring down computer systems).</p>
+    
+            <p><br />There are two types of errors.<br />&nbsp;</p>
+    
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Syntax errors</strong> occur when the code doesn't follow the rules (syntax) of the programming language.
+            </p>
+    
+            <p>Example 1 shows some Python code with a syntax error.</p>
+    
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 1 <br />
+                <code>
+                    <span class="function">print</span> <span class="string">&quot;Hello, World!&quot;</span>
+                </code>
+            </p>
+    
+            <p>
+                This is a syntax error because there should be brackets around the string: the <b>interpreter can't
+                understand</b> what the code is supposed to do.
+            </p>
+    
+            <p>Example 2 shows the output of Example 1.</p>
+    
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 2 <br />
+                <code>
+                    <span class="error">
+                        &ensp; &ensp; print &quot;Hello, World!&quot; <br />
+                        &ensp; &ensp; &ensp; &ensp;&ensp; ^^ <br />
+                        SyntaxError: invalid syntax
+                    </span>
+                </code>
+            </p>
+    
+            <p>Code with a syntax error <b>will not be able to run</b>.<br />&nbsp;</p>
+    
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Logic errors</strong> occur when the program does something unexpected.
+            </p>
+    
+            <p>Example 3 shows some Python code with a logic error.</p>
+    
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 3 <br />
+                <code>
+                    inp = <span class="function">input</span>(<span class="string">&quot;Quit (y/n)? &quot;</span>) <br />
+                    <span class="keyword">if</span> inp == <span class="string">&quot;n&quot;</span>: <br />
+                    &ensp; <span class="function">print</span>(<span class="string">&quot;Bye!&quot;</span>) <br />
+                    &ensp; <span class="other">quit</span>() <br />
+                    <span class="keyword">else</span>: <br />
+                    &ensp; <span class="other">play</span>()
+                </code>
+            </p>
+    
+            <p>The logic error here is in line 2, in the condition of the <code>if</code> statement. The <code>"n"</code> should be <code>"y"</code>.</p>
+    
+            <p>Example 4 shows the output of Example 3 when the input is <code>"n"</code>.</p>
+    
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 4 <br />
+                <code>
+                    Quit (y/n)? <span class="function">n</span> <br />
+                    Bye!
+                </code>
+            </p>
+    
+            <p>Code with a logic error <b>can still run</b>, but it won't do what you want it to do.</p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                Which type of error is harder to track down?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    Logic error - the compiler/interpreter will tell you exactly where a syntax error is,
+                    but it won't know if there is a logic error.
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = "2B-05-Errors/";</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>

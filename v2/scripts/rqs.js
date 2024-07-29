@@ -1,16 +1,27 @@
+function remove(arr, elem) {
+    arr.splice(arr.indexOf(elem), 1);
+    return elem;
+}
+
+function random_choice(arr) {
+    return arr[Math.floor(arr.length * Math.random())];
+}
+
 function next_question() {
     let old = document.querySelector("div.rq.show");
     total += +old.getAttribute("marks");
-    correct += [...old.querySelectorAll("input[type=checkbox]:checked")].length;
+    correct += Math.min([...old.querySelectorAll("input[type=checkbox]:checked")].length, +old.getAttribute("marks"));
     old.classList.remove("show");
     document.getElementById("score").innerHTML = `Score: ${correct}/${total}`;
-    let nxt = old.nextElementSibling;
-    if (nxt === null) {
+    remove(rqs, old);
+    if (rqs.length === 0) {
         document.getElementById("q-num").innerHTML = "Done!";
         return;
     }
+    nxt = random_choice(rqs);
     nxt.classList.add("show");
-    document.getElementById("q-num").innerHTML = `Question ${nxt.getAttribute("num")} of ${rqs.length}`;
+    num++;
+    document.getElementById("q-num").innerHTML = `Question ${num} of ${len}`;
 }
 
 function button_clicked() {
@@ -26,10 +37,11 @@ function button_clicked() {
 let correct = 0;
 let total = 0;
 
-const rqs = [...document.getElementById("revision-questions").querySelectorAll("div.rq")];
+let rqs = [...document.getElementById("revision-questions").querySelectorAll("div.rq")];
+let len = rqs.length;
+let num = 1;
 
 rqs.forEach((elem, i1) => {
-    elem.setAttribute("num", (i1 + 1) + "")
     elem.querySelector(".question").innerHTML += ` <b class="no-underline">[${elem.getAttribute("marks")}]</b>`;
     [...elem.querySelectorAll(".rq-answer")].forEach((a, i2) => {
         let name = `checkbox-${i1}-${i2}`;
@@ -48,6 +60,6 @@ rqs.forEach((elem, i1) => {
     btn.addEventListener("click", button_clicked);
 });
 
-document.getElementById("q-num").innerHTML = "Question 1 of " + rqs.length;
+document.getElementById("q-num").innerHTML = "Question 1 of " + len;
 
-rqs[0].classList.add("show");
+random_choice(rqs).classList.add("show");

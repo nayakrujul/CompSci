@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>Section 2 Revision Questions | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Revise Section 2 (Programming) with exam-style GCSE Computer Science questions on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+
+            <h1 id="score">Score: 0/0</h1>
+
+            <h2 id="q-num">Question 1 of &infin;</h2>
+    
+            <div id="revision-questions">
+                <div class="rq" marks="5">
+                    <span class="pretext">
+                        <p><br />Table 1 shows some the descriptions of five variables.</p>
+
+                        <p class="table">
+                            <img src="../../icons/table.svg" class="icon" />
+                            Table 1
+                        </p>
+
+                        <table>
+                            <tr>
+                                <th><strong>Variable</strong></th>
+                                <th><strong>Data Type</strong></th>
+                            </tr>
+                            <tr>
+                                <td>Name</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>Age</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>Height (m)</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>Phone number</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>Employed?</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                        </table>
+
+                        <p>&nbsp;</p>
+                    </span>
+                    <span class="question">Complete Table 1 by adding the most appropriate data types.</span>
+                    <span class="rq-answer">Name: &nbsp; <b>String</b> &nbsp; (names are collections of characters)</span>
+                    <span class="rq-answer">Age: &nbsp; <b>Integer</b> &nbsp; (an age is usually represented as a whole number)</span>
+                    <span class="rq-answer">Height: &nbsp; <b>Float / Real</b> &nbsp; (height in metres is usually a number with a decimal part)</span>
+                    <span class="rq-answer">Phone number: &nbsp; <b>String</b> &nbsp; (phone numbers start with a 0, which would not be possible to represent as an integer)</span>
+                    <span class="rq-answer">Employed?: &nbsp; <b>Boolean</b> &nbsp; (there are only two possible options here: true or false)</span>
+                </div>
+                <div class="rq" marks="1">
+                    <span class="pretext">
+                        &nbsp; (a) The data type of a variable <br />
+                        &nbsp; (b) The data type of a constant <br />
+                        &nbsp; (c) The value of a variable <br />
+                        &nbsp; (d) The value of a constant
+                        <p>&nbsp;</p>
+                    </span>
+                    <span class="question">Which of the above can be changed as a program runs?</span>
+                    <span class="rq-answer">(c) The value of a variable</span>
+                </div>
+                <div class="rq" marks="3">
+                    <span class="pretext">
+                        <p><br />Example 1 shows an algorithm written in pseudo-code.</p>
+
+                        <p class="code">
+                            <img src="../../icons/code.svg" class="icon" />
+                            Example 1 <br />
+                            <code>
+                                date &larr; <span class="string" id="js-target-1">&quot;Thu, 1 Jan 1970&quot;</span> <br />
+                                <span class="function">OUTPUT</span> <span class="other">LEN</span>(date) <br />
+                                <span class="function">OUTPUT</span> <span class="other">POSITION</span>(date, <span class="string" id="js-target-2">'a'</span>) <br />
+                                <span class="function">OUTPUT</span> <span class="other">SUBSTRING</span>(<span class="number" id="js-target-3">1</span>, <span class="number" id="js-target-4">7</span>, date)
+                            </code>
+                        </p>
+                    </span>
+                    <span class="question">What is the output of Example 1?</span>
+                    <span class="rq-answer"><span class="number" id="js-target-5">15</span></span>
+                    <span class="rq-answer"><span class="number" id="js-target-6">8</span></span>
+                    <span class="rq-answer"><span class="string" id="js-target-7">&quot;hu, 1 J&quot;</span></span>
+                </div>
+                <div class="rq" marks="1">
+                    <span class="question">
+                        What is the output of <code class="small-code">
+                            <span class="other">NOT</span>(<span class="number">5</span> ≥ <span class="number">9</span>
+                            <span class="other">OR</span> <span class="number">4</span> &gt; <span class="number">7</span>)
+                            <span class="other">XOR</span> (<span class="number">6</span> ≠ <span class="number">2</span> 
+                            <span class="other">AND</span> <span class="number">8</span> &lt; <span class="number">1</span>)</code>?
+                    </span>
+                    <span class="rq-answer"><code class="number">True</code></span>
+                </div>
+                <div class="rq" marks="2">
+                    <span class="question">
+                        Give two reasons why a developer might want to include random number in their game.
+                    </span>
+                    <span class="rq-answer">So that the game is different every time it is played</span>
+                    <span class="rq-answer">To simulate something that is random in real life</span>
+                    <span class="rq-answer">So that the game is unpredictable and challenging</span>
+                    <span class="rq-answer">[Other valid answers]</span>
+                </div>
+                <div class="rq" marks="1">
+                    <span class="question">
+                        Why would a 2D array be used to store the top three athletes in each event at a sports day?
+                    </span>
+                    <span class="rq-answer">
+                        Because the data is split by two categories: in each event there is a list of three athletes to store.
+                    </span>
+                </div>
+                <div class="rq" marks="3">
+                    <span class="question">Describe what is meant by structured programming.</span>
+                    <span class="rq-answer">Breaking down the main program into smaller, manageable modules</span>
+                    <span class="rq-answer">Designing, coding, and testing each module separately</span>
+                    <span class="rq-answer">Putting it all back together</span>
+                </div>
+                <div class="rq" marks="4">
+                    <span class="question">Describe two suitable validation checks for a postcode input.</span>
+                    <span class="rq-answer">Presence check</span>
+                    <span class="rq-answer">to see if the postcode has been left blank</span>
+                    <span class="rq-answer">Format check</span>
+                    <span class="rq-answer">to see if the postcode contains only letters and numbers</span>
+                    <span class="rq-answer">Length check</span>
+                    <span class="rq-answer">to see if the postcode is between 5 and 7 characters</span>
+                    <span class="rq-answer">Format check</span>
+                    <span class="rq-answer">to see if the postcode ends with a number and two letters</span>
+                </div>
+                <div class="rq" marks="3">
+                    <span class="question">Describe how a good test plan can help find logic errors.</span>
+                    <span class="rq-answer">A good test plan will check most of the possible paths of the program</span>
+                    <span class="rq-answer">It should test normal, boundary, and erroneous data</span>
+                    <span class="rq-answer">If any of the outputs are not equal to the expected output, there is a logic error</span>
+                </div>
+                <div class="rq" marks="4">
+                    <span class="question">Explain two advantages of low-level programming languages.</span>
+                    <span class="rq-answer">Low-level languages have more control over the hardware</span>
+                    <span class="rq-answer">so e.g., the programmer can control exactly how memory is used in the program</span>
+                    <span class="rq-answer">Very efficient code can be written for a particular type of processor</span>
+                    <span class="rq-answer">so programs in low-level languages generally execute faster and use less memory than programs in high-level languages</span>
+                    <span class="rq-answer">Commands in machine code can be executed directly by the computer</span>
+                    <span class="rq-answer">so a translator is not required</span>
+                </div>
+                <div class="rq" marks="4">
+                    <span class="question">Explain how an interpreter works.</span>
+                    <span class="rq-answer">The interpreter reads in the file statement by statement</span>
+                    <span class="rq-answer">It calls machine code subroutines to carry out commands</span>
+                    <span class="rq-answer">The interpreter stops if it finds a runtime error</span>
+                    <span class="rq-answer">No machine code is outputted by the interpreter so the program needs to be translated each time it is executed</span>
+                </div>
+            </div>
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = "2A-Summary-Questions/";</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+        <script src="../../scripts/rqs.js"></script>
+        <script src="./main.js"></script>
+
+    </body>
+</html>

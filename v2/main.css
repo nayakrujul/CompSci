@@ -467,6 +467,10 @@ div#revision-questions {
         display: none;
     }
 
+    div.rq.show {
+        animation: fadeIn 1000ms;
+    }
+
     span.pretext {
         display: block;
     }
@@ -527,6 +531,10 @@ input.copybtn:hover {
 
 p.definition i a {
     margin-right: 5px;
+}
+
+ul.less-padding-left, ol.less-padding-left {
+    padding-left: 25px;
 }
 
 @media (max-width: 500px) {

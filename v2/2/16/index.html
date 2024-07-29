@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>2.16 - Programming Language Classification | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="See the differences between high-level and low-level programming languages for GCSE Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p>Programming languages can be split into two types: high-level and low-level languages</p>
+
+            <p>
+                Some examples of high-level languages include
+                <a href="https://www.python.org/" target="_blank" rel="noopener noreferrer">Python</a>,
+                <a href="https://www.dev.java/" target="_blank" rel="noopener noreferrer">Java</a>,
+                <a href="https://www.github.com/Thunno/Thunno2/" target="_blank" rel="noopener noreferrer">Thunno</a>, and
+                <a href="https://www.go.dev/" target="_blank" rel="noopener noreferrer">Go</a>.
+            </b>
+
+            <p>
+                <b>The only low-level languages are assembly language and machine code.</b> <br />
+                Machine code is written in binary, and is the only form of code that a computer can understand. <br />
+                Each instruction in assembly language represents one instruction of machine code.
+            </p>
+
+            <br />
+
+            <p>Example 1 (Python), Example 2 (x86-64 assembly language), and Example 3 (x86-64 machine code) show exactly the same algorithm in different languages.</p>
+
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 1 <br />
+                <code>
+                    a = <span class="other">int</span>(<span class="function">input</span>()) <br />
+                    <span class="function">print</span>(a * a)
+                </code>
+            </p>
+
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 2 <br />
+                <code>
+                    &ensp; <span class="keyword">mov</span> al, <span class="number">0</span> <br />
+                    &ensp; <span class="keyword">mov</span> bl, <span class="function">[num]</span> <br />
+                    <span class="other">mult</span>: <br />
+                    &ensp; <span class="keyword">add</span> al, <span class="function">[num]</span> <br />
+                    &ensp; <span class="keyword">dec</span> bl <br />
+                    &ensp; <span class="keyword">jnz</span> <span class="other">mult</span> <br />
+                </code>
+            </p>
+
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 3 <br />
+                <code>
+                    <span class="number">
+                        10110000 00000000 10001010 00011101 00000000 00000000 00000000 00000000 00000010 00000101 00000000 00000000 00000000 00000000 11111110 11001011 01110101 11110110
+                    </span>
+                </code>
+            </p>
+
+            <p>You do <b>not</b> need to be able to understand or explain the code in Examples 2 and 3.</p>
+
+            <br />
+
+            <p><b>Advantages of high-level languages:</b></p>
+
+            <ul class="less-padding-left">
+                <li>
+                    As seen in the examples above, high-level languages like Python are often
+                    <b>much easier to read and understand</b> than low-level languages
+                    like assembly language and machine code.
+                </li>
+                <li>
+                    The same code in a high-level language <b>will work on any processor</b>,
+                    whereas code in low-level languages is dependent on the processor type.
+                </li>
+                <li>
+                    Because each line of code in a high-level language can represent multiple
+                    instructions in machine code, high-level languages are usually
+                    <b>easier and quicker to program in</b> than low-level languages.
+                </li>
+            </ul>
+
+            <br />
+
+            <p><b>Advantages of low-level languages:</b></p>
+
+            <ul class="less-padding-left">
+                <li>
+                    Commands in machine code <b>can be executed directly</b>, without the need
+                    for a translator (2B.08).
+                </li>
+                <li>
+                    Low-level languages have <b>more control over the hardware</b> (e.g. you
+                    can control exactly how memory is used in the program).
+                </li>
+                <li>
+                    Very efficient code can be written for a particular type of processor, so
+                    programs in low-level languages generally <b>execute faster and use less memory</b>
+                    than programs in high-level languages.
+                </li>
+            </ul>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                Why might a programmer prefer assembly language over machine code?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    Assembly language resembles English more closely than machine code, and is therefore easier to program in.
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = "2B-07-Programming-Language-Classification/";</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>
