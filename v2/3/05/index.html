@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>3.05 - ASCII and Unicode | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn about how computers use binary numbers to represent characters in enough detail for the GCSE Computer Science exam on this page on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p>When you press the keys on your keyboard, the keyboard sends binary information to the computer. How does the computer know what the binary information means?</p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>character set</strong> is a collection of characters that a computer can recognise from their binary representation.
+            </p>
+
+            <p><b>Computers can therefore use this character set to convert between characters and binary numbers.</b></p>
+
+            <p>Modern computers use two main character sets: ASCII and Unicode.</p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                The <strong>American Standard Code for Information Interchange</strong> (ASCII) is a character set which uses 7 bits to encode each character.
+            </p>
+
+            <p>
+                This means <b>each character is assigned a binary number from <code>0000000<sub>2</sub></code> (<code>0<sub>10</sub></code>)
+                to <code>1111111<sub>2</sub></code> (<code>127<sub>10</sub></code>)</b>,
+                and therefore ASCII can encode a total of 128 different characters.
+            </p>
+
+            <p>Table 1 shows some ASCII characters and their encodings in binary, hexadecimal, and decimal.</p>
+
+            <p class="table">
+                <img src="../../icons/table.svg" class="icon" />
+                Table 1
+            </p>
+
+            <table>
+                <tr>
+                    <th><strong>CHAR</strong></th>
+                    <th><strong>BIN</strong></th>
+                    <th><strong>HEX</strong></th>
+                    <th><strong>DEC</strong></th>
+                </tr>
+                <tr>
+                    <td class="string">Space</td>
+                    <td class="number"><code>010</code>&emsp14;<code>0000<sub class="override">2</sub></code></td>
+                    <td><code class="number">20<sub class="override">16</sub></code></td>
+                    <td><code class="number">32<sub class="override">10</sub></code></td>
+                </tr>
+                <tr>
+                    <td class="string">0</td>
+                    <td class="number"><code>011</code>&emsp14;<code>0000<sub class="override">2</sub></code></td>
+                    <td><code class="number">30<sub class="override">16</sub></code></td>
+                    <td><code class="number">48<sub class="override">10</sub></code></td>
+                </tr>
+                <tr>
+                    <td class="string">1</td>
+                    <td class="number"><code>011</code>&emsp14;<code>0001<sub class="override">2</sub></code></td>
+                    <td><code class="number">31<sub class="override">16</sub></code></td>
+                    <td><code class="number">49<sub class="override">10</sub></code></td>
+                </tr>
+                <tr>
+                    <td class="string">9</td>
+                    <td class="number"><code>011</code>&emsp14;<code>1001<sub class="override">2</sub></code></td>
+                    <td><code class="number">39<sub class="override">16</sub></code></td>
+                    <td><code class="number">57<sub class="override">10</sub></code></td>
+                </tr>
+                <tr>
+                    <td class="string">A</td>
+                    <td class="number"><code>100</code>&emsp14;<code>0001<sub class="override">2</sub></code></td>
+                    <td><code class="number">41<sub class="override">16</sub></code></td>
+                    <td><code class="number">65<sub class="override">10</sub></code></td>
+                </tr>
+                <tr>
+                    <td class="string">B</td>
+                    <td class="number"><code>100</code>&emsp14;<code>0010<sub class="override">2</sub></code></td>
+                    <td><code class="number">42<sub class="override">16</sub></code></td>
+                    <td><code class="number">66<sub class="override">10</sub></code></td>
+                </tr>
+                <tr>
+                    <td class="string">Z</td>
+                    <td class="number"><code>101</code>&emsp14;<code>1010<sub class="override">2</sub></code></td>
+                    <td><code class="number">5A<sub class="override">16</sub></code></td>
+                    <td><code class="number">90<sub class="override">10</sub></code></td>
+                </tr>
+                <tr>
+                    <td class="string">a</td>
+                    <td class="number"><code>110</code>&emsp14;<code>0001<sub class="override">2</sub></code></td>
+                    <td><code class="number">61<sub class="override">16</sub></code></td>
+                    <td><code class="number">97<sub class="override">10</sub></code></td>
+                </tr>
+                <tr>
+                    <td class="string">b</td>
+                    <td class="number"><code>110</code>&emsp14;<code>0010<sub class="override">2</sub></code></td>
+                    <td><code class="number">62<sub class="override">16</sub></code></td>
+                    <td><code class="number">98<sub class="override">10</sub></code></td>
+                </tr>
+                <tr>
+                    <td class="string">z</td>
+                    <td class="number"><code>111</code>&emsp14;<code>1010<sub class="override">2</sub></code></td>
+                    <td><code class="number">7A<sub class="override">16</sub></code></td>
+                    <td><code class="number">122<sub class="override">10</sub></code></td>
+                </tr>
+            </table>
+
+            <p><br />
+                Some things to note about ASCII: <br />
+                &bullet;
+                    The numbers (<span class="string">0</span> = <code class="number">30<sub class="override">16</sub></code>
+                        to <span class="string">9</span> = <code class="number">39<sub class="override">16</sub></code>),
+                    uppercase letters (<span class="string">A</span> = <code class="number">41<sub class="override">16</sub></code>
+                        to <span class="string">Z</span> = <code class="number">5A<sub class="override">16</sub></code>),
+                    and lowercase letters (<span class="string">a</span> = <code class="number">61<sub class="override">16</sub></code>
+                        to <span class="string">z</span> = <code class="number">7A<sub class="override">16</sub></code>)
+                    are all in order <br />
+                &bullet;
+                    The characters before <span class="string">Space</span> = <code class="number">20<sub class="override">16</sub></code>
+                        are all control characters (like <span class="string">Null</span> = <code class="number">00<sub class="override">16</sub></code>,
+                            <span class="string">Backspace</span> = <code class="number">08<sub class="override">16</sub></code>,
+                            and <span class="string">Escape</span> = <code class="number">1B<sub class="override">16</sub></code>) <br />
+                &bullet;
+                    There are no letters from other alphabets, because there was no room (7 bits only allows for 128 different characters)
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Unicode</strong> is a different character set which uses multiple bytes for each character.
+            </p>
+            
+            <p>Unicode can therefore encode many more characters than ASCII can: it covers every major language in the world. It can even encode emojis 🤯!</p>
+
+            <p>The first 128 characters in Unicode are the same as ASCII. This means that if a character is in ASCII, it will have the same encoding in Unicode.</p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                What is a disadvantage of using Unicode instead of ASCII?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    More storage will be required, as Unicode uses more bits per character than ASCII does.
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = "3-05-ASCII-and-Unicode/";</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>

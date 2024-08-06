@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>3.03 - Binary Arithmetic | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="See a step-by-step guide for adding two binary numbers, a skill you need to have for the GCSE Computer Science exam, on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p>We can add binary numbers using column addition, just like decimal numbers.</p>
+
+            <p>The only difference is that <b>we carry when the result is at least 2</b>, instead of when the result is at least 10.</p>
+
+            <p><br/>Diagram 1 shows a step-by-step guide to adding two 8-bit binary numbers. <b><i>Tap or click to go to the next step.</i></b></p>
+
+            <p class="diagram">
+                <img src="../../icons/image.svg" class="icon" />
+                Diagram 1 <br /> <br />
+                <img src="./diagram1.png" class="no-zoom" id="js-target" style="height: 170px; padding-bottom: 24px;" />
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                An <strong>overflow</strong> occurs when a number is too big to fit in a set amount of space.
+            </p>
+
+            <p>For example, trying to store the result of the addition in Diagram 1 in an 8-bit number would result in an <b>overflow error</b> because a computer would need 9 bits to store the result.</p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                What is the result of <code>1101<sub>2</sub> + 0011<sub>2</sub></code> in decimal?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    <code>
+                        &nbsp;   1 1 0 1
+                        <br /> + 0 0 1 1
+                        <br /> &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;
+                        <br /> 1 0 0 0 0 <br />
+                        &nbsp;<sup>1</sup> <sup>1</sup> <sup>1</sup> <sup>1</sup> <br />
+                    </code> <br />
+                    = <code>16<sub>10</sub></code>
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = "3-03-Binary-Arithmetic/";</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+        <script src="./main.js"></script>
+
+    </body>
+</html>

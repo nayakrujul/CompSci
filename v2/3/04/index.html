@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>3.04 - Binary Shifts | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="See an intuitive explanation of binary shifts for GCSE Computer Science on this page on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p>
+                Multiplying or dividing by powers of 10 (<code>10, 100, 1000, ...</code>) in base-10 (decimal) is really easy. <br />
+                <b>The same goes for powers of 2 (<code>2, 4, 8, ...</code>) in base-2 (binary)</b>
+            </p>
+    
+            <p>
+                To multiply by 2 in binary, we <b>add a <code>0</code> on the end of the number</b> (just like multiplying by 10 in decimal):
+                <br /> &bullet; two times <code>1011<sub>2</sub></code> is <code>10110<sub>2</sub></code>
+                <br /> &bullet; two times <code>11111111<sub>2</sub></code> is <code>111111110<sub>2</sub></code>
+            </p>
+    
+            <p>To multiply by 4, we multiply by 2 twice (add two 0s on the end: just like multiplying by 100 in decimal).</p>
+    
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>binary left-shift</strong> is equivalent to adding 0s on the end of a binary number.
+            </p>
+    
+            <p>For example, left-shifting the number <code>1101<sub>2</sub></code> by two places would give us <code>110100<sub>2</sub></code>. Two zeros have been added to the end.</p>
+    
+            <p><b>A number is doubled every time it is left-shifted by one place.</b> This means that left-shifting a number by two places would multiply it by 4.</p>
+    
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>binary right-shift</strong> is equivalent to taking away digits from the end of a binary number.
+            </p>
+    
+            <p>For example, right-shifting the number <code>1101<sub>2</sub></code> by two places would give us <code>11<sub>2</sub></code>. The last two digits have been removed.</p>
+    
+            <p><b>A number is halved every time it is right-shifted by one place.</b> This means that right-shifting a number by two places would divide it by 4.</p>
+    
+            <p>NOTE: if you right-shift an odd number, it will <b>round down</b> after halving. This is like the integer division (<code>DIV</code>) operator that was discussed in <a href="../../2/03/">2.03 (Operations)</a>.</p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                What is the numerical result (in terms of multiplication or division) of left-shifting a number three places?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">Multiply by <code>2<sup>3</sup></code> = 8.</span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = "3-04-Binary-Shifts/";</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>

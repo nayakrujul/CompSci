@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>3.06 - Images | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn about how images are stored in computer memory for GCSE Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>pixel</strong> is a single coloured point.
+            </p>
+    
+            <p>Images are made up of thousands or even millions of pixels. The colour of each pixel is stored in binary.</p>
+    
+            <p id="js-target"><b>The screen that you're viewing this page on is also made up of pixels.</b></p>
+    
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                The <strong>colour depth</strong> of an image is the number of bits used to store the colour of each pixel.
+            </p>
+    
+            <p><b>A black-and-white image would have a 1-bit colour depth</b>, as you only need one bit to choose between two different options (<code>0</code> = black and <code>1</code> = white).</p>
+    
+            <p>If <code>d</code> is the colour depth of an image, the maximum number of colours you could encode is <b><code>2<sup>d</sup></code></b>.</p>
+    
+            <p>Images usually use a <b>24-bit colour depth</b> (1 byte each for red, green, and blue). This means the total number of colours is <b><code>2<sup>24</sup> = 16,777,216</code></b>.</p>
+    
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                The <strong>file size</strong> of an image is the total number of bits needed to store the image.
+            </p>
+    
+            <p>
+                You can work out the file size by using the formula: <br />
+                <code><b>file size</b> (in bits) = <b>width</b> (in pixels) &times; <b>height</b> (in pixels) &times; <b>colour depth</b> (in bits)</code>
+            </p>
+    
+            <p>You can then work out the file size in bytes by dividing this answer by 8.</p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                What is the file size in bytes of a 50&times;100 image with a colour depth of 8 bits?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    <code><b>file size</b> (in bits) = <b>50</b> pixels &times; <b>100</b> pixels &times; <b>8</b> bits
+                        = <b>40,000</b> bits = <b>5000</b> bytes</code>
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = "3-06-Images/";</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>

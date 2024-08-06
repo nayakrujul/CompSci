@@ -537,15 +537,15 @@ ul.less-padding-left, ol.less-padding-left {
     padding-left: 25px;
 }
 
-@media (max-width: 500px) {
-    div#header img#logo {
-        content: url("./logos/square.png");
-    }
-}
-
 @media (max-width: 999px) {
     div#content div.section-flexbox {
         width: calc(100% - 20px);
+    }
+}
+
+@media (max-width: 500px) {
+    div#header img#logo {
+        content: url("./logos/square.png");
     }
 }
 

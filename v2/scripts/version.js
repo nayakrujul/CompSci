@@ -4,6 +4,7 @@ document.getElementById("header").innerHTML = `
         <a href="/v2/" class="menu-link">HOME</a>
         <a href="/v2/about/" class="menu-link">ABOUT</a>
         <a href="/v2/c-sharp/" class="menu-link">C# TUTORIAL</a>
+        <a href="/v2/glossary/gcse/" class="menu-link">GLOSSARY</a>
         <a href="/v2/feedback/" class="menu-link">FEEDBACK</a>
     </div>` + document.getElementById("header").innerHTML + `
     <select id="version-select">
