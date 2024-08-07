@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>3.07 - Sound | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="See the best explanation of how sound is stored in binary on computers for the GCSE Computer Science exam on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p>Sound waves are <b>analogue</b>, meaning they are continuously changing. Any data that is stored on a computer needs to be <b>digital</b>: a series of binary numbers.</p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                An <strong>analogue to digital converter</strong> (ADC) is used in a microphone to convert the analogue sound wave into a digital stream of binary numbers.
+            </p>
+
+            <p>To do this, the <b>amplitude</b> (height) of the sound wave is <b>sampled</b> (measured) at regular intervals. These values are then rounded and then stored in binary.</p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                The <strong>sample rate</strong> of an audio file is the number of samples every second.
+            </p>
+
+            <p>
+                We measure this in <b>Hertz (<code>Hz</code>) or Kilohertz (<code>kHz</code>)</b>.
+                <code>1Hz</code> means one sample per second, and <code>1kHz</code> means 1000 samples every second.
+                A typical sample rate is around <code>44.1kHz</code> (44,100 samples per second).
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                The <strong>sample resolution</strong> of an audio file is the number of bits used to store each sample.
+            </p>
+
+            <p>
+                You can work out the file size by using the formula: <br />
+                <code><b>file size</b> (in bits) = <b>sample rate</b> (in Hertz) &times; <b>sample resolution</b> (in bits) &times; <b>audio length</b> (in seconds)</code>
+            </p>
+
+            <p>You can then work out the file size in bytes by dividing this answer by 8.</p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                What is the file size in bytes of a <code class="small-code">2kHz, 16-bit, 15 sec</code> audio file?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    <code>
+                        <b>file size</b> (in bits) = <b>2000</b> Hertz &times; <b>16</b> bits &times;
+                        <b>15</b> seconds = <b>480,000</b> bits = <b>60,000</b> bytes
+                    </code>
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = "3-07-Sound/";</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>
