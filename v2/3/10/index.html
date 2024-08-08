@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>3.10 - Huffman Coding | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="On this page, you can learn about the more complicated but more efficient form of compression that is Huffman Coding, and even try out an online demo in real time, on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Huffman Coding</strong> is a form of lossless data compression which can be used on text files.
+            </p>
+    
+            <p>In ASCII each character is encoded by exactly 7 bits, but in Huffman Coding the <b>length of the binary encoding of a character varies</b>.</p>
+    
+            <p><br /><b>Let's do an example for the string <code class="string">"computer science revision"</code></b>.</p>
+    
+            <p>In ASCII, this would be <code>25 &times; 7 = <b>175 bits</b></code>.</p>
+    
+            <p>
+                <br />The characters in the string are arranged in a Huffman tree, and are <b>written next to their frequencies</b> in the string.
+                <br />For example, "o" appears twice, so it is written next to a 2.
+            </p>
+    
+            <p>Note: you do not need to be able to create a Huffman tree, but you do need to be able to read one.</p>
+    
+            <p>Diagram 1 shows an Example Huffman tree for this string.</p>
+    
+            <p class="diagram">
+                <img src="../../icons/image.svg" class="icon" />
+                Diagram 1 <br /> <br />
+                <img src="./diagram.png" width="400px" />
+            </p>
+    
+            <p>
+                The characters have been highlighted in green. <br />
+                The numbers in the other circles are just the combined frequencies of every character underneath that circle.
+                <br /> The character on the far left is a space.
+            </p>
+    
+            <p>
+                <b>To get the binary encoding of a character, we trace the path from the top to that character.</b> <br />
+                Each time we go left, we write a <code>0</code>, and each time we go right, we write a <code>1</code>.
+            </p>
+    
+            <p>So, the code for <code>c</code> would be <code>100</code> (because we go right once, and then left twice)</p>
+    
+            <p><br />Table 1 shows every character's encoding in this Huffman tree.</p>
+    
+            <p class="table">
+                <img src="../../icons/table.svg" class="icon" />
+                Table 1
+            </p>
+    
+            <table>
+                <tr>
+                    <th><strong>Character</strong></th>
+                    <th><strong>Encoding</strong></th>
+                </tr>
+                <tr>
+                    <td class="string">Space</td>
+                    <td class="number">0000</td>
+                </tr>
+                <tr>
+                    <td class="string">o</td>
+                    <td class="number">0001</td>
+                </tr>
+                <tr>
+                    <td class="string">e</td>
+                    <td class="number">001</td>
+                </tr>
+                <tr>
+                    <td class="string">i</td>
+                    <td class="number">010</td>
+                </tr>
+                <tr>
+                    <td class="string">m</td>
+                    <td class="number">01100</td>
+                </tr>
+                <tr>
+                    <td class="string">t</td>
+                    <td class="number">01101</td>
+                </tr>
+                <tr>
+                    <td class="string">u</td>
+                    <td class="number">01110</td>
+                </tr>
+                <tr>
+                    <td class="string">v</td>
+                    <td class="number">01111</td>
+                </tr>
+                <tr>
+                    <td class="string">c</td>
+                    <td class="number">100</td>
+                </tr>
+                <tr>
+                    <td class="string">n</td>
+                    <td class="number">1010</td>
+                </tr>
+                <tr>
+                    <td class="string">p</td>
+                    <td class="number">1011</td>
+                </tr>
+                <tr>
+                    <td class="string">r</td>
+                    <td class="number">110</td>
+                </tr>
+                <tr>
+                    <td class="string">s</td>
+                    <td class="number">111</td>
+                </tr>
+            </table>
+    
+            <p><br />Therefore, the final encoding is <code class="number">100 0001 01100 1011 01110 01101 001 110 0000 111 100 010 001 1010 100 001 0000 110 001 01111 010 111 010 0001 1010</code>.</p>
+    
+            <p>This is <code><b>90 bits</b></code> (ASCII was 175, so we almost halved the storage required).</p>
+
+            <p>
+                You can try an interactive demo of Huffman Coding <a href="https://misc.rujulnayak.com/Huffman-Tree/">here</a>.
+                Note that the interactive demo will use different encodings for each character
+                (e.g. space is <span class="number">1101</span> instead of <span class="number">0000</span>),
+                but the overall length will be the same (90 bits).
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                Decode the binary sequence <code class="number small-code">100 0001 110 110 001 100 01101</code> using Table 1.
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer"><code class="string">"correct"</code>.</span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = "3-10-Huffman-Coding/";</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>
