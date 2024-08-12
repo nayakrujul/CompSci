@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>4.01 - Logic Gates | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn about the four major logic gates (AND, OR, XOR, NOT) that you need to know for GCSE Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Logic gates</strong> are special circuits built into computer chips.
+            </p>
+    
+            <p>They <b>receive booleans</b>, <b>apply an operation</b>, then <b>output a boolean result</b>.</p>
+    
+            <p>
+                We know from Section 2 that booleans are usually represented as <code class="keyword">True</code> and <code class="keyword">False</code>,
+                but in this section we will be using <code class="number">1</code> and <code class="number">0</code> because we will be writing down a lot of boolean values.
+            </p>
+    
+            <p><b><br />There are four logic gates that you need to know.</b></p>
+    
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                The <strong>NOT gate</strong> receives one boolean input and outputs its opposite.
+            </p>
+    
+            <p>
+                That means that <code><span class="other">NOT</span>(<span class="number">1</span>)</code> is <code class="number">0</code>,
+                and <code><span class="other">NOT</span>(<span class="number">0</span>)</code> is <code class="number">1</code>
+            </p>
+    
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                The <strong>AND gate</strong> receives two boolean inputs and checks if both of them are true.
+            </p>
+    
+            <p>
+                That means that <code><span class="number">1</span> <span class="other">AND</span> <span class="number">1</span></code> is <code class="number">1</code>,
+                and any other combination of inputs will give <code class="number">0</code>.
+            </p>
+    
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                The <strong>OR gate</strong> receives two boolean inputs and checks if either one of them is true.
+            </p>
+    
+            <p>
+                That means that <code><span class="number">0</span> <span class="other">OR</span> <span class="number">0</span></code> is <code class="number">0</code>,
+                and any other combination of inputs will give <code class="number">1</code>.
+            </p>
+    
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                The <strong>XOR gate</strong> (exclusive OR) receives two boolean inputs and checks if exactly one of them is true.
+            </p>
+    
+            <p>
+                That means that <code><span class="number">0</span> <span class="other">XOR</span> <span class="number">1</span></code> is <code class="number">1</code>;
+                <code><span class="number">1</span> <span class="other">XOR</span> <span class="number">0</span></code> is <code class="number">1</code>;
+                <code><span class="number">0</span> <span class="other">XOR</span> <span class="number">0</span></code> is <code class="number">0</code>; and
+                <code><span class="number">1</span> <span class="other">XOR</span> <span class="number">1</span></code> is <code class="number">0</code>.
+            </p>
+    
+            <p>
+                You can think of <code class="other">XOR</code> as checking for inequality: if it is given two different inputs it returns
+                <code class="number">1</code>, but if the two inputs are the same, it returns <code class="number">0</code>.
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                What is <code class="small-code">(<span class="number">1</span> <span class="other">XOR</span> <span class="number">0</span>) <span class="other">AND</span>
+                <span class="other">NOT</span>(<span class="number">0</span> <span class="other">OR</span> <span class="number">1</span>)</code>?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    This simplifies to <code><span class="number">1</span> <span class="other">AND</span> <span class="other">NOT</span>(<span class="number">1</span>)</code>,
+                    which is <code><span class="number">1</span> <span class="other">AND</span> <span class="number">0</span></code>, which is <code class="number">0</code>.
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = "4-01-Logic-Gates/";</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>
