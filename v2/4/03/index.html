@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>4.03 - Complex Truth Tables | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Study more complicated truth tables, building on your knowledge from 4.02, for GCSE Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p>Let's look at a more complex truth table. To do this, we will <b>add more columns</b> instead of immediately jumping to the answer.</p>
+
+            <p><br />Table 1 shows the truth table for <code>Q = (A <span class="other">XOR</span> B) <span class="other">AND</span> <span class="other">NOT</span>(C)</code>.</p>
+
+            <p class="table">
+                <img src="../../icons/table.svg" class="icon" />
+                Table 1
+            </p>
+
+            <table>
+                <tr>
+                    <th><strong>A</strong> <i class="no-bold">(in)</i></th>
+                    <th><strong>B</strong> <i class="no-bold">(in)</i></th>
+                    <th><strong>C</strong> <i class="no-bold">(in)</i></th>
+                    <th><strong>A <span class="other no-bold">XOR</span> B</strong></th>
+                    <th><strong><span class="other no-bold">NOT</span>(C)</strong></th>
+                    <th><strong>Q</strong> <i class="no-bold">(out)</i></th>
+                </tr>
+                <tr>
+                    <td><code class="number">0</code></td>
+                    <td><code class="number">0</code></td>
+                    <td><code class="number">0</code></td>
+                    <td><code class="number">0</code></td>
+                    <td><code class="number">1</code></td>
+                    <td><code class="number"><b>0</b></code></td>
+                </tr>
+                <tr>
+                    <td><code class="number">0</code></td>
+                    <td><code class="number">0</code></td>
+                    <td><code class="number">1</code></td>
+                    <td><code class="number">0</code></td>
+                    <td><code class="number">0</code></td>
+                    <td><code class="number"><b>0</b></code></td>
+                </tr>
+                <tr>
+                    <td><code class="number">0</code></td>
+                    <td><code class="number">1</code></td>
+                    <td><code class="number">0</code></td>
+                    <td><code class="number">1</code></td>
+                    <td><code class="number">1</code></td>
+                    <td><code class="number"><b>1</b></code></td>
+                </tr>
+                <tr>
+                    <td><code class="number">0</code></td>
+                    <td><code class="number">1</code></td>
+                    <td><code class="number">1</code></td>
+                    <td><code class="number">1</code></td>
+                    <td><code class="number">0</code></td>
+                    <td><code class="number"><b>0</b></code></td>
+                </tr>
+                <tr>
+                    <td><code class="number">1</code></td>
+                    <td><code class="number">0</code></td>
+                    <td><code class="number">0</code></td>
+                    <td><code class="number">1</code></td>
+                    <td><code class="number">1</code></td>
+                    <td><code class="number"><b>1</b></code></td>
+                </tr>
+                <tr>
+                    <td><code class="number">1</code></td>
+                    <td><code class="number">0</code></td>
+                    <td><code class="number">1</code></td>
+                    <td><code class="number">1</code></td>
+                    <td><code class="number">0</code></td>
+                    <td><code class="number"><b>0</b></code></td>
+                </tr>
+                <tr>
+                    <td><code class="number">1</code></td>
+                    <td><code class="number">1</code></td>
+                    <td><code class="number">0</code></td>
+                    <td><code class="number">0</code></td>
+                    <td><code class="number">1</code></td>
+                    <td><code class="number"><b>0</b></code></td>
+                </tr>
+                <tr>
+                    <td><code class="number">1</code></td>
+                    <td><code class="number">1</code></td>
+                    <td><code class="number">1</code></td>
+                    <td><code class="number">0</code></td>
+                    <td><code class="number">0</code></td>
+                    <td><code class="number"><b>0</b></code></td>
+                </tr>
+            </table>
+
+            <p><br />
+                Note that the input columns <b>still count up in binary</b> (000, 001, 010, ...) even though we have
+                three of them instead of two.
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                How many rows will a truth table with <code>n</code> inputs have?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    <code>2<sup>n</sup></code> (because we're effectively counting in binary with the inputs)
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = "4-03-Complex-Truth-Tables/";</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>

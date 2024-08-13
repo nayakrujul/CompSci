@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>4.05 - Logic Symbols | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Study the theory of logic symbols, a different way of representing logic circuits, for GCSE Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Logic symbols</strong> can also be used to represent boolean expressions.
+            </p>
+    
+            <p>Table 1 shows the corresponding symbol for each logic gate.</p>
+    
+            <p class="table">
+                <img src="../../icons/table.svg" class="icon" />
+                Table 1
+            </p>
+    
+            <table>
+                <tr>
+                    <th><strong>Logic gate</strong></th>
+                    <th><strong>Symbol</strong></th>
+                </tr>
+                <tr>
+                    <td><code><span class="other">NOT</span>(A)</code></td>
+                    <td><code class="overbar">A</code></td>
+                </tr>
+                <tr>
+                    <td><code>A <span class="other">AND</span> B</code></td>
+                    <td><code>A . B</code></td>
+                </tr>
+                <tr>
+                    <td><code>A <span class="other">OR</span> B</code></td>
+                    <td><code>A + B</code></td>
+                </tr>
+                <tr>
+                    <td><code>A <span class="other">XOR</span> B</code></td>
+                    <td><code>A &oplus; B</code></td>
+                </tr>
+            </table>
+    
+            <p><br />
+                Note: the bar needs to <b>go over everything</b> inside the
+                <code class="other">NOT</code>: for example,
+                <code><span class="other">NOT</span>(A <span class="other">AND</span> B)</code>
+                would become <code class="overbar">(A . B)</code>
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                Convert the boolean expression <code class="small-code">
+                    (A <span class="other">XOR</span> B) <span class="other">AND</span>
+                    <span class="other">NOT</span>(C <span class="other">OR</span> D)
+                </code> into logic symbols.
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer"><code>(A &oplus; B) . <span class="overbar">(C + D)</span></code></span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = "X-XX-TITLE/";</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>
