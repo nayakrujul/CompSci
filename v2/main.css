@@ -206,6 +206,10 @@ div#page {
     margin: 8px;
 }
 
+div.feedback-page {
+    text-align: center;
+}
+
 div#footer {
     height: 1em;
     width: calc(100% - 20px);
@@ -547,6 +551,40 @@ img.img-render {
 
 .overbar {
     text-decoration: overline;
+}
+
+ul.spaced-out li {
+    padding-top: 20px;
+}
+
+.red {
+    color: red;
+}
+
+div.feedback-link {
+    display: flex;
+    height: 100px;
+    width: 300px;
+    border-radius: 20px;
+    border: 3px solid black;
+    margin: 10px auto;
+    padding: 10px;
+
+    a {
+        width: 100%;
+        color: inherit;
+
+        img {
+            max-height: 80px;
+            float: left;
+            margin: 10px;
+        }
+
+        h3, p {
+            height: 30px;
+            margin: 10px 0px;
+        }
+    }
 }
 
 @media (max-width: 999px) {
