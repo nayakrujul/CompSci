@@ -322,9 +322,15 @@ b {
 }
 
 .blue {
-    --bold-colour: #1c96c5;
-    --button-background: #20a7db;
-    --button-bg-accent: #1c96c5;
+    --bold-colour: #3c649f;
+    --button-background: #30507f;
+    --button-bg-accent: #243c5f;
+}
+
+.turquoise {
+    --bold-colour: #288f84;
+    --button-background: #38948b;
+    --button-bg-accent: #2c766f;
 }
 
 .green {
@@ -333,22 +339,34 @@ b {
     --button-bg-accent: #2f6846;
 }
 
+.yellow {
+    --bold-colour: #cc8700;
+    --button-background: #e59800;
+    --button-bg-accent: #ce8800;
+}
+
+.orange {
+    --bold-colour: #ed7117;
+    --button-background: #ee7f2e;
+    --button-bg-accent: #d67229;
+}
+
+.brown {
+    --bold-colour: #744926;
+    --button-background: #815b3b;
+    --button-bg-accent: #67482f;
+}
+
+.pink {
+    --bold-colour: #e55ea2;
+    --button-background: #ff69b4;
+    --button-bg-accent: #e76eab;
+}
+
 .purple {
     --bold-colour: #9e268a;
     --button-background: #8e227c;
     --button-bg-accent: #7e1e6e;
-}
-
-.yellow {
-    --bold-colour: #cc8700;
-    --button-background: #ffa900;
-    --button-bg-accent: #e59800;
-}
-
-.pink {
-    --bold-colour: #ff4fa7;
-    --button-background: #ff78bb;
-    --button-bg-accent: #e56ca8;
 }
 
 b {

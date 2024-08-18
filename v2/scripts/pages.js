@@ -1,6 +1,6 @@
 // Themes
 
-const THEMES = ["blue", "green", "purple", "yellow", "pink"];
+const THEMES = ["blue", "turquoise", "green", "yellow", "orange", "brown", "pink", "purple"];
 let rand = THEMES[Math.floor(Math.random() * THEMES.length)];
 document.body.classList.add(rand);
 
