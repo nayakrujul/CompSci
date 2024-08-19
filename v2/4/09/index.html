@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>4.09 - The CPU | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Study the components of the Central Processing Unit (CPU) for GCSE Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                The <strong>Central Processing Unit</strong> (CPU) processes all of the data and instructions that make the computer system work.
+            </p>
+    
+            <p>The CPU has five main components:</p>
+    
+            <ul class="spaced-out less-padding-left">
+                <li>
+                    The <b>Control Unit</b> (CU) <br />
+                    The CU <b>coordinates all the activities</b> taking place inside the CPU. Its main job is to manage the
+                    Fetch-Execute cycle which will be explored on the next page.
+                </li>
+    
+                <li>
+                    The <b>Arithmetic and Logic Unit</b> (ALU) <br />
+                    The ALU <b>carries out all the calculations</b>. This includes addition and subtraction, binary shifts, logical
+                    comparisons like greater than and less than, and boolean operations like AND, OR, NOT, and XOR.
+                </li>
+    
+                <li>
+                    The <b>Clock</b> <br />
+                    The clock is located inside the CU. Its job is to <b>synchronise the actions</b> of the CPU. It sends out a
+                    signal at a constant rate. The number of clock cycles (or "ticks") per second is called the clock speed.
+                </li>
+    
+                <li>
+                    The <b>Buses</b> <br />
+                    The buses are a collection of wire that are used to <b>transmit data between the components</b> of the CPU, and
+                    to other parts of the computer system.
+                </li>
+    
+                <li>
+                    The <b>Cache and Registers</b> <br />
+                    The registers <b>hold a small amount of data</b> which is needed by the CPU. They are the quickest form of
+                    memory to read from and write to. The cache is memory which is slower than the registers, but faster
+                    than RAM. It stores regularly used data so that the CPU can access it quickly the next time it's needed.
+                </li>
+            </ul>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                Why isn't all of a computer's data stored in cache?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    Cache is volatile, so it loses its contents when the power is turned off. Cache is also very expensive,
+                    so it would not be practical to use a lot of it.
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = "4-09-The-CPU/";</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>
