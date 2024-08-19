@@ -605,15 +605,59 @@ div.feedback-link {
     }
 }
 
+div#content.error-404 {
+    margin: 8px;
+    text-align: center;
+    width: calc(100% - 16px);
+}
+
+h1#error-404-heading {
+    font-size: 100px;
+    color: red;
+}
+
+h2#error-404-subtitle {
+    font-size: 50px;
+}
+
+h3#error-404-text {
+    font-weight: normal;
+    font-size: 30px;
+}
+
 @media (max-width: 999px) {
     div#content div.section-flexbox {
         width: calc(100% - 20px);
+    }
+
+    h1#error-404-heading {
+        font-size: 75px;
+    }
+
+    h2#error-404-subtitle {
+        font-size: 30px;
+    }
+    
+    h3#error-404-text {
+        font-size: 20px;
     }
 }
 
 @media (max-width: 500px) {
     div#header img#logo {
         content: url("./logos/square.png");
+    }
+
+    h1#error-404-heading {
+        font-size: 50px;
+    }
+
+    h2#error-404-subtitle {
+        font-size: 20px;
+    }
+    
+    h3#error-404-text {
+        font-size: 16px;
     }
 }
 
