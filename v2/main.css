@@ -171,7 +171,7 @@ div#content {
     div.section-flexbox {
         display: flex;
         box-sizing: border-box;
-        width: calc(25% - 20px);
+        width: calc(50% - 20px);
         border-radius: 10px;
         border: 3px solid;
         margin: 10px;
@@ -183,6 +183,10 @@ div#content {
             width: 100%;
             color: inherit;
         }
+    }
+
+    div.section-flexbox.homepage-flexbox {
+        width: calc(25% - 20px);
     }
 
     div.section-flexbox:not(.disabled):hover {
@@ -628,6 +632,10 @@ h3#error-404-text {
 
 @media (max-width: 999px) {
     div#content div.section-flexbox {
+        width: calc(100% - 20px);
+    }
+
+    div#content div.section-flexbox.homepage-flexbox {
         width: calc(50% - 20px);
     }
 
@@ -661,7 +669,7 @@ h3#error-404-text {
         font-size: 16px;
     }
 
-    div#content div.section-flexbox {
+    div#content div.section-flexbox.homepage-flexbox {
         width: calc(100% - 20px);
     }
 }
