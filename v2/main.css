@@ -155,6 +155,13 @@ div#margin {
     width: 100%;
 }
 
+div#homepage {
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    width: 100%;
+}
+
 div#content {
     position: absolute;
     top: 125px;
@@ -240,6 +247,48 @@ div#footer {
 
     a#next-link {
         float: right;
+    }
+}
+
+div#homepage-carousel {
+    padding: 50px;
+    height: calc(100vh - 136px);
+    box-sizing: border-box;
+
+    div.carousel-item {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        text-wrap: pretty;
+        height: 100%;
+
+        h1.carousel-header {
+            font-size: 50px;
+        }
+
+        span.highlight {
+            display: inline-block;
+            background-size: 200%;
+            background-image: linear-gradient(to right, transparent 50%, lightblue 50%);
+        }
+
+        input.q-button {
+            background-color: #e59800;
+        }
+
+        input.q-button:hover {
+            background-color: #ce8800;
+        }
+
+        a.explore-link {
+            font-size: 20px;
+        }
+    }
+
+    div.carousel-item.active {
+        display: flex;
+        flex-direction: column;
     }
 }
 
@@ -672,6 +721,10 @@ h3#error-404-text {
     div#content div.section-flexbox.homepage-flexbox {
         width: calc(100% - 20px);
     }
+
+    div#homepage div#homepage-carousel div.carousel-item h1.carousel-header {
+        font-size: 30px;
+    }
 }
 
 @keyframes fadeIn {
@@ -682,4 +735,9 @@ h3#error-404-text {
 @keyframes fadeOut {
     from {opacity: 1;}
     to {opacity: 0;}
+}
+
+@keyframes highlight {
+    from {background-position: 0;}
+    to {background-position: -100%;}
 }

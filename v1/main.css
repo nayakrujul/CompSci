@@ -207,7 +207,7 @@ input#v2-button {
     height: 40px;
     padding: 5px;
     border-radius: 20px;
-    position: absolute;
+    position: fixed;
     top: 20px;
     right: 8px;
     background-color: white;
