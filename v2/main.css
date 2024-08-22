@@ -171,7 +171,7 @@ div#content {
     div.section-flexbox {
         display: flex;
         box-sizing: border-box;
-        width: calc(50% - 20px);
+        width: calc(25% - 20px);
         border-radius: 10px;
         border: 3px solid;
         margin: 10px;
@@ -628,7 +628,7 @@ h3#error-404-text {
 
 @media (max-width: 999px) {
     div#content div.section-flexbox {
-        width: calc(100% - 20px);
+        width: calc(50% - 20px);
     }
 
     h1#error-404-heading {
@@ -659,6 +659,10 @@ h3#error-404-text {
     
     h3#error-404-text {
         font-size: 16px;
+    }
+
+    div#content div.section-flexbox {
+        width: calc(100% - 20px);
     }
 }
 
