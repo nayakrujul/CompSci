@@ -609,6 +609,7 @@ div#content.error-404 {
     margin: 8px;
     text-align: center;
     width: calc(100% - 16px);
+    text-wrap: pretty;
 }
 
 h1#error-404-heading {
