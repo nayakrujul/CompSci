@@ -140,6 +140,7 @@ div#header {
     }
 
     select#version-select {
+        background-color: white;
         float: right;
         height: 40px;
         border-radius: 20px;
@@ -252,7 +253,7 @@ div#footer {
 
 div#homepage-carousel {
     padding: 50px;
-    height: calc(100vh - 136px);
+    height: calc(100vh - 236px);
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
