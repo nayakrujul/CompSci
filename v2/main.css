@@ -254,6 +254,8 @@ div#homepage-carousel {
     padding: 50px;
     height: calc(100vh - 136px);
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
 
     div.carousel-item {
         display: none;
@@ -272,9 +274,20 @@ div#homepage-carousel {
             background-size: 200%;
             background-image: linear-gradient(to right, transparent 50%, lightblue 50%);
         }
+    }
+
+    div.carousel-item.active {
+        animation: fadeIn 500ms forwards;
+        display: flex;
+        flex-direction: column;
+    }
+
+    div#bottom {
+        text-align: center;
 
         input.q-button {
             background-color: #e59800;
+            margin: auto;
         }
 
         input.q-button:hover {
@@ -284,11 +297,6 @@ div#homepage-carousel {
         a.explore-link {
             font-size: 20px;
         }
-    }
-
-    div.carousel-item.active {
-        display: flex;
-        flex-direction: column;
     }
 }
 

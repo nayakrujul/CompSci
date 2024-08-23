@@ -2,32 +2,74 @@
 
 <html>
     <head>
-        <link rel="stylesheet" href="v1/main.css">
-        <link rel="stylesheet" href="./main.css">
-        <link rel="stylesheet" href="./homepage.css">
+        <link rel="stylesheet" href="./v2/main.css">
 
-        <title>Home | Computer Science Revision</title>
+        <title>Home | CS.RN v2</title>
 
-        <link rel="icon" type="image/png" href="./v1/icons/logo.svg"/>
-        <meta property="og:image" content="./v1/icons/logo.png" />
-        <meta property="og:image:width" content="640" />
-        <meta property="og:image:height" content="512" />
+        <link rel="icon" type="image/png" href="./v2/logos/square.png"/>
+        <meta property="og:image" content="./v2/logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
 
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Computer Science Revision is an online, mobile-friendly revision guide for GCSE Computer Science students.">
+        <meta name="description" content="CS.RN v2 is the second version of an online, mobile-friendly revision guide for GCSE and A Level Computer Science students.">
     </head>
 
     <body>
-        <h1 id="heading">Computer Science Revision</h1>
-        
-        <p>Welcome to Computer Science Revision by Rujul Nayak.</p>
 
-        <p>This is an online, mobile-friendly revision guide for GCSE Computer Science students.</p>
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="homepage">
+            <div id="homepage-carousel">
+                <div class="carousel-item">
+                    <h1 class="carousel-header">
+                        This is the <span class="highlight">best online revision guide</span> for CS students.
+                    </h1>
+                        <p class="carousel-text">
+                            Written by a Grade 9 GCSE Computer Science student, this guide contains everything you need to
+                            succeed in your exams.
+                        </p>
+                </div>
+                <div class="carousel-item">
+                    <h1 class="carousel-header">
+                        Over <span class="highlight">70 pages of content</span> for GCSE.
+                    </h1>
+                    <p class="carousel-text">
+                        This revision guide covers the whole GCSE Computer Science course.
+                        <i>(A Level content coming soon.)</i>
+                    </p>
+                </div>
+                <div class="carousel-item">
+                    <h1 class="carousel-header">
+                        Including <span class="highlight">130+ questions</span> throughout the guide.
+                    </h1>
+                    <p class="carousel-text">
+                        Organised into summary questions at the bottom of each page, and exam-style revision questions
+                        at the end of each section.
+                    </p>
+                </div>
+                <div class="carousel-item">
+                    <h1 class="carousel-header">
+                        CS.RN v2 is <span class="highlight">100% free</span>, with no ads.
+                    </h1>
+                    <p class="carousel-text">
+                        This revision guide will always remain completely free and
+                        <a href="https://github.com/nayakrujul/CompSci">open source</a>.
+                    </p>
+                </div>
+                <div id="bottom">
+                    <input type="button" class="q-button" value="Next" id="next-button"> <br />
+                    <a class="explore-link" href="./v2">Explore the index now!</a>
+                </div>
+            </div>
+        </div>
+        <div id="footer"></div>
 
-        <p id="link"><b><a class="homepage-override" href="./v1/">Click here to check it out!</a></b></p>
+        <script>let v1 = null;</script>
+        <script src="./v2/scripts/version.js"></script>
+        <script src="./v2/scripts/footer.js"></script>
+        <script src="./v2/scripts/homepage.js"></script>
 
-        <br /> <br />
     </body>
 </html>
