@@ -28,6 +28,10 @@ function button_clicked() {
     let shown = document.querySelector("div.rq.show");
     shown.querySelector("textarea.rq-textbox").disabled = true;
     [...shown.querySelectorAll("span.rq-answer")].forEach(ans => ans.classList.add("show"));
+    let p = document.createElement("p");
+    p.innerHTML = "<i>Tick off the marks you got right:</i>";
+    p.classList.add("explain-text");
+    shown.insertBefore(p, shown.querySelector("span.rq-answer"));
     let button = shown.querySelector("input.rq-button");
     button.value = "Next question";
     button.removeEventListener("click", button_clicked);

@@ -544,8 +544,26 @@ code.small-code {
     font-size: 16px;
 }
 
+div#page:has(> div#revision-questions) {
+    top: 125px;
+    text-align: center;
+    border: 3px solid var(--button-background);
+    border-radius: 10px;
+    width: calc(100% - 22px);
+    box-shadow: color-mix(in srgb, var(--button-bg-accent) 50%, transparent) 0px 0px 5px 5px;
+
+    h1#score {
+        color: var(--bold-colour);
+    }
+}
+
 div#revision-questions {
-    margin-top: 25px;
+    padding: 20px;
+
+    * {
+        margin-left: auto;
+        margin-right: auto;
+    }
 
     div.rq:not(.show) {
         display: none;
@@ -578,6 +596,8 @@ div#revision-questions {
     input.rq-checkbox {
         margin-right: 5px;
         accent-color: var(--button-background);
+        height: 18px;
+        width: 18px;
     }
 
     span.rq-answer:not(.show) {
@@ -587,6 +607,11 @@ div#revision-questions {
     span.rq-answer.show {
         display: block;
         animation: fadeIn 1000ms;
+        text-align: left;
+    }
+
+    p.explain-text {
+        text-align: left;
     }
 
     input.rq-button {
