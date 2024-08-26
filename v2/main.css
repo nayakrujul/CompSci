@@ -544,6 +544,12 @@ code.small-code {
     font-size: 16px;
 }
 
+div#page.glossary {
+    p.definition {
+        animation: fadeIn 500ms;
+    }
+}
+
 div#page:has(> div#revision-questions) {
     top: 125px;
     text-align: center;
