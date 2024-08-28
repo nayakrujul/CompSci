@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>5.04 - Protocols | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Study network protocols, one of the most important topics in GCSE Computer Science, all on one page on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p>
+                This page is one of the <b>longest and most important pages</b> of the whole GCSE course, so make sure you
+                learn this page properly. You could get a <b>long-answer question</b> asking you to explain the roles of a
+                selection of protocols on this page.
+            </p>
+
+            <p>On this page we're going to look at how data is actually <b>sent across a network</b>.</p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>protocol</strong> is a set of rules that defines how devices on a network communicate with each other.
+            </p>
+
+            <p>The protocols involved in sending data across networks can be grouped into <b>"layers"</b>.</p>
+
+            <p>Table 1 shows the protocol layers.</p>
+
+            <p class="table">
+                <img src="../../icons/table.svg" class="icon" />
+                Table 1
+            </p>
+
+            <table>
+                <tr>
+                    <th><strong>Layer</strong></th>
+                    <th><strong>Description</strong></th>
+                    <th><strong>Protocols</strong></th>
+                </tr>
+                <tr>
+                    <td><em>Application</em></td>
+                    <td>
+                        Protocols in the application layer create the data that is being sent and interpret the data that is
+                        being received.
+                    </td>
+                    <td>HTTP, HTTPS, FTP, SMTP, IMAP</td>
+                </tr>
+                <tr>
+                    <td><em>Transport</em></td>
+                    <td>
+                        Protocols in the transport layer set up communication between hosts. They are also responsible for
+                        splitting the data into packets, and reassembling the packets on receipt.
+                    </td>
+                    <td>TCP and UDP</td>
+                </tr>
+                <tr>
+                    <td><em>Internet</em></td>
+                    <td>
+                        Protocols in the internet layer communicate with routers to make sure the packets reach the
+                        correct recipient.
+                    </td>
+                    <td>IP</td>
+                </tr>
+                <tr>
+                    <td><em>Link</em></td>
+                    <td>
+                        Protocols in the link layer physically transmit the data packets from one device to another.
+                    </td>
+                    <td>WLAN (Wi-Fi) and Ethernet</td>
+                </tr>
+            </table>
+
+            <br />
+
+            <p>
+                When data is being sent, it <b>starts at the application layer</b> and makes its way <b>down</b> to the link layer. When
+                data is being received, it <b>starts at the link layer</b> and makes its way <b>up</b> to the application layer.
+            </p>
+
+            <p><br />Now, let's examine each protocol in detail. <br /> &nbsp;</p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                The <strong>Transmission Control Protocol</strong> (TCP) operates at the transport layer.
+            </p>
+
+            <p>Firstly, it <b>establishes a connection</b> between the sending and receiving devices.</p>
+            
+            <p>Then, it <b>splits the data</b> into numbered "packets" (smaller bits of data).</p>
+
+            <p>
+                It <b>communicates with the receiving device</b> to make sure all the packets have arrived. If not, they are
+                re-sent.
+            </p>
+
+            <p>It then <b>reassembles the packets</b> into the right order on the receiving device.</p>
+
+            <p>The sending device gets <b>confirmation</b> when the transfer is complete. <br /> &nbsp;</p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                The <strong>User Datagram Protocol</strong> (UDP) also operates at the transport layer.
+            </p>
+
+            <p>Just like TCP, it <b>establishes a connection</b> between the two devices and splits the data up into packets.</p>
+
+            <p>However, unlike TCP, it <b>does not check</b> if the packets have been received.</p>
+
+            <p>
+                This makes UDP a lot faster than TCP, which is good for <b>uses such as live streaming</b>, however it is not very
+                good for anything else because some data might be missing. <br /> &nbsp;
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                The <strong>Internet Protocol</strong> (IP) operates at the internet layer.
+            </p>
+
+            <p>
+                You have probably heard of IP addresses before. These are <b>unique numbers assigned to every device</b> on a
+                network.
+            </p>
+
+            <p>
+                The IP addresses of the sender and recipient are <b>attached by the Internet Protocol</b> to each data packet
+                before it is sent.
+            </p>
+
+            <p>Then, IP directs <b>directs the data packets across networks</b> in a process known as packet switching.</p>
+
+            <p>
+                Each packet is sent <b>between a series of routers</b>: each router reads the packet's destination IP address and
+                decides where to send it next. <br /> &nbsp;
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                The <strong>HyperText Transfer Protocol</strong> (HTTP) operates at the application layer.
+            </p>
+
+            <p>
+                It manages the transmission of data <b>between a web server and a client</b> (browser), providing a way for users
+                to interact with webpages.
+            </p>
+
+            <p>
+                HyperText Transfer Protocol Secure (<b>HTTPS</b>) is an <b>extension to HTTP</b> that encrypts communications
+                between the web server and the client, meaning that it is not possible for plaintext data to be stolen.
+            </p>
+
+            <p>
+                You can tell that a page is using HTTPS by checking if there is a padlock in the address bar.
+                <b>Your browser used HTTPS</b> to load this page onto your device. <br /> &nbsp;
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                The <strong>File Transfer Protocol</strong> (FTP) also operates at the application layer.
+            </p>
+
+            <p>
+                It allows users to <b>transfer files</b> between client and server computers. Servers can <b>accept connections from
+                multiple clients</b> simultaneously and limit file access to authenticated users or provide anonymous access to
+                any connected user. <br /> &nbsp;
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                The <strong>Simple Mail Transfer Protocol</strong> (SMTP) operates at the application layer.
+            </p>
+
+            <p>
+                It controls the <b>transmission of email messages</b> from a user's email client to their mail server, and from one
+                user's mail server to another, using a process called "store and forward". Messages are then stored on the
+                recipient's mail server, waiting to be downloaded via IMAP. <br /> &nbsp;
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                The <strong>Internet Messaging Access Protocol</strong> (IMAP) also operates at the application layer.
+            </p>
+
+            <p>
+                It allows <b>email client applications to interact with mail servers</b>, providing users with the option to
+                download and read their messages, delete messages, and organise messages within folders. Changes (including
+                whether a message is read or not) are synchronised with the server, providing consistency across all of a
+                user's devices. <br /> &nbsp;
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Wi-Fi</strong> is a family of related protocols which operate at the link layer.
+            </p>
+
+            <p>It controls the <b>physical transmission of data</b> as radio waves.</p>
+
+            <p>
+                It uses <b>two radio frequency bands</b>: 2.4GHz (which has a greater range and is better at getting through walls)
+                and 5GHz (which is faster over shorter distances). <br /> &nbsp;
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Ethernet</strong> is also a family of related protocols which operate at the link layer.
+            </p>
+
+            <p>It controls the <b>physical transmission of data</b> as electrical currents.</p>
+
+            <p>While Wi-Fi is specifically for wireless connections, Ethernet is specifically for <b>wired connections</b>.</p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                IPv4 is the most common type of IP address. It is essentially a 32-bit number. How many unique IPv4 addresses are there?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    <code>2<sup>32</sup></code> &approx; 4.3 billion unique IPv4 addresses. This might sound like a lot, but
+                    we're actually running out of them. To solve this, many devices now use IPv6, which are 128-bit numbers.
+                    There are over 300 undecillion (3 followed by 38 zeros) unique IPv6 addresses.
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = "5-04-Protocols/";</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>
