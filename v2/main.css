@@ -606,11 +606,11 @@ div#revision-questions {
         width: 18px;
     }
 
-    span.rq-answer:not(.show) {
+    span.rq-answer:not(.show), span.rq-answer-text:not(.show) {
         display: none;
     }
 
-    span.rq-answer.show {
+    span.rq-answer.show, span.rq-answer-text.show {
         display: block;
         animation: fadeIn 1000ms;
         text-align: left;

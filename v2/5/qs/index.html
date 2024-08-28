@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>Section 5 Revision Questions | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Revise Section 5 (Computer Networks) with exam-style GCSE Computer Science questions on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+
+            <h1 id="score">Score: 0/0</h1>
+
+            <h2 id="q-num">Question 1 of &infin;</h2>
+    
+            <div id="revision-questions">
+                <div class="rq" marks="2">
+                    <span class="question">State two advantages of connecting computers together into networks.</span>
+                    <span class="rq-answer">Sharing files and resources (including devices like printers) across the network is a lot easier</span>
+                    <span class="rq-answer">The computers can be centrally managed, so software can be updated remotely on all computers at once</span>
+                    <span class="rq-answer">Accounts can be stored centrally, so users can log in from any device on the network</span>
+                    <span class="rq-answer">Other reasonable advantage</span>
+                </div>
+                <div class="rq" marks="1">
+                    <span class="question">What does a switch do?</span>
+                    <span class="rq-answer">Sends data packets to devices on the network.</span>
+                </div>
+                <div class="rq" marks="3">
+                    <span class="question">Give three advantages of a star topology.</span>
+                    <span class="rq-answer">There are fewer data collisions on star topology networks than on bus topology networks</span>
+                    <span class="rq-answer">Data transmission is usually quicker on star topology networks</span>
+                    <span class="rq-answer">Star topology networks are more secure because the data is only sent to its intended recipient</span>
+                    <span class="rq-answer">It is easier to add new devices to a star topology network</span>
+                </div>
+                <div class="rq" marks="2">
+                    <span class="question">What is a network protocol?</span>
+                    <span class="rq-answer">A set of rules</span>
+                    <span class="rq-answer">For how devices communicate across a network</span>
+                </div>
+                <div class="rq" marks="9">
+                    <span class="pretext">
+                        <p><br />Table 1 shows the protocols in three of the layers of the TCP/IP model.</p>
+
+                        <p class="table">
+                            <img src="../../icons/table.svg" class="icon" />
+                            Table 1
+                        </p>
+
+                        <table>
+                            <tr>
+                                <th><strong>Layer</strong></th>
+                                <th><strong>Protocols</strong></th>
+                            </tr>
+                            <tr>
+                                <td><em>Application</em></td>
+                                <td>HTTP, HTTPS, FTP, SMTP, IMAP</td>
+                            </tr>
+                            <tr>
+                                <td><em>Transport</em></td>
+                                <td>TCP and UDP</td>
+                            </tr>
+                            <tr>
+                                <td><em>Internet</em></td>
+                                <td>IP</td>
+                            </tr>
+                        </table>
+
+                        <br /> &nbsp;
+                    </span>
+                    <span class="question">Describe in detail the role of one protocol from each layer in Table 1.</span>
+                    <span class="rq-answer-text">
+                        Three marks available per layer. In each layer: detailed description scores 3; some description scores 2; statements made scores 1. <br /> <br />
+
+
+                        Example of detailed description [3]: <br />
+
+                        HTTPS is an extension of HTTP and allows secure transfer of data between a
+                        browser and a website by encrypting data. The web browser will check the website
+                        server's security certificate and ensure it is legitimate. This means it's not possible to
+                        see or eavesdrop on what you're browsing or for your data to be stolen. <br /> <br />
+
+
+                        Example of some description [2]: <br />
+                        
+                        HTTPS allows secure transfer of data between a browser and a website by
+                        encrypting the data being transferred to stop your data being stolen. It does this by
+                        checking a security certificate to see if the website is legitimate. <br /> <br />
+
+
+                        Example of statements [1]: <br />
+
+                        In HTTPS the S stands for secure and stops your data being stolen on a website. It
+                        encrypts your data. <br /> <br />
+
+                        <br />
+
+                        Indicative content: <br /> <br />
+
+                        HTTP <br />
+                        Provides a way for users to interact with web resources. Transmits messages between client and server
+                        using hypertext. <br /> <br />
+
+                        HTTPS <br />
+                        As HTTP but in addition uses an encryption protocol to ensure communications are secure. <br /> <br />
+
+                        SMTP <br />
+                        Enables users to send (and receive) email messages. Initiates sessions between user and mail server.
+                        Server then forwards messages. Uses a process called 'store and forward' to store messages and forward
+                        as necessary. The server decides which server to send the message to and the inbox provider then
+                        downloads the message and places it in the recipient's inbox. Often used in conjunction with IMAP. <br /> <br />
+
+                        IMAP <br />
+                        Stores email messages on an ISPs server but allows user to manipulate messages as though on a local
+                        device. Local devices access the ISP server to access the messages. IMAP works with desktop clients and
+                        webmail clients. Allows simultaneous logins from different devices to one account. <br /> <br />
+
+                        FTP <br />
+                        Allows secure transfer of files between client and server. Files are uploaded to and downloaded from the
+                        server using FTP. <br /> <br />
+
+                        TCP <br />
+                        Connects network devices to the Internet. It defines how applications can create channels of
+                        communication across a network. It manages how a message is assembled into smaller packets before
+                        transmission and reassembles packets in the correct order at destination. <br /> <br />
+
+                        UDP <br />
+                        Communications protocol that establishes low latency and loss-tolerating connections between
+                        applications. Enables the transfer of data before an agreement is provided by the receiving party. This
+                        speeds up transfers. Can start transferring data before agreement is received from receiving party. <br /> <br />
+
+                        IP <br />
+                        Relays data across network boundaries. It defines how to address and route each packet to make sure it
+                        reaches the right destination.
+                    </span>
+                    <span class="rq-answer">Mark 1</span>
+                    <span class="rq-answer">Mark 2</span>
+                    <span class="rq-answer">Mark 3</span>
+                    <span class="rq-answer">Mark 4</span>
+                    <span class="rq-answer">Mark 5</span>
+                    <span class="rq-answer">Mark 6</span>
+                    <span class="rq-answer">Mark 7</span>
+                    <span class="rq-answer">Mark 8</span>
+                    <span class="rq-answer">Mark 9</span>
+                </div>
+                <div class="rq" marks="2">
+                    <span class="question">Explain how MAC address filtering works.</span>
+                    <span class="rq-answer">The switch or Wireless Access Point takes the unique MAC address of a device</span>
+                    <span class="rq-answer">And only allows it to connect if it is in the list of allowed addresses (whitelist)</span>
+                </div>
+            </div>
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = "5-Summary-Questions/";</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+        <script src="../../scripts/rqs.js"></script>
+
+    </body>
+</html>

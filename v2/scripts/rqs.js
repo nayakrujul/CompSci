@@ -55,7 +55,7 @@ rqs.forEach((elem, i1) => {
     let txt = document.createElement("textarea");
     txt.classList.add("rq-textbox");
     txt.rows = 3;
-    elem.insertBefore(txt, elem.querySelector(".rq-answer"));
+    elem.insertBefore(txt, elem.querySelector(".question").nextElementSibling);
     let btn = document.createElement("input");
     btn.type = "button";
     btn.classList.add("q-button", "rq-button");
