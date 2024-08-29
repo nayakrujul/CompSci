@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>6.01 - Cyber Security Threats | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn about some different cyber security threats and how they can be stopped for the GCSE Computer Science exam on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Cyber Security</strong> is an approach to computer security covering processes, practices, and technologies designed to protect networks, computers, programs, and data from attack, damage, and unauthorised access.
+            </p>
+    
+            <p>
+                It would be nice to learn the whole thing, but in an exam you would get away with saying <b>"the processes of
+                protecting networks from attacks"</b>. [See <a href="https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2023/june/AQA-85252-MS-JUN23.PDF">June 2023 Paper 2</a>, Question 16.1]
+            </p>
+    
+            <p><br />There are four main threats that we will look at in detail.</p>
+    
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                Using <strong>weak or default passwords</strong> provides an easy way into a network for hackers.
+            </p>
+    
+            <p>
+                When a device needs a username and password to log on, a <b>default password is usually provided</b> that allows
+                the device to be accessed during setup. Some users are careless and do not change this default password.
+            </p>
+    
+            <p>
+                The top four most common passwords are: <code>123456</code>, <code>password</code>, <code>12345678</code>,
+                and <code>qwerty</code>. Hackers will often have <b>lists of the most common passwords</b> and check these first.
+                Using a common password therefore significantly <b>increases the likelihood of a hacker correctly guessing your
+                password</b>.
+            </p>
+    
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Misconfigured access rights</strong> can open up a network to an insider attack.
+            </p>
+    
+            <p>
+                In an organisation, <b>different users should be able to access different things</b>. This idea is called user
+                access levels. For example, <b>students and teachers will have different access rights</b> on a school network.
+            </p>
+    
+            <p>
+                Misconfigured access rights are when a <b>user can access something they're not supposed to be able to access</b>.
+                For example, students on a school network <b>should not be able to access the terminal</b>. But, by running the
+                Python code in Example 1, they might have access. And, if a malicious student used the code, they <b>may be
+                able to coordinate an insider attack</b> by obtaining the WiFi password, as shown below.
+            </p>
+    
+            <p><br />
+                Example 1 shows some Python code which may or may not be able to load up a terminal window, even if it
+                has been disabled by the administrator.
+            </p>
+    
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 1 <br />
+                <code>
+                    <span class="keyword">import</span> os <br />
+                    os.<span class="other">system</span>(<span class="string">&quot;powershell&quot;</span>)
+                </code>
+            </p>
+
+            <p>
+                Then, from the terminal window, you can <b>extract the WiFi password</b> with the command below,
+                replacing <code class="string">[Network Name]</code> with the name of the network.
+            </p>
+
+            <p>
+                Example 2 shows a command that a malicious student could theoretically use on a laptop inside the
+                school's WiFi network to extract the WiFi password.
+            </p>
+
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 2 <br />
+                <code>
+                    <span class="keyword">netsh wlan</span> <span class="function">show profile</span>
+                    name=<span class="string">"[Network Name]"</span> key=<span class="number">clear</span> |
+                    <span class="keyword">findstr</span> <span class="string">Key</span>
+                </code>
+            </p>
+
+            <p>
+                This could be a <b>serious case of misconfigured access rights</b>, allowing someone to gain access to
+                the main network.
+            </p>
+    
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Removable media devices</strong> pose two main risks to network security.
+            </p>
+    
+            <p>They allow users to <b>bring malware into</b> the network, and to <b>take data out</b> of the network.</p>
+    
+            <p>Organisations can protect themselves by <b>disabling USB read/write</b> to users altogether.</p>
+    
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                Using <strong>unpatched or outdated software</strong> can leave devices vulnerable to attack through known exploits in that software.
+            </p>
+    
+            <p>
+                When exploits are discovered, patches are released almost immediately, but <b>devices that haven't updated the
+                software are still vulnerable</b>.
+            </p>
+    
+            <p>
+                Antivirus software <b>must be kept up-to-date</b> to be able to provide protection against <b>the latest viruses and
+                malware</b>. This is because antivirus software relies on an up-to-date database of virus 'signatures' to help
+                it detect and remove new viruses.
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                How would an ethical hacker test a network's security?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    By attempting to hack into the network in what's called a penetration test: we'll learn more about them
+                    on the next page.
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = "6-01-Cyber-Security-Threats/";</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>
