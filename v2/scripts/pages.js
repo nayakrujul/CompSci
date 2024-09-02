@@ -15,9 +15,11 @@ let [p, n] = [null, null];
 let last = [null, 9, 17, 10, 18, 5, 5, 7, 3]
 
 if (y === "01") {
-    if (x !== "1") {
+    if (x !== "1")
         p = (x - 1) + "/qs/";
-    }
+} else if (y == "qs") {
+    p = x + "/" + (last[+x] + "")
+        .padStart(2, 0) + "/";
 } else {
     p = x + "/" + ((y - 1) + "")
         .padStart(2, "0") + "/";
@@ -26,7 +28,8 @@ if (y === "01") {
 if (+y === last[+x]) {
     n = x + "/qs/";
 } else if (y === "qs") {
-    n = (+x + 1) + "/01/";
+    if (+x < last.length)
+        n = (+x + 1) + "/01/";
 } else {
     n = x + "/" + ((+y + 1) + "")
         .padStart(2, "0") + "/";
