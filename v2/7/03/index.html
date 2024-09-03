@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>7.03 - WHERE Clauses | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Study how to filter the results of a SELECT statement with a WHERE clause for GCSE Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p>
+                After <code class="keyword">SELECT</code>ing some data, you can <b>filter</b> it using
+                <code class="keyword">WHERE</code>.
+            </p>
+    
+            <p>Example 1 shows the SQL statement to <code class="keyword">SELECT</code> all fields from <code>Students</code> <code class="keyword">WHERE</code> the <b>first name is "William"</b>.</p>
+    
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 1 <br />
+                <code>
+                    <span class="keyword">SELECT</span> <span class="other">*</span>
+                    <span class="keyword">FROM</span> <span class="function">Students</span> <br />
+                    <span class="keyword">WHERE</span> <span class="other">FirstName</span>
+                    = <span class="string">"William"</span>
+                </code>
+            </p>
+    
+            <p>Table 1 shows the output of Example 1.</p>
+    
+            <p class="table">
+                <img src="../../icons/table.svg" class="icon" />
+                Table 1
+            </p>
+    
+            <table>
+                <tr>
+                    <th><strong>StudentID</strong></th>
+                    <th><strong>FirstName</strong></th>
+                    <th><strong>LastName</strong></th>
+                    <th><strong>DateOfBirth</strong></th>
+                </tr>
+                <tr>
+                    <td>1225</td>
+                    <td>William</td>
+                    <td>Smith</td>
+                    <td>15/04/2009</td>
+                </tr>
+                <tr>
+                    <td>1228</td>
+                    <td>William</td>
+                    <td>Jones</td>
+                    <td>13/09/2008</td>
+                </tr>
+            </table>
+    
+            <p><br />
+                The <b>boolean operators</b> <code class="keyword">AND</code> and <code class="keyword">OR</code> can also be used
+                in <code class="keyword">WHERE</code> clauses.
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                Write a SQL statement to <code class="small-code keyword">SELECT</code> the first and last names of all students called William, <code class="small-code keyword">OR</code> whose ID is equal to 1227.
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    <code>
+                        <span class="keyword">SELECT</span> <span class="other">FirstName</span>, <span class="other">LastName</span>
+                        <span class="keyword">FROM</span> <span class="function">Students</span> <br />
+                        <span class="keyword">WHERE</span> <span class="other">FirstName</span>
+                        = <span class="string">"William"</span> <span class="keyword">OR</span>
+                        <span class="other">StudentID</span> = <span class="number">1227</span>
+                    </code>
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = "7-03-Where-Clauses/";</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>7.02 - SELECT Statements | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn about how to retrieve data from a table using the SQL SELECT statement for GCSE Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Structured Query Language</strong> (SQL, pronounced "sequel") provides an efficient way to retrieve information from a database.
+            </p>
+    
+            <p>
+                The most basic SQL command is the <code class="keyword">SELECT</code> statement, which can <b>retrieve data
+                from a database</b>.
+            </p>
+    
+            <p>Example 1 shows the SQL statement to <code class="keyword">SELECT</code> all date of births from <code>Students</code>.</p>
+    
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 1 <br />
+                <code>
+                    <span class="keyword">SELECT</span> <span class="other">DateOfBirth</span>
+                    <span class="keyword">FROM</span> <span class="function">Students</span>
+                </code>
+            </p>
+    
+            <p>To select multiple fields, <b>use commas</b> to separate them.</p>
+    
+            <p>Example 2 shows the SQL statement to <code class="keyword">SELECT</code> all first names and date of births from <code>Students</code>.</p>
+    
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 2 <br />
+                <code>
+                    <span class="keyword">SELECT</span> <span class="other">FirstName</span>, <span class="other">DateOfBirth</span>
+                    <span class="keyword">FROM</span> <span class="function">Students</span>
+                </code>
+            </p>
+    
+            <p>Finally, use <code class="other">*</code> to <code class="keyword">SELECT</code> all the fields.</p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                How would you select all the fields from <code class="small-code">Students</code>?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    <code>
+                        <span class="keyword">SELECT</span> <span class="other">*</span>
+                        <span class="keyword">FROM</span> <span class="function">Students</span>
+                    </code>
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = "7-02-Select-Statements/";</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>
