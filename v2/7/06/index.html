@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>7.06 - UPDATE/DELETE | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Read about the final two commands in SQL for GCSE Computer Science, UPDATE and DELETE, on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p>
+                You can <b>change the fields</b> of existing records using <code class="keyword">UPDATE
+                <span class="override">...</span> SET <span class="override">...</span> WHERE</code>.
+            </p>
+    
+            <p>Example 1 shows a use of the <code class="keyword">UPDATE</code> command.</p>
+    
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 1 <br />
+                <code>
+                    <span class="keyword">UPDATE</span> <span class="function">Students</span> <br />
+                    <span class="keyword">SET</span> <span class="other">DateOfBirth</span> = <span class="number">04/12/2008</span> <br />
+                    <span class="keyword">WHERE</span> <span class="other">StudentID</span> = <span class="number">1226</span>
+                </code>
+            </p>
+    
+            <p>
+                Note that the <code>=</code> symbol <b>can mean two different things</b>: in a <code class="keyword">WHERE</code>
+                clause, it <b>checks if two things are equal</b>, but in a <code class="keyword">SET</code> clause, it <b>changes the
+                value</b> of a field.
+            </p>
+    
+            <p>
+                <br />SQL also allows us to <b>delete records from a table</b> using <code class="keyword">DELETE FROM
+                <span class="override">...</span> WHERE</code>.
+            </p>
+    
+            <p>Example 2 shows a use of the <code class="keyword">DELETE FROM</code> command.</p>
+    
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 2 <br />
+                <code>
+                    <span class="keyword">DELETE FROM</span> <span class="function">Students</span> <br />
+                    <span class="keyword">WHERE</span> <span class="other">StudentID</span> = <span class="number">1228</span>
+                </code>
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                Use the <code class="keyword small-code">UPDATE</code> command to subtract 1 from the <code class="other small-code">StudentID</code> of all records where it is greater than 1227.
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    <code>
+                        <span class="keyword">UPDATE</span> <span class="function">Students</span> <br />
+                        <span class="keyword">SET</span> <span class="other">StudentID</span> = <span class="other">StudentID</span> - <span class="number">1</span> <br />
+                        <span class="keyword">WHERE</span> <span class="other">StudentID</span> > <span class="number">1227</span>
+                    </code>
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = "7-06-Update-and-Delete/";</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>

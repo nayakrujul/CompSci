@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>7.04 - ORDER BY | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn about how to sort the results of an SQL query using ORDER BY for GCSE Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p>
+                When you need to <b>sort</b> the results of a <code class="keyword">SELECT</code> statement, you can use the
+                <code class="keyword">ORDER BY</code> keyword. You can use <code class="keyword">ASC</code> for <b>"ascending"</b>,
+                or <code class="keyword">DESC</code> for <b>"descending"</b>.
+            </p>
+    
+            <p>Example 1 shows a use of the <code class="keyword">ORDER BY</code> keyword.</p>
+    
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 1 <br />
+                <code>
+                    <span class="keyword">SELECT</span> <span class="other">*</span>
+                    <span class="keyword">FROM</span> <span class="function">Students</span> <br />
+                    <span class="keyword">WHERE</span> <span class="other">FirstName</span>
+                    = <span class="string">"William"</span> <br />
+                    <span class="keyword">ORDER BY</span> <span class="other">LastName</span>
+                    <span class="keyword">ASC</span>
+                </code>
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                Change the code in Example 1 to show the results from youngest to oldest.
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    <code>
+                        <span class="keyword">SELECT</span> <span class="other">*</span>
+                        <span class="keyword">FROM</span> <span class="function">Students</span> <br />
+                        <span class="keyword">WHERE</span> <span class="other">FirstName</span>
+                        = <span class="string">"William"</span> <br />
+                        <span class="keyword">ORDER BY</span> <span class="other">DateOfBirth</span>
+                        <span class="keyword">DESC</span>
+                    </code>
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = "7-04-Order-By/";</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>

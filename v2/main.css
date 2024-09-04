@@ -375,7 +375,7 @@ p.graph {
     padding-bottom: 10px;
 }
 
-p.code code {
+p.code code, span.answer code {
     font-family: 'Courier New', Courier, monospace;
 }
 

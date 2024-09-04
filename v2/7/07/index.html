@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>7.07 - Relational Databases | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn about relational databases, databases with multiple tables, for GCSE Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p>
+                So far in this section we have only looked at databases with one table. But, <b>databases can also have
+                multiple tables</b> that are linked to each other by primary keys.
+            </p>
+    
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>relational database</strong> is a database containing multiple tables, in order to reduce data inconsistency and redundancy.
+            </p>
+    
+            <p>Table 1 shows part of the <code class="function">Students</code> table, copied over from 7.01.</p>
+    
+            <p class="table">
+                <img src="../../icons/table.svg" class="icon" />
+                Table 1
+            </p>
+    
+            <table>
+                <tr>
+                    <th><strong>StudentID</strong></th>
+                    <th><strong>FirstName</strong></th>
+                    <th><strong>LastName</strong></th>
+                    <th><strong>DateOfBirth</strong></th>
+                </tr>
+                <tr>
+                    <td>1225</td>
+                    <td>William</td>
+                    <td>Smith</td>
+                    <td>15/04/2009</td>
+                </tr>
+                <tr>
+                    <td>1226</td>
+                    <td>Sid</td>
+                    <td>Chopra</td>
+                    <td>04/11/2008</td>
+                </tr>
+                <tr>
+                    <td>1227</td>
+                    <td>Freddie</td>
+                    <td>Brown</td>
+                    <td>28/01/2009</td>
+                </tr>
+                <tr>
+                    <td>1228</td>
+                    <td>William</td>
+                    <td>Jones</td>
+                    <td>13/09/2008</td>
+                </tr>
+            </table>
+    
+            <p><br />Table 2 shows part of a new <code class="function">Grades</code> table in the same database.</p>
+    
+            <p class="table">
+                <img src="../../icons/table.svg" class="icon" />
+                Table 2
+            </p>
+    
+            <table>
+                <tr>
+                    <th><strong>StudentID</strong></th>
+                    <th><strong>Subject</strong></th>
+                    <th><strong>Percentage</strong></th>
+                    <th><strong>Grade</strong></th>
+                </tr>
+                <tr>
+                    <td>1225</td>
+                    <td>Maths</td>
+                    <td>78</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>1227</td>
+                    <td>Computer Science</td>
+                    <td>61</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>1226</td>
+                    <td>Chemistry</td>
+                    <td>94</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td>1227</td>
+                    <td>Chemistry</td>
+                    <td>81</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>1228</td>
+                    <td>Geography</td>
+                    <td>69</td>
+                    <td>7</td>
+                </tr>
+            </table>
+    
+            <br />
+    
+            <p>
+                Because there are multiple records in the <code>Grades</code> table for each student, it would not be
+                possible to fit everything in one table <b>without redundancy</b> (rewriting the same data over and over again).
+            </p>
+    
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>foreign key</strong> is a field (column) which is the primary key of another table.
+            </p>
+    
+            <p>
+                The foreign key in the <code>Grades</code> table is <code class="other">StudentID</code> (because it is the
+                primary key of the <code>Students</code> table).
+            </p>
+    
+            <p><br />You can also use SQL to extract data from relational databases.</p>
+    
+            <p>Example 1 shows a SQL command to <code class="keyword">SELECT</code> information about all grades which are at least an 8.</p>
+    
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 1 <br />
+                <code>
+                    <span class="keyword">SELECT</span> <span class="other">FirstName</span>,
+                    <span class="other">LastName</span>, <span class="other">Subject</span>,
+                    <span class="other">Grade</span> <br /> <span class="keyword">FROM</span>
+                    <span class="function">Students</span>, <span class="function">Grades</span> <br />
+                    <span class="keyword">WHERE</span>
+                    <span class="function">Students</span>.<span class="other">StudentID</span> =
+                    <span class="function">Grades</span>.<span class="other">StudentID</span> <br />
+                    <span class="keyword">AND</span> <span class="other">Grade</span> >= <span class="number">8</span>
+                </code>
+            </p>
+    
+            <p>Table 3 shows the output of Example 1.</p>
+    
+            <p class="table">
+                <img src="../../icons/table.svg" class="icon" />
+                Table 3
+            </p>
+    
+            <table>
+                <tr>
+                    <th><strong>FirstName</strong></th>
+                    <th><strong>LastName</strong></th>
+                    <th><strong>Subject</strong></th>
+                    <th><strong>Grade</strong></th>
+                </tr>
+                <tr>
+                    <td>William</td>
+                    <td>Smith</td>
+                    <td>Maths</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>Sid</td>
+                    <td>Chopra</td>
+                    <td>Chemistry</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td>Freddie</td>
+                    <td>Brown</td>
+                    <td>Chemistry</td>
+                    <td>8</td>
+                </tr>
+            </table>
+    
+            <p><br/>We have got data <b>from both tables</b> because we linked them together with the primary and foreign key.</p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                Is the relationship between <code>Students</code> and <code>Grades</code> "one-to-one", "one-to-many", or "many-to-many"?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    It is "one-to-many", because each student has many grades, but each grade refers to one specific student. <br /> <br />
+                    An example of a "one-to-one" relationship is between headteachers and schools: each school has one headteacher, and each headteacher works at one school. <br /> <br />
+                    An example of a "many-to-many" relationship is between teachers and students: each teacher teaches many students, and each student is taught by many teachers.
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = "7-07-Relational-Databases/";</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>
