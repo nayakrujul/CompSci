@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>Section 7 Revision Questions | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Revise Section 7 (Structured Query Language) with exam-style GCSE Computer Science questions on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+
+            <h1 id="score">Score: 0/0</h1>
+
+            <h2 id="q-num">Question 1 of &infin;</h2>
+    
+            <div id="revision-questions">
+                <div class="rq" marks="1">
+                    <span class="pretext">
+                        <p>Table 1 shows part of a <code>Students</code> table that a school has created.</p>
+
+                        <p class="table">
+                            <img src="../../icons/table.svg" class="icon" />
+                            Table 1
+                        </p>
+
+                        <table>
+                            <tr>
+                                <th><strong>StudentID</strong></th>
+                                <th><strong>FirstName</strong></th>
+                                <th><strong>LastName</strong></th>
+                                <th><strong>DateOfBirth</strong></th>
+                            </tr>
+                            <tr>
+                                <td>1225</td>
+                                <td>William</td>
+                                <td>Smith</td>
+                                <td>15/04/2009</td>
+                            </tr>
+                            <tr>
+                                <td>1226</td>
+                                <td>Sid</td>
+                                <td>Chopra</td>
+                                <td>04/11/2008</td>
+                            </tr>
+                            <tr>
+                                <td>1227</td>
+                                <td>Freddie</td>
+                                <td>Brown</td>
+                                <td>28/01/2009</td>
+                            </tr>
+                            <tr>
+                                <td>1228</td>
+                                <td>William</td>
+                                <td>Jones</td>
+                                <td>13/09/2008</td>
+                            </tr>
+                        </table>
+
+                        <br /> <br />
+                    </span>
+                    <span class="question">State the name of the primary key of the <code>Students</code> table.</span>
+                    <span class="rq-answer"><code>StudentID</code></span>
+                </div>
+                <div class="rq" marks="1">
+                    <span class="pretext">
+                        <p>Table 2 shows part of a <code>Grades</code> table in a school's database.</p>
+
+                        <p class="table">
+                            <img src="../../icons/table.svg" class="icon" />
+                            Table 2
+                        </p>
+
+                        <table>
+                            <tr>
+                                <th><strong>StudentID</strong></th>
+                                <th><strong>Subject</strong></th>
+                                <th><strong>Percentage</strong></th>
+                                <th><strong>Grade</strong></th>
+                            </tr>
+                            <tr>
+                                <td>1225</td>
+                                <td>Maths</td>
+                                <td>78</td>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <td>1227</td>
+                                <td>Computer Science</td>
+                                <td>61</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td>1226</td>
+                                <td>Chemistry</td>
+                                <td>94</td>
+                                <td>9</td>
+                            </tr>
+                            <tr>
+                                <td>1227</td>
+                                <td>Chemistry</td>
+                                <td>81</td>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <td>1228</td>
+                                <td>Geography</td>
+                                <td>69</td>
+                                <td>7</td>
+                            </tr>
+                        </table>
+
+                        <br /> <br />
+                    </span>
+                    <span class="question">What is the most appropriate data type for the Subject field?</span>
+                    <span class="rq-answer"><code>Varchar</code></span>
+                </div>
+                <div class="rq" marks="1">
+                    <span class="question">Define the term "foreign key".</span>
+                    <span class="rq-answer">The foreign key of a table is the primary key of another table.</span>
+                </div>
+                <div class="rq" marks="5">
+                    <span class="pretext">
+                        <p>Table 1 shows part of a <code>Students</code> table that a school has created.</p>
+
+                        <p class="table">
+                            <img src="../../icons/table.svg" class="icon" />
+                            Table 1
+                        </p>
+
+                        <table>
+                            <tr>
+                                <th><strong>StudentID</strong></th>
+                                <th><strong>FirstName</strong></th>
+                                <th><strong>LastName</strong></th>
+                                <th><strong>DateOfBirth</strong></th>
+                            </tr>
+                            <tr>
+                                <td>1225</td>
+                                <td>William</td>
+                                <td>Smith</td>
+                                <td>15/04/2009</td>
+                            </tr>
+                            <tr>
+                                <td>1226</td>
+                                <td>Sid</td>
+                                <td>Chopra</td>
+                                <td>04/11/2008</td>
+                            </tr>
+                            <tr>
+                                <td>1227</td>
+                                <td>Freddie</td>
+                                <td>Brown</td>
+                                <td>28/01/2009</td>
+                            </tr>
+                            <tr>
+                                <td>1228</td>
+                                <td>William</td>
+                                <td>Jones</td>
+                                <td>13/09/2008</td>
+                            </tr>
+                        </table>
+
+                        <p><br />Table 2 shows part of a <code>Grades</code> table in the same database.</p>
+
+                        <p class="table">
+                            <img src="../../icons/table.svg" class="icon" />
+                            Table 2
+                        </p>
+
+                        <table>
+                            <tr>
+                                <th><strong>StudentID</strong></th>
+                                <th><strong>Subject</strong></th>
+                                <th><strong>Percentage</strong></th>
+                                <th><strong>Grade</strong></th>
+                            </tr>
+                            <tr>
+                                <td>1225</td>
+                                <td>Maths</td>
+                                <td>78</td>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <td>1227</td>
+                                <td>Computer Science</td>
+                                <td>61</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td>1226</td>
+                                <td>Chemistry</td>
+                                <td>94</td>
+                                <td>9</td>
+                            </tr>
+                            <tr>
+                                <td>1227</td>
+                                <td>Chemistry</td>
+                                <td>81</td>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <td>1228</td>
+                                <td>Geography</td>
+                                <td>69</td>
+                                <td>7</td>
+                            </tr>
+                        </table>
+
+                        <br /> <br />
+                    </span>
+                    <span class="question">
+                        Write a SQL statement to retrieve the <code class="small-code">StudentID</code>,
+                        <code class="small-code">FirstName</code>, <code class="small-code">LastName</code>,
+                        <code class="small-code">Subject</code>, and <code class="small-code">Percentage</code>
+                        of any record in the <code class="small-code">Grades</code> table with a score of at least 70%.
+                        The results should be sorted by surname, A to Z.
+                    </span>
+                    <span class="rq-answer">
+                        <code>
+                            <span class="keyword">SELECT</span> <span class="other">FirstName</span>,
+                            <span class="other">LastName</span>, <span class="other">Subject</span>,
+                            <span class="other">Percentage</span>
+                        </code>
+                    </span>
+                    <span class="rq-answer">
+                        <code>
+                            <span class="keyword">FROM</span> <span class="function">Students</span>,
+                            <span class="function">Grades</span>
+                        </code>
+                    </span>
+                    <span class="rq-answer">
+                        <code>
+                            <span class="keyword">WHERE</span>
+                            <span class="function">Students</span>.<span class="other">StudentID</span> =
+                            <span class="function">Grades</span>.<span class="other">StudentID</span>
+                        </code>
+                    </span>
+                    <span class="rq-answer">
+                        <code>
+                            <span class="keyword">AND</span> <span class="other">Percentage</span> >=
+                            <span class="number">70</span>
+                        </code>
+                    </span>
+                    <span class="rq-answer">
+                        <code>
+                            <span class="keyword">ORDER BY</span> <span class="other">LastName</span>
+                            <span class="keyword">ASC</span>
+                        </code>
+                    </span>
+                </div>
+            </div>
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = "7-Summary-Questions/";</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+        <script src="../../scripts/rqs.js"></script>
+
+    </body>
+</html>
