@@ -27,7 +27,7 @@ function next_question() {
 function button_clicked() {
     let shown = document.querySelector("div.rq.show");
     shown.querySelector("textarea.rq-textbox").disabled = true;
-    [...shown.querySelectorAll("span.rq-answer")].forEach(ans => ans.classList.add("show"));
+    [...shown.querySelectorAll("span.rq-answer, span.rq-answer-text")].forEach(ans => ans.classList.add("show"));
     let p = document.createElement("p");
     p.innerHTML = "<i>Tick off the marks you got right:</i>";
     p.classList.add("explain-text");

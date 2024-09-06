@@ -28,7 +28,7 @@ if (y === "01") {
 if (+y === last[+x]) {
     n = x + "/qs/";
 } else if (y === "qs") {
-    if (+x < last.length)
+    if (+x < last.length - 1)
         n = (+x + 1) + "/01/";
 } else {
     n = x + "/" + ((+y + 1) + "")
