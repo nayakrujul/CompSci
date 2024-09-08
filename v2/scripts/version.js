@@ -2,7 +2,6 @@ document.getElementById("header").innerHTML = `
     <img id="dropdown" class="no-zoom" alt="Menu" />
     <div id="menu">
         <a href="/v2/" class="menu-link">INDEX</a>
-        <a href="/v2/c-sharp/" class="menu-link">C# TUTORIAL</a>
         <a href="/v2/glossary/gcse/" class="menu-link">GLOSSARY</a>
         <a href="/v2/exam-info/" class="menu-link">EXAM INFO</a>
         <a href="/v2/feedback/" class="menu-link">FEEDBACK</a>
