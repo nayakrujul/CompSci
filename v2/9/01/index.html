@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>9.01 - Data Types | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Study even more data types than you did in GCSE for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+
+            <p><i>GCSE Link: <a href="../../2/02/">2.02 (Data Types)</a></i></p>
+
+            <p>This definition is copied over from the page for GCSE:</p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                The <strong>data type</strong> of a variable determines how its binary form in memory is interpreted.
+            </p>
+
+            <p>The following table is similar to the one on the GCSE page.</p>
+
+            <p>Table 1 shows the seven main data types in C#.</p>
+    
+            <p class="table">
+                <img src="../../icons/table.svg" class="icon" />
+                Table 1
+            </p>
+    
+            <table>
+                <tr>
+                    <th><strong>Name</strong></th>
+                    <th><strong>Description</strong></th>
+                    <th><strong>Example C# declaration</strong></th>
+                </tr>
+                <tr>
+                    <td>Integer</td>
+                    <td>A whole number.</td>
+                    <td><code><span class="other">int</span> minAge = <span class="number">16</span>;</code></td>
+                </tr>
+                <tr>
+                    <td>Floating point (single precision)</td>
+                    <td>A number with a decimal part, stored using 32 bits.</td>
+                    <td><code><span class="other">float</span> height = <span class="number">1.63f</span>;</code></td>
+                </tr>
+                <tr>
+                    <td>Floating point (double precision)</td>
+                    <td>A number with a decimal part, stored using 64 bits.</td>
+                    <td><code><span class="other">double</span> pi = <span class="number">3.141592653589793</span>;</code></td>
+                </tr>
+                <tr>
+                    <td>Boolean</td>
+                    <td>Either "true" or "false".</td>
+                    <td><code><span class="other">bool</span> flag = <span class="keyword">false</span>;</code></td>
+                </tr>
+                <tr>
+                    <td>Character</td>
+                    <td>A single Unicode character.</td>
+                    <td><code><span class="other">char</span> currency = <span class="string">'£'</span>;</code></td>
+                </tr>
+                <tr>
+                    <td>String</td>
+                    <td>A sequence of characters.</td>
+                    <td><code><span class="other">String</span> bestRevisionGuide = <span class="string">"CS.RN v2"</span>;</code></td>
+                </tr>
+                <tr>
+                    <td>Date/Time</td>
+                    <td>A date and time.</td>
+                    <td><code>
+                        <span class="other">DateTime</span> <span id="js-target-0">epoch</span> =
+                        <span class="keyword">new</span> <span class="other">DateTime</span>(<span class="number" id="js-target-1">1970</span>,
+                        <span class="number" id="js-target-2">1</span>, <span class="number" id="js-target-3">1</span>);
+                    </code></td>
+                </tr>
+            </table>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>pointer</strong> (or reference) stores the memory address of a variable.
+            </p>
+
+            <p>They effectively <b>"point to" where the data is being held</b>, instead of storing it themselves.</p>
+
+            <p>Note: pointers don't exist in C# because they are deemed unsafe.</p>
+
+            <p>
+                Because memory is assigned at runtime, the value of a pointer <b>will always be different</b> each time
+                you run a program.
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                How do we convert between data types in pseudocode?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    <code>
+                        <span class="other">INT_TO_STRING</span>(<span class="number">123</span>) &nbsp; &nbsp; <span class="comment">"123"</span> <br />
+                        <span class="other">STRING_TO_INT</span>(<span class="string">&quot;123&quot;</span>) &nbsp; <span class="comment">123</span> <br />
+                        <span class="other">REAL_TO_STRING</span>(<span class="number">1.23</span>) &nbsp; <span class="comment">"1.23"</span> <br />
+                        <span class="other">STRING_TO_REAL</span>(<span class="string">&quot;1.23&quot;</span>) <span class="comment">1.23</span> <br />
+                    </code>
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+        <script src="./main.js"></script>
+
+    </body>
+</html>
