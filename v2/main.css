@@ -99,6 +99,7 @@ div#header {
 
     img#dropdown {
         max-height: 60px;
+        max-width: 60px;
         margin: 20px;
         content: url("./icons/menu.svg");
         cursor: pointer;

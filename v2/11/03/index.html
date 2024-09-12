@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>11.03 - Binary Multiplication | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Study how to multiply binary numbers for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+
+            <p><i>GCSE Link: <a href="../../3/03/">3.03 (Binary Arithmetic)</a></i></p>
+
+            <p>
+                You should already know how to <b>add binary numbers</b> from GCSE. You should also already know how to
+                multiply a binary number <b>by a power of two</b> using shifts, but now we're going to learn how to
+                multiply a binary number <b>by any number</b>.
+            </p>
+
+            <p>
+                The way we would do this is we would <b>split the second number</b> into powers of two, then <b>multiply
+                the first number</b> by each power of two (using shifts), then <b>sum the results</b> of each multiplication.
+            </p>
+
+            <p><br />Let's take an example. We'll use <code>19 &times; 13</code>.</p>
+
+            <ul class="spaced-out less-padding-left">
+                <li>
+                    <b>Step 1</b>: Write out both numbers in binary. <br /> <br />
+                    This is <b><code>10011<sub>2</sub> &times; 1101<sub>2</sub></code></b>.
+                </li>
+                <li>
+                    <b>Step 2</b>: Split the second number into powers of two from its binary representation. <br /> <br />
+                    There are <code>1</code>s in the <code>2<sup>0</sup></code>, <code>2<sup>2</sup></code>, and
+                    <code>2<sup>3</sup></code> columns. This means that
+                    <code>13 = <b>2<sup>0</sup> + 2<sup>2</sup> + 2<sup>3</sup></b></code>.
+                </li>
+                <li>
+                    <b>Step 3</b>: Calculate the shifts. (We'll use the operator <code>&lt;&lt;</code> to denote left-shift.) <br /> <br />
+                    <code>10011&lt;&lt;0 == <b>00010011</b></code> <br />
+                    <code>10011&lt;&lt;2 == <b>01001100</b></code> <br />
+                    <code>10011&lt;&lt;3 == <b>10011000</b></code>
+                </li>
+                <li>
+                    <b>Step 4</b>: Sum the results. <br /> <br />
+                    <code>
+                        &nbsp; 0 0 0 1 0 0 1 1 <br />
+                        &nbsp; 0 1 0 0 1 1 0 0 <br />
+                            +  1 0 0 1 1 0 0 0 <br />
+                             ----------------- <br />
+                        &nbsp; 1 1 1 1 0 1 1 1 <br />
+                        &nbsp; &nbsp; &nbsp; &nbsp;<sup>1</sup> <sup>1</sup>
+                    </code>
+                </li>
+                <li>
+                    <b>Step 5</b>: Convert back to decimal and check the answer. <br /> <br />
+                    This is 247 in decimal, which is the <b>correct answer</b>.
+                </li>
+            </ul>
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                Perform the calculation <code class="small-code">11010<sub>2</sub> &times; 1001<sub>2</sub></code> in binary.
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    Step 1: <code>11010<sub>2</sub> &times; 1001<sub>2</sub></code> <br />
+                    Step 2: <code>2<sup>3</sup> + 2<sup>0</sup></code> <br />
+                    Step 3: <code>11010000, 00011010</code> <br />
+                    Step 4: <code>11101010</code> <br />
+                    Step 5: <code>26 &times; 9 = 234</code> &check;
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>
