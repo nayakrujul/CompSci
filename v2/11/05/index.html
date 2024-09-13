@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>11.05 - Fixed Point Representation | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="How can fractions be stored in binary? Find out about fixed point representation for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+
+            <p><i>GCSE Link: <a href="../../3/02/">3.02 (Binary and Hexadecimal)</a></i></p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Fixed Point Representation</strong> is a way of representing fractions in binary.
+            </p>
+
+            <p>
+                Have you ever wondered how to store <b>fractions</b> in binary? Well, if we <b>add a decimal point</b> after
+                the number and then a digit after that, this digit now <b>represents a half</b>. Add another digit and it
+                <b>represents a quarter</b>. Then one-eighth, one-sixteenth, and so on. This is called Fixed Point
+                Representation, because the decimal point is always fixed in the same place.
+            </p>
+
+            <p><br/>Diagram 1 shows the number 26.625 represented in binary using Fixed Point Representation.</p>
+    
+            <p class="diagram">
+                <img src="../../icons/image.svg" class="icon" />
+                Diagram 1 <br /> <br />
+                <img src="./diagram.png" width="500px" />
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                How many bits would be required to store any fraction from -128 to +127 to at least 6 decimal places using Fixed Point Representation?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    We would need one bit for the sign, seven bits for the rest of the integer, and 20 bits for the
+                    fraction (<code>2<sup>-20</sup> = 1/1,048,576</code>). This is a total of 28 bits. This is not very
+                    efficient. We'll learn more about floating point representation, a more efficient way of representing
+                    fractions, on the next page.
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>

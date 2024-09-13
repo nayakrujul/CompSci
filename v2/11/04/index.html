@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>11.04 - Two's Complement | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn about representing negative integers using two's complement for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+
+            <p><i>GCSE Link: <a href="../../3/02/">3.02 (Binary and Hexadecimal)</a></i></p>
+
+            <p>On this page we will learn about representing <b>negative integers</b> in binary.</p>
+
+            <p>
+                There are many methods for storing negative integers in binary, but the only one you need to know about
+                is called <b>two's complement</b>.
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Two's complement</strong> is a method of representing signed (positive, negative, or zero) integers in binary.
+            </p>
+
+            <p>
+                It uses the <b>most significant (left-most) bit to represent the sign</b>, with a 0 representing
+                positive, and a 1 representing negative. The rest of the bits encode the magnitude of the number.
+            </p>
+
+            <p>
+                All <b>non-negative integers</b> are represented <b>exactly like in unsigned binary systems</b>, except
+                with a leading 0 for the sign. For example, the number 5 would be <code>0101</code> in a 4-bit signed system.
+            </p>
+            
+            <p>
+                Note that because the left-most bit is being used for the sign, the <b>maximum value</b> that can be
+                represented in a 4-bit signed system is <b>7</b> (<code>0111</code>).
+            </p>
+
+            <p><br />
+                For <b>negative integers</b>, however, we follow a different process. Here's what it would look like for
+                the number -5 in a 4-bit signed system.
+            </p>
+
+            <ul class="less-padding-left">
+                <li>First, write the representation of +5, which is <code>0101</code>.</li>
+                <li>Next, flip all of the bits: <code>1010</code>.</li>
+                <li>Finally, add 1 to the binary representation to get <code>1011</code>.</li>
+            </ul>
+
+            <p>Therefore, <b>-5 would be represented as <code>1011</code></b> in a 4-bit signed system.</p>
+
+            <p>
+                The <b>lowest value</b> that can be represented in a 4-bit signed system is <b>-8</b>. Remember that the
+                <b>lower bound</b> will always be <b>even</b>, and the <b>upper bound</b> will always be <b>odd</b>.
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                How would the number -69 be represented in an 8-bit signed system?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    First, write the representation of +69, which is <code>0100 0101</code>.
+                    Next, flip all the bits: <code>1011 1010</code>.
+                    Finally, add 1 to the binary representation to get <code>1011 1011</code>.
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>
