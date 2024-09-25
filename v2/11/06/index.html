@@ -30,60 +30,76 @@
                 form is a <b>much more concise way</b> of writing very large and very small numbers.
             </p>
 
-            <p>
+            <!-- <p>
                 Also, <b>multiplication and division can be a lot easier</b> with standard form. For example, lets say a
                 physicist wants to work out how far a beam of light travels in 2.5 milliseconds. That is, he wants to
-                multiply the speed of light, 300 million metres per seconds, by 2.5 thousandths of a second.
+                multiply the speed of light, 300000000 metres per seconds, by 0.0025 seconds.
             </p>
 
             <p>
                 With standard form, <b>this task is astonishingly easy</b>. We need to do the calculation
                 <code>(3 &times; 10<sup>8</sup>) &times; (2.5 &times; 10<sup>-3</sup>)</code>, which is clearly
                 <code>7.5 &times; 10<sup>5</sup></code>.
-            </p>
+            </p> -->
 
             <p>
-                This conciseness and ease of calculations is <b>the basis of Floating Point Representation</b>. The only
-                difference is that because computers use binary, we use <b><code>m &times; 2<sup>x</sup></code></b> instead.
+                This conciseness is <b>the basis of Floating Point Representation</b>. However,
+                because computers use binary, we use <b><code>m &times; 2<sup>x</sup></code></b> instead. Also, in AQA's
+                version of Floating Point Representation, <code>m</code> is <b>between 0 and 1</b>, not 1 and 2.
+                (Note that the IEEE 754 standard used in real life is different to what you need to learn.)
             </p>
 
             <p class="definition">
                 <img src="../../icons/book.svg" class="icon" />
-                <strong>Floating Point Representation</strong> is a more efficient way of representing fractions in binary.
+                <strong>Floating Point Representation</strong> is a different way of representing fractions in binary.
             </p>
 
             <p>
-                In a single-precision (32-bit) floating point number, we use 1 sign bit (+ or -), then 8 exponent bits
-                (signed integer between -128 and +127), then 23 multiplier (mantissa) bits (fractional number between 1
-                and 2). This allows us to represent <b>any number between <code>-2<sup>127</sup></code> and
-                <code>+2<sup>127</sup></code></b> with around 8 significant figures of precision. This is so much more
-                efficient than Fixed Point Representation!
+                In floating point, we have a <b>fractional mantissa</b> (multiplier) and an <b>integer exponent</b>
+                (both signed). You will be given the lengths of both of these components if asked to convert a number to
+                its floating-point representation.
             </p>
 
-            <p>Diagram 1 shows the bits in a single-precision floating point number.</p>
-    
-            <p class="diagram">
-                <img src="../../icons/image.svg" class="icon" />
-                Diagram 1 <br /> <br />
-                <img src="./diagram.png" width="750px" />
+            <p><br />
+                To <b>convert a number</b> to its floating-point representation, use the following steps. We'll take the
+                example of 23.5, with an 8-bit mantissa and a 4-bit exponent. <br /> &nbsp;
+            </p>
+
+            <ul class="spaced-out less-padding-left">
+                <li>
+                    <b>Step 1</b>: Convert the number into fixed-point binary, using the same number of bits as the mantissa. <br /> <br />
+                    <img src="./diagram.png" width="300px" />
+                    <p>Note: because the mantissa is 8 bits long, we added an extra 0 at the end.</p>
+                </li>
+                <li>
+                    <b>Step 2</b>: Count the number of digits before the decimal point, excluding the sign bit.
+                    <p>For our example of 23.5, the answer is 5. This is our exponent.</p>
+                </li>
+                <li>
+                    <b>Step 3</b>: Convert the exponent into signed binary.
+                    <p>This will be <code>0101</code> for our example.</p>
+                </li>
+                <li>
+                    <b>Step 4</b>: remove the decimal point from the answer of Step 1.
+                    <p>For us, this is <code>01011110</code>. This is the mantissa. We are now done.</p>
+                </li>
+            </ul>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Normalisation</strong> is the process of maximising the precision of values that can be represented in floating-point.
             </p>
 
             <p>
-                Note: this is beyond A Level, but a fun fact is that the mantissa actually stores a number between 0 and
-                1, not 1 and 2. We can drop the leading 1 because it is always there, and then add 1 when multiplying.
-                This allows us another bit of precision in the multiplier.
+                We want to use the whole mantissa to make our value more precise, so we need to make sure the <b>first
+                non-sign bit is significant</b>. This means that all mantissas should start with either <code>01</code>
+                (for positive) or <code>10</code> (for negative).
             </p>
 
-            <p>
-                The reason we're able to store such a large range of numbers is because with floating point we only care
+            <p><br />
+                We can store a much larger range of numbers with floating point than fixed point, because we only care
                 about <b>significant figures</b>, not decimal places. This is good because we don't really care about
                 decimal places for extremely large numbers.
-            </p>
-
-            <p>
-                Note that there is also a <b>double-precision format</b>, which uses 64 bits instead of 32. This gives
-                around 16 significant figures of precision. This is the format that <b>most programming languages
-                have</b> today.
             </p>
 
             <br />
