@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>11.07 - Error Checking | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn about binary error checking and correction for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+
+            <p><i>GCSE Link: None</i></p>
+
+            <p>
+                Sometimes, data <b>can be corrupted</b> while stored or while being transferred. We need systems to find
+                and correct the corrupted data.
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Majority voting</strong> is the simplest form of error checking and correction.
+            </p>
+
+            <p>
+                If you send <b>three copies</b> of each bit, you will have either a <b>majority</b> of 0s or 1s. Just
+                choose the majority for each bit. For example, if we receive <code class="string">1100</code>,
+                <code class="string">1010</code> and <code class="string">1001</code>, we know the original sequence was
+                <code class="string">1000</code>.
+            </p>
+
+            <p>
+                With majority voting, we can <b>find and correct errors</b> in the data. However, we need <b>three times
+                the space</b> to store the whole thing (e.g. a 20-bit sequence would need 60 bits in total with majority
+                voting.)
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Parity bits</strong> can find errors but not correct them.
+            </p>
+
+            <p>
+                Usually, one parity bit will be added to the end of a seven-bit sequence to make the <b>total number of
+                1s even</b>. For example, the sequence <code class="string">1000101</code> will have the parity bit
+                <code class="string">1</code> appended to it (because there were 3 zeroes before, and now there are 4).
+            </p>
+
+            <p>
+                If we receive a sequence with an <b>odd number of 1s</b>, we know something has <b>gone wrong</b>.
+                However, if we receive a sequence with and even number of 1s, we don't actually know that it's correct.
+                In that case, the data may have an <b>even number of errors</b>. Usually, however, there aren't two or
+                more errors in one byte of data.
+            </p>
+
+            <p>
+                (Note: odd parity bits are very uncommon, but in that case the parity bit should make the total number
+                of 1s odd).
+            </p>
+
+            <p>
+                Although errors cannot be corrected with parity bits, they <b>take up a lot less space</b> than majority
+                voting.
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Check digits</strong> are basically parity bits for decimal numbers.
+            </p>
+
+            <p>
+                For example, the last digit of a ISBN barcode number or credit card number is a check digit: it
+                <b>verifies that the number has been entered correctly</b>.
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Checksums</strong> are similar to check digits, but larger than one digit.
+            </p>
+
+            <p>
+                Just like with check digits, an <b>algorithm is applied</b> to the data to find a check number, the
+                checksum. This can then be verified when entered.
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                If a system using majority voting received the sequences <code class="small-code string">00101101</code>,
+                <code class="small-code string">01010011</code> and <code class="small-code string">11000100</code>, find
+                the original sequence.
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    Write the sequences out, lining them up like this: <br />
+                    <code class="string">0 0 1 0 1 1 0 1</code> <br />
+                    <code class="string">0 1 0 1 0 0 1 1</code> <br />
+                    <code class="string">1 1 0 0 0 1 0 0</code> <br /> <br />
+                    Then, find the majority for each bit: <br />
+                    <code class="string">0 1 0 0 0 1 0 1</code>
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>
