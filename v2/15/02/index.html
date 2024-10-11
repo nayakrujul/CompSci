@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>15.02 - Arrays | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Study the most basic data structure, arrays, for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p><i>GCSE Link: <a href="../../2/05/">2.05 (Arrays)</a></i></p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                An <strong>array</strong> is a static data structure which stores values of the same data type under a single identifier.
+            </p>
+
+            <p>
+                The values can then be retrieved using their <b>index</b> in the array, an integer in the range
+                <code>[<span class="number">0</span> .. arr.<span class="other">Length</span>-<span class="number">1</span>]</code>.
+            </p>
+
+            <p>
+                If the array consists of values of <b>basic data types</b> (such as integers, strings, etc.), it is
+                called a <b>one-dimensional</b> array. A <b>multi-dimensional</b> array contains arrays inside of it.
+            </p>
+
+            <p><br />
+                <b>"Static"</b> means that its <b>length is fixed</b> at compile time. The opposite of this would be
+                <b>"dynamic"</b>, where the size can change at runtime.
+            </p>
+
+            <p>Table 1 shows a comparison of static and dynamic data structures.</p>
+
+            <p class="table">
+                <img src="../../icons/table.svg" class="icon" />
+                Table 1
+            </p>
+
+            <table>
+                <tr>
+                    <th>&nbsp;</th>
+                    <th><strong>Static Data Structures</strong></th>
+                    <th><strong>Dynamic Data Structures</strong></th>
+                </tr>
+                <tr>
+                    <td><em>Length</em></td>
+                    <td><b>Fixed</b> at compile time</td>
+                    <td><b>Can change</b> throughout runtime</td>
+                </tr>
+                <tr>
+                    <td><em>Stored...</em></td>
+                    <td>In <b>consecutive memory locations</b> (making them quicker to read at once)</td>
+                    <td><b>Wherever there is space</b> (dynamically allocated from the heap)</td>
+                </tr>
+                <tr>
+                    <td><em>Pointers used?</em></td>
+                    <td><b>No</b> (so less space is required)</td>
+                    <td><b>Yes</b> (to keep track of where all the items are)</td>
+                </tr>
+                <tr>
+                    <td><em>Potentially wasted space?</em></td>
+                    <td><b>Yes</b> (because each value will have a fixed maximum size in memory)</td>
+                    <td><b>No</b> (because they only take up however much space they need)</td>
+                </tr>
+            </table>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                If a 2D array, <code>arr</code>, is used to store a game board, how would you retrieve the value in the
+                third row and fifth column?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    <code>arr[<span class="number">2</span>][<span class="number">5</span>]</code> (Python) or
+                    <code>arr[<span class="number">2</span>, <span class="number">5</span>]</code> (C#)
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>
