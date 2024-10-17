@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>11.08 - Images | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn more about how images are stored in computer memory for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p><i>GCSE Link: <a href="../../3/06/">3.06 (Images)</a></i></p>
+
+            <p>
+                We've already seen that <b>bitmap</b> images are made of individual coloured pixels. The <b>colour depth</b>
+                that image tells you how many bits are used for each pixel, and this determines how many colours can be
+                stored in the image. We can also calculate the file size using <b>width</b> &times; <b>height</b> &times;
+                <b>colour depth</b>.
+            </p>
+
+            <p>
+                However, in GCSE, we did not mention the <b>header</b>. This is <b>metadata</b> at the start of the
+                image which could include the height, width, and colour depth of the image.
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                The <strong>resolution</strong> of an image (on a screen or paper) is the number of pixels per inch.
+            </p>
+
+            <p>With a higher resolution, the image will appear <b>smaller</b> but more relatively <b>detailed</b>.</p>
+
+            <p><br />We are now going to learn about an <b>alternative way</b> of representing images:</p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>vector</strong> image is made up of geometric shapes instead of pixels.
+            </p>
+
+            <p>
+                This means that if you <b>draw shapes</b> such as rectangles, ellipses and other polygons, they can be
+                represented exactly with <b>no pixelation</b> (you can <b>zoom in forever</b>).
+            </p>
+
+            <p>
+                Vector image files store the <b>position, size, and colour</b> of each shape (essentially as a <b>list
+                of shapes</b>). Then, the program which is displaying the image has to <b>draw each shape</b> one by one.
+            </p>
+
+            <p>
+                The book icon next to all of the definitions is an SVG (scalable <b>vector</b> graphic). This means that
+                if you <a href="../../icons/book.svg" target="_blank">open it in a new tab</a> and keep zooming in, the
+                lines should still appear smooth.
+            </p>
+
+            <p><br />Table 1 shows a comparison of bitmap and vector images.</p>
+
+            <p class="table">
+                <img src="../../icons/table.svg" class="icon" />
+                Table 1
+            </p>
+    
+            <table>
+                <tr>
+                    <th>&nbsp;</th>
+                    <th><strong>Bitmap</strong></th>
+                    <th><strong>Vector</strong></th>
+                </tr>
+                <tr>
+                    <td><em>Stores...</em></td>
+                    <td>The colours of each <b>pixel</b> (and the image header)</td>
+                    <td>Properties of each geometric <b>shape</b> (and the image header)</td>
+                </tr>
+                <tr>
+                    <td><em>Used for...</em></td>
+                    <td><b>Photos</b> of real-world scenes</td>
+                    <td>Icons, logos and other <b>graphics</b></td>
+                </tr>
+                <tr>
+                    <td><em>File sizes</em></td>
+                    <td>Typically <b>higher</b></td>
+                    <td>Typically <b>lower</b></td>
+                </tr>
+                <tr>
+                    <td><em>Scalable?</em></td>
+                    <td><b>No</b> - it will appear more and more pixelated as you zoom in</td>
+                    <td><b>Yes</b> - you can zoom in infinitely without any pixelation</td>
+                </tr>
+            </table>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                Would it make more sense for the images of characters in font faces to be stored as bitmaps or vectors?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    Vectors, because they are scalable (allowing the same images to be used for differently sized letters),
+                    and because they typically take up less storage space.
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>
