@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>11.09 - Sound | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Study how sound can be represented in binary in computer memory for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p><i>GCSE Link: <a href="../../3/07/">3.07 (Sound)</a></i></p>
+
+            <p>
+                We have already learned about how sound waves can be <b>sampled at regular intervals</b> and stored in
+                binary at GCSE, but now we will extend that knowledge on this page.
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                The <strong>Nyquist-Shannon theorem</strong> states that the sample rate of an audio file must be at least twice the maximum frequency of the original sound wave to accurately reproduce it.
+            </p>
+
+            <p>
+                Human hearing is <b>limited to around 20kHz</b>, so most audio files use a sampling rate of <b>44.1kHz</b>,
+                which is slightly higher than the <b>minimum sample rate of 40kHz</b> required by the Nyquist-Shannon theorem.
+            </p>
+
+            <p><br />
+                Everything you have learned about audio so far relates to <b>digital audio</b>, where sound is sampled
+                and not stored accurately. However, there is an <b>alternative form of audio representation</b> that we
+                will now learn about.
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>Musical Instrument Digital Interface</strong> (MIDI) file stores instructions for how to play a piece of music instead of sampling the audio.
+            </p>
+
+            <p>
+                Think of a MIDI file <b>like sheet music</b>: it can tell the computer <b>how</b> to play a piece of
+                music instead of actually playing the piece of music.
+            </p>
+
+            <p>
+                MIDI files contain <b>event messages</b>, which control the synthesiser that produces the sound. These
+                event messages include information such as <b>which instrument</b> should play a note, <b>when</b> the 
+                note should be played, the <b>pitch</b>, <b>volume</b>, and <b>duration</b> of a note, and <b>control
+                data</b> like the BPM of the song.
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                What are the advantages and disadvantages of using MIDI files over digital audio files?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    MIDI files are easily editable: if you want to change just one note in the song you can just change
+                    a single instruction; whereas with a digital audio file you would need to re-record the whole piece.
+                    Also, the file sizes of MIDI files can be a lot smaller than their equivalents in digital audio.
+                    <br /> <br />
+                    However, with a MIDI file, the output audio depends entirely on the synthesiser being used to play
+                    the music, so the song could sound vastly different on a different setup; whereas with a digital
+                    audio file it will sound almost exactly the same on any setup.
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>
