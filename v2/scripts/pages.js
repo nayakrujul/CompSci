@@ -12,7 +12,7 @@ let [x, y] = location.href
     .split("/").slice(-3, -1);
 let [p, n] = [null, null];
 
-let last = [null, 9, 17, 10, 18, 5, 5, 7, 3]
+let last = [null, 9, 17, 10, 18, 5, 5, 7, 3, null, null, 9];
 
 if (y === "01") {
     if (x !== "1")
