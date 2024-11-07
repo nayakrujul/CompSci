@@ -4,7 +4,7 @@
     <head>
         <link rel="stylesheet" href="../../main.css">
 
-        <title>15.03 - Linear Queues | CS.RN v2</title>
+        <title>15.04 - Circular Queues | CS.RN v2</title>
 
         <link rel="icon" type="image/png" href="../../logos/square.png"/>
         <meta property="og:image" content="../../logos/square.png" />
@@ -14,7 +14,7 @@
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Learn about the abstract data type of a linear queue, and how it can be used, for A Level Computer Science on CS.RN v2.">
+        <meta name="description" content="Learn about the abstract data type of a circular queue, and how it can be used, for A Level Computer Science on CS.RN v2.">
     </head>
 
     <body>
@@ -25,28 +25,20 @@
 
             <p class="definition">
                 <img src="../../icons/book.svg" class="icon" />
-                A <strong>linear queue</strong> is a static abstract data type which stores a sequence of items.
+                A <strong>circular queue</strong> is a static abstract data type which stores a sequence of items.
             </p>
 
             <p>
-                Queues have two key operations: <b>enqueue</b> (add an item to the end) and <b>dequeue</b>
-                (remove an item from the start). Only the first item can be accessed from the queue. This means that the
-                queue operates on a <b>First In First Out</b> (FIFO) basis.
+                In a linear queue, <b>space can be wasted</b> when data is dequeued from the front and never re-used.
+                Circular queues fix this problem.
             </p>
 
-            <p>Queues store <b>start and end pointers</b> to show where the data starts and stops.</p>
-
-            <p><br />Diagram 1 shows some operations being carried out on a linear queue.</p>
+            <p><br />Diagram 1 shows some operations being carried out on a circular queue.</p>
 
             <p class="diagram">
                 <img src="../../icons/image.svg" class="icon" />
                 Diagram 1 <br /> <br />
                 <img src="./diagram1.png" />
-            </p>
-
-            <p>
-                Note that when dequeueing, the data is <b>not deleted or shifted</b>: we only increment the start
-                pointer. This makes the process <b>more efficient</b>.
             </p>
 
             <br />
@@ -55,12 +47,12 @@
     
             <p class="question">
                 <img src="../../icons/question.svg" class="icon" />
-                What are some uses of queues?
+                What is the time complexity of the enqueue and dequeue operations for a queue?
             </p>
     
             <p class="summary-question">
                 <span class="answer">
-                    For example, buffering data from streams such as a YouTube video, or handling multiple file downloads.
+                    They are both <code>O(1)</code> (constant time), because the items never need to be shifted.
                 </span>
             </p>
 
