@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>11.11 - Encryption | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn about methods of encryption for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p><i>GCSE Link: None</i></p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon">
+                <strong>Encryption</strong> provides protection against data being read if it is stolen or intercepted.
+            </p>
+
+            <p>
+                Encryption algorithms convert the original <b>plaintext</b> data into the encrypted <b>ciphertext</b> data.
+                A password (called a "<b>key</b>") is needed to decrypt the ciphertext back into the plaintext.
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon">
+                The <strong>Caesar Cipher</strong> is an encryption method that provides almost no security.
+            </p>
+
+            <p>
+                It involves shifting each letter by a set number of places between 0 and 25. It can easily be cracked by
+                <b>brute-force</b> (trying all 26 combinations), or by <b>frequency analysis</b> for longer texts.
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon">
+                The <strong>Vernam Cipher</strong> is a perfectly secure cipher.
+            </p>
+
+            <p>
+                This means that it can <b>never be brute-forced</b>, even with an infinite amount of time, as long as
+                the key is hidden and is truly random.
+            </p>
+
+            <p>
+                It works by <b><code>XOR</code>ing each character</b> of the plaintext by each corresponding character
+                of the (randomly generated) key. (As a recap, the <code>XOR</code> logic gate essentially checks if the
+                two bits are not equal to each other.)
+            </p>
+
+            <p><br />Diagram 1 shows the result of encrypting the message <code>"CSRN"</code> with the key <code>"!@#$"</code>.</p>
+
+            <p class="diagram">
+                <img src="../../icons/image.svg" class="icon" />
+                Diagram 1 <br /> <br />
+                <img src="./diagram1.png" width="750px" />
+            </p>
+
+            <p>You can try out the Vernam cipher <a href="https://misc.rujulnayak.com/Vernam-Cipher/" target="_blank">here</a>.</p>
+
+            <p><br />
+                Other ciphers exist that are <b>computationally secure</b>, i.e. that they cannot be brute-forced in a
+                reasonable amount of time, but the Vernam cipher is the only one which offers <b>perfect security</b>.
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                Use a Caesar shift of +10 to encode the message "Computer Science".
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    First, write out the alphabet normally, then write out the alphabet shifted 10 places under it. <br /> <br />
+                    <code>
+                        A&nbsp;B&nbsp;C&nbsp;D&nbsp;E&nbsp;F&nbsp;G&nbsp;H&nbsp;I&nbsp;J&nbsp;K&nbsp;L&nbsp;M
+                        N&nbsp;O&nbsp;P&nbsp;Q&nbsp;R&nbsp;S&nbsp;T&nbsp;U&nbsp;V&nbsp;W&nbsp;X&nbsp;Y&nbsp;Z
+                    </code> <br /> <br />
+                    <code>
+                        K&nbsp;L&nbsp;M&nbsp;N&nbsp;O&nbsp;P&nbsp;Q&nbsp;R&nbsp;S&nbsp;T&nbsp;U&nbsp;V&nbsp;W
+                        X&nbsp;Y&nbsp;Z&nbsp;A&nbsp;B&nbsp;C&nbsp;D&nbsp;E&nbsp;F&nbsp;G&nbsp;H&nbsp;I&nbsp;J
+                    </code> <br /> <br />
+                    Now, use this mapping to encode the string:
+                    <code>Mywzedob Cmsoxmo</code>
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>
