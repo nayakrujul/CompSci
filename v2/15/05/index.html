@@ -4,7 +4,7 @@
     <head>
         <link rel="stylesheet" href="../../main.css">
 
-        <title>15.04 - Circular Queues | CS.RN v2</title>
+        <title>15.05 - Priority Queues | CS.RN v2</title>
 
         <link rel="icon" type="image/png" href="../../logos/square.png"/>
         <meta property="og:image" content="../../logos/square.png" />
@@ -14,27 +14,25 @@
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Learn about the abstract data type of a circular queue, and how it can be used, for A Level Computer Science on CS.RN v2.">
+        <meta name="description" content="Study priority queues, a more complex abstract data type, for A Level Computer Science on CS.RN v2.">
     </head>
 
     <body>
 
         <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
         <div id="page">
-            <p><i>GCSE Link: None</i></p>
 
             <p class="definition">
                 <img src="../../icons/book.svg" class="icon" />
-                A <strong>circular queue</strong> is a static abstract data type which stores a sequence of items.
+                A <strong>priority queue</strong> is a static abstract data type which stores a sequence of items.
             </p>
 
             <p>
-                In a linear queue, <b>space can be wasted</b> when data is dequeued from the front and never re-used.
-                Circular queues fix this problem by using <b>wrappable pointers</b> which go back to the start if they
-                go past the end.
+                However, priority queues also store the <b>priority</b> of each item: higher priority items are dequeued
+                first. If multiple items have the same priority, the queue <b>goes back to FIFO</b> (first in first out).
             </p>
 
-            <p><br />Diagram 1 shows some operations being carried out on a circular queue.</p>
+            <p><br />Diagram 1 shows some operations being carried out on a priority queue.</p>
 
             <p class="diagram">
                 <img src="../../icons/image.svg" class="icon" />
@@ -48,12 +46,17 @@
     
             <p class="question">
                 <img src="../../icons/question.svg" class="icon" />
-                What is the time complexity of the enqueue and dequeue operations for a queue?
+                What is the time complexity of a priority queue's enqueue and dequeue operations?
             </p>
     
             <p class="summary-question">
                 <span class="answer">
-                    They are both <code>O(1)</code> (constant time), because the items never need to be shifted.
+                    There are two options, depending on when the data is sorted by priority. <br /> <br />
+                    If data is sorted when enqueued (as shown in Diagram 1), the enqueue operation is <code>O(n)</code>
+                    and the dequeue operation is <code>O(1)</code>. <br />
+                    But if instead the program figures out which item is the highest priority when dequeueing, the
+                    enqueue operation is <code>O(1)</code> and the dequeue operation is <code>O(n)</code>. However,
+                    doing this can be a bit harder to implement as it may leave empty spaces in the queue.
                 </span>
             </p>
 
