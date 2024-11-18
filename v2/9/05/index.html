@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>9.05 - Exception Handling | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn about how to properly handle errors in C# for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+
+            <p><i>GCSE Link: <a href="../../2/14/">2.14 (Errors)</a></i></p>
+
+            <p>Example 1 shows some example C# code to add 5 to a given number.</p>
+
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 1 <br />
+                <code>
+                    <span class="other">int</span> num = Convert.<span class="other">ToInt32</span>(Console.<span class="function">ReadLine</span>()); <br />
+                    Console.<span class="function">WriteLine</span>(num + <span class="number">5</span>);
+                </code>
+            </p>
+
+            <p>
+                This works fine when the user inputs a number like <code class="string">7</code>, but if the user enters
+                something like <code class="string">abc</code>, the <b>program will crash</b>:
+            </p>
+
+            <pre><code><span class="error">Unhandled exception.</span> System.<span class="other">FormatException</span>: The input string <span class="string">'abc'</span> was not in a correct format.
+   at System.Number.<span class="other">ThrowFormatException</span>[TChar](ReadOnlySpan`1 value)
+   at System.Convert.<span class="other">ToInt32</span>(<span class="other">String</span> value)
+   at Program.<span class="other">Main</span>()
+<span class="error">Command terminated by signal 6</span></code></pre>
+
+            <p>So, we need to <b>handle this exception</b>. We use the <code class="keyword">try</code>...<code class="keyword">catch</code> syntax.</p>
+
+            <p>Example 2 shows some example C# code to add 5 to a given number with exception handling.</p>
+
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 2 <br />
+                <code>
+                    <span class="keyword">try</span> { <br />
+                    &ensp; <span class="other">int</span> num = Convert.<span class="other">ToInt32</span>(Console.<span class="function">ReadLine</span>()); <br />
+                    &ensp; Console.<span class="function">WriteLine</span>(num + <span class="number">5</span>); <br />
+                    } <span class="keyword">catch</span> (<span class="other">Exception</span> e) { <br />
+                    &ensp; Console.<span class="function">WriteLine</span>(<span class="string">&quot;Error: &quot;</span> + e); <br />
+                    &ensp; <span class="comment">// Do anything here</span> <br />
+                    }
+                </code>
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                Can you think of any other common scenarios where exceptions can occur?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    Index out of range when indexing an array; Dividing by zero; Integer overflows
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>

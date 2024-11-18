@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>9.04 - Random Number Generation | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn how to generate random numbers in C# for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+
+            <p><i>GCSE Link: <a href="../../2/06/">2.06 (Random Number Generation)</a></i></p>
+
+            <p>Random numbers are often used in games when the programmer wants an <b>unknown element</b> in the code.</p>
+
+            <p>In C# we use the <code><span class="other">Random</span></code> class to generate random integers.</p>
+
+            <p>Example 1 shows how the <code class="other">Random</code> class can be used to simulate rolling a die.</p>
+
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 1 <br />
+                <code>
+                    <span class="other">Random</span> r = <span class="keyword">new</span>(); <br />
+                    Console.<span class="function">WriteLine</span>(r.<span class="other">Next</span>(<span class="number">1</span>, <span class="number">7</span>));
+                </code>
+            </p>
+
+            <p>
+                Note that unlike in Python, the <b>upper bound is not included</b> in the range of possible outputs in C#.
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                How would you simulate a coin toss in C#?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    <code>
+                        <span class="other">Random</span> r = <span class="keyword">new</span>(); <br />
+                        Console.<span class="function">WriteLine</span>(r.<span class="other">Next</span>(<span class="number">0</span>,
+                        <span class="number">2</span>) == <span class="number">0</span> ? <span class="string">&quot;Heads&quot;</span>
+                        : <span class="string">&quot;Tails&quot;</span>);
+                    </code>
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>
