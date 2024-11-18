@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>9.03 - Operations | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Study the theory of arithmetic, comparison, and boolean operators for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+
+            <p><i>GCSE Link: <a href="../../2/03/">2.03 (Operations)</a></i></p>
+
+            <p>
+                Again, there is <b>nothing new</b> on this page. Everything below has been copied over from the GCSE link.
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Operators</strong> in Computer Science are just like operators in Maths: they are symbols which perform certain functions on data.
+            </p>
+    
+            <p><b>Arithmetic operators</b> work on numbers. Most of them are basic Maths.</p>
+    
+            <p>Table 1 shows the arithmetic operators.</p>
+    
+            <p class="table">
+                <img src="../../icons/table.svg" class="icon" />
+                Table 1
+            </p>
+    
+            <table>
+                <tr>
+                    <th><strong>Name</strong></th>
+                    <th><strong>Operator</strong></th>
+                    <th><strong>Example</strong></th>
+                    <th><strong>Result</strong></th>
+                </tr>
+                <tr>
+                    <td>Addition</td>
+                    <td><code>+</code></td>
+                    <td><code><span class="number">3</span> + <span class="number">6</span></code></td>
+                    <td><code><span class="number">9</span></code></td>
+                </tr>
+                <tr>
+                    <td>Subtraction</td>
+                    <td><code>-</code></td>
+                    <td><code><span class="number">7</span> - <span class="number">2</span></code></td>
+                    <td><code><span class="number">5</span></code></td>
+                </tr>
+                <tr>
+                    <td>Multiplication</td>
+                    <td><code>*</code></td>
+                    <td><code><span class="number">5</span> * <span class="number">8</span></code></td>
+                    <td><code><span class="number">40</span></code></td>
+                </tr>
+                <tr>
+                    <td>Division</td>
+                    <td><code>/</code></td>
+                    <td><code><span class="number">10</span> / <span class="number">4</span></code></td>
+                    <td><code><span class="number">2.5</span></code></td>
+                </tr>
+                <tr>
+                    <td>Integer (floor) division</td>
+                    <td><code>//</code> (or <code>DIV</code>)</td>
+                    <td><code><span class="number">11</span> / <span class="number">3</span></code></td>
+                    <td><code><span class="number">3</span></code></td>
+                </tr>
+                <tr>
+                    <td>Modulus (remainder)</td>
+                    <td><code>%</code> (or <code>MOD</code>)</td>
+                    <td><code><span class="number">12</span> % <span class="number">5</span></code></td>
+                    <td><code><span class="number">2</span></code></td>
+                </tr>
+            </table>
+    
+            <br />
+    
+            <p><b>Comparison operators</b> give a boolean result.</p>
+    
+            <p>Table 2 shows the comparison operators.</p>
+    
+            <p class="table">
+                <img src="../../icons/table.svg" class="icon" />
+                Table 2
+            </p>
+    
+            <table>
+                <tr>
+                    <th><strong>Name</strong></th>
+                    <th><strong>Operator</strong></th>
+                    <th><strong>True</strong></th>
+                    <th><strong>False</strong></th>
+                </tr>
+                <tr>
+                    <td>Equal to</td>
+                    <td><code>==</code> (or <code>=</code>)</td>
+                    <td><code><span class="number">7</span> == <span class="number">7</span></code></td>
+                    <td><code><span class="number">7</span> == <span class="number">8</span></code></td>
+                </tr>
+                <tr>
+                    <td>Not equal to</td>
+                    <td><code>!=</code> (or <code>≠</code>)</td>
+                    <td><code><span class="number">5</span> != <span class="number">8</span></code></td>
+                    <td><code><span class="number">5</span> != <span class="number">5</span></code></td>
+                </tr>
+                <tr>
+                    <td>Less than</td>
+                    <td><code>&lt;</code></td>
+                    <td><code><span class="number">4</span> &lt; <span class="number">6</span></code></td>
+                    <td><code><span class="number">4</span> &lt; <span class="number">3</span></code></td>
+                </tr>
+                <tr>
+                    <td>Greater than</td>
+                    <td><code>&gt;</code></td>
+                    <td><code><span class="number">6</span> &gt; <span class="number">5</span></code></td>
+                    <td><code><span class="number">6</span> &gt; <span class="number">6</span></code></td>
+                </tr>
+                <tr>
+                    <td>Less than or equal to</td>
+                    <td><code>&lt;=</code> (or <code>≤</code>)</td>
+                    <td><code><span class="number">3</span> &lt;= <span class="number">7</span></code></td>
+                    <td><code><span class="number">3</span> &lt;= <span class="number">2</span></code></td>
+                </tr>
+                <tr>
+                    <td>Greater than or equal to</td>
+                    <td><code>&gt;=</code> (or <code>≥</code>)</td>
+                    <td><code><span class="number">8</span> &gt;= <span class="number">8</span></code></td>
+                    <td><code><span class="number">8</span> &gt;= <span class="number">9</span></code></td>
+                </tr>
+            </table>
+    
+            <br />
+    
+            <p><b>Boolean operators</b> work on booleans.</p>
+    
+            <p>Table 3 shows the boolean operators.</p>
+    
+            <p class="table">
+                <img src="../../icons/table.svg" class="icon" />
+                Table 3
+            </p>
+    
+            <table>
+                <tr>
+                    <th><strong>Operator</strong></th>
+                    <th><strong>C# Symbol</strong></th>
+                    <th><strong>True</strong></th>
+                    <th><strong>False</strong></th>
+                </tr>
+                <tr>
+                    <td><code class="other">AND</code></td>
+                    <td><code>&&</code> (or <code>&</code> for bitwise)</td>
+                    <td>
+                        <code><span class="number">true</span>  && <span class="number">true</span> </code>
+                    </td>
+                    <td>
+                        <code><span class="number">false</span> && <span class="number">false</span></code>  <br />
+                        <code><span class="number">false</span> && <span class="number">true</span> </code>  <br />
+                        <code><span class="number">true</span>  && <span class="number">false</span></code>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code class="other">OR</code></td>
+                    <td><code>||</code> (or <code>|</code> for bitwise)</td>
+                    <td>
+                        <code><span class="number">false</span> || <span class="number">true</span> </code>  <br />
+                        <code><span class="number">true</span>  || <span class="number">false</span></code>  <br />
+                        <code><span class="number">true</span>  || <span class="number">true</span> </code>
+                    </td>
+                    <td>
+                        <code><span class="number">false</span> || <span class="number">false</span></code>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code class="other">XOR</code></td>
+                    <td><code>^</code> (same for bitwise)</td>
+                    <td>
+                        <code><span class="number">false</span> ^  <span class="number">true</span> </code>  <br />
+                        <code><span class="number">true</span>  ^  <span class="number">false</span></code>
+                    </td>
+                    <td>
+                        <code><span class="number">false</span> ^  <span class="number">false</span></code>  <br />
+                        <code><span class="number">true</span>  ^  <span class="number">true</span> </code>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code class="other">NOT</code></td>
+                    <td><code>!</code> (or <code>~</code> for bitwise)</td>
+                    <td><code>!<span class="number">false</span></code></td>
+                    <td><code>!<span class="number">true</span> </code></td>
+                </tr>
+            </table>
+    
+            <br />
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                Evaluate the expression <code class="small-code">((<span class="number">10</span> * <span class="number">6</span> / <span class="number">4</span>) <= (<span class="number">1</span> + <span class="number">2</span> * <span class="number">5</span>)) ^ ((<span class="number">17</span> % <span class="number">5</span> + <span class="number">3</span>) != (<span class="number">14</span> - <span class="number">6</span>))</code>
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    This evaluates to <code>(<span class="number">15</span> <= <span class="number">11</span>) ^
+                    (<span class="number">5</span> != <span class="number">8</span>)</code>, which is
+                    <code><span class="number">false</span> ^ <span class="number">true</span></code>,
+                    which is <code class="number">true</code>.
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>

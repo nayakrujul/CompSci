@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>9.02 - Programming Concepts | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn about basic programming concepts for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+
+            <p><i>GCSE Link: <a href="../../2/01/">2.01 (Variables)</a></i></p>
+
+            <p>
+                This page contains <b>only GCSE content</b>. There is <b>nothing new</b> in this topic at A Level, so
+                the most important parts have been included below.
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Variables</strong> are named references to locations in memory for temporarily storing data while a program is running.
+            </p>
+    
+            <p>
+                Each variable or constant should have a <b>meaningful and unique</b> identifier (name). Identifiers
+                <b>can't be reserved keywords</b> (like <code>if</code>, <code>for</code> or <code>while</code>), or
+                start with numbers.
+            </p>
+    
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>constant</strong> is a special type of variable whose value does not change as the program runs.
+            </p>
+    
+            <p>
+                Constant identifiers are usually written <b>in CAPITALS</b>. <br /> &nbsp;
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Sequence</strong> is just a matter of writing of writing down the steps in the correct order.
+            </p>
+    
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Selection</strong> allows you to choose between multiple options.
+            </p>
+    
+            <p>Example 1 shows how an <code>IF</code> statement can be used in C#.</p>
+    
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 1 <br />
+                <code>
+                    <span class="other">int</span> age = Console.<span class="function">ReadLine</span>(); <br />
+                    <span class="keyword">if</span> (age >= <span class="number">18</span>) { <br />
+                    &ensp; Console.<span class="function">WriteLine</span>(<span class="string">&quot;OK&quot;</span>); <br />
+                    } <span class="keyword">else</span> {<br />
+                    &ensp; Console.<span class="function">WriteLine</span>(<span class="string">&quot;Too young&quot;</span>); <br />
+                    }
+                </code>
+            </p>
+    
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Iteration</strong> means looping. There are three different types of loops in pseudo-code.
+            </p>
+    
+            <p>Example 2 shows an algorithm containing a <code class="keyword">for</code> loop.</p>
+    
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 2 <br />
+                <code>
+                    <span class="other">int</span> total = <span class="number">0</span>; <br />
+                    <span class="keyword">for</span> (<span class="other">int</span> i = <span class="number">0</span>;
+                        i < <span class="number">5</span>; i++) { <br />
+                    &ensp; <span class="other">int</span> num = Console.<span class="function">ReadLine</span>(); <br />
+                    &ensp; total += num; <br />
+                    } <br />
+                    Console.<span class="function">WriteLine</span>(total);
+                </code>
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                What does the code in Example 2 do?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">The algorithm asks the user for five numbers and outputs their sum.</span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>
