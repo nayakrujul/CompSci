@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>9.07 - Recursion | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn about recursion, one of the four fundamental programming techniques, and how it relates to the call stack, for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            
+            <p><i>GCSE Link: None</i></p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Recursion</strong> is when a subroutine calls itself.
+            </p>
+
+            <p>Example 1 shows an example of recursion in C#.</p>
+    
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 1 <br />
+                <code>
+                    <span class="keyword">static int</span> <span class="other">Factorial</span>(<span class="keyword">int</span> n) { <br />
+                    &ensp; <span class="keyword">if</span> (n == <span class="number">0</span>) <span class="function">return</span> <span class="number">1</span>; <br />
+                    &ensp; <span class="keyword">else</span> <span class="function">return</span> n * <span class="other">Factorial</span>(n - <span class="number">1</span>); <br />
+                    }
+                </code>
+            </p>
+
+            <p>In this example, the <code class="other">Factorial</code> function will <b>keep calling itself</b> until it reaches 0.</p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                The <strong>call stack</strong> is a data structure which stores all the subroutines which are running in a program.
+            </p>
+
+            <p><br/>Diagram 1 shows a step-by-step guide to how the call stack works in a recursive program. <b><i>Use the arrows to navigate.</i></b></p>
+
+            <p class="diagram">
+                <img src="../../icons/image.svg" class="icon" />
+                Diagram 1 <br /> <br />
+                <img src="../../icons/left.svg" class="no-zoom" id="js-target-1" height="32px" style="cursor: pointer;" />
+                <img src="./Slide1.png" id="js-target-0" width="750px" />
+                <img src="../../icons/right.svg" class="no-zoom" id="js-target-2" height="32px" style="cursor: pointer;" />
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                Write a recursive C# function to return the n<sup>th</sup> Fibonacci number (0-indexed). The sequence starts <code class="small-code">0, 1, 1, 2, 3, 5, 8, 13, ...</code>
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    <code>
+                        <span class="keyword">static int</span> <span class="other">Fibonacci</span>(<span class="keyword">int</span> n) { <br />
+                        &ensp; <span class="keyword">if</span> (n < <span class="number">2</span>) <span class="function">return</span> n; <br />
+                        &ensp; <span class="keyword">else</span> <span class="function">return</span> <span class="other">Fibonacci</span>(n-<span class="number">1</span>) + <span class="other">Fibonacci</span>(n-<span class="number">2</span>); <br />
+                        }
+                    </code>
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+        <script src="./main.js"></script>
+
+    </body>
+</html>
