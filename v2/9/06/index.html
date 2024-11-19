@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>9.06 - Subroutines | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn about the theory of subroutines in C# for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+
+            <p><i>GCSE Link: <a href="../../2/10/">2.10 (Subroutines)</a></i></p>
+
+            <p>Again, there's <b>nothing new</b> here. Everything below has been copied over from the GCSE page.</p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>subroutine</strong> is a set of instructions inside an algorithm stored under one name.
+            </p>
+    
+            <p>
+                Subroutines <b>save us from repeating the same code</b> over and over again.
+                They give your program <b>more structure and readability</b> whilst reducing the amount of code you have to write.
+            </p>
+    
+            <p>There are two types of subroutines: procedures and functions.</p>
+    
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>procedure</strong> is a subroutine which doesn't return a value.
+            </p>
+    
+            <p>Example 1 shows a procedure to output the string "Hello" in C#.</p>
+    
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 1 <br />
+                <code>
+                    <span class="keyword">static void</span> <span class="other">Greeting1</span>() {<br />
+                    &ensp; Console.<span class="function">WriteLine</span>(<span class="string">&quot;Hello&quot;</span>); <br />
+                    }
+                </code>
+            </p>
+    
+            <p>Now, when we want to use this procedure, we can call it like this: <code><span class="other">greeting1</span>();</code></p>
+    
+            <p><br />Subroutines can also take <b>parameters</b> (inputs)</p>
+            
+            <p>Example 2 shows a procedure to output the string "Hello " + the user's name.</p>
+    
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 2 <br />
+                <code>
+                    <span class="keyword">static void</span> <span class="other">Greeting2</span>(<span class="keyword">string</span> name) {<br />
+                        &ensp; Console.<span class="function">WriteLine</span>(<span class="string">&quot;Hello&quot;</span> + name); <br />
+                    }
+                </code>
+            </p>
+    
+            <p>
+                Now, if this procedure is called with the code
+                <code><span class="other">greeting2</span>(<span class="string">&quot;Rujul&quot;</span>);</code>
+                it will output <code class="string">&quot;Hello Rujul&quot;</code>.
+            </p>
+    
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>function</strong> is a subroutine which does return a value.
+            </p>
+    
+            <p><br />Example 3 shows a function to convert inches to centimetres.</p>
+    
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 3 <br />
+                <code>
+                    <span class="keyword">static double</span> <span class="other">InchesToCms</span>(<span class="keyword">double</span> inches) { <br />
+                    &ensp; <span class="function">return</span> inches * <span class="number">2.54</span>; <br />
+                    }
+                </code>
+            </p>
+    
+            <p><br />Example 4 shows a function to return the maximum of two numbers.</p>
+    
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 4 <br />
+                <code>
+                    <span class="keyword">static int</span> <span class="other">Max</span>(<span class="keyword">int</span> a, <span class="keyword">int</span> b) { <br />
+                    &ensp; <span class="keyword">if</span> (a > b) <span class="function">return</span> a; <br />
+                    &ensp; <span class="keyword">else</span> <span class="function">return</span> b; <br />
+                    }
+                </code>
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                The <strong>scope</strong> of a variable tells you which parts of the program it can be used in.
+            </p>
+    
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Local variables</strong> have a local scope: they can only be used inside the structure they're defined in.
+            </p>
+    
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Global variables</strong> have a global scope: they can be used anywhere.
+            </p>
+    
+            <p>Example 5 shows a program with both local and global variables.</p>
+    
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 5 <br />
+                <code>
+                    <span class="keyword">int</span> x = <span class="number">0</span>;
+                    <span class="keyword">int</span> y = <span class="number">0</span>; <br />
+                    <br />
+                    <span class="keyword">static void</span> <span class="other">Move</span>(<span class="keyword">int</span> p, <span class="keyword">int</span> q) {<br />
+                    &ensp; x += p; y += q; <br />
+                    } <br />
+                    <br />
+                    <span class="other">Move</span>(<span class="number">2</span>, <span class="number">6</span>);
+                    <span class="other">Move</span>(<span class="number">4</span>, <span class="number">1</span>); <br />
+                    <br />
+                    Console.<span class="function">WriteLine</span>(x); <br />
+                    Console.<span class="function">WriteLine</span>(y);
+                </code>
+            </p>
+    
+            <p>The outputs of this program are <span class="number">6</span> and <span class="number">7</span>.</p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                State the local and global variables in Example 5.
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    <code>x</code> and <code>y</code> are global variables: they are used throughout the program. <br />
+                    <code>p</code> and <code>q</code> are local variables: they can only be used inside the <code class="other">Move</code> subroutine.
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>
