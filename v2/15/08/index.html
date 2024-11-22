@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>15.08 - Graph Implementation | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn about the options for implementing graphs for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+
+            <p>
+                Here's Diagram 1 again from the previous page.
+            </p>
+
+            <p class="diagram">
+                <img src="../../icons/image.svg" class="icon" />
+                Diagram 1 <br /> <br />
+                <img src="./diagram1.png" width="500px" />
+            </p>
+
+            <p>
+                To implement a graph, we need to store which nodes are <b>adjacent</b> to each other, i.e. which nodes
+                have an edge connecting them. There are <b>two options</b> to choose from when implementing a graph:
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                An <strong>adjacency list</strong> offers a memory-efficient way of storing adjacent nodes.
+            </p>
+
+            <p>Here's what the adjacency list for the graph in Diagram 1 would look like:</p>
+
+            <p class="code"><code>
+                { <br />
+                &ensp; <span class="string">"A"</span>: [<span class="string">"B"</span>, <span class="string">"C"</span>, <span class="string">"D"</span>, <span class="string">"G"</span>], <br />
+                &ensp; <span class="string">"B"</span>: [<span class="string">"A"</span>, <span class="string">"E"</span>], <br />
+                &ensp; <span class="string">"C"</span>: [<span class="string">"A"</span>, <span class="string">"G"</span>], <br />
+                &ensp; <span class="string">"D"</span>: [<span class="string">"A"</span>, <span class="string">"F"</span>], <br />
+                &ensp; <span class="string">"E"</span>: [<span class="string">"B"</span>, <span class="string">"F"</span>, <span class="string">"H"</span>], <br />
+                &ensp; <span class="string">"F"</span>: [<span class="string">"D"</span>, <span class="string">"E"</span>, <span class="string">"G"</span>], <br />
+                &ensp; <span class="string">"G"</span>: [<span class="string">"A"</span>, <span class="string">"C"</span>, <span class="string">"F"</span>], <br />
+                &ensp; <span class="string">"H"</span>: [<span class="string">"E"</span>], <br />
+                }
+            </code></p>
+
+            <p>
+                Note that it is called an adjacency <i>list</i>, but is <b>implemented as a dictionary</b>. The size of this
+                dictionary is <code>N + E</code>, where <code>N</code> is the number of nodes, and <code>E</code> is the
+                number of edges.
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                An <strong>adjacency matrix</strong> is an alternative way of storing adjacent nodes.
+            </p>
+
+            <p>Here's what the adjacency matrix for the graph in Diagram 1 would look like:</p>
+
+            <table>
+                <tr>
+                    <th>&nbsp;</th>
+                    <th class="string">A</th>
+                    <th class="string">B</th>
+                    <th class="string">C</th>
+                    <th class="string">D</th>
+                    <th class="string">E</th>
+                    <th class="string">F</th>
+                    <th class="string">G</th>
+                    <th class="string">H</th>
+                </tr>
+                <tr>
+                    <td class="string"><strong>A</strong></td>
+                    <td>-</td>
+                    <td><code class="keyword">1</code></td>
+                    <td><code class="keyword">1</code></td>
+                    <td><code class="keyword">1</code></td>
+                    <td><code class="comment">0</code></td>
+                    <td><code class="comment">0</code></td>
+                    <td><code class="keyword">1</code></td>
+                    <td><code class="comment">0</code></td>
+                </tr>
+                <tr>
+                    <td class="string"><strong>B</strong></td>
+                    <td><code class="keyword">1</code></td>
+                    <td>-</td>
+                    <td><code class="comment">0</code></td>
+                    <td><code class="comment">0</code></td>
+                    <td><code class="keyword">1</code></td>
+                    <td><code class="comment">0</code></td>
+                    <td><code class="comment">0</code></td>
+                    <td><code class="comment">0</code></td>
+                </tr>
+                <tr>
+                    <td class="string"><strong>C</strong></td>
+                    <td><code class="keyword">1</code></td>
+                    <td><code class="comment">0</code></td>
+                    <td>-</td>
+                    <td><code class="comment">0</code></td>
+                    <td><code class="comment">0</code></td>
+                    <td><code class="comment">0</code></td>
+                    <td><code class="keyword">1</code></td>
+                    <td><code class="comment">0</code></td>
+                </tr>
+                <tr>
+                    <td class="string"><strong>D</strong></td>
+                    <td><code class="keyword">1</code></td>
+                    <td><code class="comment">0</code></td>
+                    <td><code class="comment">0</code></td>
+                    <td>-</td>
+                    <td><code class="comment">0</code></td>
+                    <td><code class="keyword">1</code></td>
+                    <td><code class="comment">0</code></td>
+                    <td><code class="comment">0</code></td>
+                </tr>
+                <tr>
+                    <td class="string"><strong>E</strong></td>
+                    <td><code class="comment">0</code></td>
+                    <td><code class="keyword">1</code></td>
+                    <td><code class="comment">0</code></td>
+                    <td><code class="comment">0</code></td>
+                    <td>-</td>
+                    <td><code class="keyword">1</code></td>
+                    <td><code class="comment">0</code></td>
+                    <td><code class="keyword">1</code></td>
+                </tr>
+                <tr>
+                    <td class="string"><strong>F</strong></td>
+                    <td><code class="comment">0</code></td>
+                    <td><code class="comment">0</code></td>
+                    <td><code class="comment">0</code></td>
+                    <td><code class="keyword">1</code></td>
+                    <td><code class="keyword">1</code></td>
+                    <td>-</td>
+                    <td><code class="keyword">1</code></td>
+                    <td><code class="comment">0</code></td>
+                </tr>
+                <tr>
+                    <td class="string"><strong>G</strong></td>
+                    <td><code class="keyword">1</code></td>
+                    <td><code class="comment">0</code></td>
+                    <td><code class="keyword">1</code></td>
+                    <td><code class="comment">0</code></td>
+                    <td><code class="comment">0</code></td>
+                    <td><code class="keyword">1</code></td>
+                    <td>-</td>
+                    <td><code class="comment">0</code></td>
+                </tr>
+                <tr>
+                    <td class="string"><strong>H</strong></td>
+                    <td><code class="comment">0</code></td>
+                    <td><code class="comment">0</code></td>
+                    <td><code class="comment">0</code></td>
+                    <td><code class="comment">0</code></td>
+                    <td><code class="keyword">1</code></td>
+                    <td><code class="comment">0</code></td>
+                    <td><code class="comment">0</code></td>
+                    <td>-</td>
+                </tr>
+            </table>
+
+            <p><br />
+                It can be <b>implemented as a 2D array</b> of booleans. The size of this array is
+                <code>N<sup>2</sup></code>, where <code>N</code> is the number of nodes.
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                What is the main advantage of using an adjacency matrix over an adjacency list?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    It is a lot faster to check if there is a node between two edges with an adjacency matrix, as you
+                    only have to get the item at the correct indices. (With an adjacency list, you would have to check
+                    if the list contains the second node, which gets slower and slower for larger graphs).
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>

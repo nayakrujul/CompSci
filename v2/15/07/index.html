@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>15.07 - Graphs | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn about the Graph abstract data type and study its uses for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>graph</strong> is an abstract data type which is used to model complex relationships between nodes.
+            </p>
+
+            <p>
+                Nodes can be connected to other nodes by <b>edges</b>. These edges can have labels called <b>weights</b>.
+            </p>
+
+            <p><br />
+                Diagram 1 shows a graph with 8 nodes, A to H, which represent <b>routers</b> in a network.
+                The weights represent the <b>time taken</b> for data to travel between the routers (in milliseconds).
+            </p>
+
+            <p class="diagram">
+                <img src="../../icons/image.svg" class="icon" />
+                Diagram 1 <br /> <br />
+                <img src="./diagram1.png" width="500px" />
+            </p>
+
+            <p>
+                The graph in Diagram 1 is an example of an <b>undirected graph</b>: one where the edges are two-way.
+                If edges only go one way, the graph is called a <b>directed graph</b>.
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                What is the fastest path from node A to node G in the graph in Diagram 1?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    There are four possible paths that data can take: <br />
+                    &bullet; AG, which takes 54ms <br />
+                    &bullet; ACG, which takes 25ms <br />
+                    &bullet; ADFG, which takes 24ms <br />
+                    &bullet; ABEFG, which takes 39ms <br />
+                    <br />Therefore, the fastest path is ADFG.
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>
