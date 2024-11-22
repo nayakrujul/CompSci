@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>19.01 - Data Modelling | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn more about data models, for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+
+            <p><i>GCSE Link: <a href="../../7/07/">7.07 (Relational Databases)</a></i></p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                An <strong>entity</strong> is a distinct category of object, person, item or concept about which data is to be recorded in a database.
+            </p>
+
+            <p>
+                It is essentially <b>a single table</b> which contains information about a thing. For example, in the
+                context of a library's database, possible entities (tables) are <code>Book</code>, <code>Member</code>,
+                and <code>Computer</code>.
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                An <strong>attribute</strong> is a single property of a given entity.
+            </p>
+
+            <p>
+                The attributes of an entity are the <b>field names</b> for the table of that entity. For example, for
+                the <code>Book</code> entity, possible attributes include <code>BookID</code>, <code>Title</code>,
+                <code>DateLoaned</code>, <code>DateDue</code>, and <code>MemberID</code>.
+            </p>
+
+            <p>
+                An entity can be <b>described in terms of its attributes</b>. For example, you could write
+                <code>Book(<u>BookID</u>, Title, DateLoaned, DateDue, MemberID)</code>. Note that <code><u>BookID</u></code>
+                is underlined because it is the <b>entity identifier</b> (<b>primary key</b> of the corresponding table).
+            </p>
+
+            <p><br />
+                <b>Entity relationship (ER) diagrams</b> can be drawn to demonstrate if relationships are <b>one-to-one</b>,
+                <b>one-to-many</b>, or <b>many-to-many</b>.
+            </p>
+
+            <p>Diagram 1 shows an example ER diagram.</p>
+
+            <p class="diagram">
+                <img src="../../icons/image.svg" class="icon" />
+                Diagram 1 <br /> <br />
+                <img src="./diagram1.png" />
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                Define the term "foreign key".
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    A foreign key is a field/attribute which is the primary key/entity identifier of another table/entity.
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>
