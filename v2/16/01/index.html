@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>16.01 - Graph Traversal | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn about the algorithms required to move around a graph for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>graph traversal</strong> algorithm goes through a graph, hitting every connected node.
+            </p>
+
+            <p>There are two ways of implementing a graph-traversal algorithm.</p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>depth-first graph traversal</strong> algorithm explores each route as far as possible before backtracking.
+            </p>
+
+            <p>It uses a <b>stack</b> to store the nodes which need to be visited.</p>
+
+            <p><br/>Diagram 1 shows a step-by-step animation of how a depth-first traversal would work. <b><i>Use the arrows to navigate.</i></b></p>
+
+            <p class="diagram">
+                <img src="../../icons/image.svg" class="icon" />
+                Diagram 1 <br /> <br />
+                <img src="../../icons/left.svg" class="no-zoom" id="js-target-1" height="32px" style="cursor: pointer;" />
+                <img src="./images/Slide1.png" id="js-target-0" width="750px" />
+                <img src="../../icons/right.svg" class="no-zoom" id="js-target-2" height="32px" style="cursor: pointer;" />
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>breadth-first graph traversal</strong> algorithm explores all the nodes in the first layer before moving on to the next layer.
+            </p>
+
+            <p>It uses a <b>queue</b> instead of a stack. There is no animation for this.</p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                What are some uses of depth-first and breadth-first traversal algorithms?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    Depth-first traversal algorithms can be used to find a way out of a maze. Breadth-first traversal
+                    algorithms can be used to find the shortest path between two nodes.
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+        <script src="./main.js"></script>
+
+    </body>
+</html>
