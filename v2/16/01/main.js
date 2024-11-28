@@ -1,16 +1,16 @@
-const t0 = document.getElementById("js-target-0");
-const t1 = document.getElementById("js-target-1");
-const t2 = document.getElementById("js-target-2");
+const dt0 = document.getElementById("js-target-d0");
+const dt1 = document.getElementById("js-target-d1");
+const dt2 = document.getElementById("js-target-d2");
+const bt0 = document.getElementById("js-target-b0");
+const bt1 = document.getElementById("js-target-b1");
+const bt2 = document.getElementById("js-target-b2");
 
-let curr = 1;
-let max = 71;
+let dcurr = 1;
+let dmax = 71;
+let bcurr = 1;
+let bmax = 63;
 
-t1.addEventListener("click", () => {
-    curr = (curr - 1) || max;
-    t0.src = "images/Slide" + curr + ".png";
-});
-
-t2.addEventListener("click", () => {
-    curr = (curr % max) + 1;
-    t0.src = "images/Slide" + curr + ".png";
-});
+dt1.addEventListener("click", () => {dt0.src = "df/Slide" + (dcurr = (dcurr - 1) || dmax) + ".png";});
+dt2.addEventListener("click", () => {dt0.src = "df/Slide" + (dcurr = (dcurr % dmax) + 1) + ".png";});
+bt1.addEventListener("click", () => {bt0.src = "bf/Slide" + (bcurr = (bcurr - 1) || bmax) + ".png";});
+bt2.addEventListener("click", () => {bt0.src = "bf/Slide" + (bcurr = (bcurr % bmax) + 1) + ".png";});
