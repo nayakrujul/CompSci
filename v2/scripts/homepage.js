@@ -17,3 +17,4 @@ function next_item() {
 next_item();
 
 document.getElementById("next-button").addEventListener("click", next_item);
+document.getElementById("explore").addEventListener("click", () => window.open("./v2/", target="_self"));

@@ -308,8 +308,12 @@ div#homepage-carousel {
             background-color: #ce8800;
         }
 
-        a.explore-link {
-            font-size: 20px;
+        input#explore {
+            background-color: #38948b;
+        }
+
+        input#explore:hover {
+            background-color: #2c766f;
         }
     }
 }
