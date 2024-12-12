@@ -309,6 +309,7 @@ div#homepage-carousel {
 
         input.q-button {
             background-color: #38948b;
+            margin: auto;
         }
 
         input.q-button:hover {

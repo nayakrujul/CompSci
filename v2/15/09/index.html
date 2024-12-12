@@ -59,11 +59,48 @@
                 A <strong>binary tree</strong> is a type of rooted tree where each node has at most two children.
             </p>
 
+            <p>
+                The tree in Diagram 1 is <b>not a binary tree</b> because <code>A</code> has three children:
+                <code>B</code>, <code>C</code>, and <code>D</code>
+            </p>
+
             <p>The trees used in Huffman compression are binary trees.</p>
 
+            <p>Binary trees can also be used for <b>efficient searching algorithms</b>:</p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>binary search tree</strong> is a binary tree where items are inserted in a special order for more efficient access.
+            </p>
+
+            <p>Example 1 shows some pseudocode for a binary search tree insertion function.</p>
+    
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 1 <br />
+                <code>
+                    <span class="keyword">SUBROUTINE</span> <span class="function">insert</span>(root, item) <br />
+                    &ensp; <span class="keyword">IF</span> item &lt; root <span class="keyword">THEN</span> <br />
+                    &ensp; &ensp; <span class="keyword">IF</span> tree.<span class="other">left</span> &ne; <span class="keyword">null THEN</span> <br />
+                    &ensp; &ensp; &ensp; <span class="function">insert</span>(tree.<span class="other">left</span>, item) <br />
+                    &ensp; &ensp; <span class="keyword">ELSE</span> <br />
+                    &ensp; &ensp; &ensp; tree.<span class="other">left</span> &larr; item <br />
+                    &ensp; &ensp; <span class="keyword">ENDIF</span> <br />
+                    &ensp; <span class="keyword">ELSE</span> <br />
+                    &ensp; &ensp; <span class="keyword">IF</span> tree.<span class="other">right</span> &ne; <span class="keyword">null THEN</span> <br />
+                    &ensp; &ensp; &ensp; <span class="function">insert</span>(tree.<span class="other">right</span>, item) <br />
+                    &ensp; &ensp; <span class="keyword">ELSE</span> <br />
+                    &ensp; &ensp; &ensp; tree.<span class="other">right</span> &larr; item <br />
+                    &ensp; &ensp; <span class="keyword">ENDIF</span> <br />
+                    &ensp; <span class="keyword">ENDIF</span> <br />
+                    <span class="keyword">ENDSUBROUTINE</span>
+                </code>
+            </p>
+
             <p>
-                Binary trees can also be used for efficient <b>searching</b> algorithms (using <b>binary search trees</b>).
-                This will be covered in Section 16.
+                To add another item to the tree, we <b>compare it to the root node</b>. If it is less than the root node,
+                it goes <b>on the left</b>. If it is more, it goes <b>on the right</b>. We continue comparing <b>until
+                there is a free space</b>.
             </p>
 
             <br />
