@@ -297,23 +297,38 @@ div#homepage-carousel {
     }
 
     div#bottom {
+        display: flex;
         text-align: center;
-
-        input#explore {
-            background-color: #e59800;
-        }
-
-        input#explore:hover {
-            background-color: #ce8800;
-        }
+        margin: auto;
 
         input.q-button {
             background-color: #38948b;
-            margin: auto;
+            margin: 0px 20px;
         }
 
         input.q-button:hover {
             background-color: #2c766f;
+        }
+
+        img.homepage-arrow {
+            height: 40px;
+            cursor: pointer;
+        }
+
+        img#left-arrow {
+            content: url("./icons/gold-left.svg");
+        }
+
+        img#left-arrow:hover {
+            content: url("./icons/golder-left.svg");
+        }
+
+        img#right-arrow {
+            content: url("./icons/gold-right.svg");
+        }
+
+        img#right-arrow:hover {
+            content: url("./icons/golder-right.svg");
         }
     }
 }

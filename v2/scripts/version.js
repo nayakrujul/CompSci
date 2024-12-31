@@ -22,17 +22,21 @@ document.getElementById("dropdown").addEventListener("click", () => {
     }
 });
 
+function openLink(href, target) {
+    if (window.open(href, target) === null) {
+        window.open(href, "_top");
+    }
+}
+
 document.getElementById("version-select").addEventListener("change", ({target}) => {
     let val = target.value;
     target.value = "v2";
     if (val === "v2") return;
     if (val === "v1") {
         if (v1 === undefined) return;
-        window.open("/v1/" + v1, "_self");
+        openLink("/v1/" + v1, "_top");
     }
-    if (val === "v3") 
-        window.open(
-            "https://youtu.be/xvFZjo5PgG0",
-            "_blank"
-        ).focus(); 
-})
+    if (val === "v3") {
+        openLink("https://youtu.be/xvFZjo5PgG0", "_blank"); 
+    }
+});
