@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>16.03 - Reverse Polish Notation | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn about Reverse Polish Notation and how it can be used for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p><i>GCSE Link: None</i></p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Reverse Polish Notation</strong> is an alternative way of writing mathematical expressions, where the operator goes after the operands.
+            </p>
+
+            <p>Diagram 1 shows how the expression <code><span class="number">9</span> + <span class="number">10</span></code> can be converted to Reverse Polish Notation.</p>
+
+            <p class="diagram">
+                <img src="../../icons/image.svg" class="icon" />
+                Diagram 1 <br /> <br />
+                <img src="./diagram1.png" width="500px" />
+            </p>
+
+            <p>
+                <br />But <b>why use Reverse Polish Notation</b>? Consider the infix expression <code>
+                (<span class="number">3</span> + <span class="number">7</span>) / (<span class="number">6</span> -
+                <span class="number">4</span>)</code>. In RPN, the <b>parentheses are never required</b>, as the order
+                of operations can be inferred by the order of operators in the expression: <code><span class="number">3</span>
+                <span class="number">7</span> + <span class="number">6</span> <span class="number">4</span> - /</code>.
+            </p>
+
+            <p><br />Also, Reverse Polish Notation can be <b>easily evaluated by stack-based interpreters</b>.</p>
+
+            <p>
+                Diagram 2 shows how the RPN expression <code>
+                    <span class="number">3</span> <span class="number">7</span> + <span class="number">6</span>
+                    <span class="number">4</span> - /
+                </code> could be evaluated by a stack-based interpreter.
+            </p>
+
+            <p class="diagram">
+                <img src="../../icons/image.svg" class="icon" />
+                Diagram 2 <br /> <br />
+                <img src="../../icons/left.svg" class="no-zoom" id="js-target-1" height="32px" style="cursor: pointer; filter: invert(40%) sepia(91%) saturate(1234%) hue-rotate(220deg) brightness(100%) contrast(93%); border: 3px solid; border-radius: 50%; padding: 0px 8px;" />
+                <img src="./diagram2/Slide1.png" id="js-target-0" width="750px" style="max-width: calc(70vw - 10px);" />
+                <img src="../../icons/right.svg" class="no-zoom" id="js-target-2" height="32px" style="cursor: pointer; filter: invert(40%) sepia(91%) saturate(1234%) hue-rotate(220deg) brightness(100%) contrast(93%); border: 3px solid; border-radius: 50%; padding: 0px 8px;" />
+            </p>
+
+            <p><br />
+                Examples of <b>interpreters that use RPN</b> include Postscript, the Java Virtual Machine (to run bytecode),
+                and <a href="https://thunno2.rujulnayak.com/run/#aGVhZGVyPSZjb2RlPTMlMjA3JTIwJTJCJTIwNiUyMDQlMjAtJTIwJTJGJmZvb3Rlcj0maW5wdXQ9JmZsYWdzPQ==" target="_blank">Thunno 2</a>.
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                Convert the RPN expression <code><span class="number">7 4</span> - <span class="number">15 8</span> + *</code> to infix and evaluate the result.
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    <code>(<span class="number">7</span> - <span class="number">4</span>) * (<span class="number">15</span> + <span class="number">8</span>)</code>
+                    (answer is <code class="number">69</code>).
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+        <script src="./main.js"></script>
+
+    </body>
+</html>
