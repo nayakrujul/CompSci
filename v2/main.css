@@ -141,6 +141,27 @@ div#header {
         transform: none;
     }
 
+    div#menu.page-dropdown {
+        max-height: 500px;
+        max-width: 100%;
+        overflow-x: auto;
+        overflow-y: auto;
+
+        a.menu-link {
+            font-size: 24px;
+            color: black;
+
+            b {
+                color: var(--bold-colour);
+            }
+        }
+
+        a.menu-link.menu-section {
+            padding-top: 20px;
+            font-size: 28px;
+        }
+    }
+
     select#version-select {
         background-color: white;
         float: right;
@@ -464,7 +485,7 @@ b {
 }
 
 b {
-    color: var(--bold-colour)
+    color: var(--bold-colour);
 }
 
 p.definition strong {

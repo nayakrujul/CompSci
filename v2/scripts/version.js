@@ -1,10 +1,10 @@
 document.getElementById("header").innerHTML = `
-    <img id="dropdown" class="no-zoom" alt="Menu" />
-    <div id="menu">
-        <a href="/v2/" class="menu-link">INDEX</a>
-        <a href="/v2/glossary/gcse/" class="menu-link">GLOSSARY</a>
-        <a href="/v2/exam-info/" class="menu-link">EXAM INFO</a>
-        <a href="/v2/feedback/" class="menu-link">FEEDBACK</a>
+    <img id="dropdown" class="no-zoom click-ignore" alt="Menu" />
+    <div id="menu" class="click-ignore">
+        <a href="/v2/" class="menu-link click-ignore">INDEX</a>
+        <a href="/v2/glossary/gcse/" class="menu-link click-ignore">GLOSSARY</a>
+        <a href="/v2/exam-info/" class="menu-link click-ignore">EXAM INFO</a>
+        <a href="/v2/feedback/" class="menu-link click-ignore">FEEDBACK</a>
     </div>` + document.getElementById("header").innerHTML + `
     <select id="version-select">
         <option value="v1" ${v1 === null ? "disabled" : ""}>v1</option>
@@ -19,6 +19,7 @@ document.getElementById("dropdown").addEventListener("click", () => {
     } else {
         document.getElementById("dropdown").classList.add("close");
         document.getElementById("menu").classList.add("active");
+        document.getElementById("this-page")?.scrollIntoView({"behaviour": "smooth", "block": "center"});
     }
 });
 
@@ -38,5 +39,14 @@ document.getElementById("version-select").addEventListener("change", ({target}) 
     }
     if (val === "v3") {
         openLink("https://youtu.be/xvFZjo5PgG0", "_blank"); 
+    }
+});
+
+document.body.addEventListener("click", ({target}) => {
+    if (document.getElementById("menu").classList.contains("active")) {
+        if (!target.classList.contains("click-ignore")) {
+            document.getElementById("menu").classList.remove("active");
+            document.getElementById("dropdown").classList.remove("close");
+        }
     }
 });
