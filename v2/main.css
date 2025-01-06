@@ -142,7 +142,7 @@ div#header {
     }
 
     div#menu.page-dropdown {
-        max-height: calc(100vh - 90px - 1.5em);
+        max-height: calc(100vh - 110px - 1.5em);
         max-width: 100%;
         overflow-x: auto;
         overflow-y: auto;
