@@ -248,7 +248,8 @@ const pageNames = [
     [],
     [],
     [
-        "Data Modelling"
+        "Data Modelling",
+        "More SQL"
     ],
     []
 ];

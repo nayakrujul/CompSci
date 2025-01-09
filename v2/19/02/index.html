@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>19.02 - More SQL | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn about even more Structured Query Language (SQL) commands for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+
+            <p><i>GCSE Link: <a href="../../7/02/">7.02 (SELECT Statements)</a></i></p>
+
+            <p>
+                On this page we will learn <b>how to create tables using SQL</b>, and also about <b>more complex SQL
+                queries</b> with joins.
+            </p>
+
+            <p>Example 1 shows a SQL statement to <code class="keyword">CREATE</code> a <code class="keyword">TABLE</code> called <code class="other">Students</code>.</p>
+    
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 1 <br />
+                <code>
+                    <span class="keyword">CREATE TABLE</span> <span class="other">Students</span> ( <br />
+                    &ensp; <code class="string">StudentID</code> <code class="keyword">INTEGER</code> <code class="function">PRIMARY KEY</code>, <br />
+                    &ensp; <code class="string">FirstName</code> <code class="keyword">TEXT</code> <code class="function">NOT NULL</code>, <br />
+                    &ensp; <code class="string">LastName</code> <code class="keyword">TEXT</code> <code class="function">NOT NULL</code>, <br />
+                    &ensp; <code class="string">DateOfBirth</code> <code class="keyword">DATETIME</code> <br />
+                    )
+                </code>
+            </p>
+
+            <p>
+                In general, you must write the <b>field identifier</b>, then the <b>data type</b>, then any
+                <b>constraints</b> (such as "primary key" or "not null") for each field.
+            </p>
+
+            <p><br />Now we have an empty table, so we can <b>put some data into it</b>!</p>
+
+            <p>Example 2 shows a SQL statement to <code class="keyword">INSERT</code> a row <code class="keyword">INTO</code> the <code class="other">Students</code> table.</p>
+
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 2 <br />
+                <code>
+                    <span class="keyword">INSERT INTO</span> <span class="other">Students</span> <span class="keyword">VALUES</span> ( <br />
+                    &ensp; <span class="number">1225</span>, <span class="string">&quot;William&quot;</span>,
+                    <span class="string">&quot;Smith&quot;</span>, <span class="number">15/04/2009</span> <br />
+                    )
+                </code>
+            </p>
+
+            <p>
+                At GCSE, we learnt how to use the <code class="keyword">WHERE</code> keyword to join tables together.
+                However, we will now learn about the <code class="keyword">JOIN</code> keyword, which provides <b>an
+                alternative way to combine tables</b> in relational databases.
+            </p>
+
+            <p>Example 3 (<code class="keyword">WHERE</code>) and Example 4 (<code class="keyword">JOIN</code>...<code class="keyword">ON</code>) are equivalent.</p>
+
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 3 <br />
+                <code>
+                    <span class="keyword">SELECT</span> * <span class="keyword">FROM</span>
+                    <span class="other">Table1</span>, <span class="other">Table2</span> <br />
+                    <span class="keyword">WHERE</span> <span class="other">Table1</span>.<span class="string">PrimaryKey</span>
+                    = <span class="other">Table2</span>.<span class="string">ForeignKey</span>
+                </code>
+            </p>
+
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 4 <br />
+                <code>
+                    <span class="keyword">SELECT</span> <span class="string">*</span> <span class="keyword">FROM</span>
+                    <span class="other">Table1</span>  <span class="keyword">JOIN</span> <span class="other">Table2</span> <br />
+                    <span class="keyword">ON</span> <span class="other">Table1</span>.<span class="string">PrimaryKey</span>
+                    = <span class="other">Table2</span>.<span class="string">ForeignKey</span>
+                </code>
+            </p>
+
+            <p><br />Table 1 shows part of a new <code class="other">Grades</code> table in the same database as the <code class="other">Students</code> table we just created.</p>
+    
+            <p class="table">
+                <img src="../../icons/table.svg" class="icon" />
+                Table 1
+            </p>
+    
+            <table>
+                <tr>
+                    <th><strong>StudentID</strong></th>
+                    <th><strong>Subject</strong></th>
+                    <th><strong>Percentage</strong></th>
+                    <th><strong>Grade</strong></th>
+                </tr>
+                <tr>
+                    <td>1225</td>
+                    <td>Maths</td>
+                    <td>78</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>1227</td>
+                    <td>Computer Science</td>
+                    <td>61</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>1226</td>
+                    <td>Chemistry</td>
+                    <td>94</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td>1227</td>
+                    <td>Chemistry</td>
+                    <td>81</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>1228</td>
+                    <td>Geography</td>
+                    <td>69</td>
+                    <td>7</td>
+                </tr>
+            </table>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                Write a SQL query using the <code class="keyword">JOIN</code> keyword to find the subject, grade, and
+                student's full name for all records in the <code class="other">Grades</code> table where the grade is
+                below <code class="number">8</code>, ordered by the grade from highest to lowest.
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    <code>
+                        <span class="keyword">SELECT</span> <span class="string">Subject</span>, <span class="string">Grade</span>,
+                        <span class="string">FirstName</span>, <span class="string">LastName</span> <br />
+                        <span class="keyword">FROM</span> <span class="other">Grades</span> <span class="keyword">JOIN</span>
+                        <span class="other">Students</span> <br /> <span class="keyword">ON</span>
+                        <span class="other">Grades</span>.<span class="string">StudentID</span> =
+                        <span class="other">Students</span>.<span class="string">StudentID</span> <br />
+                        <span class="keyword">ORDER BY</span> <span class="string">Grade</span> <span class="keyword">DESC</span>
+                    </code>
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>
