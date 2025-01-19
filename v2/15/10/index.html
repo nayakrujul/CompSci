@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>15.10 - Dictionaries | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Study the dictionary data structure and how it can be used for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p><i>GCSE Link: None</i></p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>dictionary</strong> is a collection of key-value pairs where each value can be retrieved using the associated key.
+            </p>
+
+            <p>Dictionaries are usually written like this: <code>{key1: val1, key2: val2, key3: val3}</code></p>
+
+            <p><br />
+                They can be implemented either as a <b>static or dynamic</b> data type, with <b>two arrays/lists</b>
+                storing the keys and values.
+            </p>
+
+            <p>
+                Example 1 shows some example pseudo-code to initialise a dictionary (implemented here dynamically using
+                two lists).
+            </p>
+    
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 1 <br />
+                <code>
+                    <span class="keyword">SUBROUTINE</span> <span class="function">Initialise</span>() <br />
+                    &ensp; <span class="keyword">this</span>.<span class="other">keys</span> = [] <br />
+                    &ensp; <span class="keyword">this</span>.<span class="other">vals</span> = [] <br />
+                    <span class="keyword">ENDSUBROUTINE</span>
+                </code>
+            </p>
+
+            <p>
+                To <b>add a key-value pair</b> to the dictionary, we can <b>do a linear search</b> to check if the
+                <b>key is already in the dictionary.</b> If it is, we can just <b>edit the value</b>. Otherwise, we
+                <b>append the key</b> to the end of the keys list, and <b>append the value</b> to the end of the values
+                list.
+            </p>
+
+            <p>
+                Example 2 shows some example pseudo-code to add a new key-value pair to a dictionary, or change an
+                existing value.
+            </p>
+    
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 2 <br />
+                <code>
+                    <span class="keyword">SUBROUTINE</span> <span class="function">Add</span>(key, val) <br />
+                    &ensp; <span class="comment">// Linear search</span> <br />
+                    &ensp; index &larr; <span class="number">-1</span> <br />
+                    &ensp; <span class="keyword">FOR</span> i &larr; <span class="number">0</span> <span class="keyword">TO</span>
+                    <span class="keyword">this</span>.<span class="other">keys</span>.<span class="other">length</span> - <span class="number">1</span> <br />
+                    &ensp; &ensp; <span class="keyword">IF</span> <span class="keyword">this</span>.<span class="other">keys</span>[i] = key <span class="keyword">THEN</span> <br />
+                    &ensp; &ensp; &ensp; index &larr; i <br />
+                    &ensp; &ensp; <span class="keyword">ENDIF</span> <br />
+                    &ensp; <span class="keyword">ENDFOR</span> <br /> <br />
+                    &ensp; <span class="keyword">IF</span> index = <span class="number">-1</span> <span class="keyword">THEN</span> <br />
+                    &ensp; &ensp; <span class="comment">// Key not in dictionary, <br /> &ensp; &ensp; // so add the key and value</span> <br />
+                    &ensp; &ensp; <span class="keyword">this</span>.<span class="other">keys</span>.<span class="function">append</span>(key) <br />
+                    &ensp; &ensp; <span class="keyword">this</span>.<span class="other">vals</span>.<span class="function">append</span>(val) <br />
+                    &ensp; <span class="keyword">ELSE</span> <br />
+                    &ensp; &ensp; <span class="comment">// Key already in dictionary, <br /> &ensp; &ensp; // so change the value</span> <br />
+                    &ensp; &ensp; <span class="keyword">this</span>.<span class="other">vals</span>[index] = val <br />
+                    &ensp; <span class="keyword">ENDIF</span> <br />
+                    <span class="keyword">ENDSUBROUTINE</span>
+                </code>
+            </p>
+
+            <p>
+                To <b>retrieve the value</b> corresponding to a certain key, we can again <b>use a linear search</b> to
+                get the correct index, and then use this to <b>find the correct value</b>.
+            </p>
+
+            <p>
+                Example 3 shows some example pseudo-code to retrieve a value from a dictionary using its key.
+            </p>
+    
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 3 <br />
+                <code>
+                    <span class="keyword">SUBROUTINE</span> <span class="function">Get</span>(key) <br />
+                    &ensp; <span class="comment">// Linear search</span> <br />
+                    &ensp; index &larr; <span class="number">-1</span> <br />
+                    &ensp; <span class="keyword">FOR</span> i &larr; <span class="number">0</span> <span class="keyword">TO</span>
+                    <span class="keyword">this</span>.<span class="other">keys</span>.<span class="other">length</span> - <span class="number">1</span> <br />
+                    &ensp; &ensp; <span class="keyword">IF</span> <span class="keyword">this</span>.<span class="other">keys</span>[i] = key <span class="keyword">THEN</span> <br />
+                    &ensp; &ensp; &ensp; index &larr; i <br />
+                    &ensp; &ensp; <span class="keyword">ENDIF</span> <br />
+                    &ensp; <span class="keyword">ENDFOR</span> <br /> <br />
+                    &ensp; <span class="keyword">IF</span> index = <span class="number">-1</span> <span class="keyword">THEN</span> <br />
+                    &ensp; &ensp; <span class="comment">// Key not in dictionary</span> <br />
+                    &ensp; &ensp; <span class="keyword">return null</span> <br />
+                    &ensp; <span class="keyword">ELSE</span> <br />
+                    &ensp; &ensp; <span class="comment">// Return the value at that index</span> <br />
+                    &ensp; &ensp; <span class="keyword">return</span> <span class="keyword">this</span>.<span class="other">vals</span>[index] <br />
+                    &ensp; <span class="keyword">ENDIF</span> <br />
+                    <span class="keyword">ENDSUBROUTINE</span>
+                </code>
+            </p>
+
+            <p>
+                To <b>remove a key-value pair</b> from the dictionary given the key, we once again <b>perform a linear
+                search</b> to find the correct index.
+            </p>
+
+            <p>
+                Example 4 shows some example pseudo-code to remove a key-value pair from a dictionary.
+            </p>
+    
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 4 <br />
+                <code>
+                    <span class="keyword">SUBROUTINE</span> <span class="function">Remove</span>(key) <br />
+                    &ensp; <span class="comment">// Linear search</span> <br />
+                    &ensp; index &larr; <span class="number">-1</span> <br />
+                    &ensp; <span class="keyword">FOR</span> i &larr; <span class="number">0</span> <span class="keyword">TO</span>
+                    <span class="keyword">this</span>.<span class="other">keys</span>.<span class="other">length</span> - <span class="number">1</span> <br />
+                    &ensp; &ensp; <span class="keyword">IF</span> <span class="keyword">this</span>.<span class="other">keys</span>[i] = key <span class="keyword">THEN</span> <br />
+                    &ensp; &ensp; &ensp; index &larr; i <br />
+                    &ensp; &ensp; <span class="keyword">ENDIF</span> <br />
+                    &ensp; <span class="keyword">ENDFOR</span> <br /> <br />
+                    &ensp; <span class="comment">// If key exists then remove <br /> &ensp; // the pair from the lists</span> <br />
+                    &ensp; <span class="keyword">IF</span> index &ne; <span class="number">-1</span> <span class="keyword">THEN</span> <br />
+                    &ensp; &ensp; <span class="keyword">this</span>.<span class="other">keys</span>.<span class="function">removeAt</span>(index) <br />
+                    &ensp; &ensp; <span class="keyword">this</span>.<span class="other">vals</span>.<span class="function">removeAt</span>(index) <br />
+                    &ensp; <span class="keyword">ENDIF</span> <br />
+                    <span class="keyword">ENDSUBROUTINE</span>
+                </code>
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                What is the worst-case time complexity of the <code class="function">Get</code> method in Example 3?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    It is <code>O(n)</code>, where <code>n</code> is the number of items in the dictionary (because of
+                    the linear search). We will see how this can be reduced on the next page.
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>
