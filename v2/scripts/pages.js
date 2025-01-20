@@ -239,7 +239,8 @@ const pageNames = [
         "Graphs",
         "Graph Implementation",
         "Trees",
-        "Dictionaries"
+        "Dictionaries",
+        "Hash Tables"
     ],
     [
         "Graph Traversal",

@@ -152,6 +152,36 @@
                 </code>
             </p>
 
+            <p>One use of dictionaries is to <b>store character frequencies</b> in a string.</p>
+
+            <p>
+                Example 5 shows some example pseudo-code to count the number of occurrences of each character in a
+                string.
+            </p>
+
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 5 <br />
+                <code>
+                    <span class="comment">// Initialise variables</span> <br />
+                    dict &larr; <span class="other">Dictionary</span>.<span class="function">Initialise</span>() <br />
+                    string &larr; <span class="function">input</span>() <br /> <br />
+                    <span class="comment">// Go through each character</span> <br />
+                    <span class="keyword">FOREACH</span> char <span class="keyword">IN</span> string <br />
+                    &ensp; count &larr; dict.<span class="function">Get</span>(char) <br /> <br />
+                    &ensp; <span class="keyword">IF</span> count = <span class="keyword">null THEN</span> <br />
+                    &ensp; &ensp; <span class="comment">// Key not in dictionary</span> <br />
+                    &ensp; &ensp; dict.<span class="function">Add</span>(char, <span class="number">1</span>) <br />
+                    &ensp; <span class="keyword">ELSE</span> <br />
+                    &ensp; &ensp; <span class="comment">// Key in dictionary</span> <br />
+                    &ensp; &ensp; dict.<span class="function">Add</span>(char, count + <span class="number">1</span>) <br />
+                    &ensp; <span class="keyword">ENDIF</span> <br />
+                    <span class="keyword">ENDFOR</span> <br /> <br />
+                    <span class="comment">// Output the dictionary</span> <br />
+                    <span class="function">print</span>(dict)
+                </code>
+            </p>
+
             <br />
     
             <hr />

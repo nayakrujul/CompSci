@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>15.11 - Hash Tables | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn about hash tables, a way of implementing dictionaries in order to make operations more efficient, for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p><i>GCSE Link: None</i></p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>hash table</strong> is a static data structure which provides a way of implementing a dictionary to make operations more efficient.
+            </p>
+
+            <p>
+                Hash tables use a <b>hashing algorithm</b> (a function which takes a key and returns an integer) to
+                decide <b>where each key-value pair should be placed</b> in the array. This allows us to get <code>O(1)</code>
+                (constant) time complexities for the <code class="function">Add</code> and <code class="function">Get</code>
+                methods.
+            </p>
+
+            <p>
+                For example, let's take a hash table of size 5 and hash function of <code>key % <span class="number">5</span></code>.
+                If we want to add a pair with key <code class="number">415278</code>, it would go in index 3
+                (because <code><span class="number">415278</span> % <span class="number">5</span></code> is 3).
+            </p>
+
+            <p><br />
+                Diagram 1 shows how items can be added and retrieved from a hash table.
+            </p>
+
+            <p class="diagram">
+                <img src="../../icons/image.svg" class="icon" />
+                Diagram 1 <br /> <br />
+                <img src="../../icons/left.svg" class="no-zoom" id="js-target-1" height="32px" style="cursor: pointer; filter: invert(40%) sepia(91%) saturate(1234%) hue-rotate(220deg) brightness(100%) contrast(93%); border: 3px solid; border-radius: 50%; padding: 0px 8px;" />
+                <img src="./slides/Slide1.png" id="js-target-0" width="750px" style="max-width: calc(70vw - 10px);" />
+                <img src="../../icons/right.svg" class="no-zoom" id="js-target-2" height="32px" style="cursor: pointer; filter: invert(40%) sepia(91%) saturate(1234%) hue-rotate(220deg) brightness(100%) contrast(93%); border: 3px solid; border-radius: 50%; padding: 0px 8px;" />
+            </p>
+
+            <p><br />
+                Now imagine that we wanted to add a pair with key <code class="number">747068</code> into our hash table.
+                This <b>would cause a collision</b>, as there is already an entry at index 3. We can <b>solve this problem
+                using one of two methods</b>:
+            </p>
+
+            <ul class="spaced-out less-padding-left">
+                <li>
+                    <b>Linear rehashing</b>, where in the event of a collision the pair is placed in the
+                    <b>next available space</b> in the array (wrapping back around to the front if needed). In our
+                    example, the new pair would be inserted at index 4. However, this <b>increases the time complexity</b>
+                    of the <code class="function">Add</code> and <code class="function">Get</code> methods up to
+                    <code>O(n)</code> (where <code>n</code> is the size of the hash table) in the worst case.
+                </li>
+                <li>
+                    <b>Open hashing</b>, where each array index can hold a <b>list of key-value pairs</b>. However, we
+                    now have to do a linear search on the list when retrieving items, which <b>increases the time complexity</b>
+                    to <code>O(n/k)</code> (where <code>n</code> is the total number of items in the hash table, and
+                    <code>k</code> is the size of the array) on average.
+                </li>
+            </ul>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                Why is it necessary to store both the key and value in the hash table, instead of just the value?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    Multiple keys can have the same hash value, so their values would be stored at the same index.
+                    Without the key, the table couldn't distinguish between two keys that have the same hash value,
+                    making it impossible to verify a lookup.
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+        <script src="./main.js"></script>
+
+    </body>
+</html>
