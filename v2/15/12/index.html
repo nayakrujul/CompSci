@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>15.12 - Vectors | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn about vectors, the final data structure you need to know, and the operations that can be performed on them, for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p><i>GCSE Link: None</i></p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>vector</strong> is simply a collection of numbers with a fixed size.
+            </p>
+
+            <p>
+                All of the numbers in a vector need to be <b>from the same field of number</b>, e.g. the natural numbers
+                (&naturals;), the integers (&integers;), or the reals (&reals;). A vector containing 4 integers
+                would be notated as <code>&integers;<sup>4</sup></code>.
+            </p>
+
+            <p><br />Vectors can be <b>represented in many different ways</b>:</p>
+
+            <ul class="less-padding-left spaced-out">
+                <li>
+                    As a <b>list or 1-D array</b>, e.g. <code>[<span class="number">123</span>, <span class="number">-42</span>,
+                    <span class="number">314</span>, <span class="number">-999</span>]</code>. This is the <b>most common
+                    representation</b>.
+                </li>
+                <li>
+                    As a <b>dictionary</b>, e.g. <code>{<span class="string">0</span>: <span class="number">123</span>,
+                    <span class="string">1</span>: <span class="number">-42</span>, <span class="string">2</span>: <span class="number">314</span>,
+                    <span class="string">3</span>: <span class="number">-999</span>}</code>. Each element can be
+                    <b>retrieved using its index</b>.
+                </li>
+                <li>
+                    As a <b>function</b>, e.g. <code><span class="function">f</span>: {<span class="string">0</span>,
+                    <span class="string">1</span>, <span class="string">2</span>, <span class="string">3</span>} &rarr;
+                    &integers;</code>. This is a function which <b>takes an index</b> and <b>returns the element</b> at
+                    that index.
+                </li>
+                <li>
+                    As an <b>arrow</b>. This only works for vectors with a <b>length of &le; 3</b>. If the vector was
+                    <code>[<span class="number">x</span>, <span class="number">y</span>, <span class="number">z</span>]</code>,
+                    it could be <b>represented on a 3-D graph</b> as an arrow from <code>(<span class="number">0</span>,
+                    <span class="number">0</span>, <span class="number">0</span>)</code> to <code>(<span class="number">x</span>,
+                    <span class="number">y</span>, <span class="number">z</span>)</code>
+                </li>
+            </ul>
+
+            <p>
+                Two vectors of the same size <b>can be added together</b> element-wise: <code>[<span class="number">a<sub>1</sub></span>,
+                <span class="number">b<sub>1</sub></span>, <span class="number">c<sub>1</sub></span>] +
+                [<span class="number">a<sub>2</sub></span>, <span class="number">b<sub>2</sub></span>,
+                <span class="number">c<sub>2</sub></span>] = [<span class="number">a<sub>1</sub></span>+<span class="number">a<sub>2</sub></span>,
+                <span class="number">b<sub>1</sub></span>+<span class="number">b<sub>2</sub></span>,
+                <span class="number">c<sub>1</sub></span>+<span class="number">c<sub>2</sub></span>]</code>. <b>Subtraction</b>
+                also happens element-wise.
+            </p>
+
+            <p>
+                A vector can be <b>multiplied by a scalar</b> (a single number): <code><span class="number">k</span> &times;
+                [<span class="number">a</span>, <span class="number">b</span>, <span class="number">c</span>] =
+                [<span class="number">ka</span>, <span class="number">kb</span>, <span class="number">kc</span>]</code>.
+                This has the effect of <b>making the arrow bigger or smaller</b> (but keeping it in the same direction).
+            </p>
+
+            <p>
+                Two vectors can also be <b>multiplied together to get the dot product</b>:
+                <code>[<span class="number">a<sub>1</sub></span>, <span class="number">b<sub>1</sub></span>,
+                <span class="number">c<sub>1</sub></span>] &middot; [<span class="number">a<sub>2</sub></span>,
+                <span class="number">b<sub>2</sub></span>, <span class="number">c<sub>2</sub></span>] =
+                <span class="number">a<sub>1</sub></span>&times;<span class="number">a<sub>2</sub></span> +
+                <span class="number">b<sub>1</sub></span>&times;<span class="number">b<sub>2</sub></span> +
+                <span class="number">c<sub>1</sub></span>&times;<span class="number">c<sub>2</sub></span></code>
+            </p>
+
+            <p>
+                You can also find the <b>magnitude</b> (length) of a vector: <code>|</code>&thinsp;<code>[<span class="number">a</span>,
+                <span class="number">b</span>, <span class="number">c</span>]</code>&thinsp;<code>| =
+                &Sqrt;(<span class="number">a<sup>2</sup></span> + <span class="number">b<sup>2</sup></span> +
+                <span class="number">c<sup>2</sup></span>)</code>
+            </p>
+
+            <p><br />
+                If we have two vectors <code><b class="no-underline">u</b></code> and <code><b class="no-underline">v</b></code>, then
+                <code><b class="no-underline">u</b>&middot;<b class="no-underline">v</b> = |<b class="no-underline">u</b>|
+                |<b class="no-underline">v</b>| <span class="function">cos</span>(&theta;)</code> (where <code>&theta;</code>
+                is the angle between the two arrows).
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                Work out the angle between the vectors <code class="small-code"><b class="no-underline">u</b> = [<span class="number">7</span>, <span class="number">-5</span>]</code>
+                and <code class="small-code"><b class="no-underline">v</b> = [<span class="number">3</span>, <span class="number">-6</span>]</code>.
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    <code><b class="no-underline">u</b>&middot;<b class="no-underline">v</b> = |<b class="no-underline">u</b>|
+                    |<b class="no-underline">v</b>| <span class="function">cos</span>(&theta;)</code> <br />
+                    <code><span class="number">7</span>&times;<span class="number">3</span> + (<span class="number">-5</span>)&times;(<span class="number">-6</span>)
+                    = &Sqrt;(<span class="number">7<sup>2</sup></span> + (<span class="number">-5</span>)<sup class="number">2</sup>)
+                    &times; &Sqrt;(<span class="number">3<sup>2</sup></span> + (<span class="number">-6</span>)<sup class="number">2</sup>)
+                    &times; <span class="function">cos</span>(&theta;)</code> <br />
+                    <code><span class="function">cos</span>(&theta;) = <span class="number">51</span> /
+                    &Sqrt;<span class="number">3330</span> &approx; <span class="number">0.884</span></code> <br />
+                    <code>&theta; = <span class="function">cos<sup>-1</sup></span>(<span class="number">0.884</span>)
+                    &approx; <span class="number">27.9</span>&deg;</code>
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>
