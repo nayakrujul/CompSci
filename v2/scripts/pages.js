@@ -298,3 +298,10 @@ pageNames.forEach((sct, num) => {
         });
     }
 });
+
+
+// Store last viewed page
+
+localStorage.setItem("lastPageLink", section + "/" + page);
+localStorage.setItem("lastPageTitle", document.title.split(" | ")[0]);
+localStorage.setItem("lastPageOpen", Date.now())
