@@ -17,11 +17,11 @@
         <img src="https://img.shields.io/github/license/nayakrujul/CompSci" />
     </a>
     <br />
-    <a href="https://www.aqa.org.uk/subjects/computer-science-and-it/gcse/computer-science-8525" style="text-decoration: none;">
+    <a href="https://www.aqa.org.uk/subjects/computer-science" style="text-decoration: none;">
         <img src="https://img.shields.io/badge/exam_board-AQA-purple" />
     </a>
 </div>
 
 <hr />
 
-**[Computer Science Revision](https://cs.rujulnayak.com/)** by Rujul Nayak: an online, mobile-friendly revision guide for AQA GCSE Computer Science students.
+**[CS.RN](https://cs.rujulnayak.com/)** by Rujul Nayak: an online revision guide for Computer Science students.
