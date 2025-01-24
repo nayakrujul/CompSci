@@ -100,6 +100,25 @@ function remove(target) {
 });
 
 
+// Minimise tables
+
+const tables = document.querySelectorAll("p.table");
+
+[...tables].forEach((t, i) => {
+    t.innerHTML += `&nbsp;<img class="table-minimise no-zoom" id="table-minimise-${i}" />`;
+    document.getElementById("table-minimise-" + i).addEventListener("click", ({target}) => {
+        let num = +target.id.split("-")[2];
+        if ([...target.classList].includes("maximise")) {
+            target.classList.remove("maximise");
+            [...document.querySelectorAll("table")][num].classList.remove("minimised");
+        } else {
+            target.classList.add("maximise");
+            [...document.querySelectorAll("table")][num].classList.add("minimised");
+        }
+    });
+});
+
+
 // Index dropdown
 
 const pageNames = [
@@ -252,7 +271,8 @@ const pageNames = [
     [],
     [
         "Data Modelling",
-        "More SQL"
+        "More SQL",
+        "Database Normalisation"
     ],
     []
 ];

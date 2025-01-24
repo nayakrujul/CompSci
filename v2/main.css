@@ -229,6 +229,23 @@ div#last-page-popup.hidden-popup {
     transform: translateX(calc(100% + 25px));
 }
 
+img.table-minimise {
+    content: url("./icons/minus.svg");
+    height: 20px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+img.table-minimise.maximise {
+    content: url("./icons/plus.svg");
+}
+
+table.minimised {
+    tr:has(td) {
+        display: none;
+    }
+}
+
 div#content {
     position: absolute;
     top: 125px;

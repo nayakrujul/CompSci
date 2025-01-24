@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>19.03 - Database Normalisation | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn about how databases can be normalised into 1st, 2nd, and 3rd normal forms for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p><i>GCSE Link: None</i></p>
+
+            <p>
+                In any database, we want to <b>avoid unnecessary data duplication</b> at all costs. If we don't, it can
+                lead to <b>data redundancy</b> (which can <b>increase the amount of storage space</b> required) and
+                <b>data inconsistency</b> (where the <b>same piece of data apparently has different values</b>).
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Database normalisation</strong> is the process of organising a database in order to eliminate data redundancy and inconsistency.
+            </p>
+
+            <p>Let's take an example database and <b>work through the steps of normalising</b> it:</p>
+
+            <p class="table">
+                <img src="../../icons/table.svg" class="icon" />
+                Orders
+            </p>
+    
+            <table>
+                <tr>
+                    <th><strong><u>OrderID</u></strong></th>
+                    <th><strong>OrderDate</strong></th>
+                    <th><strong>Products</strong></th>
+                    <th><strong>CustomerName</strong></th>
+                    <th><strong>CustomerAddress</strong></th>
+                </tr>
+                <tr>
+                    <td class="number">17342</td>
+                    <td class="number">15/07/2023</td>
+                    <td class="string">3 x Red T-Shirt, 2 x Blue Jeans</td>
+                    <td class="string">John Doe</td>
+                    <td class="string">153 Crown St, Reading</td>
+                </tr>
+                <tr>
+                    <td class="number">17343</td>
+                    <td class="number">21/07/2023</td>
+                    <td class="string">5 x Black Socks</td>
+                    <td class="string">Sarah Brown</td>
+                    <td class="string">26 West Rd, Bracknell</td>
+                </tr>
+                <tr>
+                    <td class="number">17344</td>
+                    <td class="number">23/07/2023</td>
+                    <td class="string">2 x Blue Jumper, 1 x White Trainers, 1 x Maroon Tracksuit</td>
+                    <td class="string">John Doe</td>
+                    <td class="string">153 Crown St, Reading</td>
+                </tr>
+                <tr>
+                    <td class="number">17345</td>
+                    <td class="number">01/08/2023</td>
+                    <td class="string">3 x Orange Cap</td>
+                    <td class="string">Richard Jones</td>
+                    <td class="string">36 Squirrels Way, Earley</td>
+                </tr>
+                <tr>
+                    <td class="number">17346</td>
+                    <td class="number">01/08/2023</td>
+                    <td class="string">1 x Green Hoodie</td>
+                    <td class="string">Richard Jones</td>
+                    <td class="string">36 Squirrels Way, Earley</td>
+                </tr>
+            </table>
+
+            <br />
+
+            <p>
+                The first thing we do is <b>make sure all data is atomic</b> (contains only one value). Here, the
+                <code>Products</code> field is not atomic, so we must <b>create another table</b> for it. Also, the
+                <code>CustomerName</code> and <code>CustomerAddress</code> fields can be decomposed further as well.
+            </p>
+
+            <p class="table">
+                <img src="../../icons/table.svg" class="icon" />
+                Orders
+            </p>
+    
+            <table>
+                <tr>
+                    <th><strong><u>OrderID</u></strong></th>
+                    <th><strong>OrderDate</strong></th>
+                    <th><strong>CustomerForename</strong></th>
+                    <th><strong>CustomerSurname</strong></th>
+                    <th><strong>AddressNumber</strong></th>
+                    <th><strong>AddressRoad</strong></th>
+                    <th><strong>AddressTown</strong></th>
+                </tr>
+                <tr>
+                    <td class="number">17342</td>
+                    <td class="number">15/07/2023</td>
+                    <td class="string">John</td>
+                    <td class="string">Doe</td>
+                    <td class="number">153</td>
+                    <td class="string">Crown St</td>
+                    <td class="string">Reading</td>
+                </tr>
+                <tr>
+                    <td class="number">17343</td>
+                    <td class="number">21/07/2023</td>
+                    <td class="string">Sarah</td>
+                    <td class="string">Brown</td>
+                    <td class="number">26</td>
+                    <td class="string">West Rd</td>
+                    <td class="string">Bracknell</td>
+                </tr>
+                <tr>
+                    <td class="number">17344</td>
+                    <td class="number">23/07/2023</td>
+                    <td class="string">John</td>
+                    <td class="string">Doe</td>
+                    <td class="number">153</td>
+                    <td class="string">Crown St</td>
+                    <td class="string">Reading</td>
+                </tr>
+                <tr>
+                    <td class="number">17345</td>
+                    <td class="number">01/08/2023</td>
+                    <td class="string">Richard</td>
+                    <td class="string">Jones</td>
+                    <td class="number">36</td>
+                    <td class="string">Squirrels Way</td>
+                    <td class="string">Earley</td>
+                </tr>
+                <tr>
+                    <td class="number">17346</td>
+                    <td class="number">01/08/2023</td>
+                    <td class="string">Richard</td>
+                    <td class="string">Jones</td>
+                    <td class="number">36</td>
+                    <td class="string">Squirrels Way</td>
+                    <td class="string">Earley</td>
+                </tr>
+            </table>
+
+            <p class="table">
+                <img src="../../icons/table.svg" class="icon" />
+                ProductInOrder
+            </p>
+
+            <table>
+                <tr>
+                    <th><strong><u>OrderID</u></strong></th>
+                    <th><strong><u>ProductType</u></strong></th>
+                    <th><strong><u>ProductColour</u></strong></th>
+                    <th><strong>Quantity</strong></th>
+                </tr>
+                <tr>
+                    <td class="number">17342</td>
+                    <td class="string">T-Shirt</td>
+                    <td class="string">Red</td>
+                    <td class="number">3</td>
+                </tr>
+                <tr>
+                    <td class="number">17342</td>
+                    <td class="string">Jeans</td>
+                    <td class="string">Blue</td>
+                    <td class="number">2</td>
+                </tr>
+                <tr>
+                    <td class="number">17343</td>
+                    <td class="string">Socks</td>
+                    <td class="string">Black</td>
+                    <td class="number">5</td>
+                </tr>
+                <tr>
+                    <td class="number">17344</td>
+                    <td class="string">Jumper</td>
+                    <td class="string">Blue</td>
+                    <td class="number">2</td>
+                </tr>
+                <tr>
+                    <td class="number">17344</td>
+                    <td class="string">Trainers</td>
+                    <td class="string">White</td>
+                    <td class="number">1</td>
+                </tr>
+                <tr>
+                    <td class="number">17344</td>
+                    <td class="string">Tracksuit</td>
+                    <td class="string">Maroon</td>
+                    <td class="number">1</td>
+                </tr>
+                <tr>
+                    <td class="number">17345</td>
+                    <td class="string">Cap</td>
+                    <td class="string">Orange</td>
+                    <td class="number">3</td>
+                </tr>
+                <tr>
+                    <td class="number">17346</td>
+                    <td class="string">Hoodie</td>
+                    <td class="string">Green</td>
+                    <td class="number">1</td>
+                </tr>
+            </table>
+
+            <br />
+
+            <p>
+                However, we <b>still have a problem with possible data duplication</b> in the <code>Orders</code> table,
+                with all of the Customer fields. These belong <b>in their own table</b>.
+            </p>
+
+            <p class="table">
+                <img src="../../icons/table.svg" class="icon" />
+                Orders
+            </p>
+    
+            <table>
+                <tr>
+                    <th><strong><u>OrderID</u></strong></th>
+                    <th><strong>OrderDate</strong></th>
+                    <th><strong>CustomerID</strong></th>
+                </tr>
+                <tr>
+                    <td class="number">17342</td>
+                    <td class="number">15/07/2023</td>
+                    <td class="number">7086</td>
+                </tr>
+                <tr>
+                    <td class="number">17343</td>
+                    <td class="number">21/07/2023</td>
+                    <td class="number">6227</td>
+                </tr>
+                <tr>
+                    <td class="number">17344</td>
+                    <td class="number">23/07/2023</td>
+                    <td class="number">7086</td>
+                </tr>
+                <tr>
+                    <td class="number">17345</td>
+                    <td class="number">01/08/2023</td>
+                    <td class="number">7139</td>
+                </tr>
+                <tr>
+                    <td class="number">17346</td>
+                    <td class="number">01/08/2023</td>
+                    <td class="number">7139</td>
+                </tr>
+            </table>
+
+            <p class="table">
+                <img src="../../icons/table.svg" class="icon" />
+                ProductInOrder
+            </p>
+
+            <table>
+                <tr>
+                    <th><strong><u>OrderID</u></strong></th>
+                    <th><strong><u>ProductType</u></strong></th>
+                    <th><strong><u>ProductColour</u></strong></th>
+                    <th><strong>Quantity</strong></th>
+                </tr>
+                <tr>
+                    <td class="number">17342</td>
+                    <td class="string">T-Shirt</td>
+                    <td class="string">Red</td>
+                    <td class="number">3</td>
+                </tr>
+                <tr>
+                    <td class="number">17342</td>
+                    <td class="string">Jeans</td>
+                    <td class="string">Blue</td>
+                    <td class="number">2</td>
+                </tr>
+                <tr>
+                    <td class="number">17343</td>
+                    <td class="string">Socks</td>
+                    <td class="string">Black</td>
+                    <td class="number">5</td>
+                </tr>
+                <tr>
+                    <td class="number">17344</td>
+                    <td class="string">Jumper</td>
+                    <td class="string">Blue</td>
+                    <td class="number">2</td>
+                </tr>
+                <tr>
+                    <td class="number">17344</td>
+                    <td class="string">Trainers</td>
+                    <td class="string">White</td>
+                    <td class="number">1</td>
+                </tr>
+                <tr>
+                    <td class="number">17344</td>
+                    <td class="string">Tracksuit</td>
+                    <td class="string">Maroon</td>
+                    <td class="number">1</td>
+                </tr>
+                <tr>
+                    <td class="number">17345</td>
+                    <td class="string">Cap</td>
+                    <td class="string">Orange</td>
+                    <td class="number">3</td>
+                </tr>
+                <tr>
+                    <td class="number">17346</td>
+                    <td class="string">Hoodie</td>
+                    <td class="string">Green</td>
+                    <td class="number">1</td>
+                </tr>
+            </table>
+
+            <p class="table">
+                <img src="../../icons/table.svg" class="icon" />
+                Customer
+            </p>
+
+            <table>
+                <tr>
+                    <th><strong><u>CustomerID</u></strong></th>
+                    <th><strong>Forename</strong></th>
+                    <th><strong>Surname</strong></th>
+                    <th><strong>AddressNumber</strong></th>
+                    <th><strong>AddressRoad</strong></th>
+                    <th><strong>AddressTown</strong></th>
+                </tr>
+                <tr>
+                    <td class="number">6227</td>
+                    <td class="string">Sarah</td>
+                    <td class="string">Brown</td>
+                    <td class="number">26</td>
+                    <td class="string">West Rd</td>
+                    <td class="string">Bracknell</td>
+                </tr>
+                <tr>
+                    <td class="number">7086</td>
+                    <td class="string">John</td>
+                    <td class="string">Doe</td>
+                    <td class="number">153</td>
+                    <td class="string">Crown St</td>
+                    <td class="string">Reading</td>
+                </tr>
+                <tr>
+                    <td class="number">7139</td>
+                    <td class="string">Richard</td>
+                    <td class="string">Jones</td>
+                    <td class="number">36</td>
+                    <td class="string">Squirrels Way</td>
+                    <td class="string">Earley</td>
+                </tr>
+            </table>
+
+            <br />
+
+            <p>
+                We have one final problem. Ideally, the <b>products would be in their own table</b> as well.
+            </p>
+
+            <p class="table">
+                <img src="../../icons/table.svg" class="icon" />
+                Orders
+            </p>
+    
+            <table>
+                <tr>
+                    <th><strong><u>OrderID</u></strong></th>
+                    <th><strong>OrderDate</strong></th>
+                    <th><strong>CustomerID</strong></th>
+                </tr>
+                <tr>
+                    <td class="number">17342</td>
+                    <td class="number">15/07/2023</td>
+                    <td class="number">7086</td>
+                </tr>
+                <tr>
+                    <td class="number">17343</td>
+                    <td class="number">21/07/2023</td>
+                    <td class="number">6227</td>
+                </tr>
+                <tr>
+                    <td class="number">17344</td>
+                    <td class="number">23/07/2023</td>
+                    <td class="number">7086</td>
+                </tr>
+                <tr>
+                    <td class="number">17345</td>
+                    <td class="number">01/08/2023</td>
+                    <td class="number">7139</td>
+                </tr>
+                <tr>
+                    <td class="number">17346</td>
+                    <td class="number">01/08/2023</td>
+                    <td class="number">7139</td>
+                </tr>
+            </table>
+
+            <p class="table">
+                <img src="../../icons/table.svg" class="icon" />
+                ProductInOrder
+            </p>
+
+            <table>
+                <tr>
+                    <th><strong><u>OrderID</u></strong></th>
+                    <th><strong><u>ProductID</u></strong></th>
+                    <th><strong>Quantity</strong></th>
+                </tr>
+                <tr>
+                    <td class="number">17342</td>
+                    <td class="number">23</td>
+                    <td class="number">3</td>
+                </tr>
+                <tr>
+                    <td class="number">17342</td>
+                    <td class="number">70</td>
+                    <td class="number">2</td>
+                </tr>
+                <tr>
+                    <td class="number">17343</td>
+                    <td class="number">81</td>
+                    <td class="number">5</td>
+                </tr>
+                <tr>
+                    <td class="number">17344</td>
+                    <td class="number">47</td>
+                    <td class="number">2</td>
+                </tr>
+                <tr>
+                    <td class="number">17344</td>
+                    <td class="number">88</td>
+                    <td class="number">1</td>
+                </tr>
+                <tr>
+                    <td class="number">17344</td>
+                    <td class="number">64</td>
+                    <td class="number">1</td>
+                </tr>
+                <tr>
+                    <td class="number">17345</td>
+                    <td class="number">95</td>
+                    <td class="number">3</td>
+                </tr>
+                <tr>
+                    <td class="number">17346</td>
+                    <td class="number">51</td>
+                    <td class="number">1</td>
+                </tr>
+            </table>
+
+            <p class="table">
+                <img src="../../icons/table.svg" class="icon" />
+                Customer
+            </p>
+
+            <table>
+                <tr>
+                    <th><strong><u>CustomerID</u></strong></th>
+                    <th><strong>Forename</strong></th>
+                    <th><strong>Surname</strong></th>
+                    <th><strong>AddressNumber</strong></th>
+                    <th><strong>AddressRoad</strong></th>
+                    <th><strong>AddressTown</strong></th>
+                </tr>
+                <tr>
+                    <td class="number">6227</td>
+                    <td class="string">Sarah</td>
+                    <td class="string">Brown</td>
+                    <td class="number">26</td>
+                    <td class="string">West Rd</td>
+                    <td class="string">Bracknell</td>
+                </tr>
+                <tr>
+                    <td class="number">7086</td>
+                    <td class="string">John</td>
+                    <td class="string">Doe</td>
+                    <td class="number">153</td>
+                    <td class="string">Crown St</td>
+                    <td class="string">Reading</td>
+                </tr>
+                <tr>
+                    <td class="number">7139</td>
+                    <td class="string">Richard</td>
+                    <td class="string">Jones</td>
+                    <td class="number">36</td>
+                    <td class="string">Squirrels Way</td>
+                    <td class="string">Earley</td>
+                </tr>
+            </table>
+
+            <p class="table">
+                <img src="../../icons/table.svg" class="icon" />
+                Product
+            </p>
+
+            <table>
+                <tr>
+                    <th><strong><u>ProductID</u></strong></th>
+                    <th><strong>ProductType</strong></th>
+                    <th><strong>Colour</strong></th>
+                </tr>
+                <tr>
+                    <td class="number">23</td>
+                    <td class="string">T-Shirt</td>
+                    <td class="string">Red</td>
+                </tr>
+                <tr>
+                    <td class="number">47</td>
+                    <td class="string">Jumper</td>
+                    <td class="string">Blue</td>
+                </tr>
+                <tr>
+                    <td class="number">51</td>
+                    <td class="string">Hoodie</td>
+                    <td class="string">Green</td>
+                </tr>
+                <tr>
+                    <td class="number">64</td>
+                    <td class="string">Tracksuit</td>
+                    <td class="string">Maroon</td>
+                </tr>
+                <tr>
+                    <td class="number">70</td>
+                    <td class="string">Jeans</td>
+                    <td class="string">Blue</td>
+                </tr>
+                <tr>
+                    <td class="number">81</td>
+                    <td class="string">Socks</td>
+                    <td class="string">Black</td>
+                </tr>
+                <tr>
+                    <td class="number">88</td>
+                    <td class="string">Trainers</td>
+                    <td class="string">White</td>
+                </tr>
+                <tr>
+                    <td class="number">95</td>
+                    <td class="string">Cap</td>
+                    <td class="string">Orange</td>
+                </tr>
+            </table>
+
+            <br />
+
+            <p>
+                The database is now <b>fully normalised</b>. To verify this, we check if the following statement is
+                true: <b>"all non-key attributes in every table depend only upon the key, the whole key, and nothing but
+                the key"</b>.
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                A data anomaly is an inconsistency in a database. How does normalisation help to avoid data anomalies?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    If a database is normalised, each piece of data should be stored in only one place, and therefore
+                    only needs to be updated in one place if required. In denormalised databases, data needs to be
+                    updated using complex queries, which could lead to data anomalies if not done correctly.
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>
