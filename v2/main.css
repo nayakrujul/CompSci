@@ -184,6 +184,7 @@ div#homepage {
     top: 100px;
     left: 0px;
     width: 100%;
+    overflow-x: hidden;
 }
 
 div#last-page-popup {
