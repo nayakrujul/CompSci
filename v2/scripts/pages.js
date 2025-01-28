@@ -1,10 +1,3 @@
-// Themes
-
-const THEMES = ["blue", "turquoise", "green", "yellow", "orange", "brown", "pink", "purple"];
-let rand = THEMES[Math.floor(Math.random() * THEMES.length)];
-document.body.classList.add(rand);
-
-
 // Navbar arrows
 
 let [x, y] = location.href

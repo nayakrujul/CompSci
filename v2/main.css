@@ -162,6 +162,55 @@ div#header {
         }
     }
 
+    span#theme-colour {
+        width: 38px;
+        height: 38px;
+        margin: 30px 20px;
+        margin-left: 0px;
+        border-radius: 50%;
+        border: 1px solid black;
+        background-color: var(--button-background);
+        float: right;
+        cursor: pointer;
+    }
+
+    div#colour-dropdown {
+        position: fixed;
+        top: 100px;
+        right: 0px;
+        display: none;
+        padding: 10px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 180px;
+        height: 180px;
+        background-color: white;
+        animation: fadeIn 1000ms;
+
+        * {
+            display: block;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            border: 1px solid black;
+            background-color: var(--button-background);
+            cursor: pointer;
+            margin: 10px;
+            flex-basis: 38px;
+        }
+    }
+
+    div#colour-dropdown.show {
+        display: flex;
+    }
+
+    span#theme-colour.random, span.colour-option.random {
+        background-image: url("./icons/random.svg");
+        background-size: 16px;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
     select#version-select {
         background-color: white;
         float: right;
@@ -193,7 +242,7 @@ div#last-page-popup {
     right: 20px;
     text-align: center;
     width: 300px;
-    z-index: 2000;
+    z-index: 999;
     background-color: white;
     transition: background-color 500ms, transform 1000ms;
     border-radius: 20px;
@@ -279,6 +328,10 @@ div#content {
 
     div.section-flexbox.homepage-flexbox {
         width: calc(25% - 20px);
+    }
+
+    div.section-flexbox:not(.disabled) {
+        border-color: var(--button-background);
     }
 
     div.section-flexbox:not(.disabled):hover {
@@ -497,6 +550,10 @@ b {
     text-decoration: underline;
 }
 
+.random {
+    --button-background: white;
+}
+
 .blue {
     --bold-colour: #3c649f;
     --button-background: #30507f;
@@ -561,6 +618,10 @@ p.definition strong {
           -ms-user-select: none; /* Internet Explorer/Edge */
               user-select: none; /* Non-prefixed version, currently
                                     supported by Chrome, Edge, Opera and Firefox */
+}
+
+table th, table td {
+    overflow-wrap: anywhere;
 }
 
 span.answer.show {
