@@ -319,6 +319,7 @@ div#content {
         text-align: center;
         margin-left: auto;
         margin-right: auto;
+        transition: background-color 200ms;
 
         a.section-link {
             width: 100%;
@@ -331,7 +332,7 @@ div#content {
     }
 
     div.section-flexbox:not(.disabled) {
-        border-color: var(--button-background);
+        border-color: var(--button-bg-accent);
     }
 
     div.section-flexbox:not(.disabled):hover {
