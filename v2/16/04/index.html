@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>16.04 - Searching and Sorting Algorithms | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Revise searching algorithms for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p><i>GCSE Link: <a href="../../1/04/">1.04 - Linear Search</a></i></p>
+
+            <p>This page contains <b>only GCSE content</b>.</p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>searching algorithm</strong> is an algorithm to find the index of an item in a list.
+            </p>
+
+            <p>There are two main searching algorithms: <b>linear search</b> and <b>binary search</b>.</p>
+
+            <p>
+                Linear search <b>checks each item in order</b> from the start of the list until it <b>finds the target
+                item</b> or <b>reaches the end</b> of the list.
+            </p>
+
+            <p>
+                Binary search <b>takes a sorted list</b>, and starts with <b>the middle item</b>. Then, if the target
+                item is lower it <b>discards the right half</b> of the list, and if the target item is higher it
+                <b>discards the left half</b> of the list. It keeps going until it <b>finds the target item</b> or
+                <b>discards every item</b>.
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>sorting algorithm</strong> is an algorithm to put the items of a list in order.
+            </p>
+
+            <p>There are two main sorting algorithms: <b>bubble sort</b> and <b>merge sort</b>.</p>
+
+            <p>
+                Bubble sort <b>swaps pairs of numbers</b> which are in the wrong order <b>until the list is sorted</b>.
+                It requires <b>up to <code>n</code> full passes</b> for a list of length <code>n</code>, where in each
+                pass <b>all consecutive pairs are examined</b>.
+            </p>
+
+            <p>
+                Merge sort <b>repeatedly splits the list in half</b> until each sub-list has only one item. Then, it
+                <b>sorts the items</b> while <b>putting the lists back together</b>.
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                State the worst-case time complexities of each of the algorithms mentioned above.
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    Linear search: <code>O(n)</code>, which means that doubling the length of the list doubles the
+                    maximum number of comparisons. <br />
+                    Binary search: <code>O(log<sub>2</sub> n)</code>, which means that doubling the length of the list
+                    adds one to the maximum number of comparisons. <br />
+                    <br />
+                    Bubble sort: <code>O(n<sup>2</sup>)</code>, which means that doubling the length of the list
+                    quadruples the maximum number of comparisons. <br />
+                    Merge sort: <code>O(n log<sub>2</sub> n)</code>, which means that doubling the length of the list
+                    roughly doubles the maximum number of comparisons.
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>

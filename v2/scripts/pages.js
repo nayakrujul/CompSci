@@ -258,7 +258,8 @@ const pageNames = [
     [
         "Graph Traversal",
         "Tree Traversal",
-        "Reverse Polish Notation"
+        "Reverse Polish Notation",
+        "Searching and Sorting Algorithms"
     ],
     [],
     [],
