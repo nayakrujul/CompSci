@@ -6,13 +6,13 @@ document.getElementById("header").innerHTML = `
         <a href="/v2/exam-info/" class="menu-link click-ignore">EXAM INFO</a>
         <a href="/v2/feedback/" class="menu-link click-ignore">FEEDBACK</a>
     </div>` + document.getElementById("header").innerHTML + `
-    <span id="theme-colour"></span>
-    <div id="colour-dropdown"></div>
     <select id="version-select">
         <option value="v1" ${v1 === null ? "disabled" : ""}>v1</option>
         <option value="v2" selected>v2</option>
         <option value="v3">v3 (Beta)</option>
-    </select>`;
+    </select>
+    <a id="settings-button" href="/v2/settings/"></a>
+`;
 
 document.getElementById("dropdown").addEventListener("click", () => {
     if ([...document.getElementById("dropdown").classList].includes("close")) {
@@ -51,43 +51,29 @@ document.body.addEventListener("click", ({target}) => {
             document.getElementById("dropdown").classList.remove("close");
         }
     }
-    if (document.getElementById("colour-dropdown").classList.contains("show")) {
-        if (target.id !== "colour-dropdown" && target.id !== "theme-colour")
-            document.getElementById("colour-dropdown").classList.remove("show");
-    }
 });
 
-
-// Themes
-
-const THEMES = ["blue", "turquoise", "green", "orange", "yellow", "brown", "pink", "purple"];
-
-function change_theme({target}) {
-    let thm = target.id.slice(6);
-    localStorage.setItem("themeColour", thm);
-    document.body.classList = [];
-    document.body.classList.add(THEMES.includes(thm) ? thm : THEMES[Math.floor(Math.random() * THEMES.length)]);
-    document.getElementById("theme-colour").classList = [];
-    document.getElementById("theme-colour").classList.add(thm);
-}
-
-[...THEMES, "random"].forEach(theme => {
-    let sp = document.createElement("span");
-    sp.classList.add("colour-option", theme);
-    sp.id = "theme-" + theme;
-    document.getElementById("colour-dropdown").appendChild(sp);
-    sp.addEventListener("click", change_theme);
-});
+const THEMES = ["blue", "turquoise", "green", "brown", "orange", "yellow", "pink", "purple"];
 
 let selected = localStorage.getItem("themeColour")
 if (!THEMES.includes(selected)) {
-    document.getElementById("theme-colour").classList.add("random");
+    selected = "random";
     document.body.classList.add(THEMES[Math.floor(Math.random() * THEMES.length)]);
 } else {
-    document.getElementById("theme-colour").classList.add(selected);
     document.body.classList.add(selected);
 }
 
-document.getElementById("theme-colour").addEventListener("click", () => {
-    document.getElementById("colour-dropdown").classList.toggle("show");
-});
+function change_line_height(val) {
+    [...document.querySelectorAll("style.temp-style")].forEach(ts => ts.remove());
+    let style = document.createElement("style");
+    style.classList.add("temp-style");
+    style.innerHTML = `body {--default-line-height: ${val / 10};}`;
+    document.head.appendChild(style);
+}
+
+let lsp = localStorage.getItem("lineSpacing");
+if (lsp !== null) {
+    change_line_height(+lsp);
+} else {
+    localStorage.setItem("lineSpacing", "15");
+}

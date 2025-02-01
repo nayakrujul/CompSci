@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../main.css">
+
+        <title>Settings | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../logos/square.png"/>
+        <meta property="og:image" content="../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Customise the appearance of CS.RN v2!">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <br />
+            <h1>Theme Colour:</h1>
+            <div id="colour-picker"></div>
+            <br />
+            <h1>Line Spacing:</h1>
+            <div id="line-spacing">
+                <input type="range" min="10" max="20" step="1" value="15" id="spacing-slider" />
+            </div>
+            <br /> <br /> <hr /> <br />
+            <h1>Sample Text:</h1>
+            <p>
+                The steps to do a linear search are as follows:
+                <br /> &emsp; 1. Look at the <b>first item</b> in your list
+                <br /> &emsp; 2. <b>Check</b> if this is the item that you are looking for
+                <br /> &emsp; 3. If it is, <b>output the index</b> and exit
+                <br /> &emsp; 4. Otherwise, <b>move on</b> to the next item in the list
+                <br /> &emsp; 5. <b>Repeat</b> steps 2 to 4 until you find the item, or you reach the end of the list
+            </p>
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../scripts/version.js"></script>
+        <script src="../scripts/footer.js"></script>
+        <script src="./main.js"></script>
+
+    </body>
+</html>
