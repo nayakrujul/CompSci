@@ -473,8 +473,7 @@ div#colour-picker {
 }
 
 div#line-spacing {
-    width: 50%;
-    min-width: 500px;
+    width: 500px;
     max-width: 100%;
 
     input#spacing-slider {
