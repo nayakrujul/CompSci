@@ -266,7 +266,8 @@ const pageNames = [
     [
         "Data Modelling",
         "More SQL",
-        "Database Normalisation"
+        "Database Normalisation",
+        "Client-Server Databases"
     ],
     []
 ];
