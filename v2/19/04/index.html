@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>19.04 - Client-Server Databases | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Find out about the problems related to concurrent access of client-server databases for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p><i>GCSE Link: None</i></p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>client-server database</strong> is a system in which data stored in a central server can be accessed simultaneously by multiple clients.
+            </p>
+
+            <p>
+                Users (clients) can read from or write to the database in <b>transactions</b>, which is a group of SQL
+                commands. If <b>one command in the transaction fails</b>, all changes made in the transaction are
+                <b>rolled back</b> (undone) and the <b>whole transaction fails</b>.
+            </p>
+
+            <p><br />
+                <b>Concurrent access</b> (where multiple users access the database at the same time) could lead to <b>a
+                loss of data integrity</b> (where the data in the database is inaccurate) if not managed properly.
+            </p>
+
+            <p><br />
+                One potential issue is the <b>lost update problem</b>, where two users attempt to <b>write to the same
+                record</b> at the same time, and one update is lost. Imagine a <b>client-server database for a
+                supermarket</b>, which includes a <code>Products</code> table like the one below:
+            </p>
+
+            <p>Diagram 1 shows an example <code>Products</code> table in a supermarket's database.</p>
+
+            <p class="diagram">
+                <img src="../../icons/image.svg" class="icon" />
+                Diagram 1 <br /> <br />
+                <img src="./diagram1.png" width="500px" />
+            </p>
+
+            <p>
+                Now imagine two customers <b>buy milk at the same time</b>. The first one buys <b>three</b> bottles,
+                while the other buys <b>one</b>. In the background, the <b>stock count is updated</b>:
+            </p>
+
+            <p>Diagram 2 shows a step-by-step animation of what would happen to the <code>Products</code> table. <b><i>Use the arrows to navigate.</i></b></p>
+
+            <p class="diagram">
+                <img src="../../icons/image.svg" class="icon" />
+                Diagram 2 <br /> <br />
+                <img src="../../icons/left.svg" class="no-zoom" id="js-target-1" height="32px" style="cursor: pointer; filter: invert(40%) sepia(91%) saturate(1234%) hue-rotate(220deg) brightness(100%) contrast(93%); border: 3px solid; border-radius: 50%; padding: 0px 8px;" />
+                <img src="./diagram2/Slide1.png" id="js-target-0" width="650px" style="max-width: calc(70vw - 10px);" />
+                <img src="../../icons/right.svg" class="no-zoom" id="js-target-2" height="32px" style="cursor: pointer; filter: invert(40%) sepia(91%) saturate(1234%) hue-rotate(220deg) brightness(100%) contrast(93%); border: 3px solid; border-radius: 50%; padding: 0px 8px;" />
+            </p>
+
+            <p><br />
+                We can <b>solve the lost update problem using record locks</b>. When a transaction begins, a <b>lock is
+                placed on the record</b> which is being updated, which <b>prevents other users from accessing it</b>.
+                In the example above, <b>Transaction 2 would have failed</b> because it would have attempted to access
+                a locked record. It would then be <b>retried later</b>, giving the correct end result of 90:
+            </p>
+
+            <p>Diagram 3 shows a step-by-step animation of record locking. <b><i>Use the arrows to navigate.</i></b></p>
+
+            <p class="diagram">
+                <img src="../../icons/image.svg" class="icon" />
+                Diagram 3 <br /> <br />
+                <img src="../../icons/left.svg" class="no-zoom" id="js-target-4" height="32px" style="cursor: pointer; filter: invert(40%) sepia(91%) saturate(1234%) hue-rotate(220deg) brightness(100%) contrast(93%); border: 3px solid; border-radius: 50%; padding: 0px 8px;" />
+                <img src="./diagram3/Slide1.png" id="js-target-3" width="650px" style="max-width: calc(70vw - 10px);" />
+                <img src="../../icons/right.svg" class="no-zoom" id="js-target-5" height="32px" style="cursor: pointer; filter: invert(40%) sepia(91%) saturate(1234%) hue-rotate(220deg) brightness(100%) contrast(93%); border: 3px solid; border-radius: 50%; padding: 0px 8px;" />
+            </p>
+
+            <p><br />
+                Transactions may also <b>be placed in a queue</b>, so that <b>each transaction is executed fully</b>
+                before the next transaction starts. This would <b>also fix the lost update problem</b>.
+            </p>
+
+            <p><br />
+                The final method for preventing the lost update problem is <b>timestamp ordering</b>. Each transaction
+                is <b>given a timestamp when it starts</b>, and each record is given two timestamps: when it was <b>last
+                read from</b> and when it was <b>last written to</b>. When a transaction attempts to <b>write to a
+                record</b>, its timestamp must be <b>greater than both timestamps</b> on the record. When a transaction
+                attempts to <b>read from a record</b>, its timestamp must be <b>greater than the write timestamp</b> of
+                that record. If the transaction doesn't meet these rules, it <b>should be aborted</b> and the changes
+                should be rolled back.
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                What could be a potential issue with record locks?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    The performance of the database could degrade if locks are placed unnecessarily (e.g. on a whole
+                    table instead of a single record).
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+        <script src="./main.js"></script>
+
+    </body>
+</html>

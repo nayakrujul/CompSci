@@ -469,6 +469,10 @@ div#homepage-carousel {
     }
 }
 
+p {
+    line-height: 1.5;
+}
+
 a {
     color: #3366cc;
 }
