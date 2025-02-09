@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>Section 15 Revision Questions | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Revise Section 15 (Data Structures) with exam-style GCSE Computer Science questions on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+
+            <h1 id="score">Score: 0/0</h1>
+
+            <h2 id="q-num">Question 1 of &infin;</h2>
+    
+            <div id="revision-questions">
+                <div class="rq" marks="3">
+                    <span class="question">Describe three differences between static and dynamic data structures.</span>
+                    <span class="rq-answer">
+                        Static data structures have a fixed size (determined at compile time),
+                        while dynamic data structures can grow or shrink in size as the program runs.
+                    </span>
+                    <span class="rq-answer">
+                        Static data structures (typically) store data in consecutive memory locations,
+                        while dynamic data structures do not.
+                    </span>
+                    <span class="rq-answer">
+                        Static data structures can waste storage space if the amount of data stored is small,
+                        whereas dynamic data structures only take up the exact amount of storage space required.
+                    </span>
+                    <span class="rq-answer">
+                        Static data structures (typically) do not need pointers,
+                        whereas dynamic data structures use memory to store pointers to the next item.
+                    </span>
+                </div>
+                <div class="rq" marks="3">
+                    <span class="question">Describe the steps of an <code>enqueue</code> operation on a circular queue.</span>
+                    <span class="rq-answer">
+                        Check if the queue is full, with <code>(<span class="other">rear_pointer</span> +
+                        <span class="number">1</span>) % <span class="other">size</span> ==
+                        <span class="other">front_pointer</span></code>. If it is, throw an error.
+                    </span>
+                    <span class="rq-answer">
+                        Otherwise, set <code class="other">rear_pointer</code> to
+                        <code>(<span class="other">rear_pointer</span> + <span class="number">1</span>) %
+                        <span class="other">size</span></code>.
+                    </span>
+                    <span class="rq-answer">
+                        Insert the item into the array at the index indicated by the new value of
+                        <code class="other">rear_pointer</code>.
+                    </span>
+                </div>
+                <div class="rq" marks="2">
+                    <span class="question">Explain how a single stack can be used to reverse the order of the items in a queue.</span>
+                    <span class="rq-answer">Dequeue the queue and push the item to the stack, until the queue is empty.</span>
+                    <span class="rq-answer">Pop items from the stack and enqueue them into the queue, until the stack is empty.</span>
+                </div>
+                <div class="rq" marks="1">
+                    <span class="pretext">
+                        Diagram 1 shows a graph.
+                        <p class="diagram">
+                            <img src="../../icons/image.svg" class="icon" />
+                            Diagram 1 <br /> <br />
+                            <img src="./diagram1.png" width="500px" />
+                        </p>
+                    </span>
+                    <span class="question">Explain why the graph in Diagram 1 is not a tree.</span>
+                    <span class="rq-answer">There are cycles, for example ACG, and therefore multiple paths between two nodes.</span>
+                </div>
+                <!-- <div class="rq" marks="1">
+                    <span class="pretext">
+                        Diagram 1 shows a graph.
+                        <p class="diagram">
+                            <img src="../../icons/image.svg" class="icon" />
+                            Diagram 1 <br /> <br />
+                            <img src="./diagram1.png" width="500px" />
+                        </p>
+                    </span>
+                    <span class="question">State the output of a breadth-first traversal of Diagram 1 from E, visiting neighbours in alphabetical order.</span>
+                    <span class="rq-answer">B, F, H, A, D, G, C</span>
+                </div> -->
+                <div class="rq" marks="4">
+                    <span class="pretext">
+                        <p>
+                            A programmer wants to implement two functions in his text-based software: <code>undo</code>
+                            and <code>repeat</code>.
+                        </p>
+                        <p>
+                            The <code>undo</code> function will change the state of the text to how it was before the
+                            user's most recent action (e.g. changing a font) was carried out. The <code>repeat</code>
+                            function will apply the user's most recent action again.
+                        </p>
+                    </span>
+                    <span class="question">Explain how the <code>undo</code> and <code>repeat</code> functions can be implemented using a single stack.</span>
+                    <span class="rq-answer">A stack can be used to store the user's actions.</span>
+                    <span class="rq-answer">Each time an action is completed it is pushed to the top of the stack.</span>
+                    <span class="rq-answer">The <code>undo</code> function will pop the top item from the stack.</span>
+                    <span class="rq-answer">The <code>repeat</code> function will peek at the top of the stack.</span>
+                </div>
+                <div class="rq" marks="2">
+                    <span class="question">Explain the circumstances in which it is more appropriate to represent a graph using an adjacency list instead of an adjacency matrix.</span>
+                    <span class="rq-answer">When the the graph is sparse (fewer edges between vertices).</span>
+                    <span class="rq-answer">When edges are rarely changed.</span>
+                    <span class="rq-answer">When the presence of a specific edge doesn't need to be tested frequently.</span>
+                </div>
+                <div class="rq" marks="3">
+                    <span class="question">Explain how a key-value can be added to a hash table.</span>
+                    <span class="rq-answer">The hashing algorithm is applied to the key.</span>
+                    <span class="rq-answer">If this index of the array is empty, the pair is added there.</span>
+                    <span class="rq-answer">Otherwise, a collision has occurred and a collision handling method must be used.</span>
+                </div>
+                <div class="rq" marks="3">
+                    <span class="question">Describe the steps involved in rehashing a hash table.</span>
+                    <span class="rq-answer">A larger hash table is created.</span>
+                    <span class="rq-answer">Each value in the existing table is inserted into the new larger table,</span>
+                    <span class="rq-answer">using a new hashing algorithm for the new table.</span>
+                </div>
+                <div class="rq" marks="4">
+                    <span class="question">Calculate the angle between the vectors <code>[2, 3]</code> and <code>[-1, 5]</code>.</span>
+                    <span class="rq-answer">Dot product = <code>13</code></span>
+                    <span class="rq-answer">Lengths are <code>&Sqrt;13</code> and <code>&Sqrt;26</code></span>
+                    <span class="rq-answer"><code>cos(&theta;) = 1 / &Sqrt;2</code></span>
+                    <span class="rq-answer"><code>&theta; = 45&deg;</code></span>
+                </div>
+            </div>
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+        <script src="../../scripts/rqs.js"></script>
+
+    </body>
+</html>

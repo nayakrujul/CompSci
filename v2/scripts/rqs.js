@@ -64,6 +64,22 @@ rqs.forEach((elem, i1) => {
     btn.addEventListener("click", button_clicked);
 });
 
+function key_pressed(evt) {
+    let cmd = (evt.ctrlKey || evt.metaKey);
+    if (evt.keyCode === 13 && cmd) {
+        document.querySelector("div.rq.show input.q-button.rq-button")?.click();
+    } else if (48 <= evt.keyCode && evt.keyCode < 58 && evt.shiftKey && cmd) {
+        let txtbox = document.querySelector("div.rq.show textarea.rq-textbox");
+        if (txtbox !== null && txtbox.disabled) {
+            let n = evt.keyCode - 48;
+            let boxes = [...document.querySelectorAll("div.rq.show span.rq-answer.show input.rq-checkbox")];
+            boxes.forEach(i => i.checked = true);
+            boxes.slice(n).forEach(j => j.checked = false);
+        }
+    }
+}
+
 document.getElementById("q-num").innerHTML = "Question 1 of " + len;
+document.body.addEventListener("keydown", key_pressed);
 
 random_choice(rqs).classList.add("show");

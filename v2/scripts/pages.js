@@ -253,7 +253,8 @@ const pageNames = [
         "Trees",
         "Dictionaries",
         "Hash Tables",
-        "Vectors"
+        "Vectors",
+        "qs"
     ],
     [
         "Graph Traversal",
