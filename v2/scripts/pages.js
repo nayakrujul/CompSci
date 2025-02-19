@@ -260,7 +260,8 @@ const pageNames = [
         "Graph Traversal",
         "Tree Traversal",
         "Reverse Polish Notation",
-        "Searching and Sorting Algorithms"
+        "Searching and Sorting Algorithms",
+        "Dijkstra's Shortest Path"
     ],
     [],
     [],

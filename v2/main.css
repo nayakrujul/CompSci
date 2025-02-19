@@ -876,7 +876,7 @@ img.img-render {
     text-decoration: overline;
 }
 
-ul.spaced-out li {
+ul.spaced-out li, ol.spaced-out li {
     padding-bottom: 20px;
 }
 
