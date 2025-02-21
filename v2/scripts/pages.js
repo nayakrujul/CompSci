@@ -240,7 +240,9 @@ const pageNames = [
     ],
     [],
     [],
-    [],
+    [
+        "Communication Basics",
+    ],
     [
         "Data Structures",
         "Arrays",

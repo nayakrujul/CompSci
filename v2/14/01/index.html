@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>14.01 - Communication Basics | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn about the fundamentals of communication, including the difference between bit rate and Baud rate, for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p><i>GCSE Link: None</i></p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Communication</strong> is the process of transferring information from one party to another, via some communication medium.
+            </p>
+
+            <p>
+                This medium is usually some kind of <b>cable for a wired connection</b>, or <b>the air for a wireless
+                connection</b>.
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                The <strong>bit rate</strong> measures the speed of communication, i.e. how much data can be sent every second.
+            </p>
+
+            <p>
+                The bit rate is measured in <b>bits per second</b> (bps), <b>kilobits per second</b> (kbps), or
+                <b>megabits per second</b> (Mbps).
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                The <strong>Baud rate</strong> measures how many changes can be made to a signal every second.
+            </p>
+
+            <p>
+                The Baud rate is measured in <b>Bauds</b> or <b>changes per second</b>. But how is it different from the
+                bit rate?
+            </p>
+
+            <p><br />Diagram 1 shows an example of a digital signal used to transmit information.</p>
+
+            <p class="diagram">
+                <img src="../../icons/image.svg" class="icon" />
+                Diagram 1 <br /> <br />
+                <img src="./diagram1.png" width="500px" />
+            </p>
+
+            <p>
+                Here, <b>20 bits</b> have been transferred in <b>0.05 seconds</b> (50ms), and so the bit rate is
+                <b>400 bps</b>. However, there can only be a maximum of <b>10 signal changes</b> in that same time
+                period, so the Baud rate is <b>200 changes/sec</b>.
+            </p>
+
+            <p>
+                In general, <code class="no-underline"><b>bit rate</b> (bps) = <b>Baud rate</b> (changes/sec) &times;
+                <b>bits per signal</b> (bits)</code>. <br /> &nbsp;
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Bandwidth</strong> (in the context of communication) is the range of frequencies which can be used in a medium.
+            </p>
+
+            <p>
+                That means that bandwidth is equal to the <b>highest possible frequency</b> minus the <b>lowest possible
+                frequency</b> that can be transmitted in a certain medium. Because <b>bandwidth is directly proportional
+                to bit rate</b>, a <b>higher bandwidth</b> means a <b>higher bit rate</b>.
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Latency</strong> is the time delay between a signal being sent and received.
+            </p>
+
+            <p>
+                Note that latency is <b>unrelated to bit rate</b>. It is possible to have a <b>high bit rate</b> (a lot
+                of data sent every second) with a <b>high latency</b> (the data takes a long time to get to the receiver).
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                Calculate the bit rate of a communication that has a Baud rate of 3 MegaBaud and 16 possible voltage levels.
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    16 voltage levels means 4 bits per signal (because 2<sup>4</sup> = 16). Therefore 
+                    <code>bit rate = 3,000,000 &times; 4 = 12Mbps</code>.
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>

@@ -518,7 +518,7 @@ img:not(.icon):not(#logo):not(.no-zoom) {
     cursor: zoom-in;
 }
 
-.no-underline {
+.no-underline, .no-underline * {
     text-decoration: none !important;
 }
 
@@ -953,11 +953,13 @@ h3#error-404-text {
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 649px) {
     div#header img#logo {
         content: url("./logos/square.png");
     }
+}
 
+@media (max-width: 500px) {
     h1#error-404-heading {
         font-size: 50px;
     }
