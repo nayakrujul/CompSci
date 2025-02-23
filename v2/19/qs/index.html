@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>Section 19 Revision Questions | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Revise Section 19 (Databases) with exam-style A Level Computer Science questions on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+
+            <h1 id="score">Score: 0/0</h1>
+
+            <h2 id="q-num">Question 1 of &infin;</h2>
+    
+            <div id="revision-questions">
+                <div class="rq" marks="4">
+                    <span class="pretext">
+                        <p>A relational database contains the following relations:</p>
+                        <p>
+                            <code><span class="other">Product</span>(<u>ProductID</u>, ProductName, Description, Price)</code> <br />
+                            <code><span class="other">OrderDetails</span>(<u>OrderID</u>, CustomerFirstName, CustomerSurname, CustomerAddress)</code> <br />
+                            <code><span class="other">OrderLine</span>(<u>OrderID, ProductID</u>, Quantity)</code>
+                        </p>
+                    </span>
+                    <span class="question">Why is this database not in 3NF? What issues could this cause? How could the database be normalised?</span>
+                    <span class="rq-answer">
+                        The customer fields in the <code class="other">OrderDetails</code> table are not dependent
+                        solely on the primary key of the table, <code>OrderID</code>
+                    </span>
+                    <span class="rq-answer">
+                        This could lead to data redundancy (where the customer details would have to be stored multiple
+                        times unnecessarily)
+                    </span>
+                    <span class="rq-answer">
+                        There might also be data inconsistency, where the details of a customer have not been updated in
+                        some places, and so there is confusion over which version is correct
+                    </span>
+                    <span class="rq-answer">
+                        To fix this, a new table should be created, e.g. <code>
+                            <span class="other">Customer</span>(<u>CustomerID</u>, FirstName, Surname, Address)
+                        </code>, and the <code class="other">OrderDetails</code> table should be updated to only include
+                        the <code>OrderID</code> and <code>CustomerID</code> fields.
+                    </span>
+                </div>
+                <div class="rq" marks="4">
+                    <span class="pretext">
+                        <p>A relational database contains a table with the following description:</p>
+                        <p><code><span class="other">Product</span>(<u>ProductID</u>, ProductName, Description, Price)</code></p>
+                        <p>
+                            The <code>Price</code> field stores an whole number of pennies to avoid floating-point
+                            rounding errors.
+                        </p>
+                    </span>
+                    <span class="question">Use SQL to create the <code class="small-code other">Product</code> table.</span>
+                    <span class="rq-answer">
+                        <code><span class="keyword">CREATE TABLE</span> <span class="other">Product</span></code> (
+                    </span>
+                    <span class="rq-answer">
+                        <code>&ensp; ProductID <span class="string">INTEGER</span> <span class="keyword">PRIMARY KEY</span>,</code>
+                    </span>
+                    <span class="rq-answer">
+                        <code>&ensp; ProductName <span class="string">TEXT</span>, <br />&ensp;&ensp; &ensp;</code>
+                        &thinsp;&thinsp;&thinsp;<code>Description <span class="string">TEXT</span>,</code>
+                    </span>
+                    <span class="rq-answer">
+                        <code>&ensp; Price <span class="string">INTEGER</span> <br /> &ensp; &thinsp;&thinsp;)</code>
+                    </span>
+                </div>
+                <div class="rq" marks="10">
+                    <span class="pretext">
+                        <p>A cinema uses a relational database containing four relations:</p>
+                        <p>
+                            <code><span class="other">Film</span>(<u>FilmID</u>, Title, Duration)</code> <br />
+                            <code><span class="other">Screening</span>(<u>ScreeningID</u>, FilmID, ScreeningDate, StartTime, ScreenNumber)</code> <br />
+                            <code><span class="other">Customer</span>(<u>CustomerID</u>, FirstName, LastName, EmailAddress)</code> <br />
+                            <code><span class="other">Booking</span>(<u>ScreeningID, CustomerID</u>, SeatNumber, IsPremiumSeat)</code>
+                        </p>
+                        <p>Assume all screenings start on time, and therefore end at <code>StartTime + Duration</code>.</p>
+                    </span>
+                    <span class="question">
+                        Write a SQL query to find all premium seat customers who were watching a film at
+                        <code id="js-target-0" class="string small-code">"12:34"</code> on
+                        <code id="js-target-1" class="string small-code">"2021-05-28"</code>.
+                        The query should only return the customers' full names and the title of the film they were watching.
+                        The results should be displayed in alphabetical order of last name.
+                    </span>
+                    <span class="rq-answer"><code>
+                        <span class="keyword">SELECT</span> FirstName, LastName, Title
+                    </code></span>
+                    <span class="rq-answer"><code>
+                        <span class="keyword">FROM</span> <span class="other">Customer</span>
+                    </code></span>
+                    <span class="rq-answer"><code>
+                        <span class="keyword">INNER JOIN</span> <span class="other">Booking</span>
+                        <span class="keyword">ON</span> <span class="other">Customer</span>.CustomerID =
+                        <span class="other">Booking</span>.CustomerID
+                    </code></span>
+                    <span class="rq-answer"><code>
+                        <span class="keyword">INNER JOIN</span> <span class="other">Screening</span>
+                        <span class="keyword">ON</span> <span class="other">Booking</span>.ScreeningID =
+                        <span class="other">Screening</span>.ScreeningID
+                    </code></span>
+                    <span class="rq-answer"><code>
+                        <span class="keyword">INNER JOIN</span> <span class="other">Film</span>
+                        <span class="keyword">ON</span> <span class="other">Screening</span>.FilmID =
+                        <span class="other">Film</span>.FilmID
+                    </code></span>
+                    <span class="rq-answer"><code>
+                        <span class="keyword">WHERE</span> IsPremiumSeat = <span class="number">TRUE</span>
+                    </code></span>
+                    <span class="rq-answer"><code>
+                        <span class="keyword">AND</span> ScreeningDate =
+                        <span id="js-target-2" class="string">"2021-05-28"</span>
+                    </code></span>
+                    <span class="rq-answer"><code>
+                        <span class="keyword">AND</span> StartTime &lt;=
+                        <span id="js-target-3" class="string">"12:34"</span>
+                    </code></span>
+                    <span class="rq-answer"><code>
+                        <span class="keyword">AND</span> StartTime + Duration &gt;=
+                        <span id="js-target-4" class="string">"12:34"</span>
+                    </code></span>
+                    <span class="rq-answer"><code>
+                        <span class="keyword">ORDER BY</span> LastName <span class="keyword">ASC</span>
+                    </code></span>
+                    <span class="rq-answer-text">
+                        <br />Alternative answer, not using <code class="keyword">JOIN</code>s:<br />&nbsp;
+                    </span>
+                    <span class="rq-answer"><code>
+                        <span class="keyword">SELECT</span> FirstName, LastName, Title
+                    </code></span>
+                    <span class="rq-answer"><code>
+                        <span class="keyword">FROM</span> <span class="other">Customer</span>,
+                        <span class="other">Booking</span>, <span class="other">Screening</span>,
+                        <span class="other">Film</span>
+                    </code></span>
+                    <span class="rq-answer"><code>
+                        <span class="keyword">WHERE</span> <span class="other">Customer</span>.CustomerID =
+                        <span class="other">Booking</span>.CustomerID
+                    </code></span>
+                    <span class="rq-answer"><code>
+                        <span class="keyword">AND</span> <span class="other">Booking</span>.ScreeningID =
+                        <span class="other">Screening</span>.ScreeningID
+                    </code></span>
+                    <span class="rq-answer"><code>
+                        <span class="keyword">AND</span> <span class="other">Screening</span>.FilmID =
+                        <span class="other">Film</span>.FilmID
+                    </code></span>
+                    <span class="rq-answer"><code>
+                        <span class="keyword">AND</span> IsPremiumSeat = <span class="number">TRUE</span>
+                    </code></span>
+                    <span class="rq-answer"><code>
+                        <span class="keyword">AND</span> ScreeningDate =
+                        <span id="js-target-5" class="string">"2021-05-28"</span>
+                    </code></span>
+                    <span class="rq-answer"><code>
+                        <span class="keyword">AND</span> StartTime &lt;=
+                        <span id="js-target-6" class="string">"12:34"</span>
+                    </code></span>
+                    <span class="rq-answer"><code>
+                        <span class="keyword">AND</span> StartTime + Duration &gt;=
+                        <span id="js-target-7" class="string">"12:34"</span>
+                    </code></span>
+                    <span class="rq-answer"><code>
+                        <span class="keyword">ORDER BY</span> LastName <span class="keyword">ASC</span>
+                    </code></span>
+                </div>
+                <div class="rq" marks="3">
+                    <span class="question">Explain what is meant by a normalised database.</span>
+                    <span class="rq-answer">All non-key attributes are dependent on the primary key of the table</span>
+                    <span class="rq-answer">There are no partial dependencies / All non-key attributes depend on the whole key</span>
+                    <span class="rq-answer">There are no transitive dependencies / All non-key attributes depend on nothing but the key</span>
+                    <span class="rq-answer">All data is atomic / There are no repeating groups</span>
+                </div>
+                <div class="rq" marks="2">
+                    <span class="question">Why is database normalisation important?</span>
+                    <span class="rq-answer">To eliminate/avoid data inconsistency</span>
+                    <span class="rq-answer">To eliminate/reduce data redundancy</span>
+                    <span class="rq-answer">To improve the performance of the database</span>
+                </div>
+                <div class="rq" marks="4">
+                    <span class="question">
+                        State the conditions under which concurrent access to a database could cause a problem,
+                        and explain how this could be dealt with using timestamp ordering.
+                    </span>
+                    <span class="rq-answer">
+                        It can cause a problem when two users try to update the same record at the same time
+                    </span>
+                    <span class="rq-answer">
+                        The database assigns read and write timestamps to each record, which store the last successful
+                        read and write operations on the record respectively
+                    </span>
+                    <span class="rq-answer">
+                        When a read transaction happens on a record, the timestamp of the transaction must be greater
+                        than the write timestamp of the record
+                    </span>
+                    <span class="rq-answer">
+                        When a write transaction happens on a record, the timestamp of the transaction must be greater
+                        than both the read and write timestamps of the record
+                    </span>
+                </div>
+            </div>
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+        <script src="../../scripts/rqs.js"></script>
+        <script src="./main.js"></script>
+
+    </body>
+</html>

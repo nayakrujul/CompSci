@@ -272,7 +272,8 @@ const pageNames = [
         "Data Modelling",
         "More SQL",
         "Database Normalisation",
-        "Client-Server Databases"
+        "Client-Server Databases",
+        "qs"
     ],
     []
 ];
