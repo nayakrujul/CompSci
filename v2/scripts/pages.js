@@ -259,6 +259,8 @@ const pageNames = [
         "qs"
     ],
     [
+        "Time Complexity",
+        "Classification of Algorithms",
         "Graph Traversal",
         "Tree Traversal",
         "Reverse Polish Notation",

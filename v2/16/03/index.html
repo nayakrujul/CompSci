@@ -4,7 +4,7 @@
     <head>
         <link rel="stylesheet" href="../../main.css">
 
-        <title>16.03 - Reverse Polish Notation | CS.RN v2</title>
+        <title>16.03 - Graph Traversal | CS.RN v2</title>
 
         <link rel="icon" type="image/png" href="../../logos/square.png"/>
         <meta property="og:image" content="../../logos/square.png" />
@@ -14,7 +14,7 @@
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Learn about Reverse Polish Notation and how it can be used for A Level Computer Science on CS.RN v2.">
+        <meta name="description" content="Learn about the algorithms required to move around a graph for A Level Computer Science on CS.RN v2.">
     </head>
 
     <body>
@@ -25,45 +25,55 @@
 
             <p class="definition">
                 <img src="../../icons/book.svg" class="icon" />
-                <strong>Reverse Polish Notation</strong> is an alternative way of writing mathematical expressions, where the operator goes after the operands.
+                A <strong>graph traversal</strong> algorithm goes through a graph, hitting every connected node.
             </p>
 
-            <p>Diagram 1 shows how the expression <code><span class="number">9</span> + <span class="number">10</span></code> can be converted to Reverse Polish Notation.</p>
+            <p>There are two ways of implementing a graph-traversal algorithm.<br />&nbsp;</p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>depth-first graph traversal</strong> algorithm explores each route as far as possible before backtracking.
+            </p>
+
+            <p>It uses a <b>stack</b> to store the nodes which need to be visited.</p>
+
+            <p><br/>Diagram 1 shows a step-by-step animation of how a depth-first traversal would work. <b><i>Use the arrows to navigate.</i></b></p>
 
             <p class="diagram">
                 <img src="../../icons/image.svg" class="icon" />
                 Diagram 1 <br /> <br />
-                <img src="./diagram1.png" width="500px" />
+                <img src="../../icons/left.svg" class="no-zoom" id="js-target-d1" height="32px" style="cursor: pointer; filter: invert(40%) sepia(91%) saturate(1234%) hue-rotate(220deg) brightness(100%) contrast(93%); border: 3px solid; border-radius: 50%; padding: 0px 8px;" />
+                <img src="./df/Slide1.png" id="js-target-d0" width="1000px" style="max-width: calc(70vw - 10px);" />
+                <img src="../../icons/right.svg" class="no-zoom" id="js-target-d2" height="32px" style="cursor: pointer; filter: invert(40%) sepia(91%) saturate(1234%) hue-rotate(220deg) brightness(100%) contrast(93%); border: 3px solid; border-radius: 50%; padding: 0px 8px;" />
             </p>
 
             <p>
-                <br />But <b>why use Reverse Polish Notation</b>? Consider the infix expression <code>
-                (<span class="number">3</span> + <span class="number">7</span>) / (<span class="number">6</span> -
-                <span class="number">4</span>)</code>. In RPN, the <b>parentheses are never required</b>, as the order
-                of operations can be inferred by the order of operators in the expression: <code><span class="number">3</span>
-                <span class="number">7</span> + <span class="number">6</span> <span class="number">4</span> - /</code>.
+                In this example, the program went <b>as far as possible along a single route</b> (<code>ABEFD</code>)
+                before backtracking to hit <code>G</code> and <code>C</code>, and then finally reaching <code>H</code>.
+                <br />&nbsp;
             </p>
 
-            <p><br />Also, Reverse Polish Notation can be <b>easily evaluated by stack-based interpreters</b>.</p>
-
-            <p>
-                Diagram 2 shows how the RPN expression <code>
-                    <span class="number">3</span> <span class="number">7</span> + <span class="number">6</span>
-                    <span class="number">4</span> - /
-                </code> could be evaluated by a stack-based interpreter.
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>breadth-first graph traversal</strong> algorithm explores all the nodes in the first layer before moving on to the next layer.
             </p>
+
+            <p>It uses a <b>queue</b> instead of a stack.</p>
+
+            <p><br/>Diagram 2 shows a step-by-step animation of how a breadth-first traversal would work. <b><i>Use the arrows to navigate.</i></b></p>
 
             <p class="diagram">
                 <img src="../../icons/image.svg" class="icon" />
                 Diagram 2 <br /> <br />
-                <img src="../../icons/left.svg" class="no-zoom" id="js-target-1" height="32px" style="cursor: pointer; filter: invert(40%) sepia(91%) saturate(1234%) hue-rotate(220deg) brightness(100%) contrast(93%); border: 3px solid; border-radius: 50%; padding: 0px 8px;" />
-                <img src="./diagram2/Slide1.png" id="js-target-0" width="750px" style="max-width: calc(70vw - 10px);" />
-                <img src="../../icons/right.svg" class="no-zoom" id="js-target-2" height="32px" style="cursor: pointer; filter: invert(40%) sepia(91%) saturate(1234%) hue-rotate(220deg) brightness(100%) contrast(93%); border: 3px solid; border-radius: 50%; padding: 0px 8px;" />
+                <img src="../../icons/left.svg" class="no-zoom" id="js-target-b1" height="32px" style="cursor: pointer; filter: invert(40%) sepia(91%) saturate(1234%) hue-rotate(220deg) brightness(100%) contrast(93%); border: 3px solid; border-radius: 50%; padding: 0px 8px;" />
+                <img src="./bf/Slide1.png" id="js-target-b0" width="1000px" style="max-width: calc(70vw - 10px);" />
+                <img src="../../icons/right.svg" class="no-zoom" id="js-target-b2" height="32px" style="cursor: pointer; filter: invert(40%) sepia(91%) saturate(1234%) hue-rotate(220deg) brightness(100%) contrast(93%); border: 3px solid; border-radius: 50%; padding: 0px 8px;" />
             </p>
 
-            <p><br />
-                Examples of <b>interpreters that use RPN</b> include Postscript, the Java Virtual Machine (to run bytecode),
-                and <a href="https://thunno2.rujulnayak.com/run/#aGVhZGVyPSZjb2RlPTMlMjA3JTIwJTJCJTIwNiUyMDQlMjAtJTIwJTJGJmZvb3Rlcj0maW5wdXQ9JmZsYWdzPQ==" target="_blank">Thunno 2</a>.
+            <p>
+                In this example, the program first <b>hit all of the neighbours</b> of <code>A</code> (<code>B</code>,
+                <code>C</code>, <code>D</code>, and <code>G</code>), before hitting all of their neighbours
+                (<code>E</code> and <code>F</code>), and then finally their neighbours (<code>H</code>).
             </p>
 
             <br />
@@ -72,13 +82,13 @@
     
             <p class="question">
                 <img src="../../icons/question.svg" class="icon" />
-                Convert the RPN expression <code><span class="number">7 4</span> - <span class="number">15 8</span> + *</code> to infix and evaluate the result.
+                What are some uses of depth-first and breadth-first traversal algorithms?
             </p>
     
             <p class="summary-question">
                 <span class="answer">
-                    <code>(<span class="number">7</span> - <span class="number">4</span>) * (<span class="number">15</span> + <span class="number">8</span>)</code>
-                    (answer is <code class="number">69</code>).
+                    Depth-first traversal algorithms can be used to find a way out of a maze. Breadth-first traversal
+                    algorithms can be used to find the shortest path between two nodes.
                 </span>
             </p>
 

@@ -4,7 +4,7 @@
     <head>
         <link rel="stylesheet" href="../../main.css">
 
-        <title>16.01 - Graph Traversal | CS.RN v2</title>
+        <title>16.01 - Time Complexity | CS.RN v2</title>
 
         <link rel="icon" type="image/png" href="../../logos/square.png"/>
         <meta property="og:image" content="../../logos/square.png" />
@@ -14,7 +14,7 @@
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Learn about the algorithms required to move around a graph for A Level Computer Science on CS.RN v2.">
+        <meta name="description" content="Study the theory of different time complexity classes, and how they can be expressed using Big O Notation, for A Level Computer Science on CS.RN v2.">
     </head>
 
     <body>
@@ -25,55 +25,163 @@
 
             <p class="definition">
                 <img src="../../icons/book.svg" class="icon" />
-                A <strong>graph traversal</strong> algorithm goes through a graph, hitting every connected node.
-            </p>
-
-            <p>There are two ways of implementing a graph-traversal algorithm.<br />&nbsp;</p>
-
-            <p class="definition">
-                <img src="../../icons/book.svg" class="icon" />
-                A <strong>depth-first graph traversal</strong> algorithm explores each route as far as possible before backtracking.
-            </p>
-
-            <p>It uses a <b>stack</b> to store the nodes which need to be visited.</p>
-
-            <p><br/>Diagram 1 shows a step-by-step animation of how a depth-first traversal would work. <b><i>Use the arrows to navigate.</i></b></p>
-
-            <p class="diagram">
-                <img src="../../icons/image.svg" class="icon" />
-                Diagram 1 <br /> <br />
-                <img src="../../icons/left.svg" class="no-zoom" id="js-target-d1" height="32px" style="cursor: pointer; filter: invert(40%) sepia(91%) saturate(1234%) hue-rotate(220deg) brightness(100%) contrast(93%); border: 3px solid; border-radius: 50%; padding: 0px 8px;" />
-                <img src="./df/Slide1.png" id="js-target-d0" width="1000px" style="max-width: calc(70vw - 10px);" />
-                <img src="../../icons/right.svg" class="no-zoom" id="js-target-d2" height="32px" style="cursor: pointer; filter: invert(40%) sepia(91%) saturate(1234%) hue-rotate(220deg) brightness(100%) contrast(93%); border: 3px solid; border-radius: 50%; padding: 0px 8px;" />
+                The <strong>time complexity</strong> of an algorithm is a way of expressing how the performance of the algorithm scales as the input gets bigger.
             </p>
 
             <p>
-                In this example, the program went <b>as far as possible along a single route</b> (<code>ABEFD</code>)
-                before backtracking to hit <code>G</code> and <code>C</code>, and then finally reaching <code>H</code>.
-                <br />&nbsp;
+                We use <b>Big O Notation</b> to describe the time complexity of an algorithm. To do this, we look at the
+                <b>number of steps</b> the algorithm takes <b>relative to the size of the input</b>, <code>n</code>.
+                Then, we <b>ignore everything except the largest term</b>, and <b>remove all constant factors</b>. For
+                example, <code>0.5n<sup>2</sup> + 2n - 3</code> becomes simply <code>n<sup>2</sup></code>.
+            </p>
+
+            <br />
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>constant time</strong> algorithm takes the same amount of time to complete regardless of the input.
+            </p>
+
+            <p>
+                An example of a constant time algorithm would be <b>getting the first element of an array</b>. This is
+                because <b>no matter how long the array is</b>, the subroutine will complete in the <b>same amount of
+                time</b>. This is written as <b class="no-underline"><code>O(1)</code></b> in Big O Notation.
+            </p>
+
+            <p>Example 1 shows an algorithm to retrieve the first element of an array.</p>
+
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 1 <br />
+                <code>
+                    <span class="keyword">SUBROUTINE</span> <span class="other">FirstItem</span>(arr) <br />
+                    &ensp; <span class="function">RETURN</span> arr[<span class="number">0</span>] <br />
+                    <span class="keyword">ENDSUBROUTINE</span>
+                </code>
             </p>
 
             <p class="definition">
                 <img src="../../icons/book.svg" class="icon" />
-                A <strong>breadth-first graph traversal</strong> algorithm explores all the nodes in the first layer before moving on to the next layer.
-            </p>
-
-            <p>It uses a <b>queue</b> instead of a stack.</p>
-
-            <p><br/>Diagram 2 shows a step-by-step animation of how a breadth-first traversal would work. <b><i>Use the arrows to navigate.</i></b></p>
-
-            <p class="diagram">
-                <img src="../../icons/image.svg" class="icon" />
-                Diagram 2 <br /> <br />
-                <img src="../../icons/left.svg" class="no-zoom" id="js-target-b1" height="32px" style="cursor: pointer; filter: invert(40%) sepia(91%) saturate(1234%) hue-rotate(220deg) brightness(100%) contrast(93%); border: 3px solid; border-radius: 50%; padding: 0px 8px;" />
-                <img src="./bf/Slide1.png" id="js-target-b0" width="1000px" style="max-width: calc(70vw - 10px);" />
-                <img src="../../icons/right.svg" class="no-zoom" id="js-target-b2" height="32px" style="cursor: pointer; filter: invert(40%) sepia(91%) saturate(1234%) hue-rotate(220deg) brightness(100%) contrast(93%); border: 3px solid; border-radius: 50%; padding: 0px 8px;" />
+                A <strong>logarithmic time</strong> algorithm halves the size of the problem at every step.
             </p>
 
             <p>
-                In this example, the program first <b>hit all of the neighbours</b> of <code>A</code> (<code>B</code>,
-                <code>C</code>, <code>D</code>, and <code>G</code>), before hitting all of their neighbours
-                (<code>E</code> and <code>F</code>), and then finally their neighbours (<code>H</code>).
+                An example of a logarithmic time algorithm would be <b>converting a number to binary</b>. This is
+                because <b>doubling the input number adds one extra step</b> that needs to be completed. This is written
+                as <b class="no-underline"><code>O(log n)</code></b> in Big O Notation.
+            </p>
+
+            <p>Example 2 shows an algorithm to convert a number into binary.</p>
+
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 2 <br />
+                <code>
+                    <span class="keyword">SUBROUTINE</span> <span class="other">ToBinary</span>(num) <br />
+                    &ensp; <span class="keyword">IF</span> num &lt; <span class="number">2</span> <span class="keyword">THEN</span> <br />
+                    &ensp; &ensp; <span class="function">RETURN</span> <span class="other">STR</span>(num) <br />
+                    &ensp; <span class="keyword">ENDIF</span> <br />
+                    &ensp; <span class="function">RETURN</span> <span class="other">ToBinary</span>(num <span class="other">DIV</span>
+                    <span class="number">2</span>) + <span class="other">STR</span>(num % <span class="number">2</span>) <br />
+                    <span class="keyword">ENDSUBROUTINE</span>
+                </code>
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>linear time</strong> algorithm takes twice as long to complete if you double the input size.
+            </p>
+
+            <p>
+                An example of a linear time algorithm would be <b>calculating the sum of an array</b>. This is
+                because there is a <code>FOR</code> loop which <b>iterates through the whole array</b>, so the <b>time
+                taken</b> will be more or less <b>proportional to the size of the input</b>. This is written as
+                <b class="no-underline"><code>O(n)</code></b> in Big O Notation.
+            </p>
+
+            <p>Example 3 shows an algorithm to find the sum of an array.</p>
+
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 3 <br />
+                <code>
+                    <span class="keyword">SUBROUTINE</span> <span class="other">Sum</span>(arr) <br />
+                    &ensp; result &larr; <span class="number">0</span> <br />
+                    &ensp; <span class="keyword">FOR</span> i &larr; <span class="number">0</span> <span class="keyword">TO</span>
+                    <span class="other">LEN</span>(arr)-<span class="number">1</span> <br />
+                    &ensp; &ensp; result &larr; result + arr[i] <br />
+                    &ensp; <span class="keyword">ENDFOR</span> <br />
+                    &ensp; <span class="function">RETURN</span> result <br />
+                    <span class="keyword">ENDSUBROUTINE</span>
+                </code>
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>quadratic time</strong> algorithm takes four times as long to complete if you double the input size.
+            </p>
+
+            <p>
+                An example of a quadratic time algorithm would be <b>finding all distinct pairs in an array</b>. This is
+                because there is <b>nested iteration which goes through the array twice</b>, so the <b>time taken</b>
+                will be more or less <b>proportional to the size of the input squares</b>. This is written as
+                <b class="no-underline"><code>O(n<sup>2</sup>)</code></b> in Big O Notation.
+            </p>
+
+            <p>Example 4 shows an algorithm to find all distinct pairs of elements in an array.</p>
+
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 4 <br />
+                <code>
+                    <span class="keyword">SUBROUTINE</span> <span class="other">FindAllPairs</span>(arr) <br />
+                    &ensp; result &larr; [] <br />
+                    &ensp; <span class="keyword">FOR</span> i &larr; <span class="number">0</span> <span class="keyword">TO</span>
+                    <span class="other">LEN</span>(arr)-<span class="number">2</span> <br />
+                    &ensp; &ensp; <span class="keyword">FOR</span> j &larr; i + <span class="number">1</span>
+                    <span class="keyword">TO</span> <span class="other">LEN</span>(arr)-<span class="number">1</span> <br />
+                    &ensp; &ensp; &ensp; result.<span class="other">Append</span>([arr[i], arr[j]]) <br />
+                    &ensp; &ensp; <span class="keyword">ENDFOR</span> <br />
+                    &ensp; <span class="keyword">ENDFOR</span> <br />
+                    &ensp; <span class="function">RETURN</span> result <br />
+                    <span class="keyword">ENDSUBROUTINE</span>
+                </code>
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                An <strong>exponential time</strong> algorithm takes significantly longer to complete when you make the input bigger.
+            </p>
+
+            <p>
+                An example of a exponential time algorithm would be <b>finding all subsets of an array</b>. This is
+                because the <b>total number of subsets</b> in an array of length <code>n</code> <b>is
+                <code>2<sup>n</sup></code></b>. This is written as <b class="no-underline"><code>O(2<sup>n</sup>)</code></b>
+                in Big O Notation.
+            </p>
+
+            <p>Example 5 shows an algorithm to find all distinct pairs of elements in an array.</p>
+
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 5 <br />
+                <code>
+                    <span class="keyword">SUBROUTINE</span> <span class="other">Subsets</span>(arr) <br />
+                    &ensp; result &larr; [] <br />
+                    &ensp; <span class="keyword">FOR</span> mask &larr; <span class="number">0</span> <span class="keyword">TO</span>
+                    <span class="number">2</span>**<span class="other">LEN</span>(arr) <br />
+                    &ensp; &ensp; subset &larr; [] <br />
+                    &ensp; &ensp; <span class="keyword">FOR</span> i &larr; <span class="number">0</span>
+                    <span class="keyword">TO</span> <span class="other">LEN</span>(arr)-<span class="number">1</span> <br />
+                    &ensp; &ensp; &ensp; <span class="keyword">IF</span> (mask >> i) & <span class="number">1</span> <span class="keyword">THEN</span> <br />
+                    &ensp; &ensp; &ensp; &ensp; subset.<span class="other">Append</span>(arr[i]) <br />
+                    &ensp; &ensp; &ensp; <span class="keyword">ENDIF</span> <br />
+                    &ensp; &ensp; <span class="keyword">ENDFOR</span> <br />
+                    &ensp; &ensp; result.<span class="other">Append</span>(subset) <br />
+                    &ensp; <span class="keyword">ENDFOR</span> <br />
+                    &ensp; <span class="function">RETURN</span> result <br />
+                    <span class="keyword">ENDSUBROUTINE</span>
+                </code>
             </p>
 
             <br />
@@ -82,13 +190,14 @@
     
             <p class="question">
                 <img src="../../icons/question.svg" class="icon" />
-                What are some uses of depth-first and breadth-first traversal algorithms?
+                What is the time complexity of an algorithm to find the maximum item of an array?
             </p>
     
             <p class="summary-question">
                 <span class="answer">
-                    Depth-first traversal algorithms can be used to find a way out of a maze. Breadth-first traversal
-                    algorithms can be used to find the shortest path between two nodes.
+                    <code>O(n)</code>, because you would have to go through each item (just like the
+                    <code class="other">Sum</code> function in Example 3). Therefore that algorithm has a linear time
+                    complexity.
                 </span>
             </p>
 
@@ -102,7 +211,6 @@
         <script src="../../scripts/version.js"></script>
         <script src="../../scripts/footer.js"></script>
         <script src="../../scripts/pages.js"></script>
-        <script src="./main.js"></script>
 
     </body>
 </html>

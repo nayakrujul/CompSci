@@ -4,7 +4,7 @@
     <head>
         <link rel="stylesheet" href="../../main.css">
 
-        <title>16.04 - Searching and Sorting Algorithms | CS.RN v2</title>
+        <title>16.04 - Tree Traversal | CS.RN v2</title>
 
         <link rel="icon" type="image/png" href="../../logos/square.png"/>
         <meta property="og:image" content="../../logos/square.png" />
@@ -14,52 +14,93 @@
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Revise searching algorithms for A Level Computer Science on CS.RN v2.">
+        <meta name="description" content="Study the algorithms required to move around a tree for A Level Computer Science on CS.RN v2.">
     </head>
 
     <body>
 
         <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
         <div id="page">
-            <p><i>GCSE Link: <a href="../../1/04/">1.04 - Linear Search</a></i></p>
-
-            <p>This page contains <b>only GCSE content</b>.</p>
+            <p><i>GCSE Link: None</i></p>
 
             <p class="definition">
                 <img src="../../icons/book.svg" class="icon" />
-                A <strong>searching algorithm</strong> is an algorithm to find the index of an item in a list.
+                A <strong>tree traversal</strong> algorithm goes through a binary tree, hitting every node in a specific order.
             </p>
 
-            <p>There are two main searching algorithms: <b>linear search</b> and <b>binary search</b>.</p>
+            <p>There are three types of tree traversal: <b>pre-order</b>, <b>in-order</b>, and <b>post-order</b>.</p>
 
-            <p>
-                Linear search <b>checks each item in order</b> from the start of the list until it <b>finds the target
-                item</b> or <b>reaches the end</b> of the list.
+            <p><br />Example 1 shows some pseudocode for a pre-order traversal.</p>
+
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 1 <br />
+                <code>
+                    <span class="keyword">SUBROUTINE</span> <span class="other">PreOrder</span>(root) <br />
+                    &ensp; <span class="function">OUTPUT</span> root <br />
+                    &ensp; <span class="keyword">IF</span> root.left &ne; <span class="keyword">null THEN</span> <br />
+                    &ensp; &ensp; <span class="other">PreOrder</span>(root.left) <br />
+                    &ensp; <span class="keyword">ENDIF</span> <br />
+                    &ensp; <span class="keyword">IF</span> root.right &ne; <span class="keyword">null THEN</span> <br />
+                    &ensp; &ensp; <span class="other">PreOrder</span>(root.right) <br />
+                    &ensp; <span class="keyword">ENDIF</span> <br />
+                    <span class="keyword">ENDSUBROUTINE</span>
+                </code>
             </p>
 
-            <p>
-                Binary search <b>takes a sorted list</b>, and starts with <b>the middle item</b>. Then, if the target
-                item is lower it <b>discards the right half</b> of the list, and if the target item is higher it
-                <b>discards the left half</b> of the list. It keeps going until it <b>finds the target item</b> or
-                <b>discards every item</b>.
+            <p><br />Example 2 shows some pseudocode for an in-order traversal.</p>
+
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 2 <br />
+                <code>
+                    <span class="keyword">SUBROUTINE</span> <span class="other">InOrder</span>(root) <br />
+                    &ensp; <span class="keyword">IF</span> root.left &ne; <span class="keyword">null THEN</span> <br />
+                    &ensp; &ensp; <span class="other">InOrder</span>(root.left) <br />
+                    &ensp; <span class="keyword">ENDIF</span> <br />
+                    &ensp; <span class="function">OUTPUT</span> root <br />
+                    &ensp; <span class="keyword">IF</span> root.right &ne; <span class="keyword">null THEN</span> <br />
+                    &ensp; &ensp; <span class="other">InOrder</span>(root.right) <br />
+                    &ensp; <span class="keyword">ENDIF</span> <br />
+                    <span class="keyword">ENDSUBROUTINE</span>
+                </code>
             </p>
 
-            <p class="definition">
-                <img src="../../icons/book.svg" class="icon" />
-                A <strong>sorting algorithm</strong> is an algorithm to put the items of a list in order.
+            <p><br />Example 3 shows some pseudocode for a post-order traversal.</p>
+
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 3 <br />
+                <code>
+                    <span class="keyword">SUBROUTINE</span> <span class="other">PostOrder</span>(root) <br />
+                    &ensp; <span class="keyword">IF</span> root.left &ne; <span class="keyword">null THEN</span> <br />
+                    &ensp; &ensp; <span class="other">PostOrder</span>(root.left) <br />
+                    &ensp; <span class="keyword">ENDIF</span> <br />
+                    &ensp; <span class="keyword">IF</span> root.right &ne; <span class="keyword">null THEN</span> <br />
+                    &ensp; &ensp; <span class="other">PostOrder</span>(root.right) <br />
+                    &ensp; <span class="keyword">ENDIF</span> <br />
+                    &ensp; <span class="function">OUTPUT</span> root <br />
+                    <span class="keyword">ENDSUBROUTINE</span>
+                </code>
             </p>
 
-            <p>There are two main sorting algorithms: <b>bubble sort</b> and <b>merge sort</b>.</p>
-
-            <p>
-                Bubble sort <b>swaps pairs of numbers</b> which are in the wrong order <b>until the list is sorted</b>.
-                It requires <b>up to <code>n</code> full passes</b> for a list of length <code>n</code>, where in each
-                pass <b>all consecutive pairs are examined</b>.
+            <p><br />
+                As you can see from the examples, the <b>only difference</b> between the three algorithms is
+                <b>where the output happens</b>. In a pre-order traversal, it happens <b>at the start</b>. In an
+                in-order traversal, it happens <b>in the middle</b>. In a post-order traversal, it happens <b>at the
+                end</b>.
             </p>
 
-            <p>
-                Merge sort <b>repeatedly splits the list in half</b> until each sub-list has only one item. Then, it
-                <b>sorts the items</b> while <b>putting the lists back together</b>.
+            <p><br />Let's try an example.</p>
+
+            <p>Diagram 1 shows a step-by-step animation of how a <b>post-order</b> traversal would work. <b><i>Use the arrows to navigate.</i></b></p>
+
+            <p class="diagram">
+                <img src="../../icons/image.svg" class="icon" />
+                Diagram 1 <br /> <br />
+                <img src="../../icons/left.svg" class="no-zoom" id="js-target-1" height="32px" style="cursor: pointer; filter: invert(40%) sepia(91%) saturate(1234%) hue-rotate(220deg) brightness(100%) contrast(93%); border: 3px solid; border-radius: 50%; padding: 0px 8px;" />
+                <img src="./anim/Slide1.png" id="js-target-0" width="750px" style="max-width: calc(70vw - 10px);" />
+                <img src="../../icons/right.svg" class="no-zoom" id="js-target-2" height="32px" style="cursor: pointer; filter: invert(40%) sepia(91%) saturate(1234%) hue-rotate(220deg) brightness(100%) contrast(93%); border: 3px solid; border-radius: 50%; padding: 0px 8px;" />
             </p>
 
             <br />
@@ -68,20 +109,13 @@
     
             <p class="question">
                 <img src="../../icons/question.svg" class="icon" />
-                State the worst-case time complexities of each of the algorithms mentioned above.
+                What would be the output of an in-order traversal on the tree shown in Diagram 1?
             </p>
     
             <p class="summary-question">
                 <span class="answer">
-                    Linear search: <code>O(n)</code>, which means that doubling the length of the list doubles the
-                    maximum number of comparisons. <br />
-                    Binary search: <code>O(log<sub>2</sub> n)</code>, which means that doubling the length of the list
-                    adds one to the maximum number of comparisons. <br />
-                    <br />
-                    Bubble sort: <code>O(n<sup>2</sup>)</code>, which means that doubling the length of the list
-                    quadruples the maximum number of comparisons. <br />
-                    Merge sort: <code>O(n log<sub>2</sub> n)</code>, which means that doubling the length of the list
-                    roughly doubles the maximum number of comparisons.
+                    <code>ABCDEFG</code>: an in-order traversal on a binary search tree will always give the output in
+                    ascending (alphabetical) order.
                 </span>
             </p>
 
@@ -95,6 +129,7 @@
         <script src="../../scripts/version.js"></script>
         <script src="../../scripts/footer.js"></script>
         <script src="../../scripts/pages.js"></script>
+        <script src="./main.js"></script>
 
     </body>
 </html>

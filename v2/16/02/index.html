@@ -4,7 +4,7 @@
     <head>
         <link rel="stylesheet" href="../../main.css">
 
-        <title>16.02 - Tree Traversal | CS.RN v2</title>
+        <title>16.02 - Classification of Algorithms | CS.RN v2</title>
 
         <link rel="icon" type="image/png" href="../../logos/square.png"/>
         <meta property="og:image" content="../../logos/square.png" />
@@ -14,7 +14,7 @@
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Study the algorithms required to move around a tree for A Level Computer Science on CS.RN v2.">
+        <meta name="description" content="Learn about the differences between tractable, intractable, and non-computable problems for A Level Computer Science on CS.RN v2.">
     </head>
 
     <body>
@@ -25,82 +25,47 @@
 
             <p class="definition">
                 <img src="../../icons/book.svg" class="icon" />
-                A <strong>tree traversal</strong> algorithm goes through a binary tree, hitting every node in a specific order.
+                A <strong>tractable</strong> problem is one that can be solved in polynomial time or better.
             </p>
 
-            <p>There are three types of tree traversal: <b>pre-order</b>, <b>in-order</b>, and <b>post-order</b>.</p>
-
-            <p><br />Example 1 shows some pseudocode for a pre-order traversal.</p>
-
-            <p class="code">
-                <img src="../../icons/code.svg" class="icon" />
-                Example 1 <br />
-                <code>
-                    <span class="keyword">SUBROUTINE</span> <span class="other">PreOrder</span>(root) <br />
-                    &ensp; <span class="function">OUTPUT</span> root <br />
-                    &ensp; <span class="keyword">IF</span> root.left &ne; <span class="keyword">null THEN</span> <br />
-                    &ensp; &ensp; <span class="other">PreOrder</span>(root.left) <br />
-                    &ensp; <span class="keyword">ENDIF</span> <br />
-                    &ensp; <span class="keyword">IF</span> root.right &ne; <span class="keyword">null THEN</span> <br />
-                    &ensp; &ensp; <span class="other">PreOrder</span>(root.right) <br />
-                    &ensp; <span class="keyword">ENDIF</span> <br />
-                    <span class="keyword">ENDSUBROUTINE</span>
-                </code>
+            <p>
+                Polynomial time is an umbrella term for <b>any time complexity of the form <code>O(n<sup>k</sup>)</code></b>.
+                It includes <b>quadratic time</b> (<code>O(n<sup>2</sup>)</code>), <b>cubic time</b>
+                (<code>O(n<sup>3</sup>)</code>), and so on.
             </p>
 
-            <p><br />Example 2 shows some pseudocode for an in-order traversal.</p>
-
-            <p class="code">
-                <img src="../../icons/code.svg" class="icon" />
-                Example 2 <br />
-                <code>
-                    <span class="keyword">SUBROUTINE</span> <span class="other">InOrder</span>(root) <br />
-                    &ensp; <span class="keyword">IF</span> root.left &ne; <span class="keyword">null THEN</span> <br />
-                    &ensp; &ensp; <span class="other">InOrder</span>(root.left) <br />
-                    &ensp; <span class="keyword">ENDIF</span> <br />
-                    &ensp; <span class="function">OUTPUT</span> root <br />
-                    &ensp; <span class="keyword">IF</span> root.right &ne; <span class="keyword">null THEN</span> <br />
-                    &ensp; &ensp; <span class="other">InOrder</span>(root.right) <br />
-                    &ensp; <span class="keyword">ENDIF</span> <br />
-                    <span class="keyword">ENDSUBROUTINE</span>
-                </code>
+            <p>
+                The problems solved by <b>Examples 1 to 4</b> on the previous page <b>are tractable</b> (because
+                <b>constant time</b>, <b>logarithmic time</b> and <b>linear time</b> are all considered <b>"better" than
+                polynomial time</b>). <b>Searching and sorting algorithms</b> (<a href="../06/">16.06</a>) are also
+                tractable.
             </p>
 
-            <p><br />Example 3 shows some pseudocode for a post-order traversal.</p>
-
-            <p class="code">
-                <img src="../../icons/code.svg" class="icon" />
-                Example 3 <br />
-                <code>
-                    <span class="keyword">SUBROUTINE</span> <span class="other">PostOrder</span>(root) <br />
-                    &ensp; <span class="keyword">IF</span> root.left &ne; <span class="keyword">null THEN</span> <br />
-                    &ensp; &ensp; <span class="other">PostOrder</span>(root.left) <br />
-                    &ensp; <span class="keyword">ENDIF</span> <br />
-                    &ensp; <span class="keyword">IF</span> root.right &ne; <span class="keyword">null THEN</span> <br />
-                    &ensp; &ensp; <span class="other">PostOrder</span>(root.right) <br />
-                    &ensp; <span class="keyword">ENDIF</span> <br />
-                    &ensp; <span class="function">OUTPUT</span> root <br />
-                    <span class="keyword">ENDSUBROUTINE</span>
-                </code>
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                An <strong>intractable</strong> problem is one that cannot be solved in polynomial time or better.
             </p>
 
-            <p><br />
-                As you can see from the examples, the <b>only difference</b> between the three algorithms is
-                <b>where the output happens</b>. In a pre-order traversal, it happens <b>at the start</b>. In an
-                in-order traversal, it happens <b>in the middle</b>. In a post-order traversal, it happens <b>at the
-                end</b>.
+            <p>
+                <b>Example 5</b> on the previous page is <b>intractable</b>, as exponential time is <b>worse than
+                polynomial time</b>. Intractable problems <b>cannot be solved efficiently</b> for larger inputs.
             </p>
 
-            <p><br />Let's try an example.</p>
+            <p><br />However, there are also problems which cannot be solved using algorithms at all.</p>
 
-            <p>Diagram 1 shows a step-by-step animation of how a <b>post-order</b> traversal would work. <b><i>Use the arrows to navigate.</i></b></p>
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>non-computable</strong> problem is one with no algorithmic solution.
+            </p>
 
-            <p class="diagram">
-                <img src="../../icons/image.svg" class="icon" />
-                Diagram 1 <br /> <br />
-                <img src="../../icons/left.svg" class="no-zoom" id="js-target-1" height="32px" style="cursor: pointer; filter: invert(40%) sepia(91%) saturate(1234%) hue-rotate(220deg) brightness(100%) contrast(93%); border: 3px solid; border-radius: 50%; padding: 0px 8px;" />
-                <img src="./anim/Slide1.png" id="js-target-0" width="750px" style="max-width: calc(70vw - 10px);" />
-                <img src="../../icons/right.svg" class="no-zoom" id="js-target-2" height="32px" style="cursor: pointer; filter: invert(40%) sepia(91%) saturate(1234%) hue-rotate(220deg) brightness(100%) contrast(93%); border: 3px solid; border-radius: 50%; padding: 0px 8px;" />
+            <p>
+                For example: the <b>halting problem</b>. Given <b>any program as an input</b>, the machine must output
+                whether that program will <b>halt</b> (finish execution) or <b>loop forever</b>.
+            </p>
+
+            <p>
+                This was <b>proven to be impossible</b> by Alan Turing in 1936, showing that there are some problems
+                which <b>cannot be solved by a computer</b>.
             </p>
 
             <br />
@@ -109,13 +74,13 @@
     
             <p class="question">
                 <img src="../../icons/question.svg" class="icon" />
-                What would be the output of an in-order traversal on the tree shown in Diagram 1?
+                What is the time complexity of an algorithm to find all permutations of an array? Is this problem tractable or intractable?
             </p>
     
             <p class="summary-question">
                 <span class="answer">
-                    <code>ABCDEFG</code>: an in-order traversal on a binary search tree will always give the output in
-                    ascending (alphabetical) order.
+                    The time complexity is <code>O(n!)</code>, so it runs in "factorial time" (which is even worse than
+                    exponential time). This is clearly an intractable problem.
                 </span>
             </p>
 
@@ -129,7 +94,6 @@
         <script src="../../scripts/version.js"></script>
         <script src="../../scripts/footer.js"></script>
         <script src="../../scripts/pages.js"></script>
-        <script src="./main.js"></script>
 
     </body>
 </html>

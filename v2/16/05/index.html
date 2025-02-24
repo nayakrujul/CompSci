@@ -4,7 +4,7 @@
     <head>
         <link rel="stylesheet" href="../../main.css">
 
-        <title>16.05 - Dijkstra's Shortest Path | CS.RN v2</title>
+        <title>16.05 - Reverse Polish Notation | CS.RN v2</title>
 
         <link rel="icon" type="image/png" href="../../logos/square.png"/>
         <meta property="og:image" content="../../logos/square.png" />
@@ -14,7 +14,7 @@
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Learn about Dijkstra's Shortest Path Algorithm, an example of an optimisation algorithm, for A Level Computer Science on CS.RN v2.">
+        <meta name="description" content="Learn about Reverse Polish Notation and how it can be used for A Level Computer Science on CS.RN v2.">
     </head>
 
     <body>
@@ -25,60 +25,45 @@
 
             <p class="definition">
                 <img src="../../icons/book.svg" class="icon" />
-                <strong>Dijkstra's Shortest Path Algorithm</strong> is an optimisation algorithm which finds the shortest path between a start node and any other node of a weighted graph.
+                <strong>Reverse Polish Notation</strong> is an alternative way of writing mathematical expressions, where the operator goes after the operands.
             </p>
 
-            <p>This is how it works:</p>
-            <ol class="less-padding-left spaced-out">
-                <li>
-                    Firstly, <b>create a distances dictionary</b> which will store the shortest distance from the start
-                    node to every other node. At the beginning, <b>every value is set to infinity</b> (because the other
-                    nodes haven't been discovered yet) except the start node, which is <b>set to 0</b>.
-                </li>
-                <li>
-                    Next, <b>create a previous nodes dictionary</b> which will store the previous node from each of the
-                    nodes (e.g. if the shortest path from <code class="string">A</code> to <code class="string">G</code>
-                    is <code class="string">ADG</code>, then <code>prev[<span class="string">'G'</span>]</code> will be
-                    <code class="string">'D'</code> and <code>prev[<span class="string">'D'</span>]</code> will be
-                    <code class="string">'A'</code>). Initialise all values here to <code class="keyword">null</code>,
-                    because we <b>haven't discovered any paths</b> yet.
-                </li>
-                <li>
-                    Then, create a <b>list of nodes to visit</b>. Add <b>every node in the graph</b> to that list.
-                </li>
-                <li>
-                    <b>Find the node</b> in the list with the <b>lowest distance</b> value. (The first time round, this
-                    will be the <b>start node</b>.) We'll call this node <code>v</code>.
-                </li>
-                <li>
-                    Now, <b>repeat steps 6 and 7</b> with <b>every neighbour</b> of <code>v</code> which is <b>still in
-                    the list</b> of nodes to visit. We'll call the neighbouring node <code>u</code>.
-                </li>
-                <li>&ensp; &ensp;
-                    <b>Calculate the new distance value</b> of <code>u</code>: the distance of <code>v</code> plus the
-                    weight of the edge between <code>v</code> and <code>u</code>.
-                </li>
-                <li>&ensp; &ensp;
-                    If this <b>new distance is less</b> than the distance of <code>u</code>, <b>update the distance</b>
-                    of <code>u</code> to be the new distance and set <code>prev[u]</code> to <code>v</code>.
-                </li>
-                <li>
-                    <b>Remove</b> <code>v</code> <b>from the list</b> of nodes to visit. If the <b>list is not
-                    empty</b>, go back to step 4.
-                </li>
-                <li>
-                    Otherwise, the <b>algorithm is finished</b>.
-                </li>
-            </ol>
-
-            <p>Diagram 1 shows a step-by-step animation of Dijkstra's Shortest Path Algorithm <b><i>Use the arrows to navigate.</i></b></p>
+            <p>Diagram 1 shows how the expression <code><span class="number">9</span> + <span class="number">10</span></code> can be converted to Reverse Polish Notation.</p>
 
             <p class="diagram">
                 <img src="../../icons/image.svg" class="icon" />
                 Diagram 1 <br /> <br />
+                <img src="./diagram1.png" width="500px" />
+            </p>
+
+            <p>
+                <br />But <b>why use Reverse Polish Notation</b>? Consider the infix expression <code>
+                (<span class="number">3</span> + <span class="number">7</span>) / (<span class="number">6</span> -
+                <span class="number">4</span>)</code>. In RPN, the <b>parentheses are never required</b>, as the order
+                of operations can be inferred by the order of operators in the expression: <code><span class="number">3</span>
+                <span class="number">7</span> + <span class="number">6</span> <span class="number">4</span> - /</code>.
+            </p>
+
+            <p><br />Also, Reverse Polish Notation can be <b>easily evaluated by stack-based interpreters</b>.</p>
+
+            <p>
+                Diagram 2 shows how the RPN expression <code>
+                    <span class="number">3</span> <span class="number">7</span> + <span class="number">6</span>
+                    <span class="number">4</span> - /
+                </code> could be evaluated by a stack-based interpreter.
+            </p>
+
+            <p class="diagram">
+                <img src="../../icons/image.svg" class="icon" />
+                Diagram 2 <br /> <br />
                 <img src="../../icons/left.svg" class="no-zoom" id="js-target-1" height="32px" style="cursor: pointer; filter: invert(40%) sepia(91%) saturate(1234%) hue-rotate(220deg) brightness(100%) contrast(93%); border: 3px solid; border-radius: 50%; padding: 0px 8px;" />
-                <img src="./anim/Slide1.png" id="js-target-0" width="1000px" style="max-width: calc(70vw - 10px);" />
+                <img src="./diagram2/Slide1.png" id="js-target-0" width="750px" style="max-width: calc(70vw - 10px);" />
                 <img src="../../icons/right.svg" class="no-zoom" id="js-target-2" height="32px" style="cursor: pointer; filter: invert(40%) sepia(91%) saturate(1234%) hue-rotate(220deg) brightness(100%) contrast(93%); border: 3px solid; border-radius: 50%; padding: 0px 8px;" />
+            </p>
+
+            <p><br />
+                Examples of <b>interpreters that use RPN</b> include Postscript, the Java Virtual Machine (to run bytecode),
+                and <a href="https://thunno2.rujulnayak.com/run/#aGVhZGVyPSZjb2RlPTMlMjA3JTIwJTJCJTIwNiUyMDQlMjAtJTIwJTJGJmZvb3Rlcj0maW5wdXQ9JmZsYWdzPQ==" target="_blank">Thunno 2</a>.
             </p>
 
             <br />
@@ -87,14 +72,13 @@
     
             <p class="question">
                 <img src="../../icons/question.svg" class="icon" />
-                Can you think of a real-world application of Dijkstra's Shortest Path Algorithm?
+                Convert the RPN expression <code><span class="number">7 4</span> - <span class="number">15 8</span> + *</code> to infix and evaluate the result.
             </p>
     
             <p class="summary-question">
                 <span class="answer">
-                    For example: finding the shortest routes between two locations in Google Maps (where edges represent
-                    roads and the weights show the travel time); network routing (nodes represent routers and weights
-                    show the latency); etc.
+                    <code>(<span class="number">7</span> - <span class="number">4</span>) * (<span class="number">15</span> + <span class="number">8</span>)</code>
+                    (answer is <code class="number">69</code>).
                 </span>
             </p>
 
