@@ -138,7 +138,7 @@
                     &ensp; result &larr; [] <br />
                     &ensp; <span class="keyword">FOR</span> i &larr; <span class="number">0</span> <span class="keyword">TO</span>
                     <span class="other">LEN</span>(arr)-<span class="number">2</span> <br />
-                    &ensp; &ensp; <span class="keyword">FOR</span> j &larr; i + <span class="number">1</span>
+                    &ensp; &ensp; <span class="keyword">FOR</span> j &larr; i+<span class="number">1</span>
                     <span class="keyword">TO</span> <span class="other">LEN</span>(arr)-<span class="number">1</span> <br />
                     &ensp; &ensp; &ensp; result.<span class="other">Append</span>([arr[i], arr[j]]) <br />
                     &ensp; &ensp; <span class="keyword">ENDFOR</span> <br />
@@ -169,7 +169,7 @@
                     <span class="keyword">SUBROUTINE</span> <span class="other">Subsets</span>(arr) <br />
                     &ensp; result &larr; [] <br />
                     &ensp; <span class="keyword">FOR</span> mask &larr; <span class="number">0</span> <span class="keyword">TO</span>
-                    <span class="number">2</span>**<span class="other">LEN</span>(arr) <br />
+                    <span class="number">2</span>**<span class="other">LEN</span>(arr)-<span class="number">1</span> <br />
                     &ensp; &ensp; subset &larr; [] <br />
                     &ensp; &ensp; <span class="keyword">FOR</span> i &larr; <span class="number">0</span>
                     <span class="keyword">TO</span> <span class="other">LEN</span>(arr)-<span class="number">1</span> <br />
