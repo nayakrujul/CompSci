@@ -242,6 +242,7 @@ const pageNames = [
     [],
     [
         "Communication Basics",
+        "Serial and Parallel Transmission"
     ],
     [
         "Data Structures",
