@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>14.03 - Synchronising Communication | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Study the differences between synchronous and asynchronous communication methods for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p><i>GCSE Link: None</i></p>
+
+            <p>
+                For two devices to communicate, they <b>must be synchronised</b> in some way, otherwise the receiving
+                device <b>will not know when to read the data</b>.
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                In <strong>synchronous communications</strong>, a shared clock is used to coordinate the transmission.
+            </p>
+
+            <p>
+                When the <b>clock is set to 1</b>, the receiving device <b>reads the signal</b> on the data stream.
+            </p>
+
+            <p>Diagram 1 shows an example of synchronous communication.</p>
+
+            <p class="diagram">
+                <img src="../../icons/image.svg" class="icon" />
+                Diagram 1 <br /> <br />
+                <img src="./diagram1.png" width="600px" />
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Asynchronous communications</strong> do not use a shared clock to coordinate the transmission.
+            </p>
+
+            <p>
+                Instead, the <b>data stream is set to 1 while idle</b>. The <b>first bit</b> of a communication is
+                <b>0</b>, signalling to the receiving device that a communication is about to start. Then, <b>one byte
+                of data is sent</b> (along with an optional parity bit), followed by a <b>stop bit</b>, which is
+                <b>1</b>. The signal is then <b>kept at 1</b> (idle) until the next communication starts.
+            </p>
+
+            <p>Diagram 2 shows an example of asynchronous communication.</p>
+
+            <p class="diagram">
+                <img src="../../icons/image.svg" class="icon" />
+                Diagram 2 <br /> <br />
+                <img src="./diagram2.png" width="700px" />
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                The <strong>overhead</strong> of a communication is the amount of additional bits sent apart from the data, as a percentage of the size of the data.
+            </p>
+
+            <p>
+                For example, the overhead of the communication in Diagram 2 is <code>2 / 8</code> = <b>25%</b>, because
+                1 start bit and 1 stop bit was required (totalling <b>2 additional bits</b>), and <b>8 bits of data</b>
+                were sent.
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                What is the overhead in synchronous communications?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    Zero, because nothing but the data is sent.
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>

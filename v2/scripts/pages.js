@@ -242,7 +242,8 @@ const pageNames = [
     [],
     [
         "Communication Basics",
-        "Serial and Parallel Transmission"
+        "Serial and Parallel Transmission",
+        "Synchronising Communication"
     ],
     [
         "Data Structures",
