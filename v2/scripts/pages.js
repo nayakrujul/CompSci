@@ -243,7 +243,8 @@ const pageNames = [
     [
         "Communication Basics",
         "Serial and Parallel Transmission",
-        "Synchronising Communication"
+        "Synchronising Communication",
+        "Network Topologies"
     ],
     [
         "Data Structures",
