@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>14.06 - Wireless Networks | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn about the basics of wireless networks such as Wi-Fi for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p><i>GCSE Link: <a href="../../5/02/">5.02 - Wired and Wireless Networks</a></i></p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>wireless network</strong> transfers information using radio waves or other wireless signals instead of physical cables.
+            </p>
+
+            <p>
+                <b>Wi-Fi</b> is one of the most common <b>wireless network technologies</b>, allowing computers to join
+                <b>wireless local area networks (WLANs)</b>.
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>wireless access point</strong> is a component of a network which allows devices to connect to a local area network.
+            </p>
+
+            <p>
+                The wireless access point will <b>broadcast the network's Service Set Identifier (SSID)</b>, its unique
+                network name, so that devices <b>know the network exists</b>. When a device attempts to join the
+                network, the wireless access point <b>asks for a password</b> (using the Wi-Fi Protected Access, or WPA,
+                protocol), and only allows <b>devices which have the correct password</b>. Then, it <b>encrypts all
+                communication</b> on the network, making sure that outsiders can't steal the data.
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>wireless network adapter</strong> converts data into radio signals, allowing a computer to communicate with a wireless access point.
+            </p>
+
+            <p>
+                They are <b>built into almost all modern computers</b>, but can also be <b>external devices</b> which
+                plug into a USB port.
+            </p>
+
+            <p><br />
+                Wi-Fi can operate in <b>two different frequency bands</b>: 2.4GHz (the older standard) and 5GHz (more
+                modern). The 2.4GHz band has <b>slower transfer speeds</b> than 5GHz, but has a <b>longer range</b>.
+                Most modern routers <b>support both bands</b> for backwards-compatibility.
+            </p>
+
+            <p>
+                Both bands are <b>susceptible to interference</b>, since a lot of consumer electronic devices <b>output
+                radio signals</b> at those frequencies. We can calculate the <b>signal-to-noise ratio (SNR)</b> using
+                the formula <code><b>SNR</b> (dB) = 10 &times; log<sub>10</sub>(<b>signal</b> / <b>noise</b>)</code>.
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                Calculate the SNR if the signal power is 100mW and the noise power is 1mW. 
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    <code>SNR = 10 &times; log<sub>10</sub>(100 / 1) = 10 &times; 2</code> = 20 dB
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>
