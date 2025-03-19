@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>14.07 - Avoiding Collisions | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn about the details of the Carrier Sense Multiple Access with Collision Avoidance (CSMA/CA) protocol for Wi-Fi for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p><i>GCSE Link: None</i></p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Carrier Sense Multiple Access with Collision Avoidance</strong> (CSMA/CA) is a protocol used in wireless networks in order to prevent data collisions.
+            </p>
+
+            <p>
+                Before a <b>device attempts to transmit information</b> on the network, it first listens for
+                signals to check if <b>another device is currently transmitting</b>. If the <b>network is idle</b>
+                (no other devices transmitting), then it <b>starts transmitting</b>. It then <b>waits for an
+                acknowledgement signal</b> from the router to verify that the data was received correctly.
+                If the network wasn't idle, the device <b>waits a random period of time</b> before trying again.
+            </p>
+
+            <p><br />
+                This works if every device on the network is <b>in range of every other device's transmissions</b>, but
+                this is often not the case. For example, consider the setup shown in Diagram 1 below. If <b>A wants to
+                transmit</b> while <b>B is already transmitting</b>, A will not know that B is transmitting, because
+                it is <b>out of range</b>. This is called the <b>"hidden node problem"</b>.
+            </p>
+
+            <p><br />
+                Diagram 1 shows a network with two devices, A and B. The dashed outlines show the range of each device's
+                transmissions.
+            </p>
+
+            <p class="diagram">
+                <img src="../../icons/image.svg" class="icon" />
+                Diagram 1 <br /> <br />
+                <img src="./diagram1.png" width="500px" />
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Request to Send and Clear to Send</strong> (RTS/CTS) is a protocol that can be optionally used alongside CSMA/CA which helps solve the hidden node problem.
+            </p>
+
+            <p>
+                Before a device attempts to transmit information, it sends a short <b>Request to Send (RTS) message</b>
+                to the wireless access point. If no other devices are transmitting, the wireless access point returns a
+                <b>Clear to Send (CTS) message</b>, telling the device to start the transmission. All other devices on
+                the network <b>go silent for some time</b> after hearing the CTS message. When they <b>hear the
+                acknowledgement message</b>, the other devices know that the transmission is over, and they can attempt
+                to <b>transmit their own message</b> again.
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                Draw a flowchart of the steps a device would take when attempting to transmit information using CSMA/CA with RTS/CTS.
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    <img src="./diagram2.png" width="300px" />
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>

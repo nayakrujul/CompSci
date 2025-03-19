@@ -246,7 +246,8 @@ const pageNames = [
         "Synchronising Communication",
         "Network Topologies",
         "Network Models",
-        "Wireless Networks"
+        "Wireless Networks",
+        "Avoiding Collisions"
     ],
     [
         "Data Structures",
