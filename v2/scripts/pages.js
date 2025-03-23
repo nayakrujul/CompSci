@@ -221,7 +221,8 @@ const pageNames = [
         "Random Number Generation",
         "Exception Handling",
         "Subroutines",
-        "Recursion"
+        "Recursion",
+        "Procedural Programming"
     ],
     [],
     [
