@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>9.09 - Object-Oriented Programming | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Study the fundamentals of Object-Oriented Programming (OOP), another programming paradigm, for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p><i>GCSE Link: None</i></p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Object-Oriented Programming</strong> (OOP) is a programming paradigm in which everything in a program is an object.
+            </p>
+
+            <p>
+                Each object is a <b>specific instance of a class</b>, which is a <b>template for an object</b>
+                (containing <b>methods and attributes</b> that all objects of that class need).
+            </p>
+
+            <p>Example 1 shows an example of a class in C#.</p>
+    
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 1 <br />
+                <code>
+                    <span class="keyword">class</span> <span class="function">Person</span>(<span class="keyword">string</span> name) { <br />
+                    &ensp; <span class="keyword">public string</span> <span class="other">Name</span> = name; <br />
+                    &ensp; <span class="keyword">public void</span> <span class="other">Greet</span>() { <br />
+                    &ensp; &ensp; <span class="function">Console</span>.<span class="other">WriteLine</span>(<span class="string">&quot;Hi,
+                    I'm &quot;</span> + Name); <br />
+                    &ensp; } <br />
+                    }
+                </code>
+            </p>
+
+            <p>
+                This class contains an attribute <code class="other">Name</code>, and a method <code><span class="other">Greet</span>()</code>.
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Instantiation</strong> is the process of creating an object (an instance of a class).
+            </p>
+
+            <p>
+                We can create an instance of the <code class="function">Person</code> class using the
+                <code class="keyword">new</code> keyword and passing in the name.
+            </p>
+
+            <p>Example 2 shows an example of instantiation in C#.</p>
+    
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 1 <br />
+                <code>
+                    <span class="function">Person</span> a = <span class="keyword">new</span>(<span class="string">&quot;Adam&quot;</span>); <br />
+                    a.<span class="other">Greet</span>(); <br /> <br />
+                    <span class="function">Person</span> b = <span class="keyword">new</span>(<span class="string">&quot;Bob&quot;</span>); <br />
+                    b.<span class="other">Greet</span>(); <br />
+                </code>
+            </p>
+
+            <p>
+                Although they are part of the same class, <code>a</code> and <code>b</code> <b>are different objects</b>,
+                so they have <b>different values</b> of their attributes, and therefore the <b>behaviour of their methods</b>
+                is different.
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Encapsulation</strong> is the OOP principle that allows data and methods to be bundled into objects.
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                State the output of Example 2.
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    <code>Hi, I'm Adam<br />Hi, I'm Bob</code>
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>

@@ -222,7 +222,8 @@ const pageNames = [
         "Exception Handling",
         "Subroutines",
         "Recursion",
-        "Procedural Programming"
+        "Procedural Programming",
+        "Object-Oriented Programming"
     ],
     [],
     [
