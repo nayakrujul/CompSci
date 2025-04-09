@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>9.10 - Inheritance | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn about how objects can inherit methods and attributes from one another for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p><i>GCSE Link: None</i></p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Inheritance</strong> is a fundamental principle of OOP in which objects of a child class can use methods and attributes of a parent class.
+            </p>
+
+            <p>
+                Note that sometimes the child class is called a <b>subclass</b> or <b>derived class</b>, and the parent
+                class can be called a <b>super class</b> or <b>base class</b>.
+            </p>
+
+            <p><br />
+                For example, a <code>Car</code> class could inherit from a <code>Vehicle</code> class, because they both
+                need <b>similar methods and attributes</b>. The <code>Car</code> class could then <b>add extra
+                functionality</b> that the generic <code>Vehicle</code> class does not have, but it could also
+                <b>override some methods</b> in the <code>Vehicle</code> class:
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Polymorphism</strong> refers to the ability of different objects to respond to the same method call differently.
+            </p>
+
+            <p>Example 1 shows an example of polymorphism.</p>
+
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 1 <br />
+                <code>
+                    <span class="keyword">class</span> <span class="function">Animal</span> { <br />
+                    &ensp; <span class="keyword">public virtual void</span> <span class="other">Speak</span>() <br />
+                    &ensp; &ensp; => <span class="function">Console</span>.<span class="other">WriteLine</span>(<span class="string">""</span>); <br />
+                    } <br /> <br />
+                    <span class="keyword">class</span> <span class="function">Cat</span>: <span class="function">Animal</span> { <br />
+                    &ensp; <span class="keyword">public override void</span> <span class="other">Speak</span>() <br />
+                    &ensp; &ensp; => <span class="function">Console</span>.<span class="other">WriteLine</span>(<span class="string">"Meow"</span>); <br />
+                    } <br /> <br />
+                    <span class="keyword">class</span> <span class="function">Dog</span>: <span class="function">Animal</span> { <br />
+                    &ensp; <span class="keyword">public override void</span> <span class="other">Speak</span>() <br />
+                    &ensp; &ensp; => <span class="function">Console</span>.<span class="other">WriteLine</span>(<span class="string">"Woof"</span>); <br />
+                    }
+                </code>
+            </p>
+
+            <p>
+                Here, we have defined a generic <code class="function">Animal</code> class, with a <b>virtual method</b>
+                (i.e. one that can be overridden) called <code><span class="other">Speak</span>()</code>. This is then
+                overridden in the <code class="function">Cat</code> and <code class="function">Dog</code> classes
+                <b>which inherit from it</b>. Calling the <code><span class="other">Speak</span>()</code> method on a
+                <code class="function">Cat</code> object will output <code class="string">"Meow"</code>, and calling it
+                on a <code class="function">Dog</code> object will output <code class="string">"Woof"</code>.
+            </p>
+
+            <p>
+                But we can also call the <code><span class="other">Speak</span>()</code> method on a generic
+                <code class="function">Animal</code> object, which will output <code class="string">""</code>. If we
+                don't want to allow generic <code class="function">Animal</code> objects to be created, we can mark the
+                class as <b>abstract</b>, which means that it is <b>simply a template for subclasses</b> and cannot
+                itself be instantiated.
+            </p>
+
+            <p><br />
+                Abstract classes can also contain <b>abstract methods</b> which (unlike virtual methods) have <b>no
+                implementation at all</b> in the parent class, and <b>must be overridden</b> in the child class
+                (whereas virtual methods <b>have the option to be overridden</b>, but don't have to be).
+            </p>
+
+            <p>Example 2 shows an abstract <code class="function">Animal</code> class with an abstract <code><span class="other">Speak</span>()</code> method.</p>
+
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 2 <br />
+                <code>
+                    <span class="keyword">abstract class</span> <span class="function">Animal</span> { <br />
+                    &ensp; <span class="keyword">public abstract void</span> <span class="other">Speak</span>(); <br />
+                    }
+                </code>
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                Modify the <code class="function small-code">Animal</code> class to have a <code class="other small-code">Name</code> attribute. 
+                How would the <code class="function small-code">Cat</code> and <code class="function small-code">Dog</code> classes need to be
+                modified to also have a <code class="other small-code">Name</code> variable?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    <code>
+                        <span class="keyword">abstract class</span> <span class="function">Animal</span>(<span class="keyword">string</span> name) { <br />
+                        &ensp; <span class="keyword">public string</span> <span class="other">Name</span> = name; <br />
+                        &ensp; <span class="keyword">public abstract void</span> <span class="other">Speak</span>(); <br />
+                        } <br /> <br />
+                        <span class="keyword">class</span> <span class="function">Cat</span>(<span class="keyword">string</span> name):
+                        <span class="function">Animal</span>(name) { <br />
+                        &ensp; <span class="keyword">public override void</span> <span class="other">Speak</span>() <br />
+                        &ensp; &ensp; => <span class="function">Console</span>.<span class="other">WriteLine</span>(<span class="string">"Meow"</span>); <br />
+                        } <br /> <br />
+                        <span class="keyword">class</span> <span class="function">Dog</span>(<span class="keyword">string</span> name):
+                        <span class="function">Animal</span>(name) { <br />
+                        &ensp; <span class="keyword">public override void</span> <span class="other">Speak</span>() <br />
+                        &ensp; &ensp; => <span class="function">Console</span>.<span class="other">WriteLine</span>(<span class="string">"Woof"</span>); <br />
+                        } <br /> <br />
+                    </code>
+                    Because of inheritance, the <code class="function">Cat</code> and <code class="function">Dog</code>
+                    classes also have the <code class="other">Name</code> attribute without many changes!
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>

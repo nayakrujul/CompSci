@@ -223,7 +223,8 @@ const pageNames = [
         "Subroutines",
         "Recursion",
         "Procedural Programming",
-        "Object-Oriented Programming"
+        "Object-Oriented Programming",
+        "Inheritance"
     ],
     [],
     [
