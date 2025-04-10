@@ -224,7 +224,8 @@ const pageNames = [
         "Recursion",
         "Procedural Programming",
         "Object-Oriented Programming",
-        "Inheritance"
+        "Inheritance",
+        "Information Hiding"
     ],
     [],
     [

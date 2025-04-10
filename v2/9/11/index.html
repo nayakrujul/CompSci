@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>9.11 - Information Hiding | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Study how private, protected and public access modifiers can be used in Object Oriented Programming for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p><i>GCSE Link: None</i></p>
+
+            <p>
+                In OOP, we usually have <b>many different classes working together</b>, each responsible for its own
+                part of the program. <b>Information hiding</b> means that each class can <b>keep its internal
+                details</b> (like helper methods) <b>private</b>, only exposing a clear, simple interface for other
+                classes to use.
+            </p>
+
+            <p><br />
+                There are <b>three levels of access restrictions</b> that you can place on a method or attribute:
+            </p>
+
+            <ul class="less-padding-left">
+                <li>
+                    <b>Public</b> - the method or attribute can be accessed by any object of <b>any class</b> (no restrictions)
+                </li>
+                <li>
+                    <b>Protected</b> - the method or attribute can only be accessed by objects of the <b>same class or subclasses</b>
+                </li>
+                <li>
+                    <b>Private</b> - the method or attribute can only be accessed by objects of the <b>same class</b>
+                </li>
+            </ul>
+
+            <p>
+                In C#, simply add the modifier (<code class="keyword">public</code>, <code class="keyword">protected</code>
+                or <code class="keyword">private</code>) before the definition (for example
+                <code><span class="keyword">protected string</span> <span class="other">Name</span> =
+                <span class="string">&quot;&quot;</span>;</code> or <code><span class="keyword">public void</span>
+                <span class="other">Output</span>(...)</code>). By default, everything is <code class="keyword">private</code>.
+            </p>
+
+            <p>
+                You can even have <b>different access modifiers</b> for the <b>get and set</b> methods of an attribute.
+                For example, <code><span class="keyword">public string</span> <span class="other">Name</span>
+                {<span class="keyword">get</span>; <span class="keyword">private set</span>} = <span class="string">""</span>;</code>
+                can be read by any object (<code class="keyword">public</code>), but only written to from the same class
+                (<code class="keyword">private</code>).
+            </p>
+
+            <p><br />
+                <b>Class definitions</b> can be written to show the methods and attributes of a class.
+                The general format of a class definition is:
+            </p>
+
+            <p class="code">
+                <code>
+                    <span class="function">MyClass</span> = <span class="keyword">Class</span> <br />
+                    &ensp; <span class="keyword">Public</span> <br />
+                    &ensp; &ensp; Procedure <span class="other">Procedure1</span> <br />
+                    &ensp; &ensp; Function&nbsp; <span class="other">Function1</span> <br />
+                    &ensp; &ensp; <span class="other">Var1</span>: Integer <br />
+                    &ensp; <span class="keyword">Protected</span> <br />
+                    &ensp; &ensp; Procedure <span class="other">Procedure2</span> <br />
+                    &ensp; &ensp; Function&nbsp; <span class="other">Function2</span> <br />
+                    &ensp; &ensp; <span class="other">Var2</span>: String <br />
+                    &ensp; <span class="keyword">Private</span> <br />
+                    &ensp; &ensp; Procedure <span class="other">Procedure3</span> <br />
+                    &ensp; &ensp; Function&nbsp; <span class="other">Function3</span> <br />
+                    &ensp; &ensp; <span class="other">Var3</span>: Boolean <br />
+                    <span class="keyword">End</span>
+                </code>
+            </p>
+
+            <p>
+                Unless explicitly stated, all attributes (variables) should be <span class="keyword">private</span>,
+                with separate <span class="keyword">public</span> or <span class="keyword">protected</span>
+                <code class="other">Get</code> and <code class="other">Set</code> methods if required.
+            </p>
+
+            <br />
+    
+            <hr />
+
+            <p>
+                A <code class="function">Player</code> class in a game has attributes
+                <code class="other">Name</code>, <code class="other">Health</code> and
+                <code class="other">XP</code>, all of which have <code class="keyword">public</code>
+                getters and <code class="keyword">protected</code> setters. It also has an
+                <code class="other">Attack</code> procedure and <code class="other">Defend</code>
+                method, both of which are <code class="keyword">private</code>, and a
+                <code class="keyword">public</code> <code class="other">TakeTurn</code> procedure.
+            </p>
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                Write the class definition for the <code class="function small-code">Player</code> class.
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    <code>
+                        <span class="function">Player</span> = <span class="keyword">Class</span> <br />
+                        &ensp; <span class="keyword">Public</span> <br />
+                        &ensp; &ensp; Procedure <span class="other">TakeTurn</span> <br />
+                        &ensp; &ensp; Function&nbsp; <span class="other">GetName</span> <br />
+                        &ensp; &ensp; Function&nbsp; <span class="other">GetHealth</span> <br />
+                        &ensp; &ensp; Function&nbsp; <span class="other">GetXP</span> <br />
+                        &ensp; <span class="keyword">Protected</span> <br />
+                        &ensp; &ensp; Procedure <span class="other">SetName</span> <br />
+                        &ensp; &ensp; Procedure <span class="other">SetHealth</span> <br />
+                        &ensp; &ensp; Procedure <span class="other">SetXP</span> <br />
+                        &ensp; <span class="keyword">Private</span> <br />
+                        &ensp; &ensp; Procedure <span class="other">Attack</span> <br />
+                        &ensp; &ensp; Function&nbsp; <span class="other">Defend</span> <br />
+                        &ensp; &ensp; <span class="other">Name</span>: &nbsp; String <br />
+                        &ensp; &ensp; <span class="other">Health</span>: Integer <br />
+                        &ensp; &ensp; <span class="other">XP</span>: &nbsp; &nbsp; Integer <br />
+                        <span class="keyword">End</span>
+                    </code>
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>
