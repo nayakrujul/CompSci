@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>10.01 - Logic Puzzles | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Practice solving simple logic puzzles for the Problem Solving part of A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p><i>GCSE Link: None</i></p>
+
+            <p>
+                In the A Level exam you may be asked to <b>solve simple logic puzzles</b> like this one:
+            </p>
+
+            <p><br />
+                A valuable jewel was taken from a museum by one of Alice, Bob or Carl. The following facts are gathered:
+            </p>
+            
+            <ol class="less-padding-left">
+                <li>The thief took the jewel out of the museum through the side exit</li>
+                <li>If Bob was in the storage room before the theft, the jewel was taken using a backpack</li>
+                <li>Either Bob or Carl was in the storage room before the theft occurred</li>
+                <li>If Carl stole the jewel, Alice was not in the lobby</li>
+                <li>If the jewel was put in a backpack, then Alice was in the lobby and did not steal the jewel</li>
+            </ol>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                Who stole the jewel?
+            </p>
+
+            <details>
+                <summary>Hint</summary>
+                <br />
+                Because most of the clues use statements like <b>"If A, then B"</b> (which we can write as
+                <b>"A implies B"</b> or <code>A &Implies; B</code>), we can use the <b>contrapositive</b> (<b>"not B
+                implies not A"</b>, or <code>B&prime; &Implies; A&prime;</code>) which is <b>logically equivalent</b>
+                to the original statement. For example, for clue 5, we can use "If the thief did <b>not</b> leave using
+                the main exit, then Carl was <b>not</b> in the storage room before the theft".
+                <br /> &nbsp;
+            </details>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    &bullet; We know from clue 1 and the contrapositive of clue 5 that Carl was not in the storage room before the theft <br />
+                    &bullet; We therefore know from clue 3 that Bob was in the storage room before the theft occurred <br />
+                    &bullet; Now from clue 2, the jewel was taken using a backpack <br />
+                    &bullet; From clue 5, we know that Alice was in the lobby and did not steal the jewel <br />
+                    &bullet; Finally, from the contrapositive of clue 4, Carl did not steal the jewel. <br />
+                    &bullet; The only remaining suspect is <b>Bob</b>, who must be the thief.
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>
