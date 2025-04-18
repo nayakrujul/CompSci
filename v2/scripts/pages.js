@@ -227,7 +227,9 @@ const pageNames = [
         "Inheritance",
         "Information Hiding"
     ],
-    [],
+    [
+        "Logic Puzzles"
+    ],
     [
         "Number Systems",
         "Units of Information",
