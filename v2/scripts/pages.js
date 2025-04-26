@@ -282,7 +282,9 @@ const pageNames = [
         "Dijkstra's Shortest Path",
         "qs"
     ],
-    [],
+    [
+        "Finite State Machines"
+    ],
     [],
     [
         "Data Modelling",

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>17.01 - Finite State Machines | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn about Finite State Machines and how they can be used for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p><i>GCSE Link: None</i></p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>finite state machine</strong> is a model of how a machine should react to inputs.
+            </p>
+
+            <p>Diagram 1 shows an example finite state machine.</p>
+
+            <p class="diagram">
+                <img src="../../icons/image.svg" class="icon" />
+                Diagram 1 <br /> <br />
+                <img src="./diagram1.png" style="width: 500px;" />
+            </p>
+
+            <p>
+                This finite state machine shows the <b>different ways to pay 5p</b> using 1p, 2p and 5p coins. It has
+                <b>6 states (0 to 5)</b>, each showing how much money has been paid already. The <b>arrows show the
+                transitions</b> between the states: <b>each arrow has an input</b> (1p, 2p or 5p coin) attached to it.
+                The initial state, 0, has an <b>arrow going into it</b>. The final state, 5, has a <b>double outline</b>
+                to show the process terminates there.
+            </p>
+
+            <p><br />
+                Finite state machines can also be represented using <b>state transition tables</b>.
+            </p>
+
+            <p>Diagram 2 shows the finite state machine from Diagram 1 represented as a state transition table.</p>
+
+            <p class="diagram">
+                <img src="../../icons/image.svg" class="icon" />
+                Diagram 2 <br /> <br />
+                <img src="./diagram2.png" style="width: 500px;" />
+            </p>
+
+            <p><br />
+                There are also types of <b>finite state machines which have outputs</b>. These are called <b>Mealy
+                machines</b> and they have no final (accepting) states. The input and output of a transition are
+                <b>both written next to the arrow</b>, separated by a pipe (<code>|</code>).
+            </p>
+
+            <p>Diagram 3 shows a simple Mealy machine which flips the bits of a binary string.</p>
+
+            <p class="diagram">
+                <img src="../../icons/image.svg" class="icon" />
+                Diagram 3 <br /> <br />
+                <img src="./diagram3.png" style="width: 200px;" />
+            </p>
+
+            <p>
+                When a <code>0</code> is entered, a <code>1</code> is output, and vice versa. The <b>state doesn't
+                change</b> because the arrows loop back to the same state.
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                What might finite state machines be used for?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    Validating user input, controlling traffic lights, managing enemy logic in games, parsing code in
+                    compilers, and much more.
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>
