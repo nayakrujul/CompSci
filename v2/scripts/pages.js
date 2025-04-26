@@ -228,7 +228,9 @@ const pageNames = [
         "Information Hiding"
     ],
     [
-        "Logic Puzzles"
+        "Logic Puzzles",
+        "Abstraction",
+        "Decomposition"
     ],
     [
         "Number Systems",

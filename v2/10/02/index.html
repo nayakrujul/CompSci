@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>10.02 - Abstraction | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn about the different types of abstraction, computational thinking tool, for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p><i>GCSE Link: <a href="../../1/01/">1.01 - Computational Thinking</a></i></p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Abstraction</strong> is a process used in Computer Science where we remove details to focus on the important parts of a problem.
+            </p>
+
+            <p>There are <b>many different types</b> of abstraction, which we will cover on this page:</p>
+
+            <br />
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Representational abstraction</strong> is about removing unnecessary details of a problem.
+            </p>
+
+            <p>
+                For example, if you were writing a program to find the <b>shortest route between two places</b>, you
+                don't need details such as the names of specific buildings and parks, so you would <b>use
+                representational abstraction</b> to just focus on the roads.
+            </p>
+
+            <p>
+                <b>Information hiding</b> is a form of representational abstraction - other classes only need to know
+                the <b>essential characteristics</b> of an object, and not any protected or private attributes.
+            </p>
+
+            <br />
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Abstraction by generalisation</strong> is about grouping together objects with common characteristics.
+            </p>
+
+            <p>
+                This allows us to <b>simplify problems</b>. An example of this is <b>inheritance in OOP</b>, where
+                subclasses can use methods implemented in the parent class (so you don't need to write them twice).
+            </p>
+
+            <br />
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Procedural abstraction</strong> is about using a general method (procedure) to complete a repeated task.
+            </p>
+
+            <p>
+                For example, when making a game, you might write a <code><span class="other">drawText</span>(message)</code>
+                procedure to <b>draw some text</b> (given in the parameter <code>message</code>) <b>on the screen</b>.
+                Once you've written it, you can <b>forget about doing those exact steps again</b>, and instead just call
+                the procedure.
+            </p>
+
+            <br />
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Functional abstraction</strong> takes procedural abstraction one step further and hides the method of computation itself.
+            </p>
+
+            <p>
+                Do you know how the square root (<code class="other">sqrt</code>) function actually works? (If you're interested, check out 
+                <a href="https://en.wikipedia.org/wiki/Methods_of_computing_square_roots" target="_blank">the Wikipedia article</a>.)
+                This is an example of functional abstraction - <b>the user doesn't need to know how it works</b>, just <i>that</i> it works.
+            </p>
+
+            <br />
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Data abstraction</strong> is about hiding the implementations of abstract data types.
+            </p>
+
+            <p>
+                If a programming language has a <b>stack data type</b>, you <b>don't need to know how it's actually
+                implemented</b> under the hood (similar to functional abstraction, just for data types).
+            </p>
+
+            <br />
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Problem abstraction</strong> is about reducing the problem to one which you have already solved.
+            </p>
+
+            <p>
+                For example, if you were writing a program to <b>find a route between two Tube stations</b>, you could
+                <b>represent the map as a graph</b>, with stations being nodes and lines being edges. Then you could
+                traverse the graph as usual to find a route.
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                How might abstraction be used when calling a weather API?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    Representational abstraction is used, because only the relevant details (temperature, wind, etc.)
+                    are returned by the API, and not the raw data collected by weather balloons. Functional abstraction
+                    is also used, because the user doesn't know how the forecast actually works.
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>
