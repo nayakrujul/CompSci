@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>17.02 - Basics of Sets | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn about the basics of sets, required for regular expressions, for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p><i>GCSE Link: None</i></p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>set</strong> is an unordered collection of items with no duplicates.
+            </p>
+
+            <p>
+                They are <b>written in curly brackets</b>, e.g. <code>S = {<span class="number">123</span>,
+                <span class="number">-5</span>, <span class="number">10.1</span>}</code>. Note that
+                <code>{<span class="number">0</span>, <span class="number">0</span>, <span class="number">7</span>}</code>
+                is not a set because it <b>contains two zeroes</b>.
+            </p>
+
+            <p>
+                As we learnt in <a href="../../11/01/">11.01 (Number Systems)</a>, the symbol &naturals; represents the
+                set of <b>natural numbers</b>, <code>{<span class="number">0</span>, <span class="number">1</span>,
+                <span class="number">2</span>, <span class="number">3</span>, ...}</code>, the symbol &integers;
+                represents the set of <b>integers</b>, <code>{<span class="number">0</span>, <span class="number">1</span>,
+                <span class="number">-1</span>, <span class="number">2</span>, <span class="number">-2</span>, ...}</code>,
+                and the symbols &rationals; and &reals; represent the <b>rationals</b> and <b>reals</b> respectively.
+                The <b>empty set</b>, <code>{}</code>, can also be written using the symbol &emptyset;.
+            </p>
+
+            <p><br />
+                The notation <code>x &in; S</code> is used to check <b>if an item</b> <code>x</code> <b>is in the set</b> <code>S</code>.
+                We can use <b>set comprehensions</b> to compactly represent sets. Set comprehensions are of the form
+                <b><code>{expression | condition}</code></b>. For example, <code>{3x | x &in; &naturals;}</code> represents the
+                set <code>{<span class="number">0</span>, <span class="number">3</span>, <span class="number">6</span>,
+                <span class="number">9</span>, ...}</code>. In the condition, we can use the symbol &and; to mean <b>AND</b>,
+                and the symbol &or; to mean <b>OR</b>. For example, the comprehension <code>{3x | x &in; &naturals; &and; x &ge; 10}</code>
+                represents the set <code>{<span class="number">30</span>, <span class="number">33</span>, <span class="number">36</span>,
+                <span class="number">39</span>, ...}</code>.
+            </p>
+
+            <p><br />
+                <b>Sets can also contain strings</b>. One way to write sets of strings is using notation such as
+                <code>{A<sup>n</sup>B<sup>n</sup> | n &ge; 2}</code>, which would mean <b>"at least two <code>A</code>s
+                followed by the same number of <code>B</code>s"</b>, i.e. the set <code>{<span class="string">AABB</span>,
+                <span class="string">AAABBB</span>, <span class="string">AAAABBBB</span>, ...}</code>.
+            </p>
+
+            <br />
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>finite set</strong> is one which ends at some point.
+            </p>
+
+            <p>
+                This means that you can <b>count its elements using natural numbers</b>, up to a point. The <b>length of
+                a finite set</b> is called its <b>cardinality</b>. The set <code>{<span class="number">123</span>,
+                <span class="number">-5</span>, <span class="number">10.1</span>}</code> is finite with cardinality 3.
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                An <strong>infinite set</strong> is one which never ends.
+            </p>
+
+            <p>
+                For example, the <b>natural numbers</b>, <b>integers</b>, <b>rational numbers</b>, and <b>real numbers</b>.
+                A <b>countably infinite set</b> is one where every element of the set can be <b>mapped to a different
+                natural number</b>. The natural numbers are obviously countably infinite, as are the integers: an
+                <b>example mapping</b> could be <code>{<span class="other">0</span>: <span class="number">0</span>,
+                <span class="other">1</span>: <span class="number">1</span>, <span class="other">2</span>:
+                <span class="number">-1</span>, <span class="other">3</span>: <span class="number">2</span>,
+                <span class="other">4</span>: <span class="number">-2</span>, ...}</code>. The rational numbers and real
+                numbers are <b>uncountably infinite</b>.
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                Write out the set represented by the comprehension <code class="small-code">{P<sup>m</sup>Q<sup>n</sup> | m + n = 7}</code>.
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    <code>{<span class="string">PPPPPPP</span>, <span class="string">PPPPPPQ</span>, <span class="string">PPPPPQQ</span>,
+                    <span class="string">PPPPQQQ</span>, <span class="string">PPPQQQQ</span>, <span class="string">PPQQQQQ</span>,
+                    <span class="string">PQQQQQQ</span>, <span class="string">QQQQQQQ</span>}</code>
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>

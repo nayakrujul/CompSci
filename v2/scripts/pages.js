@@ -283,7 +283,8 @@ const pageNames = [
         "qs"
     ],
     [
-        "Finite State Machines"
+        "Finite State Machines",
+        "Basics of Sets"
     ],
     [],
     [
