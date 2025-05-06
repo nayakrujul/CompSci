@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>17.03 - Set Operations | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn about the operations that can be performed on sets, including the Cartesian product of two sets, for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p><i>GCSE Link: None</i></p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>subset</strong> of a given larger set is one which is fully contained in the larger set.
+            </p>
+
+            <p>
+                That means that the set <code>A</code> is a subset of the set <code>B</code> if and only if <b>every
+                element of <code>A</code> is also in <code>B</code></b>. "<code>A</code> is a subset of <code>B</code>" is
+                written with the notation <code>A &subseteq; B</code> (note the similarity to the <code>&le;</code> sign).
+                For example, <code>{<span class="number">2</span>, <span class="number">3</span>} &subseteq;
+                {<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>,
+                <span class="number">4</span>, <span class="number">5</span>}</code>.
+            </p>
+
+            <p>
+                The opposite of a subset is a <b>superset</b>: <code>A</code> is a superset of <code>B</code> if and only if
+                <b>every element of <code>B</code> is also in <code>A</code></b>, i.e. if <b><code>B</code> is a subset
+                of <code>A</code></b>. The notation is <code>A &supseteq; B</code> (similar to <code>&ge;</code>). For
+                example, <code>{<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>,
+                <span class="number">4</span>, <span class="number">5</span>} &supseteq; {<span class="number">2</span>,
+                <span class="number">3</span>}</code>.
+            </p>
+
+            <p>
+                Note that any set is a <b>subset and superset of itself</b>. To exclude the set itself, we can use
+                <b>proper subset/superset</b>, where the larger set must contain <b>all items of the smaller set and
+                more</b>. The notation is <code>A &subset; B</code> for a proper subset and <code>A &supset; B</code>
+                for a proper superset (see the similarity with &le; vs &lt; and &ge; vs &gt;?).
+            </p>
+
+            <p><br />
+                There are also a number of <b>operations</b> we can perform on two sets.
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                The <strong>set union</strong> of two sets contains every value that appears in either set.
+            </p>
+
+            <p>
+                The <b>notation for this is <code>A &cup; B</code></b> (like a "U" for "Union"). For example,
+                <code>{<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>} &cup;
+                {<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>}</code> is
+                <code>{<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>,
+                <span class="number">4</span>, <span class="number">5</span>}</code> (note that we don't include the
+                <code class="number">3</code> twice because <b>sets can't contain duplicates</b>).
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                The <strong>set intersection</strong> of two sets contains any value that appears in both sets.
+            </p>
+
+            <p>
+                The <b>notation for this is <code>A &cap; B</code></b> (the union symbol upside down). For example,
+                <code>{<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>} &cap;
+                {<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>}</code> is
+                <code>{<span class="number">3</span>}</code>.
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                The <strong>set difference</strong> of two sets contains any value that appears in the first set but not the second.
+            </p>
+
+            <p>
+                The <b>notation for this is <code>A - B</code></b> (or alternatively <code>A \ B</code>). For example,
+                <code>{<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>} -
+                {<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>}</code> is
+                <code>{<span class="number">1</span>, <span class="number">2</span>}</code>.
+            </p>
+
+            <br />
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                The <strong>Cartesian product</strong> of two sets is a set of all pairs where the first element comes from the first set and the second element comes from the second set.
+            </p>
+
+            <p>
+                <b>It is written <code>A &times; B</code></b>. For example, <code>{<span class="number">1</span>,
+                <span class="number">2</span>, <span class="number">3</span>} &times; {<span class="number">3</span>,
+                <span class="number">4</span>, <span class="number">5</span>}</code> is <code>{(<span class="number">1</span>,<span class="number">3</span>),
+                (<span class="number">1</span>,<span class="number">4</span>), (<span class="number">1</span>,<span class="number">5</span>),
+                (<span class="number">2</span>,<span class="number">3</span>), (<span class="number">2</span>,<span class="number">4</span>),
+                (<span class="number">2</span>,<span class="number">5</span>), (<span class="number">3</span>,<span class="number">3</span>),
+                (<span class="number">3</span>,<span class="number">4</span>), (<span class="number">3</span>,<span class="number">5</span>)}</code>
+            </p>
+
+            <p>Example 1 shows an example implementation of the Cartesian product in pseudo-code.</p>
+
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 1 <br />
+                <code>
+                    <span class="keyword">SUBROUTINE</span> <span class="other">CartesianProduct</span>(a, b) <br />
+                    &ensp; result &larr; {} <br />
+                    &ensp; <span class="keyword">FOREACH</span> x <span class="keyword">IN</span> a <br />
+                    &ensp; &ensp; <span class="keyword">FOREACH</span> y <span class="keyword">IN</span> b <br />
+                    &ensp; &ensp; &ensp; result.<span class="other">Add</span>((x, y)) <br />
+                    &ensp; &ensp; <span class="keyword">ENDFOR</span> <br />
+                    &ensp; <span class="keyword">ENDFOR</span> <br />
+                    &ensp; <span class="function">RETURN</span> result <br />
+                    <span class="keyword">ENDSUBROUTINE</span>
+                </code>
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                Evaluate the expression <code class="small-code">({<span class="number">3</span>, <span class="number">1</span>,
+                <span class="number">4</span>} &cup; {<span class="number">3</span>, <span class="number">4</span>,
+                <span class="number">5</span>}) &times; ({<span class="number">1</span>, <span class="number">5</span>,
+                <span class="number">9</span>} \ {<span class="number">2</span>, <span class="number">6</span>,
+                <span class="number">5</span>})</code>.
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    This simplifies to <code>{<span class="number">1</span>, <span class="number">3</span>,
+                    <span class="number">4</span>, <span class="number">5</span>} &times; {<span class="number">1</span>,
+                    <span class="number">9</span>}</code>, which is <code>{(<span class="number">1</span>,<span class="number">1</span>),
+                    (<span class="number">1</span>,<span class="number">9</span>), (<span class="number">3</span>,<span class="number">1</span>),
+                    (<span class="number">3</span>,<span class="number">9</span>), (<span class="number">4</span>,<span class="number">1</span>),
+                    (<span class="number">4</span>,<span class="number">9</span>), (<span class="number">5</span>,<span class="number">1</span>),
+                    (<span class="number">5</span>,<span class="number">9</span>)}</code>
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>
