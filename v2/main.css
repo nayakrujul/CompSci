@@ -911,6 +911,18 @@ div.feedback-link {
     }
 }
 
+div.wrapper {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+
+    table td:not(.no-wrap), table th:not(.no-wrap) {
+        text-wrap: auto;
+        text-wrap-style: pretty;
+        overflow-wrap: normal;
+    }
+}
+
 div#content.error-404 {
     margin: 8px;
     text-align: center;
