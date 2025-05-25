@@ -286,7 +286,8 @@ const pageNames = [
         "Finite State Machines",
         "Basics of Sets",
         "Set Operations",
-        "Regular Expressions"
+        "Regular Expressions",
+        "Context-Free Languages"
     ],
     [],
     [

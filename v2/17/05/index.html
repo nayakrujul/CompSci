@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>17.05 - Context-Free Languages | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Study the difference between regular languages and context-free languages, and how to represent the latter with Backus-Naur Form and syntax diagrams, for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p><i>GCSE Link: None</i></p>
+
+            <p>
+                There are certain sets of strings which <b>cannot be represented as regular expressions</b> (i.e. they
+                do not form a regular language). Take, for instance, the set
+                <code>{<span class="string">a</span><sup>n</sup><span class="string">b</span><sup>n</sup> | n &ge; <span class="number">1</span>}</code>
+                (which is <code>{<span class="string">"ab"</span>, <span class="string">"aabb"</span>, <span class="string">"aaabbb"</span>, ...}</code>).
+                There is <b>no regular expression or finite state machine</b> that can describe this set. (The regular
+                expression <code><span class="string">a</span><span class="keyword">+</span><span class="string">b</span><span class="keyword">+</span></code>
+                includes strings like <code class="string">"aab"</code> where the numbers of <span class="string">a</span>s and
+                <span class="string">b</span>s are not the same.)
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Context-free languages</strong> are a superset of regular languages that are defined in terms of recursive production rules.
+            </p>
+
+            <p>
+                This means that <b>every regular language is context-free</b>, but not every context free language is
+                regular. There are <b>two main ways to represent context-free languages</b>, both shown below:
+            </p>
+
+            <p><br />
+                In <b>Backus-Naur Form</b> (BNF), the language is described in terms of <b>terminal symbols</b> (literal
+                characters like letters, digits or punctuation) and <b>non-terminal symbols</b> (defined in terms of
+                terminal and non-terminal symbols using <b>production rules</b>). Non-terminal symbols are always enclosed
+                in angled brackets, <code class="keyword">&lt;&gt;</code>.
+            </p>
+
+            <p>Example 1 shows a simple example of BNF being used to define different types of numbers.</p>
+
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 1 <br />
+                <code>
+                    <span class="keyword">&lt;digit&gt;</span> ::=  <span class="string">0</span> |
+                    <span class="string">1</span> | <span class="string">2</span> | <span class="string">3</span> |
+                    <span class="string">4</span> | <span class="string">5</span> | <span class="string">6</span> |
+                    <span class="string">7</span> | <span class="string">8</span> | <span class="string">9</span> <br />
+                    <span class="keyword">&lt;natural&gt;</span> ::= <span class="keyword">&lt;digit&gt;</span> |
+                    <span class="keyword">&lt;digit&gt;&lt;natural&gt;</span> <br />
+                    <span class="keyword">&lt;integer&gt;</span> ::= <span class="keyword">&lt;natural&gt;</span> |
+                    <span class="string">-</span><span class="keyword">&lt;natural&gt;</span> <br />
+                    <span class="keyword">&lt;real&gt;</span> ::= <span class="keyword">&lt;integer&gt;</span> |
+                    <span class="keyword">&lt;integer&gt;</span><span class="string">.</span><span class="keyword">&lt;natural&gt;</span>
+                </code>
+            </p>
+
+            <p>
+                Let's go through it line by line:
+            </p>
+
+            <ul class="spaced-out less-padding-left">
+                <li>
+                    On the first line, the non-terminal symbol <code class="keyword">&lt;digit&gt;</code> is defined as
+                    being any of the literal characters <code class="string">0</code> to <code class="string">9</code>
+                    (the <code>|</code> means "or" in BNF, just like in regex).
+                </li>
+                <li>
+                    Next, a <code class="keyword">&lt;natural&gt;</code> is defined as being either a single
+                    <code class="keyword">&lt;digit&gt;</code>, or a <code class="keyword">&lt;digit&gt;</code> followed
+                    by a <code class="keyword">&lt;natural&gt;</code>. This is a recursive definition, allowing
+                    <code class="keyword">&lt;natural&gt;</code>s to be any length.
+                </li>
+                <li>
+                    On line 3, we define an <code class="keyword">&lt;integer&gt;</code> to be either just a
+                    <code class="keyword">&lt;natural&gt;</code> or a <code class="string">-</code> followed by a
+                    <code class="keyword">&lt;natural&gt;</code>. This allows for both positive and negative numbers.
+                </li>
+                <li>
+                    Finally, the last line defines a <code class="keyword">&lt;real&gt;</code> number, which can either
+                    be just an <code class="keyword">&lt;integer&gt;</code>, or an <code class="keyword">&lt;integer&gt;</code>
+                    followed a <code class="string">.</code> followed by a <code class="keyword">&lt;natural&gt;</code>.
+                    This allows for decimals.
+                </li>
+            </ul>
+
+            <p><br />
+                The other way to represent context-free languages is using <b>syntax diagrams</b>. Simply <b>follow the
+                arrows</b> from the start to the end to see if a string is part of the language. If there are different
+                options, use forks in the path. Recursion is achieved by simply <b>looping back around</b> to the start.
+                Terminal symbols are put in <b>circles</b> and non-terminal symbols are put in <b>rectangles</b>.
+            </p>
+
+            <p>Diagram 1 shows a syntax diagram which is equivalent to the BNF in Example 1.</p>
+
+            <p class="diagram">
+                <img src="../../icons/image.svg" class="icon" />
+                Diagram 1 <br /> <br />
+                <img src="./diagram1.png" style="width: 500px;" />
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                Write a BNF production rule to describe the set <code class="small-code">
+                {<span class="string">a</span><sup>n</sup><span class="string">b</span><sup>n</sup> | n &ge; <span class="number">1</span>}</code>.
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    <code>
+                        <span class="keyword">&lt;valid-string&gt;</span> ::= <span class="string">ab</span> |
+                        <span class="string">a</span><span class="keyword">&lt;valid-string&gt;</span><span class="string">b</span>
+                    </code>
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>

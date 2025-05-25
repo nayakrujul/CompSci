@@ -584,6 +584,11 @@ p.code code, span.answer code {
     font-family: 'Courier New', Courier, monospace;
 }
 
+p.code {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
 b {
     text-decoration: underline;
 }
