@@ -225,7 +225,8 @@ const pageNames = [
         "Procedural Programming",
         "Object-Oriented Programming",
         "Inheritance",
-        "Information Hiding"
+        "Information Hiding",
+        "Association"
     ],
     [
         "Logic Puzzles",

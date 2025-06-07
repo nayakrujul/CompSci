@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>9.12 - Association | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn about aggregation and composition (types of association) in Object-Oriented Programming for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p><i>GCSE Link: None</i></p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Association</strong> is another fundamental principle of OOP where objects can reference other objects.
+            </p>
+
+            <p>
+                For example, a <code class="other">Character</code> object in a game might have references to the
+                <code class="other">Weapon</code>s that it can use. It <b>does not make sense to use inheritance</b>
+                here, since the two objects are not the same type as each other: instead they are <b>linked by ownership</b>.
+            </p>
+
+            <p><br />There are <b>two types of association</b>, differentiated by the strength of the relationship:</p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Composition</strong> is the stronger form of association, where the contained objects cannot exist without the container.
+            </p>
+
+            <p>
+                For example: <code class="other">Attachment</code> and <code class="other">Email</code>. An
+                <code class="other">Email</code> object will keep track of the <code class="other">Attachment</code>s to
+                that email, but <b>the attachments cannot exist if the email is deleted</b>. Therefore this is composition.
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Aggregation</strong> is the weaker form of association, where the contained objects may exist outside of the container.
+            </p>
+
+            <p>
+                For example: <code class="other">Song</code> and <code class="other">Playlist</code>. A
+                <code class="other">Playlist</code> object will keep track of the <code class="other">Songs</code>s in
+                that playlist, but <b>the songs can still exist if the playlist is deleted</b>. Therefore this is aggregation.
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                If you have a choice, which should you choose: composition or inheritance?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    Composition should be favoured over inheritance. It allows relationships to be more flexible,
+                    therefore making code easier to maintain and extend.
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>
