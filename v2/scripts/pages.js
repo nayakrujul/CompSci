@@ -226,7 +226,8 @@ const pageNames = [
         "Object-Oriented Programming",
         "Inheritance",
         "Information Hiding",
-        "Association"
+        "Association",
+        "UML Diagrams"
     ],
     [
         "Logic Puzzles",
