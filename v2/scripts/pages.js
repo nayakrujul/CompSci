@@ -289,7 +289,8 @@ const pageNames = [
         "Basics of Sets",
         "Set Operations",
         "Regular Expressions",
-        "Context-Free Languages"
+        "Context-Free Languages",
+        "Turing Machines"
     ],
     [],
     [

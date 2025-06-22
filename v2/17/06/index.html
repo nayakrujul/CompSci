@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>17.06 - Turing Machines | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn about Turing machines and how they can be used as a model of computation for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p><i>GCSE Link: None</i></p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Turing machines</strong> allow us to define the limits of computability by providing a formal model of computation.
+            </p>
+
+            <p>
+                That is, <b>if a problem can be solved</b> computationally then there is (theoretically) a Turing
+                machine which can be <b>created to solve that problem</b>.
+            </p>
+
+            <p><br />
+                A Turing machine consists of an <b>infinitely long tape</b>, a <b>read-write head</b> and a
+                <b>transition function</b> (which governs the movement and output of the read-write head). The machine
+                is in one of a finite number of <b>states</b> at any given point in time. Each cell on the tape either
+                contains a <b>single symbol</b> or is <b>left blank</b> (denoted as a hollow box, &square;).
+            </p>
+
+            <p><br />
+                The transition function is made up of a number of <b>transition rules</b>, each of which is of the format
+                <code><span class="keyword">&delta;</span>(<span class="function">CurrentState</span>, <span class="string">Input</span>) =
+                (<span class="function">NextState</span>, <span class="string">Output</span>, <span class="other">Movement</span>)</code>.
+            </p>
+
+            <p>
+                For example, the transition rule <code><span class="keyword">&delta;</span>(<span class="function">S<sub>0</sub></span>, <span class="string">a</span>) =
+                (<span class="function">S<sub>1</sub></span>, <span class="string">b</span>, <span class="other">&rarr;</span>)</code>
+                means "If the machine is currently in state <code class="function">S<sub>0</sub></code> and reads an <code class="string">'a'</code>, then
+                switch to state <code class="function">S<sub>1</sub></code>, write a <code class="string">'b'</code> and move to the <code class="other">right</code>".
+            </p>
+
+            <p><br />
+                Note: beyond A Level, the tape is usually shown as infinite in both directions, but for the A Level exam
+                you will only be shown tapes that are <b>infinite on the right and not the left</b>.
+            </p>
+
+            <p>Diagram 1 shows a step-by-step animation of a Turing machine which computes the even parity bit of a string of bits. <b><i>Use the arrows to navigate.</i></b></p>
+
+            <p class="diagram">
+                <img src="../../icons/image.svg" class="icon" />
+                Diagram 1 <br /> <br />
+                <img src="../../icons/left.svg" class="no-zoom" id="js-target-1" style="height: 32px; cursor: pointer; filter: invert(40%) sepia(91%) saturate(1234%) hue-rotate(220deg) brightness(100%) contrast(93%); border: 3px solid; border-radius: 50%; padding: 0px 8px;" />
+                <img src="./anim/Slide1.png" id="js-target-0" style="width: 750px; max-width: calc(70vw - 10px);" />
+                <img src="../../icons/right.svg" class="no-zoom" id="js-target-2" style="height: 32px; cursor: pointer; filter: invert(40%) sepia(91%) saturate(1234%) hue-rotate(220deg) brightness(100%) contrast(93%); border: 3px solid; border-radius: 50%; padding: 0px 8px;" />
+            </p>
+
+            <p><br />
+                But a Turing machine is really just a <b>finite state machine with a tape</b>! To account for this, we
+                write <code>input|output,direction</code> next to the arrows, like <code>0|0,&rarr;</code>.
+            </p>
+
+            <br />
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>Universal Turing Machine</strong> (UTM) is a Turing machine that can simulate any other Turing machine.
+            </p>
+
+            <p>
+                It is basically an <b>interpreter of Turing machines</b>. It takes a description of another Turing
+                machine along with its input and mimics its behaviour.
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                Draw a finite state machine which is equivalent to the Turing machine shown in Diagram 1.
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    <img src="./answer.png" style="width: 500px;" />
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+        <script src="./main.js"></script>
+
+    </body>
+</html>
