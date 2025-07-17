@@ -248,7 +248,9 @@ const pageNames = [
         "Encryption",
         "qs"
     ],
-    [],
+    [
+        "Hardware and Software"
+    ],
     [],
     [
         "Communication Basics",

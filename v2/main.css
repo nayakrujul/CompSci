@@ -341,20 +341,15 @@ div#footer {
     background-color: white;
     text-align: center;
     box-shadow: 0px -10px 10px 5px rgba(0, 0, 0, 0.2);
-
-    b.no-underline {
-        position: absolute;
-        bottom: 10px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
 
     a#prev-link, a#next-link {
         font-size: 25px;
         text-decoration: none;
         color: var(--button-background);
-        position: absolute;
-        bottom: 5px;
     }
 
     a#prev-link.disabled, a#next-link.disabled {
