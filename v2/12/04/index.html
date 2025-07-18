@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>12.04 - Programming Language Classification | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="DESCRIPTION">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p><i>GCSE Link: <a href="../../2/16/">2.16 - Programming Language Classification</a></i></p>
+
+            <p>Programming languages can be split into two types: high-level and low-level languages</p>
+
+            <p>
+                Some examples of high-level languages include
+                <a href="https://www.python.org/" target="_blank" rel="noopener noreferrer">Python</a>,
+                <a href="https://www.dev.java/" target="_blank" rel="noopener noreferrer">Java</a>,
+                <a href="https://www.github.com/Thunno/Thunno2/" target="_blank" rel="noopener noreferrer">Thunno</a>, and
+                <a href="https://www.go.dev/" target="_blank" rel="noopener noreferrer">Go</a>.
+            </b>
+
+            <p>
+                <b>The only low-level languages are assembly language and machine code.</b> <br />
+                Machine code is written in binary, and is the only form of code that a computer can understand. <br />
+                Each instruction in assembly language represents one instruction of machine code.
+            </p>
+
+            <br />
+
+            <p>Example 1 (Python) and Example 2 (AQA assembly language) show exactly the same algorithm in different languages.</p>
+
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 1 <br />
+                <code>
+                    a = <span class="other">int</span>(<span class="function">input</span>()) <br />
+                    <span class="function">print</span>(a * a)
+                </code>
+            </p>
+
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 2 <br />
+                <code>
+                    &ensp; <span class="keyword">LDR</span> <span class="other">R0</span>, <span class="number">#0</span> <br />
+                    &ensp; <span class="keyword">LDR</span> <span class="other">R1</span>, <span class="string">101</span> <br />
+                    &ensp; <span class="keyword">LDR</span> <span class="other">R2</span>, <span class="string">101</span> <br />
+                    <span class="function">loop:</span> <br />
+                    &ensp; <span class="keyword">CMP</span> <span class="other">R2</span>, <span class="number">#0</span> <br />
+                    &ensp; <span class="keyword">BEQ</span> <span class="function">end</span> <br />
+                    &ensp; <span class="keyword">ADD</span> <span class="other">R0</span>, <span class="other">R0</span>, <span class="other">R1</span> <br />
+                    &ensp; <span class="keyword">SUB</span> <span class="other">R2</span>, <span class="other">R2</span>, <span class="number">#1</span> <br />
+                    &ensp; <span class="keyword">B</span> <span class="function">loop</span> <br />
+                    <span class="function">end:</span> <br />
+                    &ensp; <span class="keyword">STR</span> <span class="other">R0</span>, <span class="string">102</span> <br />
+                    &ensp; <span class="keyword">HALT</span>
+                </code>
+            </p>
+
+            <p><b>Advantages of high-level languages:</b></p>
+
+            <ul class="less-padding-left">
+                <li>
+                    As seen in the examples above, high-level languages like Python are often
+                    <b>much easier to read and understand</b> than low-level languages
+                    like assembly language and machine code.
+                </li>
+                <li>
+                    The same code in a high-level language <b>will work on any processor</b>,
+                    whereas code in low-level languages is dependent on the processor type.
+                </li>
+                <li>
+                    Because each line of code in a high-level language can represent multiple
+                    instructions in machine code, high-level languages are usually
+                    <b>easier and quicker to program in</b> than low-level languages.
+                </li>
+            </ul>
+
+            <p><b>Advantages of low-level languages:</b></p>
+
+            <ul class="less-padding-left">
+                <li>
+                    Commands in machine code <b>can be executed directly</b>, without the need
+                    for a translator (2B.08).
+                </li>
+                <li>
+                    Low-level languages have <b>more control over the hardware</b> (e.g. you
+                    can control exactly how memory is used in the program).
+                </li>
+                <li>
+                    Very efficient code can be written for a particular type of processor, so
+                    programs in low-level languages generally <b>execute faster and use less memory</b>
+                    than programs in high-level languages.
+                </li>
+            </ul>
+
+            <br />
+
+            <p>Only <b>machine code</b> can be understood by the computer. Everything else has to be <b>translated</b> (converted) into machine code.</p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Translators</strong> are a type of software which translate (convert) code into machine code that the computer can run.
+            </p>
+
+            <p>
+                There are three types of translator: <b>compilers, interpreters, and assemblers</b>. <br />
+                Compilers and interpreters work on high-level languages. Assemblers work on assembly language.
+            </p>
+
+            <p>
+                Compilers translate a <b>whole program directly</b> into machine code, while interpreters translate
+                <b>one line at a time</b>, calling machine code subroutines to execute the file.
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                What are the advantages and disadvantages of compiled languages as opposed to interpreted languages?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    Advantages: <br />
+                    &bullet; Compilation results in an executable machine code file which will run more quickly than interpreted code <br />
+                    &bullet; The original source code cannot be retrieved once compiled, which is good for mass distribution (e.g. games) <br />
+                    &bullet; The file can be run directly without any other software <br />
+                    <br />
+                    Disadvantages: <br />
+                    &bullet; Compilation can take a long time for larger projects <br />
+                    &bullet; The executable file is specific to a processor type and will not run on devices with other processors
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>12.02 - The Operating System | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Study the functions of an Operating System (OS) for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p><i>GCSE Link: <a href="../../4/07/">4.07 - The Operating System</a></i></p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon">
+                The <strong>Operating System</strong> (OS) is a set of programs which act as a bridge between applications and the computer's hardware.
+            </p>
+
+            <p>The OS has six main jobs (as we know from GCSE):</p>
+    
+            <ul class="spaced-out less-padding-left">
+                <li>
+                    <b>Processor management</b> <br />
+                    Each CPU core can only process one instruction at a time, so if you have multiple applications running,
+                    it's the OS's job to tell the CPU which application's instructions to process. Operating Systems
+                    schedule different tasks, using a priority system to make some applications' tasks wait in a queue.
+                </li>
+    
+                <li>
+                    <b>Memory management</b> <br />
+                    The OS manages which bits of RAM each application is allowed to use. This makes sure that applications
+                    don't interfere with or overwrite each other's data. When applications are closed, the OS removes their
+                    data from RAM.
+                </li>
+    
+                <li>
+                    <b>Input/Output device management</b> <br />
+                    I/O devices (like keyboards, microphones, or speakers), also called "peripherals", allow computers to
+                    take inputs and give outputs. Operating Systems use device drivers to communicate with I/O devices.
+                </li>
+    
+                <li>
+                    <b>Application management</b> <br />
+                    The OS has to install an application onto your computer when you download it. It also communicates
+                    with an Applications Program Interface (API) to allow the application to interact with your computer.
+                    The OS also provides an interface through which applications can be accessed.
+                </li>
+    
+                <li>
+                    <b>Disk management</b> <br />
+                    Your files aren't stored in folders in your computer. They're all stored in the same place on your hard
+                    drive. The OS has to keep track of where each file is stored on your hard drive, and also your folder
+                    structure. 
+                </li>
+    
+                <li>
+                    <b>Security management</b> <br />
+                    The OS manages login details for different users on your computer, as well as user access permissions.
+                    It also encrypts files on the hard drive to keep them secure.
+                </li>
+            </ul>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                How might the OS also help with networking?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    It provides applications with software that can abstract the details of hardware and protocols, so
+                    that they can communicate over networks using simple Application Program Interfaces (APIs).
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>

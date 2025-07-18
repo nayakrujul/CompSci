@@ -249,7 +249,10 @@ const pageNames = [
         "qs"
     ],
     [
-        "Hardware and Software"
+        "Hardware and Software",
+        "The Operating System",
+        "Utility Software",
+        "Programming Language Classification"
     ],
     [],
     [
