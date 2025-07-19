@@ -252,7 +252,9 @@ const pageNames = [
         "Hardware and Software",
         "The Operating System",
         "Utility Software",
-        "Programming Language Classification"
+        "Programming Language Classification",
+        "Logic Gates",
+        "Adder Circuits"
     ],
     [],
     [

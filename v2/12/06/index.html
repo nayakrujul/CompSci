@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>12.06 - Adder Circuits | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Study how logic gates can be used to add up numbers for GCSE Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p><i>GCSE Link: None</i></p>
+
+            <p>
+                Let's say you want to <b>add two 1-bit integers</b> (i.e. either <code>0</code> or <code>1</code>) together.
+                We'll need <b>two inputs</b> (the two bits) and <b>two outputs</b> (because the output could be up to two bits).
+                We could write out a <b>truth table</b> like so, where <code class="function">A</code> and
+                <code class="function">B</code> are our inputs, and <code class="keyword">S<sub>0</sub></code> and
+                <code class="keyword">S<sub>1</sub></code> are our outputs (sum).
+            </p>
+
+            <table>
+                <tr>
+                    <th><code class="function">A</code></th>
+                    <th><code>+</code></th>
+                    <th><code class="function">B</code></th>
+                    <th><code>=</code></th>
+                    <th><code class="keyword">S<sub>0</sub></code></th>
+                    <th><code class="keyword">S<sub>1</sub></code></th>
+                </tr>
+                <tr>
+                    <td><code class="number">0</code></td>
+                    <td><code>+</code></td>
+                    <td><code class="number">0</code></td>
+                    <td><code>=</code></td>
+                    <td><code class="string">0</code></td>
+                    <td><code class="string">0</code></td>
+                </tr>
+                <tr>
+                    <td><code class="number">0</code></td>
+                    <td><code>+</code></td>
+                    <td><code class="number">1</code></td>
+                    <td><code>=</code></td>
+                    <td><code class="string">0</code></td>
+                    <td><code class="string">1</code></td>
+                </tr>
+                <tr>
+                    <td><code class="number">1</code></td>
+                    <td><code>+</code></td>
+                    <td><code class="number">0</code></td>
+                    <td><code>=</code></td>
+                    <td><code class="string">0</code></td>
+                    <td><code class="string">1</code></td>
+                </tr>
+                <tr>
+                    <td><code class="number">1</code></td>
+                    <td><code>+</code></td>
+                    <td><code class="number">1</code></td>
+                    <td><code>=</code></td>
+                    <td><code class="string">1</code></td>
+                    <td><code class="string">0</code></td>
+                </tr>
+            </table>
+
+            <br />
+
+            <p>
+                We can now clearly see that <code>
+                    <span class="keyword">S<sub>0</sub></span> = <span class="function">A</span> &CenterDot; <span class="function">B</span>
+                </code> and that <code>
+                    <span class="keyword">S<sub>1</sub></span> = <span class="function">A</span> &oplus; <span class="function">B</span>
+                </code>. We can now draw the logic diagram for the <b>half-adder</b>, which adds two bits together.
+            </p>
+
+            <p>Diagram 1 shows the logic diagram for the half-adder.</p>
+
+            <p class="diagram">
+                <img src="../../icons/image.svg" class="icon" />
+                Diagram 1 <br /> <br />
+                <img src="./diagram1.png" style="width: 500px;" />
+            </p>
+
+            <p><br />
+                The <b>full-adder</b> is a more complicated circuit which takes a third input <code class="function">C</code>,
+                the carry-in bit. It can then <b>add those three bits together</b> resulting in two output bits. These
+                can then be chained to add any number of bits together.
+            </p>
+
+            <p>Diagram 1 shows the logic diagram for the full-adder.</p>
+
+            <p class="diagram">
+                <img src="../../icons/image.svg" class="icon" />
+                Diagram 2 <br /> <br />
+                <img src="./diagram2.png" style="width: 500px;" />
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                Write out the truth table for the full-adder.
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    <code>
+                        <span class="function">A</span> + <span class="function">B</span> + <span class="function">C</span> = <span class="keyword">S<sub>0</sub></span> <span class="keyword">S<sub>1</sub></span> <br />
+                        <span class="number">0</span> + <span class="number">0</span> + <span class="number">0</span> = <span class="string">0</span><sub>&nbsp;</sub> <span class="string">0</span> <br />
+                        <span class="number">0</span> + <span class="number">0</span> + <span class="number">1</span> = <span class="string">0</span><sub>&nbsp;</sub> <span class="string">1</span> <br />
+                        <span class="number">0</span> + <span class="number">1</span> + <span class="number">0</span> = <span class="string">0</span><sub>&nbsp;</sub> <span class="string">1</span> <br />
+                        <span class="number">0</span> + <span class="number">1</span> + <span class="number">1</span> = <span class="string">1</span><sub>&nbsp;</sub> <span class="string">0</span> <br />
+                        <span class="number">1</span> + <span class="number">0</span> + <span class="number">0</span> = <span class="string">0</span><sub>&nbsp;</sub> <span class="string">1</span> <br />
+                        <span class="number">1</span> + <span class="number">0</span> + <span class="number">1</span> = <span class="string">1</span><sub>&nbsp;</sub> <span class="string">0</span> <br />
+                        <span class="number">1</span> + <span class="number">1</span> + <span class="number">0</span> = <span class="string">1</span><sub>&nbsp;</sub> <span class="string">0</span> <br />
+                        <span class="number">1</span> + <span class="number">1</span> + <span class="number">1</span> = <span class="string">1</span><sub>&nbsp;</sub> <span class="string">1</span> <br />
+                    </code>
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>
