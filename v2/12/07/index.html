@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>12.07 - Boolean Algebra | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn about the identities used to simplify Boolean expressions for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p><i>GCSE Link: None</i></p>
+
+            <p>
+                There are a number of <b>identities</b> that we can use to simplify Boolean expressions:
+            </p>
+
+            <ul class="less-padding-left spaced-out">
+                <li>
+                    <code><span class="overbar function"> &#x0305;A</span> = <span class="function">A</span></code>
+                    &ensp; (two <code class="other">NOT</code>s cancel out)
+                </li>
+                <br />
+                <li>
+                    <code>
+                        <span class="function">A</span> &CenterDot; <span class="number">0</span> =
+                        <span class="number">0</span>
+                    </code>
+                    &ensp; (anything <code class="other">AND</code> <code class="number">0</code> is just
+                    <code class="number">0</code>)
+                </li>
+                <li>
+                    <code>
+                        <span class="function">A</span> + <span class="number">1</span> = <span class="number">1</span>
+                    </code>
+                    &ensp; (anything <code class="other">OR</code> <code class="number">1</code> is just
+                    <code class="number">1</code>)
+                </li>
+                <li>
+                    <code>
+                        <span class="function">A</span> &CenterDot; <span class="number">1</span> =
+                        <span class="function">A</span>
+                    </code>
+                    &ensp; (anything <code class="other">AND</code> <code class="number">1</code> is itself)
+                </li>
+                <li>
+                    <code>
+                        <span class="function">A</span> + <span class="number">0</span> =
+                        <span class="function">A</span>
+                    </code>
+                    &ensp; (anything <code class="other">OR</code> <code class="number">0</code> is itself)
+                </li>
+                <br />
+                <li>
+                    <code>
+                        <span class="function">A</span> &CenterDot; <span class="string">B</span> =
+                        <span class="string">B</span> &CenterDot; <span class="function">A</span>
+                    </code>
+                    &ensp; (order of <code class="other">AND</code> doesn't matter)
+                </li>
+                <li>
+                    <code>
+                        <span class="function">A</span> + <span class="string">B</span> =
+                        <span class="string">B</span> + <span class="function">A</span>
+                    </code>
+                    &ensp; (order of <code class="other">OR</code> doesn't matter)
+                </li>
+                <li>
+                    <code>
+                        (<span class="function">A</span> &CenterDot; <span class="string">B</span>) &CenterDot;
+                        <span class="keyword">C</span> = <span class="function">A</span> &CenterDot;
+                        (<span class="string">B</span> &CenterDot; <span class="keyword">C</span>)
+                    </code>
+                    &ensp; (<code class="other">AND</code> is associative)
+                </li>
+                <li>
+                    <code>
+                        (<span class="function">A</span> + <span class="string">B</span>) +
+                        <span class="keyword">C</span> = <span class="function">A</span> +
+                        (<span class="string">B</span> + <span class="keyword">C</span>)
+                    </code>
+                    &ensp; (<code class="other">OR</code> is associative)
+                </li>
+                <br />
+                <li>
+                    <code>
+                        <span class="function">A</span> &CenterDot; <span class="function">A</span> =
+                        <span class="function">A</span>
+                    </code>
+                    &ensp; (anything <code class="other">AND</code> itself is itself)
+                </li>
+                <li>
+                    <code>
+                        <span class="function">A</span> + <span class="function">A</span> =
+                        <span class="function">A</span>
+                    </code>
+                    &ensp; (anything <code class="other">OR</code> itself is itself)
+                </li>
+                <li>
+                    <code>
+                        <span class="function">A</span> &CenterDot; <span class="function overbar">A</span> =
+                        <span class="number">0</span>
+                    </code>
+                    &ensp; (anything <code class="other">AND</code> its complement is <code class="number">0</code>)
+                </li>
+                <li>
+                    <code>
+                        <span class="function">A</span> + <span class="function overbar">A</span> =
+                        <span class="number">1</span>
+                    </code>
+                    &ensp; (anything <code class="other">OR</code> its complement is <code class="number">1</code>)
+                </li>
+                <br />
+                <li>
+                    <code>
+                        <span class="function">A</span> &CenterDot; (<span class="string">B</span> +
+                        <span class="keyword">C</span>) = (<span class="function">A</span> &CenterDot;
+                        <span class="string">B</span>) + (<span class="function">A</span> &CenterDot;
+                        <span class="keyword">C</span>)
+                    </code>
+                    &ensp; (<code class="other">AND</code> can be distributed into the brackets, like multiplication)
+                </li>
+                <li>
+                    <code>
+                        <span class="function">A</span> + (<span class="string">B</span> &CenterDot;
+                        <span class="keyword">C</span>) = (<span class="function">A</span> +
+                        <span class="string">B</span>) &CenterDot; (<span class="function">A</span> +
+                        <span class="keyword">C</span>)
+                    </code>
+                    &ensp; (<code class="other">OR</code> can also be distributed into the brackets)
+                </li>
+                <br />
+                <li>
+                    <code>
+                        <span class="function">A</span> + (<span class="function">A</span> &CenterDot;
+                        <span class="string">B</span>) = <span class="function">A</span>
+                    </code>
+                    &ensp; (we can factorise the LHS to get <code><span class="function">A</span> &CenterDot;
+                    (<span class="number">1</span> + <span class="string">B</span>)</code>, which simplifies to
+                    <code class="function">A</code>)
+                </li>
+                <li>
+                    <code>
+                        <span class="function">A</span> &CenterDot; (<span class="function">A</span> +
+                        <span class="string">B</span>) = <span class="function">A</span>
+                    </code>
+                    &ensp; (we expand to get <code>(<span class="function">A</span> &CenterDot;
+                    <span class="function">A</span>) + (<span class="function">A</span> &CenterDot;
+                    <span class="string">B</span>)</code>, which is <code><span class="function">A</span> +
+                    (<span class="function">A</span> &CenterDot; <span class="string">B</span>)</code> which we know is
+                    just <code class="function">A</code>)
+                </li>
+                <br />
+                <li>
+                    <code>
+                        <span class="overbar"><span class="function">A</span> &CenterDot; <span class="string">B</span></span>
+                        = <span class="overbar function">A</span> + <span class="overbar string">B</span>
+                    </code>
+                    &ensp; (De Morgan's Law: split the bar and flip the sign)
+                </li>
+                <li>
+                    <code>
+                        <span class="overbar"><span class="function">A</span> + <span class="string">B</span></span>
+                        = <span class="overbar function">A</span> &CenterDot; <span class="overbar string">B</span>
+                    </code>
+                    &ensp; (De Morgan's Law: split the bar and flip the sign)
+                </li>
+            </ul>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                Simplify the Boolean expression <code class="small-code">
+                    <span class="overbar"><span class="function">A</span> &CenterDot; <span class="string">B&#x0305;</span></span>
+                    + (<span class="function">A</span> &CenterDot; <span class="string overbar">B</span>) +
+                    (<span class="string">B</span> &CenterDot; <span class="keyword">C</span>)
+                </code>
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    Apply De Morgan's Law to the first term: &ensp; <code>
+                        <span class="overbar"><span class="function">A</span> &CenterDot;<span class="string"> &#x0305;B</span></span>
+                        = <span class="function overbar">A</span> + <span class="string overbar">&#x0305;B</span>
+                        = <span class="function overbar">A</span> + <span class="string">B</span>
+                    </code> <br /> <br />
+                    Therefore the expression is &ensp; <code>
+                        <span class="function overbar">A</span> + <span class="string">B</span> +
+                        (<span class="function">A</span> &CenterDot; <span class="string overbar">B</span>) +
+                        (<span class="string">B</span> &CenterDot; <span class="keyword">C</span>)
+                    </code> <br /> <br /> <br />
+                    We can rearrange to get &ensp; <code>
+                        <span class="string">B</span> + (<span class="string">B</span> &CenterDot; <span class="keyword">C</span>)
+                        + <span class="function overbar">A</span> + 
+                        (<span class="function">A</span> &CenterDot; <span class="string overbar">B</span>)
+                    </code> <br /> <br /> <br />
+                    We know that &ensp; <code>
+                        <span class="string">B</span> + (<span class="string">B</span> &CenterDot; <span class="keyword">C</span>)
+                        = <span class="string">B</span>
+                    </code> <br /> <br />
+                    Therefore we have &ensp; <code>
+                        <span class="string">B</span> + <span class="function overbar">A</span> + 
+                        (<span class="function">A</span> &CenterDot; <span class="string overbar">B</span>)
+                    </code> <br /> <br /> <br />
+                    We can distribute into the brackets, getting &ensp; <code>
+                        <span class="string">B</span> + ((<span class="function overbar">A</span> + 
+                        <span class="function">A</span>) &CenterDot; (<span class="function overbar">A</span> +
+                        <span class="string overbar">B</span>))
+                    </code> <br /> <br />
+                    But &ensp; <code>
+                        <span class="function overbar">A</span> + <span class="function">A</span> =
+                        <span class="number">1</span>
+                    </code> &ensp; and &ensp;  <code>
+                        <span class="number">1</span> &CenterDot; (<span class="function overbar">A</span> +
+                        <span class="string overbar">B</span>) = <span class="function overbar">A</span> +
+                        <span class="string overbar">B</span>
+                    </code> <br /> <br />
+                    So now we have &ensp; <code>
+                        <span class="string">B</span> + <span class="function overbar">A</span> +
+                        <span class="string overbar">B</span>
+                    </code> <br /> <br /> <br />
+                    And finally &ensp; <code>
+                        <span class="string">B</span> + <span class="string overbar">B</span> =
+                        <span class="number">1</span>
+                    </code> <br /> <br />
+                    Thus we are left with &ensp; <code>
+                        <span class="function overbar">A</span> + <span class="number">1</span>
+                    </code> which is simply <code class="number">1</code>
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>

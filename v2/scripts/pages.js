@@ -254,7 +254,8 @@ const pageNames = [
         "Utility Software",
         "Programming Language Classification",
         "Logic Gates",
-        "Adder Circuits"
+        "Adder Circuits",
+        "Boolean Algebra"
     ],
     [],
     [
