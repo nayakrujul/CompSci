@@ -57,8 +57,8 @@ const THEMES = ["blue", "turquoise", "green", "brown", "orange", "yellow", "pink
 
 let selected = localStorage.getItem("themeColour")
 if (!THEMES.includes(selected)) {
-    selected = "random";
-    document.body.classList.add(THEMES[Math.floor(Math.random() * THEMES.length)]);
+    selected = "turquoise";
+    document.body.classList.add("turquoise");
 } else {
     document.body.classList.add(selected);
 }
