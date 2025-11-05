@@ -257,7 +257,10 @@ const pageNames = [
         "Adder Circuits",
         "Boolean Algebra"
     ],
-    [],
+    [
+        "Computer Hardware",
+        "System Architectures"
+    ],
     [
         "Communication Basics",
         "Serial and Parallel Transmission",

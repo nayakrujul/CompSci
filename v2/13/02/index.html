@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>13.02 - System Architectures | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Study the differences between the von Neumann and Harvard architectures, as well as the stored program concept, for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p><i>GCSE Link: None</i></p>
+
+            <p>There are two main types of designs of computer systems.</p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                In the <strong>von Neumann architecture</strong>, data and program instructions are stored together in a single pool of main memory.
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                In the <strong>Harvard architecture</strong>, data and instructions are stored separately in two distinct memory spaces.
+            </p>
+
+            <p>
+                The von Neumann architecture is used in <b>all modern general-purpose devices</b> due to its flexibility,
+                while <b>embedded systems</b> might use the Harvard architecture due to its ability to access data and
+                instructions in parallel. The Harvard architecture can also <b>prevent data from being executed as
+                code</b> (an exploit that could be used by hackers).
+            </p>
+
+            <br />
+
+            <p>
+                The <b>stored program concept</b> is the idea that instructions can be stored in and fetched from main
+                memory, just like data. This allows for <b>different programs to be run</b> without changing the hardware.
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                How does the stored program concept relate to the von Neumann architecture?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    The stored program concept is the basis of the von Neumann architecture, where data and program
+                    instructions are stored together in main memory and transmitted along the same buses.
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>

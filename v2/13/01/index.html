@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>13.01 - Computer Hardware | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn about the essential components of a computer system for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p><i>GCSE Link: None</i></p>
+
+            <p><br />All computer systems require certain <b>essential components</b>.</p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                The <strong>processor</strong> or Central Processing Unit (CPU) executes machine code instructions to run programs.
+            </p>
+
+            <p>This will be explored further later on in this section.</p>
+            
+            <br />
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Main memory</strong> stores data and program instructions so that they can be fetched by the processor.
+            </p>
+
+            <p>
+                Main memory is <b>split into small blocks</b> (usually bytes), each of which has an <b>address</b> that
+                can be used to retrieve the data in that space.
+            </p>
+            
+            <br />
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Buses</strong> are collections of wires used to send data between components of the computer system.
+            </p>
+
+            <p>The three main buses are:</p>
+
+            <ul class="less-padding-left spaced-out">
+                <li>
+                    The <b>data bus</b>, a bidirectional bus which carries data between the CPU and other components such as main memory
+                </li>
+                <li>
+                    The <b>address bus</b>, a unidirectional bus which transfers memory addresses from the CPU to other components
+                </li>
+                <li>
+                    The <b>control bus</b>, a bidirectional bus carrying signals such as the clock and read/write mode
+                </li>
+            </ul>
+
+            <p>
+                The <b>width</b> of a bus is the number of wires that it has. Since each wire can transmit a single bit
+                of information at once, the <b>total number of memory locations</b> that can be transmitted by the
+                address bus is <code>2<sup>w</sup></code>, where <code>w</code> is the width of the bus.
+            </p>
+
+            <br />
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Input/Output controllers</strong> are hardware components that manage communication between the processor and external devices.
+            </p>
+
+            <p>
+                They include a <b>port</b> to connect to the peripheral device, a set of <b>registers</b> to hold data,
+                and an <b>interface</b> to connect to the processor.
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                What is the minimum required address bus width to address 16GB of RAM, where each memory location is a byte?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    16GB is equal to 16,000,000,000 bytes. Taking <code>log<sub>2</sub></code> of this gives <code>33.9</code>,
+                    so the minimum width required is 34.
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>
