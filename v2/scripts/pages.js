@@ -171,7 +171,7 @@ const pageNames = [
         "The Operating System",
         "Utility Software",
         "The CPU",
-        "Fetch Execute Cycle",
+        "The Fetch-Execute Cycle",
         "CPU Performance",
         "RAM and ROM",
         "Virtual Memory",
@@ -259,7 +259,9 @@ const pageNames = [
     ],
     [
         "Computer Hardware",
-        "System Architectures"
+        "System Architectures",
+        "The CPU",
+        "The Fetch-Execute Cycle"
     ],
     [
         "Communication Basics",

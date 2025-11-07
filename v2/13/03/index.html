@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>13.03 - The CPU | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn about the functions of the CPU components and which factors can affect CPU performance for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p><i>GCSE Link: <a href="../../4/09/">4.09 - The CPU</a></i></p>
+
+            <p><br /><b>Processors</b> consist of a number of components:</p>
+
+            <ul class="spaced-out less-padding-left">
+                <li>
+                    The <b>Control Unit</b> (CU) coordinates the activities of the CPU, <b>identifying the processes</b>
+                    needed to carry out each instruction and <b>sending control signals</b> to the appropriate components.
+                </li>
+                <li>
+                    The <b>Arithmetic and Logic Unit</b> (ALU) performs <b>mathematical</b> (addition/subtraction),
+                    <b>logical</b> (<code>AND</code>, <code>OR</code>, <code>XOR</code>, <code>NOT</code>) and
+                    <b>bit-shift</b> operations.
+                </li>
+                <li>
+                    The <b>clock</b> which generates an <b>oscillating signal</b> to synchronise the activity of CPU components.
+                </li>
+                <li>
+                    <b>General-purpose registers</b> are small units of memory in the CPU that can store anything,
+                    usually an <b>intermediate result</b> of a calculation or a <b>memory address</b>.
+                </li>
+                <li>
+                    <b>Dedicated registers</b> (or special-purpose registers) are used to hold <b>specific values</b>
+                    needed by the CPU. They include: <br /> &nbsp;
+                    <ul class="less-padding-left spaced-out">
+                        <li>
+                            The <b>Program Counter</b> (PC), which holds the <b>memory address of the next instruction</b> 
+                            to be executed. It is updated at the end of the Fetch stage of the Fetch-Decode-Execute cycle.
+                        </li>
+                        <li>
+                            The <b>Current Instruction Register</b> (CIR), which <b>holds the current instruction</b>
+                            which is to be decoded and executed.
+                        </li>
+                        <li>
+                            The <b>Memory Address Register</b> (MAR), which holds the <b>memory address</b> of data
+                            which is to be read from or written to main memory.
+                        </li>
+                        <li>
+                            The <b>Memory Buffer Register</b> (MBR), which holds the <b>actual data</b> which has been
+                            read from or is to be written to main memory.
+                        </li>
+                        <li>
+                            The <b>Status Register</b> (SR), which holds <b>status codes</b> relating to the executed
+                            instruction (e.g. if an overflow has occurred during a calculation).
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <p>
+                Some processors can also include some <b>cache memory</b>, which is very fast memory inside the CPU. It
+                stores <b>recently and frequently used</b> instructions and data so that they don't need to be fetched
+                from main memory if needed again.
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                How could CPU performance be affected by amount of cache memory? What about other factors?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    &bullet; More cache memory means more instructions and data can be retrieved faster, which improves CPU performance <br />
+                    &bullet; Having multiple CPU cores can also improve performance if tasks can be performed in parallel <br />
+                    &bullet; Increasing the clock speed will mean more Fetch-Execute cycles in a second, which improves performance <br />
+                    &bullet; A higher word size (the number of bits the CPU can process at once) will also improve CPU performance <br />
+                    &bullet; Increasing the width of the address bus will also improve performance, as more memory locations can be addressed <br />
+                    &bullet; Similarly, increasing the width of the data bus will also improve performance, as more data can be sent at once <br />
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>

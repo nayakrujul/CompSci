@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>13.04 - The Fetch-Execute Cycle | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Study the Fetch-Decode-Execute cycle, the fundamental theory of how the CPU works, for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p><i>GCSE Link: <a href="../../4/10/">4.10 - The Fetch-Execute Cycle</a></i></p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                The <strong>Fetch-Execute Cycle</strong> (also called the Fetch-Decode-Execute Cycle) is the sequence of operations that the CPU uses to carry out instructions.
+            </p>
+
+            <p>
+                The cycle consists of three stages:
+            </p>
+
+            <ul class="less-padding-left spaced-out">
+                <br />
+                <li>
+                    The <b>Fetch</b> stage <br /> &nbsp;
+                    <ol class="less-padding-left">
+                        <li>
+                            The <b>memory address of the next instruction</b> is copied from the Program Counter (PC)
+                            into the <b>Memory Address Register (MAR)</b>.
+                        </li>
+                        <li>
+                            This address is <b>sent along the address bus</b> to main memory, and the instruction at that
+                            memory location is <b>sent back along the data bus</b> into the Memory Buffer Register (MBR).
+                        </li>
+                        <li>
+                            The contents of the MBR are <b>copied into the Current Instruction Register (CIR)</b>. 
+                        </li>
+                        <li>
+                            The <b>PC is incremented</b> to point to the next instruction.
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    The <b>Decode</b> stage <br /> &nbsp;
+                    <ol class="less-padding-left" start="5">
+                        <li>
+                            The Control Unit (CU) splits the instruction into its <b>opcode</b> and <b>operand(s)</b>
+                            where relevant, and the <b>required operation is identified</b>.
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    The <b>Execute</b> stage <br /> &nbsp;
+                    <ol class="less-padding-left" start="6">
+                        <li>
+                            The CU <b>sends control signals</b> to other CPU components (e.g. the ALU).
+                        </li>
+                        <li>
+                            The instruction is <b>carried out</b>. Data may be read from or written to memory, and
+                            <b>registers</b> (including the PC and Status Register) <b>may be updated</b>.
+                        </li>
+                    </ol>
+                </li>
+            </ul>
+
+            <p>
+                An <b>interrupt</b> is a signal sent by a device or program that <b>requires immediate attention</b>
+                from the CPU. It allows the <b>currently running process to be suspended</b>, and then resumed after the
+                interrupt request has been dealt with.
+            </p>
+
+            <p>
+                At the end of each Fetch-Decode-Execute cycle, the CPU <b>checks for interrupt requests</b>. If it has
+                received one, it <b>saves the current state of the registers</b> in memory (to allow the registers to be
+                used to handle the interrupt) and then calls an <b>Interrupt Service Routine</b> (ISR) to handle the
+                request. After it has finished, the registers are repopulated with the original data and the cycle restarts.
+            </p>
+    
+            <br />
+
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                Give some examples of when interrupts would be required.
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    For example, an input from a peripheral (e.g. keypress or mouse move), a hardware fault such as a
+                    power failure, software interrupts from the Operating System, or exception interrupts (e.g. divide-by-zero).
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>
