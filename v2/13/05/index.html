@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>13.05 - Assembly Language | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn about assembly language and how it relates to machine code, and how to write programs in assembly, for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p><i>GCSE Link: None</i></p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Machine code</strong> is a low-level programming language that uses binary digits to represent commands.
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Assembly language</strong> is a low-level programming language that uses mnemonics to represent commands.
+            </p>
+
+            <p>
+                There is a <b>one-to-one mapping</b> of machine code commands to assembly language commands. Machine
+                code can be <b>directly executed by the CPU</b>, while assembly language code must first be
+                <b>translated by an assembler</b> into machine code.
+            </p>
+
+            <p>
+                Each assembly language or machine code command has two parts: the <b>opcode</b> (which represents the
+                operation that needs to be performed) and the <b>operand(s)</b> (which are the values that the operation is
+                performed on). There are two ways to reference an operand: <b>immediate addressing</b> (where the <b>value</b>
+                is given) and <b>direct addressing</b> (where the <b>memory location</b> of the value is given). In
+                assembly language, a <code class="number">#</code> symbol indicates immediate addressing.
+            </p>
+
+            <p>
+                The set of opcodes that define the basic operations of the processor is called its <b>instruction set</b>.
+                This will vary from processor to processor.
+            </p>
+
+            <p><br/>Diagram 1 shows the parts of an assembly language and machine code command.</p>
+    
+            <p class="diagram">
+                <img src="../../icons/image.svg" class="icon" />
+                Diagram 1 <br /> <br />
+                <img src="./diagram1.png" style="width: 750px;" />
+            </p>
+
+            <p><br />
+                For the exam, you will need to be able to <b>write programs in assembly language</b>. You will be given
+                a table of commands similar to the one below. In the table, <code class="function">[operand]</code> can
+                be either an immediate value (using <code class="number">#</code>) like <code class="number">#25</code>
+                for the decimal value 25, or the value of a register (using <code>R</code>) like <code>R<span class="string">2</span></code>
+                for the value of register 2.
+            </p>
+
+            <p class="table">
+                <img src="../../icons/table.svg" class="icon" />
+                Table 1
+            </p>
+
+            <table>
+                <tr>
+                    <th><strong>Command</strong></th>
+                    <th><strong>Explanation</strong></th>
+                </tr>
+                <tr>
+                    <td><code>
+                        <span class="keyword">LDR</span> R<span class="string">d</span>, <span class="function">[memref]</span>
+                    </code></td>
+                    <td>
+                        Load the value stored in the specified memory location <code class="function">[memref]</code>
+                        into register <code class="string">d</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>
+                        <span class="keyword">STR</span> R<span class="string">d</span>, <span class="function">[memref]</span>
+                    </code></td>
+                    <td>
+                        Store the value of register <code class="string">d</code> into  the specified memory location
+                        <code class="function">[memref]</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>
+                        <span class="keyword">MOV</span> R<span class="string">d</span>, <span class="function">[operand]</span>
+                    </code></td>
+                    <td>
+                        Copy <code class="function">[operand]</code> into register <code class="string">d</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>
+                        <span class="keyword">ADD</span> R<span class="string">d</span>, R<span class="string">n</span>, <span class="function">[operand]</span>
+                    </code></td>
+                    <td>
+                        Add <code class="function">[operand]</code> to the value of register <code class="string">n</code>,
+                        and store the result in register <code class="string">d</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>
+                        <span class="keyword">SUB</span> R<span class="string">d</span>, R<span class="string">n</span>, <span class="function">[operand]</span>
+                    </code></td>
+                    <td>
+                        Subtract <code class="function">[operand]</code> from the value of register <code class="string">n</code>,
+                        and store the result in register <code class="string">d</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>
+                        <span class="keyword">AND</span> R<span class="string">d</span>, R<span class="string">n</span>, <span class="function">[operand]</span>
+                    </code></td>
+                    <td>
+                        Perform a bitwise logical <code>AND</code> between <code class="function">[operand]</code> and the value
+                        of register <code class="string">n</code>, and store the result in register <code class="string">d</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>
+                        <span class="keyword">ORR</span> R<span class="string">d</span>, R<span class="string">n</span>, <span class="function">[operand]</span>
+                    </code></td>
+                    <td>
+                        Perform a bitwise logical <code>OR</code> between <code class="function">[operand]</code> and the value
+                        of register <code class="string">n</code>, and store the result in register <code class="string">d</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>
+                        <span class="keyword">EOR</span> R<span class="string">d</span>, R<span class="string">n</span>, <span class="function">[operand]</span>
+                    </code></td>
+                    <td>
+                        Perform a bitwise logical <code>XOR</code> between <code class="function">[operand]</code> and the value
+                        of register <code class="string">n</code>, and store the result in register <code class="string">d</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>
+                        <span class="keyword">MVN</span> R<span class="string">d</span>, <span class="function">[operand]</span>
+                    </code></td>
+                    <td>
+                        Perform a bitwise logical <code>NOT</code> on <code class="function">[operand]</code> and store
+                        the result in register <code class="string">d</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>
+                        <span class="keyword">LSL</span> R<span class="string">d</span>, R<span class="string">n</span>, <span class="function">[operand]</span>
+                    </code></td>
+                    <td>
+                        Perform a left bit-shift on the value of register <code class="string">n</code> by
+                        <code class="function">[operand]</code> spaces, and store the result in register <code class="string">d</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>
+                        <span class="keyword">LSR</span> R<span class="string">d</span>, R<span class="string">n</span>, <span class="function">[operand]</span>
+                    </code></td>
+                    <td>
+                        Perform a right bit-shift on the value of register <code class="string">n</code> by
+                        <code class="function">[operand]</code> spaces, and store the result in register <code class="string">d</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>
+                        <span class="keyword">CMP</span> R<span class="string">n</span>, <span class="function">[operand]</span>
+                    </code></td>
+                    <td>
+                        Compare the value of register <code class="string">n</code> with <code class="function">[operand]</code>
+                        (used before a conditional branch operation)
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>
+                        <span class="keyword">B</span> <span class="other">[label]</span>
+                    </code></td>
+                    <td>
+                        Jump to the position specified by <code class="other">[label]</code> in the program
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>
+                        <span class="keyword">BEQ</span> <span class="other">[label]</span>
+                    </code></td>
+                    <td>
+                        If the previous comparison was equal, jump to the position specified by
+                        <code class="other">[label]</code> in the program
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>
+                        <span class="keyword">BNE</span> <span class="other">[label]</span>
+                    </code></td>
+                    <td>
+                        If the previous comparison was not equal, jump to the position specified by
+                        <code class="other">[label]</code> in the program
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>
+                        <span class="keyword">BGT</span> <span class="other">[label]</span>
+                    </code></td>
+                    <td>
+                        If the previous comparison was greater than, jump to the position specified by
+                        <code class="other">[label]</code> in the program
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>
+                        <span class="keyword">BLE</span> <span class="other">[label]</span>
+                    </code></td>
+                    <td>
+                        If the previous comparison was less than, jump to the position specified by
+                        <code class="other">[label]</code> in the program
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>
+                        <span class="keyword">HALT</span>
+                    </code></td>
+                    <td>
+                        Immediately end execution of the program.
+                    </td>
+                </tr>
+            </table>
+
+            <br />
+
+            <p>
+                A <b>label</b> is simply a name that points to a line of code. You write the name of the label (e.g. 
+                <code class="other">start</code>) followed by a colon immediately before the line it points to.
+            </p>
+
+            <p>
+                <b>Comments</b> in assembly language are started with a semicolon. Anything between the semicolon and
+                the end of the line is ignored by the assembler.
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                Write an assembly language program to multiply two numbers in memory locations 101 and 102, and store the result in memory location 103.
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    <code>
+                        <span class="other">start</span>: <br />
+                        &ensp; <span class="keyword">LDR</span> R<span class="string">0</span>, <span class="function">101</span>
+                        <span class="comment">; load from memory 101</span> <br />
+                        &ensp; <span class="keyword">LDR</span> R<span class="string">1</span>, <span class="function">102</span>
+                        <span class="comment">; load from memory 102</span> <br />
+                        &ensp; <span class="keyword">MOV</span> R<span class="string">2</span>, <span class="number">#0</span>
+                        <span class="comment">; stores running total</span> <br />
+                        <span class="other">loop</span>: <br />
+                        &ensp; <span class="keyword">CMP</span> R<span class="string">1</span>, <span class="number">#0</span>
+                        <span class="comment">; if R1 is 0, finish</span> <br />
+                        &ensp; <span class="keyword">BEQ</span> <span class="other">end</span> <br />
+                        &ensp; <span class="keyword">ADD</span> R<span class="string">2</span>, R<span class="string">2</span>,
+                        R<span class="string">0</span> <span class="comment">; else add R0 to total</span> <br />
+                        &ensp; <span class="keyword">SUB</span> R<span class="string">1</span>, R<span class="string">1</span>,
+                        <span class="number">#1</span> <span class="comment">; and decrement R1</span> <br />
+                        &ensp; <span class="keyword">B</span> <span class="other">loop</span> <span class="comment">; loop again</span> <br />
+                        <span class="other">end</span>: <br />
+                        &ensp; <span class="keyword">STR</span> R<span class="string">2</span>, <span class="function">103</span>
+                        <span class="comment">; store in memory 103</span> <br />
+                        &ensp; <span class="keyword">HALT</span>
+                    </code>
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>
