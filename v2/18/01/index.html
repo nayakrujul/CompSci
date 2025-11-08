@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>18.01 - The Internet | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn about the structure of the Internet, as well as key terms like URLs, FQDNs and the DNS system, for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p><i>GCSE Link: None</i></p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                The <strong>Internet</strong> is a global network of networks set up to allow computers to communicate with one another around the world.
+            </p>
+
+            <p>
+                The Internet is organised into <b>tiers of networks</b>: Tier 1 networks are the largest, usually
+                operated by global telecommunications companies; Tier 2 and 3 networks are smaller, usually servicing a
+                single country or region.
+            </p>
+
+            <p>
+                The <b>Internet Protocol</b> (IP) handles the transmission of packets between networks. Each network
+                device is assigned a unique <b>IP address</b>. When a packet of data is to be transmitted, a
+                <b>header</b> is attached, containing the IP addresses of the source and destination devices, a checksum
+                and a <b>time to live</b> (TTL) value, which is decremented at each step. If the TTL value reaches 0,
+                <b>the packet is discarded</b> (this is to prevent infinite cycles).
+            </p>
+
+            <p>
+                <b>Routers</b> and <b>gateways</b> are used to <b>forward packets</b> to another network closer to the
+                destination using routing and forwarding tables. Routers connect networks using the <b>same protocols</b>,
+                while gateways provide an interface for networks using <b>different protocols</b>, translating data
+                formats as required. This <b>enables communication between networks</b> that otherwise wouldn't have
+                been possible.
+            </p>
+
+            <br />
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>Uniform Resource Locator</strong> (URL) is the full address used to identify and access a specific resource on the Internet.
+            </p>
+
+            <p>
+                For example, the URL of this page is <code>https://cs.rujulnayak.com/v2/18/01/index.html</code>. It is
+                split into multiple parts:
+            </p>
+
+            <ul class="less-padding-left">
+                <li><b>The protocol</b>: in this case <code>https</code>, but could also be <code>http</code>, <code>ftp</code>, etc.</li>
+                <li><b>The host</b>: the domain name (or IP address) of the server, in this case <code>cs.rujulnayak.com</code></li>
+                <li><b>The path</b>: in this case <code>/v2/18/01/index.html</code></li>
+                <li><b>A query</b> (optional): starts with a <code>?</code>, for example <code>?theme=dark</code></li>
+                <li><b>A section</b> (optional): starts with a <code>#</code>, for example <code>#top</code></li>
+            </ul>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>domain name</strong> is a human-readable hierarchical label used to identify an area of the internet.
+            </p>
+
+            <p>
+                Every domain name is made up of <b>labels</b> separated by dots. A <b>top-level domain</b> (TLD) is the
+                right-most label. It can either be a <b>generic TLD</b> such as <code>.com</code>, <code>.org</code> or
+                <code>.net</code>, or a <b>country code TLD</b> (ccTLD) such as <code>.uk</code>, <code>.fr</code> or
+                <code>.de</code>. The next label from the right is called the <b>second-level domain</b> (2LD), and then
+                the next is called the <b>third-level domain</b> (3LD) and so on.
+            </p>
+
+            <p>Diagram 1 shows the parts of two domain names.</p>
+    
+            <p class="diagram">
+                <img src="../../icons/image.svg" class="icon" />
+                Diagram 1 <br /> <br />
+                <img src="./diagram1.png" style="width: 500px;" />
+            </p>
+
+            <p>
+                A <b>fully qualified domain name</b> (FQDN) is one that specifies all labels up to the host. For example,
+                <code>cs.rujulnayak.com</code> and <code>aqa.org.uk</code> are both FQDNs, while <code>com</code> and
+                <code>org.uk</code> are both not.
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                The <strong>Domain Name System</strong> (DNS) is used to translate human-readable domain names into IP addresses.
+            </p>
+
+            <p>
+                Every domain has <b>one or more IP addresses</b> assigned to it (<code>rujulnayak.com</code> has the IP
+                addresses <code>185.199.108.153</code>, <code>185.199.109.153</code>, <code>185.199.110.153</code> and
+                <code>185.199.111.153</code>). DNS stores a <b>table of all domains and their assigned IP addresses</b>
+                to allow for conversion.
+            </p>
+
+            <p>
+                The <b>Internet Assigned Numbers Authority</b> (IANA) coordinates the allocation of IP addresses. The
+                <b>regional internet registries</b> (RIRs) are five organisations that allocate IP address blocks to
+                their regions. Each TLD is operated by a <b>domain registry</b>, and domain names are sold to end-users
+                by <b>domain registrars</b>.
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                Why are the internet registries needed?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    Global cooperation is required to ensure that each assigned IP address is unique. Without this, the
+                    same addresses could be issued twice, causing routing failures. Also, a hierarchical model allows
+                    for easier global scalability.
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>
