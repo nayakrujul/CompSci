@@ -4,7 +4,7 @@
     <head>
         <link rel="stylesheet" href="../../main.css">
 
-        <title>18.01 - The Internet | CS.RN v2</title>
+        <title>18.01 - Network Protocols | CS.RN v2</title>
 
         <link rel="icon" type="image/png" href="../../logos/square.png"/>
         <meta property="og:image" content="../../logos/square.png" />
@@ -14,106 +14,235 @@
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Learn about the structure of the Internet, as well as key terms like URLs, FQDNs and the DNS system, for A Level Computer Science on CS.RN v2.">
+        <meta name="description" content="Study the theory of network protocols, the basis of how information is sent through networks, for A Level Computer Science on CS.RN v2.">
     </head>
 
     <body>
 
         <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
         <div id="page">
-            <p><i>GCSE Link: None</i></p>
+            <p><i>GCSE Link: <a href="../../5/04/">5.04 - Network Protocols</a></i></p>
 
             <p class="definition">
                 <img src="../../icons/book.svg" class="icon" />
-                The <strong>Internet</strong> is a global network of networks set up to allow computers to communicate with one another around the world.
+                A <strong>protocol</strong> is a set of rules that defines how devices on a network communicate with each other.
             </p>
 
-            <p>
-                The Internet is organised into <b>tiers of networks</b>: Tier 1 networks are the largest, usually
-                operated by global telecommunications companies; Tier 2 and 3 networks are smaller, usually servicing a
-                single country or region.
+            <p>The protocols involved in sending data across networks can be grouped into <b>"layers"</b>.</p>
+
+            <p>Table 1 shows the protocol layers.</p>
+
+            <p class="table">
+                <img src="../../icons/table.svg" class="icon" />
+                Table 1
             </p>
 
-            <p>
-                The <b>Internet Protocol</b> (IP) handles the transmission of packets between networks. Each network
-                device is assigned a unique <b>IP address</b>. When a packet of data is to be transmitted, a
-                <b>header</b> is attached, containing the IP addresses of the source and destination devices, a checksum
-                and a <b>time to live</b> (TTL) value, which is decremented at each step. If the TTL value reaches 0,
-                <b>the packet is discarded</b> (this is to prevent infinite cycles).
-            </p>
-
-            <p>
-                <b>Routers</b> and <b>gateways</b> are used to <b>forward packets</b> to another network closer to the
-                destination using routing and forwarding tables. Routers connect networks using the <b>same protocols</b>,
-                while gateways provide an interface for networks using <b>different protocols</b>, translating data
-                formats as required. This <b>enables communication between networks</b> that otherwise wouldn't have
-                been possible.
-            </p>
+            <div class="wrapper">
+                <table>
+                    <tr>
+                        <th><strong>Layer</strong></th>
+                        <th><strong>Description</strong></th>
+                        <th><strong>Protocols</strong></th>
+                    </tr>
+                    <tr>
+                        <td><em>Application</em></td>
+                        <td>
+                            Protocols in the application layer create the data that is being sent and interpret the data that is
+                            being received.
+                        </td>
+                        <td>HTTP(S), FTP, SMTP, POP3, SSH</td>
+                    </tr>
+                    <tr>
+                        <td><em>Transport</em></td>
+                        <td>
+                            Protocols in the transport layer set up communication between hosts. They are also responsible for
+                            splitting the data into packets, and reassembling the packets on receipt.
+                        </td>
+                        <td>TCP and UDP</td>
+                    </tr>
+                    <tr>
+                        <td><em>Network (or Internet)</em></td>
+                        <td>
+                            Protocols in the network layer communicate with routers to make sure the packets reach the
+                            correct recipient.
+                        </td>
+                        <td>IP</td>
+                    </tr>
+                    <tr>
+                        <td><em>Link</em></td>
+                        <td>
+                            Protocols in the link layer physically transmit the data packets from one device to another.
+                        </td>
+                        <td>WLAN (Wi-Fi) and Ethernet</td>
+                    </tr>
+                </table>
+            </div>
 
             <br />
 
-            <p class="definition">
-                <img src="../../icons/book.svg" class="icon" />
-                A <strong>Uniform Resource Locator</strong> (URL) is the full address used to identify and access a specific resource on the Internet.
+            <p>
+                When data is being sent, it <b>starts at the application layer</b> and makes its way <b>down</b> to the link layer. When
+                data is being received, it <b>starts at the link layer</b> and makes its way <b>up</b> to the application layer.
             </p>
 
             <p>
-                For example, the URL of this page is <code>https://cs.rujulnayak.com/v2/18/01/index.html</code>. It is
-                split into multiple parts:
+                Each protocol will add its own <b>header</b> to the payload that it receives. This means that the final
+                packet of data will look something like this:
             </p>
 
-            <ul class="less-padding-left">
-                <li><b>The protocol</b>: in this case <code>https</code>, but could also be <code>http</code>, <code>ftp</code>, etc.</li>
-                <li><b>The host</b>: the domain name (or IP address) of the server, in this case <code>cs.rujulnayak.com</code></li>
-                <li><b>The path</b>: in this case <code>/v2/18/01/index.html</code></li>
-                <li><b>A query</b> (optional): starts with a <code>?</code>, for example <code>?theme=dark</code></li>
-                <li><b>A section</b> (optional): starts with a <code>#</code>, for example <code>#top</code></li>
-            </ul>
+            <p>Diagram 1 shows the structure of a packet of data.</p>
 
-            <p class="definition">
-                <img src="../../icons/book.svg" class="icon" />
-                A <strong>domain name</strong> is a human-readable hierarchical label used to identify an area of the internet.
-            </p>
-
-            <p>
-                Every domain name is made up of <b>labels</b> separated by dots. A <b>top-level domain</b> (TLD) is the
-                right-most label. It can either be a <b>generic TLD</b> such as <code>.com</code>, <code>.org</code> or
-                <code>.net</code>, or a <b>country code TLD</b> (ccTLD) such as <code>.uk</code>, <code>.fr</code> or
-                <code>.de</code>. The next label from the right is called the <b>second-level domain</b> (2LD), and then
-                the next is called the <b>third-level domain</b> (3LD) and so on.
-            </p>
-
-            <p>Diagram 1 shows the parts of two domain names.</p>
-    
             <p class="diagram">
                 <img src="../../icons/image.svg" class="icon" />
                 Diagram 1 <br /> <br />
                 <img src="./diagram1.png" style="width: 500px;" />
             </p>
 
+            <p><br />We will now look at each protocol in detail. <br /> &nbsp;</p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                The <strong>HyperText Transfer Protocol</strong> (HTTP) is used to transfer webpages between a client (web browser) and web server.
+            </p>
+
             <p>
-                A <b>fully qualified domain name</b> (FQDN) is one that specifies all labels up to the host. For example,
-                <code>cs.rujulnayak.com</code> and <code>aqa.org.uk</code> are both FQDNs, while <code>com</code> and
-                <code>org.uk</code> are both not.
+                The client sends a <b>request</b> (e.g. <code>GET</code> or <code>POST</code>) and the web server sends
+                a <b>response</b> containing the status code and content of the webpage. Everything is sent in plaintext,
+                with <b>no encryption</b>.
+            </p>
+
+            <p>
+                The <b>HyperText Transfer Protocol Secure</b> (HTTPS) encrypts the request and response using
+                <b>Transport Layer Security</b> (TLS). This makes it <b>more secure</b> and less prone to hacking.
             </p>
 
             <p class="definition">
                 <img src="../../icons/book.svg" class="icon" />
-                The <strong>Domain Name System</strong> (DNS) is used to translate human-readable domain names into IP addresses.
+                The <strong>File Transfer Protocol</strong> (FTP) is used to transfer files between a client and server.
             </p>
 
             <p>
-                Every domain has <b>one or more IP addresses</b> assigned to it (<code>rujulnayak.com</code> has the IP
-                addresses <code>185.199.108.153</code>, <code>185.199.109.153</code>, <code>185.199.110.153</code> and
-                <code>185.199.111.153</code>). DNS stores a <b>table of all domains and their assigned IP addresses</b>
-                to allow for conversion.
+                Servers can <b>accept connections from multiple clients</b> simultaneously and limit file access to
+                authenticated users or provide anonymous access to any connected user. It is unencrypted by default,
+                but the <b>File Transfer Protocol Secure</b> (FTPS) extension works similarly to HTTPS, encrypting
+                communications using TLS.
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                The <strong>Simple Mail Transfer Protocol</strong> (SMTP) sends emails from a client to a mail server, or between mail servers.
             </p>
 
             <p>
-                The <b>Internet Assigned Numbers Authority</b> (IANA) coordinates the allocation of IP addresses. The
-                <b>regional internet registries</b> (RIRs) are five organisations that allocate IP address blocks to
-                their regions. Each TLD is operated by a <b>domain registry</b>, and domain names are sold to end-users
-                by <b>domain registrars</b>.
+                It is a <b>push protocol</b>: it can only send and not receive emails. When an email is sent, SMTP
+                passes the message to a <b>mail server</b>. The message can then be sent <b>around other mail servers</b>
+                until it reaches the recipient's server, at which point it can be <b>retrieved using IMAP or POP3</b>.
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                The <strong>Post Office Protocol v3</strong> (POP3) retrieves emails from a mail server to a client.
+            </p>
+
+            <p>
+                It <b>downloads incoming emails</b> to a local device, then <b>deletes them</b> from the server. This
+                allows users to read emails afterwards <b>even if they are offline</b>.
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                The <strong>Secure Shell</strong> (SSH) protocol allows users to securely connect to and manage remote systems.
+            </p>
+
+            <p>
+                It <b>encrypts all data</b> between the client and server, and also performs <b>authentication</b>. SSH
+                is commonly used by network administrators.
+            </p>
+
+            <br />
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                The <strong>Transmission Control Protocol</strong> (TCP) provides reliable, ordered delivery of packets.
+            </p>
+
+            <p>
+                It first <b>establishes a connection</b> with the receiving device. Then, it <b>splits the data</b> into
+                numbered packets. When the packets arrive at the destination, the receiving device <b>sends an
+                acknowledgement</b>. Any packets that did not arrive are re-sent. At the other end, the packets are
+                <b>reassembled in order</b>.
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                The <strong>User Datagram Protocol</strong> (UDP) sends data quickly without guaranteeing delivery.
+            </p>
+
+            <p>
+                Each packet is <b>sent independently</b>. There is no ordering or acknowledgement. This is useful in
+                cases where <b>speed is more important than reliability</b>, for example livestreaming or gaming.
+            </p>
+
+            <br />
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                The <strong>Internet Protocol</strong> (IP) handles the routing of packets.
+            </p>
+
+            <p>
+                Each network device is assigned a unique <b>IP address</b>. When a packet of data is to be transmitted,
+                a <b>header</b> is attached, containing the IP addresses of the source and destination devices, a
+                checksum and a <b>time to live</b> (TTL) value, which is decremented at each step. If the TTL value
+                reaches 0, <b>the packet is discarded</b> (this is to prevent infinite cycles).
+            </p>
+
+            <p>There are two standards of IP addresses:</p>
+
+            <ul class="less-padding-left">
+                <li>
+                    <b>IPv4</b>: a <b>32-bit number</b> that is usually written in denary as four <code>0-255</code>
+                    numbers separated by dots, like <code>192.168.0.1</code>
+                </li>
+                <li>
+                    <b>IPv6</b>: a <b>128-bit number</b> that is usually written in hexadecimal as eight <code>0-ffff</code>
+                    numbers separated by colons, like <code>2001:db8:0:0:0:8a2e:370:7334</code>
+                </li>
+            </ul>
+
+            <p>
+                IPv4 only allows for a maximum of <code>2<sup>32</sup></code> (about 4.3 billion) addresses, while IPv6
+                allows for <code>2<sup>128</sup></code> (340 undecillion, which is 340 billion billion billion billion)
+                addresses.
+            </p>
+
+            <p>We will learn more about IP addresses on the next page.</p>
+
+            <br />
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Wi-Fi</strong> is a family of related protocols which handle the physical transmission of data as radio waves.
+            </p>
+
+            <p>
+                It uses <b>two radio frequency bands</b>: 2.4GHz (which has a greater range and is better at getting through walls)
+                and 5GHz (which is faster over shorter distances). <br /> &nbsp;
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Ethernet</strong> is a family of related protocols which handle the physical transmission of data as electrical currents.
+            </p>
+
+            <p>
+                While Wi-Fi is specifically for wireless connections, Ethernet is specifically for <b>wired connections</b>.
+            </p>
+
+            <p>
+                Each device's Network Interface Card (NIC) has a unique <b>Media Access Control (MAC) address</b>.
+                Ethernet uses MAC addresses to route packets between different network interfaces <b>on a local area
+                network</b>, while IP uses IP addresses to route data between networks.
             </p>
 
             <br />
@@ -122,14 +251,13 @@
     
             <p class="question">
                 <img src="../../icons/question.svg" class="icon" />
-                Why are the internet registries needed?
+                If a single device has multiple applications sending and receiving data, how does it know which application incoming data is meant for?
             </p>
     
             <p class="summary-question">
                 <span class="answer">
-                    Global cooperation is required to ensure that each assigned IP address is unique. Without this, the
-                    same addresses could be issued twice, causing routing failures. Also, a hierarchical model allows
-                    for easier global scalability.
+                    Each process is assigned a unique port number which is sent in the TCP or UDP packet, as we will see
+                    on the next page.
                 </span>
             </p>
 

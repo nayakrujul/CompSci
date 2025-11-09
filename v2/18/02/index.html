@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>18.02 - IP Addresses | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn about IP addresses, port numbers, subnets and more, for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p><i>GCSE Link: None</i></p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Port numbers</strong> identify which application or process data is meant for.
+            </p>
+
+            <p>
+                The allow multiple applications to <b>use the network at the same time</b> without confusion. The port
+                is often written after the IP address, with a colon before (like <code>192.168.1.10:80</code> for port
+                <code>80</code> on IP address <code>192.168.1.10</code>). The port number is 16 bits, so can be any
+                number from <b>0 to 65535</b>. Together, the IP address and port number form a <b>socket</b>.
+            </p>
+
+            <p>
+                TCP and UDP will attach the <b>source and destination port numbers</b> in the header. When your computer
+                receives a packet, it checks the destination port number and <b>forwards it to the correct application</b>.
+            </p>
+
+            <p>
+                There are three types of ports:
+            </p>
+
+            <ul class="less-padding-left spaced-out">
+                <li>
+                    Ports 0 to 1023 are <b>well-known ports</b>, assigned to common protocols (e.g. HTTP is 80, HTTPS is
+                    443, FTP is 21, SSH is 22, SMTP is 25, and POP3 is 110). These are used on <b>application servers</b>
+                    (like web servers) so that they only need to listen on one or two ports.
+                </li>
+                <li>
+                    Ports 1024 to 49151 are <b>registered ports</b>, used by specific applications such as games.
+                </li>
+                <li>
+                    Ports 49152 to 65535 are <b>dynamic ports</b>, temporarily assigned by the OS for outgoing connections.
+                </li>
+            </ul>
+
+            <p>Diagram 1 shows an example communication between a client and web server.</p>
+
+            <p class="diagram">
+                <img src="../../icons/image.svg" class="icon" />
+                Diagram 1 <br /> <br />
+                <img src="./diagram1.png" style="width: 500px;" />
+            </p>
+
+            <br />
+
+            <p>
+                IP addresses consist of two parts: a <b>network ID</b> and <b>host ID</b>. Note that host IDs of all 0s
+                and all 1s are reserved, so the maximum number of hosts is <code>2<sup>h</sup> - 2</code> where <code>h</code>
+                is the number of bits in the host ID.
+            </p>
+
+            <p>
+                A <b>subnet mask</b> is used to identify the two parts of an IP address. If the network ID is <code>n</code>
+                bits, the subnet mask is <code>n</code> ones followed by <code>32 - n</code> zeroes. The subnet mask can
+                be <code>AND</code>ed with the IP address to find the network ID. In the denary representation,
+                <code>/n</code> is appended to the end of the IP address.
+            </p>
+
+            <p>Diagram 2 shows the two parts of an IP address.</p>
+
+            <p class="diagram">
+                <img src="../../icons/image.svg" class="icon" />
+                Diagram 2 <br /> <br />
+                <img src="./diagram2.png" style="width: 600px;" />
+            </p>
+
+            <p>
+                If the network is particularly large, we might want to split the network into further <b>subnetworks</b>. 
+                We can repurpose some bits from the start of the host ID to form the <b>subnet ID</b>. The subnet mask
+                will include the bits of the subnet ID.
+            </p>
+
+            <p>Diagram 2 shows the parts of an IP address including a subnet ID.</p>
+
+            <p class="diagram">
+                <img src="../../icons/image.svg" class="icon" />
+                Diagram 3 <br /> <br />
+                <img src="./diagram3.png" style="width: 600px;" />
+            </p>
+
+            <br />
+
+            <p>
+                IP addresses can be assigned either <b>statically</b> (you can manually enter an IP address) or
+                <b>dynamically</b> (the device is <b>leased</b> an IP address for a fixed duration, after which it must
+                adopt a new one). While static addresses are better for devices that need a known IP address like
+                <b>routers and servers</b>, dynamic addresses can <b>reduce IP address conflicts</b> for other devices.
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                The <strong>Dynamic Host Configuration Protocol</strong> (DHCP) is used to dynamically assign IP addresses to devices.
+            </p>
+
+            <p>
+                The device requiring an IP address broadcasts a <code>DHCP<b class="no-underline">DISCOVER</b></code> to
+                the network. The network's DHCP server (which is usually in the router) then responds with a
+                <code>DHCP<b class="no-underline">OFFER</b></code>, which contains a free IP address. When the device
+                receives the offer, it responds with a <code>DHCP<b class="no-underline">REQUEST</b></code>, asking for
+                that IP address. Finally, the server sends a <code>DHCP<b class="no-underline">ACK</b></code>
+                (acknowledgement) confirming that the IP address is now taken by that device.
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                What network ID and host ID split would you use for a small business with up to 15 users?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    4 host ID bits allows for 14 devices, so this is not enough. The minimum number is 5 host ID bits (and so 27 network ID bits).
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>

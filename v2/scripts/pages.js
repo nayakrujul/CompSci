@@ -307,6 +307,9 @@ const pageNames = [
         "Turing Machines"
     ],
     [
+        "Network Protocols",
+        "IP Addresses",
+        "Network Address Translation",
         "The Internet"
     ],
     [
