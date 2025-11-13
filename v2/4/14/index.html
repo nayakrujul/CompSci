@@ -4,7 +4,7 @@
     <head>
         <link rel="stylesheet" href="../../main.css">
 
-        <title>4.14 - Magnetic Storage | CS.RN v2</title>
+        <title>4.14 - Flash Storage | CS.RN v2</title>
 
         <link rel="icon" type="image/png" href="../../logos/square.png"/>
         <meta property="og:image" content="../../logos/square.png" />
@@ -14,7 +14,7 @@
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Learn about Magnetic Storage, the main form of data storage, for GCSE Computer Science, on CS.RN v2.">
+        <meta name="description" content="Study the theory of Flash Storage, a newer but more expensive form of file storage, for GCSE Computer Science on CS.RN v2.">
     </head>
 
     <body>
@@ -23,31 +23,24 @@
         <div id="page">
             <p class="definition">
                 <img src="../../icons/book.svg" class="icon" />
-                <strong>Secondary Storage</strong> is non-volatile storage which isn't directly accessible by the CPU.
+                <strong>Solid State Drives</strong> (SSDs) are the main form of flash storage in computers.
             </p>
+    
+            <p>They use <b>electrical currents</b> to represent 1s and 0s.</p>
+    
+            <p><br />
+                SSDs have <b>significantly faster read/write times</b> than HDDs. They are also more robust because they
+                have <b>no moving parts</b>.
+            </p>
+    
+            <p>However, SSDs are <b>more expensive</b> than HDDs (&approx;10p per GB), and they have a slightly lower capacity.</p>
     
             <p>
-                There are three forms of secondary storage: <b>magnetic</b>, <b>flash</b>, and <b>optical</b>, all of which will be
-                covered over the next three pages.
+                Also, flash storage degrades over time, as it only has a <b>limited number of read/write cycles</b>, meaning that
+                SSDs are less reliable than HDDs.
             </p>
     
-            <p class="definition">
-                <img src="../../icons/book.svg" class="icon" />
-                <strong>Hard Disk Drives</strong> (HDDs) are the main form of magnetic storage in computers.
-            </p>
-    
-            <p>
-                They are made up of magnetised metal disks, called <b>"platters"</b>, spinning at a rate of around 10,000
-                revolutions per minute.
-            </p>
-    
-            <p>
-                Binary data is represented by the <b>direction of magnetisation</b> (North is 1 and South is 0).
-            </p>
-    
-            <p>Each platter is divided into <b>"tracks"</b>, and each track into <b>"sectors"</b>.</p>
-    
-            <p>There is a <b>read/write head</b>, like the needle on an old record player.</p>
+            <p><br />Other types of flash storage include USB sticks and SD cards.</p>
 
             <br />
     
@@ -55,13 +48,14 @@
     
             <p class="question">
                 <img src="../../icons/question.svg" class="icon" />
-                What are the advantages and disadvantages of using HDDs?
+                Would an SSD need defragmentation?
             </p>
     
             <p class="summary-question">
                 <span class="answer">
-                    HDDs offer very large storage capacities (several terabytes), and are also very cheap (&lt;5p per GB).
-                    However, because of their moving parts, HDDs can be damaged by large impacts like drops.
+                    No, because it takes the same amount of time to read from or write to any memory location on an SSD.
+                    HDDs need defragmentation because of the spinning disks: data in adjacent sectors can be read more
+                    quickly than data in far away sectors.
                 </span>
             </p>
 
@@ -71,7 +65,7 @@
         </div>
         <div id="footer"></div>
 
-        <script>let v1 = "4-14-Magnetic-Storage/";</script>
+        <script>let v1 = "4-14-Flash-Storage/";</script>
         <script src="../../scripts/version.js"></script>
         <script src="../../scripts/footer.js"></script>
         <script src="../../scripts/pages.js"></script>
