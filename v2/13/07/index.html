@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>13.07 - Secondary Storage | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn about the different types of secondary storage (magnetic, flash, and optical) and the advantages and disadvantages of each, for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p><i>GCSE Link: <a href="../../4/13/">4.13 - Magnetic Storage</a></i></p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Secondary storage</strong> is non-volatile storage which isn't directly accessible by the CPU.
+            </p>
+
+            <p>
+                Computer systems need secondary storage, as <b>RAM is volatile</b> (so can't be used for long-term
+                storage) and <b>ROM is read-only</b>.
+            </p>
+
+            <p>
+                There are three types of secondary storage: <b>magnetic</b>, <b>flash</b> and <b>optical</b>.
+            </p>
+
+            <br />
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Hard Disk Drives</strong> (HDDs) are the most common form of magnetic storage in computers.
+            </p>
+
+            <p>
+                HDDs use <b>magnetised regions</b> on metal discs called <b>platters</b> to store binary data. These
+                platters spin at up to 10,000 revolutions per minute. Each platter is divided into <b>tracks</b> and
+                <b>sectors</b>, which allows the physical location of the data to be identified. A <b>magnetic arm</b>
+                is moved across the platter to <b>read or write data</b>.
+            </p>
+
+            <p>
+                Hard disks offer <b>high capacity</b> and <b>low cost-per-GB</b>, however they can be <b>damaged by
+                large impacts</b> as they contain moving parts.
+            </p>
+
+            <br />
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Solid State Drives</strong> (SSDs) are the most common form of flash storage in computers.
+            </p>
+
+            <p>
+                They use <b>NAND flash memory cells</b> to store data using <b>electrical charges</b>. Cells are
+                arranged into <b>pages</b>, and pages are arranged into <b>blocks</b>. The <b>controller chip</b>
+                manages the reading and writing of data: data is <b>written in pages</b> but <b>erased in blocks</b>.
+            </p>
+
+            <p>
+                SSDs offer <b>faster transfer speeds</b> and <b>lower latency</b> than HDDs, as well as being <b>more
+                robust</b> as they have no moving parts. This makes them <b>ideal for portable devices</b> like laptops
+                and mobile phones. However, they can be <b>more expensive</b>. Also, NAND memory degrades over time,
+                meaning that SSDs have a <b>limited number of read/write cycles</b> before they become unreliable.
+            </p>
+
+            <br />
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Optical Storage</strong> uses indentations on the surface of a disc to represent binary data.
+            </p>
+
+            <p>
+                To read the disc, a reader <b>shines laser light at the surface</b> as the disc spins. The intensity of
+                reflected light is then measured to detect the <b>pits</b> and <b>lands</b>, which are then converted
+                into binary.
+            </p>
+
+            <p>
+                The three main types of optical storage are <b>CDs</b> (which hold around 700MB of data, ideal for
+                <b>audio files</b>), <b>DVDs</b> (which hold around 4.7GB of data, ideal for <b>movies</b>), and
+                <b>Blu-ray discs</b> (which hold around 25GB of data, ideal for <b>software</b> such as large games).
+            </p>
+
+            <p>
+                Each type comes in three different formats: <b>ROM</b> (read-only memory: data on the disc cannot be
+                changed), <b>R</b> (recordable: data can be written once and then can't be changed), and <b>RW</b>
+                (rewritable: data can be rewritten multiple times).
+            </p>
+
+            <p>
+                While optical storage is <b>very cheap and portable</b>, it has a <b>low capacity and slow read/write
+                speeds</b>. Discs can also be <b>easily damaged</b> by scratches.
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                Which type of optical storage disc is the most suitable for 4K video distribution?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    Blu-ray ROM, as CDs and DVDs will not have sufficient capacity for large 4K
+                    video files, and the video does not need to be rewritten.
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>

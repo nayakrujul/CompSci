@@ -262,7 +262,8 @@ const pageNames = [
         "The CPU",
         "The Fetch-Execute Cycle",
         "Assembly Language",
-        "External Hardware Devices"
+        "External Hardware Devices",
+        "Secondary Storage"
     ],
     [
         "Communication Basics",
