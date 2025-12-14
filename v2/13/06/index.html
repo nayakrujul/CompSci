@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>13.07 - External Hardware Devices | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Study the characteristics and purposes of barcode readers, digital cameras, RFID scanners and laser printers for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p><i>GCSE Link: None</i></p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>barcode</strong> is a black-and-white image that represents some data in a machine-readable format.
+            </p>
+
+            <p>
+                There are two types of barcodes: <b>one-dimensional</b> (commonly used to represent product ID numbers)
+                and <b>two-dimensional</b> (such as <b>Quick Response (QR) codes</b>, used to represent anything from
+                plane tickets to URLs).
+            </p>
+
+            <p>Diagram 1 shows an example of each type of barcode..</p>
+    
+            <p class="diagram">
+                <img src="../../icons/image.svg" class="icon" />
+                Diagram 1 <br /> <br />
+                <img src="./barcodes.png" style="width: 500px;" />
+            </p>
+
+            <p>
+                One-dimensional barcode readers work by <b>moving a laser or LED light source</b> across the barcode. A
+                <b>light sensor</b> then measures the <b>intensity of reflected light</b> to work out if the bar was
+                black or white. The bars are then <b>converted into binary</b> and sent to the computer.
+            </p>
+
+            <p>
+                Two-dimensional barcodes can be read using <b>charge-coupled device (CCD)</b>-based readers (using an
+                <b>array of light sensors</b> instead of only one, and with no moving beam) or <b>digital cameras</b>
+                (e.g. in your smartphone).
+            </p>
+
+            <p>
+                Using barcodes <b>speeds up data entry and reduces human error</b>. Barcode readers are also <b>very
+                cheap</b> and can be <b>easily integrated</b> into most computer systems (the reader can send data as
+                keyboard inputs).
+            </p>
+
+            <br />
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>digital camera</strong> is an input device that captures photographs, representing them as binary data.
+            </p>
+
+            <p>
+                Light enters through the lens of the camera and is <b>focused on the sensor</b>. A <b>colour filter
+                array</b> is placed above the sensor, which allows half of the pixels to detect green light, a quarter
+                to detect red light, and a quarter to detect blue light. Each pixel <b>produces an electrical current</b>
+                based on the light intensity received. This is converted into a digital signal using an
+                <b>analogue-to-digital converter</b>, and the output is stored as a bitmap image.
+            </p>
+
+            <br />
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Radio Frequency Identification</strong> (RFID) is a technology used to identify and track objects wirelessly using radio waves.
+            </p>
+
+            <p>
+                An RFID reader <b>emits radio waves</b>, generating an electromagnetic field. The RFID tag then <b>sends
+                its unique identifier</b> back to the reader. The reader converts the signal into digital data.
+            </p>
+
+            <p>
+                The tags can be <b>active</b> (they have their own battery) or <b>passive</b> (they are powered by the
+                incoming radio waves).
+            </p>
+
+            <p>
+                RFID can be used for <b>fast, automated data capture</b>. An advantage is that <b>no line-of-sight is
+                required</b>, and the <b>range is much longer</b> than barcodes. However, they are more expensive.
+            </p>
+
+            <br />
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>laser printer</strong> is an output device that forms images on paper using powdered toner.
+            </p>
+
+            <p>
+                First, the <b>cylindrical drum</b> inside the printer is <b>charged</b>. Then, a laser <b>draws the
+                inverse of the image</b> onto the drum, causing those areas to lose their charge. The <b>powdered toner
+                particles</b> (which are oppositely charged to the drum) are brought near the drum, and are <b>attracted
+                to the charged areas</b> (i.e. the areas not hit by the laser), which forms an image on the drum. This
+                is then <b>transferred onto paper</b> and fused by heated rollers.
+            </p>
+
+            <p>
+                For colour printers, this process is <b>repeated four times</b> (once for each colour of toner: cyan,
+                magenta, yellow and black).
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                What are the advantages and disadvantages of laser printers compared with traditional inkjet printers?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    Advantages: <br />
+                    &bullet; Laser printers are faster than inkjet printers <br />
+                    &bullet; Toner is cheaper than ink, so laser printers have a lower cost per page <br />
+                    &bullet; Toner does not dry out, whereas ink does <br />
+                    <br />
+                    Disadvantages: <br />
+                    &bullet; Laser printers have a higher upfront cost than inkjet printers <br />
+                    &bullet; Laser printers also use more power than inkjet printers <br />
+                    &bullet; Laser printers are larger and heavier than inkjet printers
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>
