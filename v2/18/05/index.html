@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>18.05 - Internet Security | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn about how the Internet is secured using firewalls, encryption and digital certificates for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p><i>GCSE Link: <a href="../../5/05/">5.05 - Network Security</a></i></p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>firewall</strong> is a device that monitors network traffic, acting as a barrier between the network and the Internet.
+            </p>
+
+            <p>
+                Firewalls are usually <b>built-in to routers</b>, although they can also be separate devices. They work
+                by <b>inspecting the headers of packets</b> that go into and out of the network, and blocking some
+                packets based on pre-defined rules. This process is known as <b>packet filtering</b>. Some computers
+                also have <b>software firewalls</b> built-in to the OS: these use the <b>same packet filtering
+                concepts</b>, but only protect a single computer and not the whole network.
+            </p>
+
+            <p>
+                There are two types of packet filtering: <b>static</b> and <b>dynamic</b>. Static packet filtering uses
+                a list of blocked <b>IP addresses</b> and <b>TCP ports</b>, called the <b>access control list</b>. Only
+                the header is inspected, not the payload, so this method is <b>less secure</b>. Dynamic packet filtering
+                (also called <b>stateful inspection</b>) inspects the payload of the packet to determine if the packet
+                should be allowed to enter or leave the network. 
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>proxy server</strong> is a device that handles network communications on behalf of a device.
+            </p>
+
+            <p>
+                The proxy server <b>sits between a device and the Internet</b>, and makes all requests to external
+                servers instead of that device. This <b>provides anonymity</b> to the device, as the requests will have
+                the proxy server's IP address instead of the device's.
+            </p>
+
+            <br />
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Encryption</strong> provides protection against data being read if it is stolen or intercepted.
+            </p>
+
+            <p>
+                Encryption algorithms convert the original <b>plaintext</b> data into the encrypted <b>ciphertext</b>
+                data. A password (called a "<b>key</b>") is needed to decrypt the ciphertext back into the plaintext.
+                When the key used to encrypt the plaintext is the <b>same key</b> needed to decrypt the ciphertext, it
+                is called <b>symmetric encryption</b>. When they are <b>different keys</b>, it is called <b>asymmetric
+                encryption</b>.
+            </p>
+
+            <p>
+                For symmetric encryption, a problem arises: how can the sender <b>securely transmit the encryption
+                key</b> to the receiver without it being intercepted? The key would have to be encrypted, but then the
+                same problem arises for the new encryption key. Instead, we use asymmetric encryption:
+            </p>
+
+            <p>
+                Every computer has a two different keys: one <b>public key</b> and one <b>private key</b>. The public
+                key can be shared everywhere, but the private key must be kept a secret. The keys are related through a
+                mathematical algorithm which means that a message <b>encrypted by one key</b> can only be <b>decrypted
+                by the other</b>. When Person A wants to send a message to Person B, they simply need to <b>encrypt the
+                message using B's public key</b>. Now, the message can <b>only be decrypted using B's private key</b>
+                (which only Person B has access to) providing a secure channel of communication.
+            </p>
+
+            <p>
+                The downside is that asymmetric encryption is <b>much slower than symmetric encryption</b>, especially
+                for longer messages. Therefore, asymmetric encryption is <b>only used</b> at the start of the
+                communication <b>to exchange the key</b> that will be used for the remainder of the communication. After
+                this, <b>symmetric encryption can be used</b> without a problem.
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>digital signature</strong> is used to verify the identity of the sender.
+            </p>
+
+            <p>
+                Remember that the asymmetric encryption process <b>works both ways</b>: messages can also be encrypted
+                using the private key and then decrypted using a public key. Consider this series of steps:
+            </p>
+
+            <ol class="less-padding-left spaced-out">
+                <li>
+                    Person A wants to <b>securely send a message</b> to Person B, but also <b>prove that it was them</b>
+                    that sent the message.
+                </li>
+                <li>
+                    First, A generates a <b>hash</b> (a one-way algorithm which turns a message into a series of bits of
+                    a certain length, usually 256 or 512) of the message, and encrypts it with <b>their own private key</b>.
+                </li>
+                <li>
+                    This encrypted hash is then <b>appended to the (unencrypted) message</b>, and the whole thing is
+                    then encrypted using <b>B's public key</b>.
+                </li>
+                <li>
+                    B receives the encrypted message and decrypts it using <b>their private key</b>. This gives the
+                    <b>message</b> followed by an <b>encrypted hash</b> of the message.
+                </li>
+                <li>
+                    B can decrypt the encrypted hash using <b>A's public key</b>. B can then <b>generate the hash</b> of
+                    the message themselves and <b>compare it</b> to the decrypted hash. If they match, the hash must
+                    have been encrypted using A's private key (which <b>proves that person A sent the message</b>).
+                </li>
+            </ol>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>Certificate Authority</strong> is responsible for issuing digital certificates that guarantee the authenticity of a public key.
+            </p>
+
+            <p>
+                The <b>digital certificate</b> contains the public key, the information about who owns the key, and how
+                long the certificate is valid for. It contains the <b>digital signature of the Certificate Authority</b>,
+                so it can be trusted by all parties.
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                Which network threats do firewalls protect against?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    Firewalls can prevent malware from entering a network by blocking packets from suspicious sources.
+                    They can also block attackers from gaining unauthorised access to the system, and prevent denial of
+                    service attacks by blocking excessive requests.
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>

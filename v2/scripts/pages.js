@@ -311,7 +311,9 @@ const pageNames = [
         "Network Protocols",
         "IP Addresses",
         "Network Address Translation",
-        "The Internet"
+        "The Internet",
+        "Internet Security",
+        "Malware"
     ],
     [
         "Data Modelling",
