@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>18.07 - Client-Server Model | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn about the client-server model, the principles of CRUD and REST, and the comparison of JSON and XML, for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p><i>GCSE Link: None</i></p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                The <strong>client-server model</strong> is a structure for applications involving clients and servers.
+            </p>
+
+            <p>
+                Clients can <b>request</b> data from the server, which will send a <b>response</b>. They communicate
+                with each other using <b>agreed protocols</b> such as HTTP and FTP.
+            </p>
+
+            <p>
+                If most of the processing is done by the server it is called <b>thin-client computing</b>, whereas if
+                the client has a significant processing capacity it is called <b>thick-client computing</b>.
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                The <strong>WebSocket protocol</strong> is an application layer protocol which establishes a connection between a web browser and server.
+            </p>
+
+            <p>
+                This allows for a <b>persistent connection</b>, meaning that data can be sent quickly by either side
+                <b>at any time</b>. This is commonly used in <b>instant messaging</b> and <b>online gaming</b>.
+            </p>
+
+            <br />
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>CRUD</strong> (create, retrieve, update, delete) describes the four basic operations of a database.
+            </p>
+
+            <p>
+                These can be mapped to the <b>four HTTP methods</b>, and also to <b>four basic SQL commands</b>:
+            </p>
+
+            <p>Table 1 shows a mapping of CRUD to the HTTP methods and SQL commands.</p>
+
+            <p class="table">
+                <img src="../../icons/table.svg" class="icon" />
+                Table 1
+            </p>
+
+            <table>
+                <tr>
+                    <th><strong>CRUD</strong></th>
+                    <th><strong>HTTP</strong></th>
+                    <th><strong>SQL</strong></th>
+                    <th>Meaning</th>
+                </tr>
+                <tr>
+                    <td>Create</td>
+                    <td><code class="other">POST</code></td>
+                    <td><code class="keyword">INSERT</code></td>
+                    <td>Add data to the server</td>
+                </tr>
+                <tr>
+                    <td>Retrieve</td>
+                    <td><code class="other">GET</code></td>
+                    <td><code class="keyword">SELECT</code></td>
+                    <td>Fetch data from the server</td>
+                </tr>
+                <tr>
+                    <td>Update</td>
+                    <td><code class="other">PUT</code></td>
+                    <td><code class="keyword">UPDATE</code></td>
+                    <td>Modify data on the server</td>
+                </tr>
+                <tr>
+                    <td>Delete</td>
+                    <td><code class="other">DELETE</code></td>
+                    <td><code class="keyword">DELETE</code></td>
+                    <td>Remove data from the server </td>
+                </tr>
+            </table>
+
+            <br />
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>Representational State Transfer Application Program Interface</strong> (REST API) performs the
+                translation between HTTP methods and SQL commands, allowing a client to make requests to the server.
+            </p>
+
+            <p>
+                A <b>JavaScript (JS) file</b> referenced by a HTML file can be run in the browser. This can <b>create a
+                HTTP request</b> to the web server via the REST API, which can then pass on the request to the database.
+                The database's response is <b>passed back to the JS file</b> in the browser and displayed to the user.
+            </p>
+
+            <p>
+                There are <b>two main file formats</b> used to transmit the response of the database: <b>JavaScript
+                Object Notation (JSON)</b> (which are essentially JS dictionaries) and <b>Extensible Markup Language
+                (XML)</b> (which looks like HTML code). Below are examples of both:
+            </p>
+
+            <p>Example 1 shows a database response in JSON format.</p>
+
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 1 <br />
+                <code>
+                    { <br />
+                    &ensp; <span class="keyword">&quot;movie&quot;</span>: { <br />
+                    &ensp; &ensp; <span class="other">&quot;title&quot;</span>: <span class="string">&quot;Avengers: Endgame&quot;</span>, <br />
+                    &ensp; &ensp; <span class="other">&quot;year&quot;</span>: <span class="number">2019</span>, <br />
+                    &ensp; &ensp; <span class="other">&quot;runtime&quot;</span>: <span class="number">181</span>, <br />
+                    &ensp; &ensp; <span class="other">&quot;genre&quot;</span>: [<span class="string">&quot;action&quot;</span>,
+                    <span class="string">&quot;adventure&quot;</span>, <span class="string">&quot;sci-fi&quot;</span>] <br />
+                    &ensp; } <br /> }
+                </code>
+            </p>
+
+            <p>Example 2 shows a database response in XML format.</p>
+
+            <p class="code">
+                <img src="../../icons/code.svg" class="icon" />
+                Example 2 <br />
+                <code>
+                    <span class="keyword">&lt;movie&gt;</span> <br />
+                    &ensp; <span class="other">&lt;title&gt;</span>
+                    <span class="string">Avengers: Endgame</span>
+                    <span class="other">&lt;/title&gt;</span> <br />
+                    &ensp; <span class="other">&lt;year&gt;</span>
+                    <span class="number">2019</span>
+                    <span class="other">&lt;/year&gt;</span> <br />
+                    &ensp; <span class="other">&lt;runtime&gt;</span>
+                    <span class="number">181</span>
+                    <span class="other">&lt;/runtime&gt;</span> <br />
+                    &ensp; <span class="other">&lt;genre&gt;</span>
+                    <span class="string">action</span>
+                    <span class="other">&lt;/genre&gt;</span> <br />
+                    &ensp; <span class="other">&lt;genre&gt;</span>
+                    <span class="string">adventure</span>
+                    <span class="other">&lt;/genre&gt;</span> <br />
+                    &ensp; <span class="other">&lt;genre&gt;</span>
+                    <span class="string">sci-fi</span>
+                    <span class="other">&lt;/genre&gt;</span> <br />
+                    <span class="keyword">&lt;/movie&gt;</span>
+                </code>
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                What are the advantages of JSON over XML?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    JSON can be easily evaluated using JavaScript (since it uses the same syntax as JS objects) and is
+                    therefore quicker to parse than XML. JSON is also easier for a human to read due to its compact
+                    key-value format. Furthermore, it is easier to create due to its simpler syntax. JSON can also
+                    represent arrays.
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>

@@ -313,7 +313,8 @@ const pageNames = [
         "Network Address Translation",
         "The Internet",
         "Internet Security",
-        "Malware"
+        "Malware",
+        "Client-Server Model"
     ],
     [
         "Data Modelling",
