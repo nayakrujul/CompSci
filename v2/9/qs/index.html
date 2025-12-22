@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>Section 9 Revision Questions | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Revise Section 9 (Programming) with exam-style A Level Computer Science questions on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+
+            <h1 id="score">Score: 0/0</h1>
+
+            <h2 id="q-num">Question 1 of &infin;</h2>
+    
+            <div id="revision-questions">
+                <div class="rq" marks="3">
+                    <span class="question">Explain what is meant by each of the following data types: integer, real and boolean.</span>
+                    <span class="rq-answer">Integer: whole numbers with no fractional part</span>
+                    <span class="rq-answer">Real: numbers that can contain a fractional/decimal part</span>
+                    <span class="rq-answer">Boolean: either <code>true</code> or <code>false</code></span>
+                </div>
+                <div class="rq" marks="1">
+                    <span class="question">State the difference between a procedure and a function.</span>
+                    <span class="rq-answer">A function returns a value, while a procedure does not</span>
+                </div>
+                <div class="rq" marks="2">
+                    <span class="pretext">
+                        A game contains a 2D grid of width 8 and height 10. Each cell in the grid is given a unique
+                        index from 0 to 79. The top-left cell is index 0, the cell to the left of that is index 1, and
+                        so on. This continues until the end of the row, after which the first cell of the second row is
+                        index 8, the next cell is index 9 and so on. <br /> &nbsp;
+                    </span>
+                    <span class="question">Describe how the row number and column number of a cell can be calculated from its index.</span>
+                    <span class="rq-answer">The row number is <code>index <span class="other">DIV</span> 8</code></span>
+                    <span class="rq-answer">The column number is <code>index <span class="other">MOD</span> 8</code></span>
+                </div>
+                <div class="rq" marks="2">
+                    <span class="question">Give two reasons why exception handling is required in a program.</span>
+                    <span class="rq-answer">To prevent the program from terminating unexpectedly</span>
+                    <span class="rq-answer">To provide meaningful error messages</span>
+                    <span class="rq-answer">To allow alternative procedures to be executed when an error occurs</span>
+                </div>
+                <div class="rq" marks="2">
+                    <span class="pretext">
+                        The <code><span class="other">random</span>()</code> function returns a random floating-point
+                        number greater than or equal to <code class="number">0</code> and less than <code class="number">1</code>.
+                        <br /> &nbsp;
+                    </span>
+                    <span class="question">Use this function to write an expression that generates a random integer between 1 and 10 inclusive.</span>
+                    <span class="rq-answer">First mark for multiplying <code><span class="other">random</span>()</code> by <span class="number">10</span></span>
+                    <span class="rq-answer">
+                        Second mark for a fully correct answer: <code>
+                            <span class="other">FLOOR</span>(<span class="other">random</span>()
+                            * <span class="number">10</span>) + <span class="number">1</span>
+                        </code>
+                    </span>
+                </div>
+                <div class="rq" marks="3">
+                    <span class="pretext">
+                        In Object-Oriented Programming, a class attribute is declared as <code class="keyword">private</code>.
+                        <br /> &nbsp;
+                    </span>
+                    <span class="question">Explain why this is done and how an external class can safely access and modify this attribute.</span>
+                    <span class="rq-answer">This is done to enforce information hiding, preventing direct unauthorised access from outside the class</span>
+                    <span class="rq-answer">The class can use public getter and setter methods,</span>
+                    <span class="rq-answer">which should include validation logic before modifying the attribute</span>
+                </div>
+                <div class="rq" marks="4">
+                    <span class="pretext">
+                        A <code>University</code> system contains <code>Department</code>s and <code>Student</code>s.
+                        <br /> &nbsp;
+                    </span>
+                    <span class="question">
+                        Explain the type of association relationship between <code>University</code> and <code>Department</code>,
+                        and between <code>Department</code> and <code>Student</code>.
+                    </span>
+                    <span class="rq-answer">The relationship between <code>University</code> and <code>Department</code> is composition (strong association)</span>
+                    <span class="rq-answer">Because if the <code>University</code> is destroyed, its <code>Department</code>s cease to exist</span>
+                    <span class="rq-answer">The relationship between <code>Department</code> and <code>Student</code> is aggregation (weak association)</span>
+                    <span class="rq-answer">Because if the <code>Department</code> is destroyed, its <code>Student</code>s continue to exist</span>
+                </div>
+                <div class="rq" marks="2">
+                    <span class="question">State the UML diagram symbols for composition and aggregation</span>
+                    <span class="rq-answer">Composition is shown using a filled black diamond</span>
+                    <span class="rq-answer">Aggregation is shown using a hollow diamond</span>
+                </div>
+            </div>
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+        <script src="../../scripts/rqs.js"></script>
+
+    </body>
+</html>

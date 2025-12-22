@@ -5,8 +5,8 @@ let [x, y] = location.href
     .split("/").slice(-3, -1);
 let [p, n] = [null, null];
 
-//          (0)   1  2   3   4   5  6  7  8   9     10   11   12    13    14   15  16  17    18   19  20
-let last = [null, 9, 17, 10, 17, 5, 5, 7, 3, null, null, 11, null, null, null, 12, 7, null, null, 4, null];
+//          (0)   1  2   3   4   5  6  7  8  9    10   11   12    13    14   15  16  17    18   19  20
+let last = [null, 9, 17, 10, 17, 5, 5, 7, 3, 13, null, 11, null, null, null, 12, 7, null, null, 4, null];
 
 if (y === "01") {
     if (x !== "1")
@@ -226,7 +226,8 @@ const pageNames = [
         "Inheritance",
         "Information Hiding",
         "Association",
-        "UML Diagrams"
+        "UML Diagrams",
+        "qs"
     ],
     [
         "Logic Puzzles",

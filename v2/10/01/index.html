@@ -32,12 +32,22 @@
             </p>
             
             <ol class="less-padding-left">
-                <li>The thief took the jewel out of the museum through the side exit</li>
-                <li>If Bob was in the storage room before the theft, the jewel was taken using a backpack</li>
-                <li>Either Bob or Carl was in the storage room before the theft occurred</li>
-                <li>If Carl stole the jewel, Alice was not in the lobby</li>
-                <li>If the jewel was put in a backpack, then Alice was in the lobby and did not steal the jewel</li>
+                <li>Alice had an alibi after midnight, so she could only have stolen the jewel before midnight</li>
+                <li>If and only if the thief used a rope, then Bob was in the storage room before the theft</li>
+                <li>The jewel was stolen after midnight if and only if Carl was in the main hall before the theft</li>
+                <li>Either Bob or Carl (but not both) was in the storage room before the theft</li>
+                <li>If the thief used a crowbar, Bob is innocent</li>
+                <li>Carl was either in the storage room or the main hall (but not both) before the theft</li>
+                <li>The thief used either a crowbar or a rope (but not both)</li>
+                <li>If Carl was not in the storage room before the theft then he is innocent</li>
+                <li>If Carl was not in the main hall before the theft then Bob is the thief</li>
             </ol>
+
+            <p>
+                A useful trick in these kind of logic puzzles is to use the contrapositive: the statement "<b>if A then B</b>"
+                (which we can write as "<b>A implies B</b>") is logically equivalent to "<b>if (not B) then (not A)</b>"
+                (or "<b>B&prime; implies A&prime;</b>")
+            </p>
 
             <br />
     
@@ -47,26 +57,24 @@
                 <img src="../../icons/question.svg" class="icon" />
                 Who stole the jewel?
             </p>
-
-            <details>
-                <summary>Hint</summary>
-                <br />
-                Because most of the clues use statements like <b>"If A, then B"</b> (which we can write as
-                <b>"A implies B"</b> or <code>A &Implies; B</code>), we can use the <b>contrapositive</b> (<b>"not B
-                implies not A"</b>, or <code>B&prime; &Implies; A&prime;</code>) which is <b>logically equivalent</b>
-                to the original statement. For example, for clue 4, we can use "If Alice <b>was</b> in the lobby,
-                then Carl did <b>not</b> steal the jewel".
-                <br /> &nbsp;
-            </details>
     
             <p class="summary-question">
                 <span class="answer">
-                    &bullet; We know from clue 1 and the contrapositive of clue 5 that Carl was not in the storage room before the theft <br />
-                    &bullet; We therefore know from clue 3 that Bob was in the storage room before the theft occurred <br />
-                    &bullet; Now from clue 2, the jewel was taken using a backpack <br />
-                    &bullet; From clue 5, we know that Alice was in the lobby and did not steal the jewel <br />
-                    &bullet; Finally, from the contrapositive of clue 4, Carl did not steal the jewel. <br />
-                    &bullet; The only remaining suspect is <b>Bob</b>, who must be the thief.
+                    &bullet; We start with clue 7 which tells us that either a crowbar or rope was used, but not both.
+                    We examine the cases separately: <br /> <br />
+
+                    Crowbar: <br />
+                    &bullet; From clue 5, if a crowbar was used then Bob is innocent <br />
+                    &bullet; Clue 2 tells us that Bob was not in the storage room before the theft in this case <br />
+                    &bullet; Using clues 4 and 6, this means that if a crowbar was used then Carl was in the storage room before the theft <br />
+                    &bullet; But from clue 9, Bob is the thief: we have reached a contradiction, therefore the thief did not use a crowbar <br /> <br />
+
+                    Rope: <br />
+                    &bullet; Using clue 2, if a rope was used then Bob was in the storage room before the theft <br />
+                    &bullet; From clues 4 and 6, if the thief used a rope then Carl was in the main hall (and not in the storage room) <br />
+                    &bullet; But from clue 8 this means that Carl is innocent <br />
+                    &bullet; Clue 3 tells us that this means the jewel was stolen after midnight <br />
+                    &bullet; Therefore from clue 1, Alice is innocent, and so Bob is the thief
                 </span>
             </p>
 
