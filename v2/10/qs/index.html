@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>Section 10 Revision Questions | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Revise Section 10 (Problem Solving) with exam-style A Level Computer Science questions on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+
+            <h1 id="score">Score: 0/0</h1>
+
+            <h2 id="q-num">Question 1 of &infin;</h2>
+    
+            <div id="revision-questions">
+                <div class="rq" marks="4">
+                    <span class="pretext">
+                        A company uses three servers: A, B and C. Each runs on a different operating system (Windows, macOS or Linux),
+                        has a different role (web, database or authentication) and has a different maintenance day (Monday, Wednesday or Friday).
+                        You are given that:
+                    </span>
+                    <ol class="spaced-out less-padding-left" style="display: inline-block; text-align: left;">
+                        <li>Server A is maintained earlier in the week than the database server</li>
+                        <li>The Windows server is not maintained on Wednesday, and does not do authentication</li>
+                        <li>The authentication server is maintained two days before the web server</li>
+                        <li>Server C is maintained two days after the Linux server</li>
+                        <li>If the web server runs Linux, then it is maintained on Monday</li>
+                    </ol>
+                    <br />
+                    <span class="question">Find the OS, role and maintenance day of each of the three servers.</span>
+                    <span class="rq-answer">
+                        From clue 3, we have two options: authentication server on Monday and web server on Wednesday,
+                        or authentication server on Wednesday and web server on Friday. But for the second option, this
+                        would force the database server to be maintained on Monday, which violates clue 1 (since nothing
+                        is earlier than Monday). This means that the authentication server is Monday, the web server is
+                        Wednesday, and the database server is Friday
+                    </span>
+                    <span class="rq-answer">
+                        Since the Windows server does not do authentication and is not maintained on Wednesday (clue 2),
+                        it must be the database server, maintained on Friday
+                    </span>
+                    <span class="rq-answer">
+                        From the contrapositive of clue 5, the web server does not run Linux (since it is not maintained
+                        on Monday). Since Windows is already taken, it must run macOS. Thus the authorisation server runs Linux.
+                    </span>
+                    <span class="rq-answer">
+                        From clue 4, server C is maintained on Wednesday. This means it is the web server running macOS.
+                        From clue 1, server A is maintained before the database server, so it must be maintained on
+                        Monday. This means it is the authorisation server running Linux. By elimination, server B is the
+                        remaining one: the database server running Windows, maintained on Friday
+                    </span>
+                </div>
+                <div class="rq" marks="2">
+                    <span class="question">Define the terms "representational abstraction" and "abstraction by generalisation"</span>
+                    <span class="rq-answer">Removing unnecessary details</span>
+                    <span class="rq-answer">Grouping by common characteristics</span>
+                </div>
+                <div class="rq" marks="3">
+                    <span class="question">Explain what is meant by "procedural decomposition"</span>
+                    <span class="rq-answer">Breaking a problem into smaller sub-problems</span>
+                    <span class="rq-answer">Each of which solves an identifiable task</span>
+                    <span class="rq-answer">And might be further subdivided</span>
+                </div>
+            </div>
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+        <script src="../../scripts/rqs.js"></script>
+
+    </body>
+</html>
