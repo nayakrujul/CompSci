@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>Section 14 Revision Questions | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Revise Section 14 (Communication) with exam-style A Level Computer Science questions on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+
+            <h1 id="score">Score: 0/0</h1>
+
+            <h2 id="q-num">Question 1 of &infin;</h2>
+    
+            <div id="revision-questions">
+                <div class="rq" marks="2">
+                    <span class="question">Calculate the bit rate of a communication that has a Baud rate of 5 MegaBaud and 4 possible voltage levels.</span>
+                    <span class="rq-answer">4 voltage levels means 2 bits per signal</span>
+                    <span class="rq-answer">So bit rate is 10Mbps</span>
+                </div>
+                <div class="rq" marks="1">
+                    <span class="question">What is the difference between asynchronous and synchronous communication?</span>
+                    <span class="rq-answer">In synchronous transmission, the receiver and transmitter are (continuously) synchronised by a shared clock</span>
+                </div>
+                <div class="rq" marks="2">
+                    <span class="question">What is the difference between serial and parallel transmission?</span>
+                    <span class="rq-answer">Serial uses a single wire/cable, while parallel uses multiple</span>
+                    <span class="rq-answer">Serial sends one bit at a time, while parallel sends multiple bits simultaneously</span>
+                </div>
+                <div class="rq" marks="4">
+                    <span class="question">Explain two disadvantages of parallel transmission.</span>
+                    <span class="rq-answer">Extra wiring is required</span>
+                    <span class="rq-answer">which makes parallel transmission more expensive than serial transmission</span>
+                    <span class="rq-answer">Crosstalk (interference) between wires can be an issue over longer distances</span>
+                    <span class="rq-answer">making parallel transmission less reliable than serial</span>
+                    <span class="rq-answer">Imperfections in the wires could mean that data isn't received at the same time (data skew)</span>
+                    <span class="rq-answer">causing a delay at the receiving end, slowing down the transmission</span>
+                </div>
+                <div class="rq" marks="2">
+                    <span class="question">State the purpose of the start and stop bits in asynchronous communication.</span>
+                    <span class="rq-answer">Start bit used to start the receiver's clock and synchronise it with the transmitter's clock</span>
+                    <span class="rq-answer">Stop bit used to provide time for the receiver to process the data, and to allow the next start bit to be recognised</span>
+                </div>
+                <div class="rq" marks="6">
+                    <span class="question">Describe the operation of the CSMA/CA protocol with RTS/CTS.</span>
+                    <span class="rq-answer">The device listens to the network to check if it is idle before attempting to transmit</span>
+                    <span class="rq-answer">If the network is busy, it waits for a random time period before trying again</span>
+                    <span class="rq-answer">When the network is free, the device transmits a Request to Send frame</span>
+                    <span class="rq-answer">The receiver then responds with a Clear to Send</span>
+                    <span class="rq-answer">After hearing this, all other devices on the network go silent for some time</span>
+                    <span class="rq-answer">After data has been transmitted, the receiver sends an acknowledgement</span>
+                    <span class="rq-answer">This notifies the other devices that they can transmit again</span>
+                    <span class="rq-answer">If the sender did not receive an acknowledgement, it waits and tries again</span>
+                </div>
+                <div class="rq" marks="3">
+                    <span class="question">Compare peer-to-peer and client-server networking.</span>
+                    <span class="rq-answer">In P2P each computer has equal status (can act as both a client and a server), while in C-S certain computers are servers and the others are all clients</span>
+                    <span class="rq-answer">In P2P resources are stored on any computer, while in C-S resources are only stored on servers</span>
+                    <span class="rq-answer">In P2P there is no centralised management of security, while in C-S there is</span>
+                </div>
+            </div>
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+        <script src="../../scripts/rqs.js"></script>
+
+    </body>
+</html>

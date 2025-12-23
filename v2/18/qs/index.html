@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>Section 18 Revision Questions | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Revise Section 18 (Networks) with exam-style A Level Computer Science questions on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+
+            <h1 id="score">Score: 0/0</h1>
+
+            <h2 id="q-num">Question 1 of &infin;</h2>
+    
+            <div id="revision-questions">
+                <div class="rq" marks="4">
+                    <span class="question">Explain four different ways that a firewall can protect computers on a LAN.</span>
+                    <span class="rq-answer">It can block traffic from specific IP addresses</span>
+                    <span class="rq-answer">It can block traffic on specific ports (specific protocols)</span>
+                    <span class="rq-answer">It can block certain types of packets</span>
+                    <span class="rq-answer">It can act as a proxy server</span>
+                    <span class="rq-answer">It can identify unusual behaviour from a host</span>
+                </div>
+                <div class="rq" marks="3">
+                    <span class="question">Describe the main purpose of the Domain Name System and how it works.</span>
+                    <span class="rq-answer">DNS translates fully qualified domain names into IP addresses</span>
+                    <span class="rq-answer">It stores a table of FQDNs and corresponding IP addresses</span>
+                    <span class="rq-answer">Servers are organised into a hierarchy</span>
+                    <span class="rq-answer">Individual mappings are only known by some DNS servers</span>
+                    <span class="rq-answer">If one server can't resolve a query it is passed to another server</span>
+                </div>
+                <div class="rq" marks="4">
+                    <span class="question">Name four components typically included in a packet.</span>
+                    <span class="rq-answer">Source and destination IP addresses</span>
+                    <span class="rq-answer">Source and destination port numbers</span>
+                    <span class="rq-answer">Packet size/length</span>
+                    <span class="rq-answer">Time to live value</span>
+                    <span class="rq-answer">Sequence number</span>
+                    <span class="rq-answer">Payload/data</span>
+                    <span class="rq-answer">Any other reasonable answers</span>
+                </div>
+                <div class="rq" marks="2">
+                    <span class="question">Describe the role of a router in packet switching.</span>
+                    <span class="rq-answer">It connects two networks together</span>
+                    <span class="rq-answer">It determines which router to send the packet to next</span>
+                    <span class="rq-answer">by working out the most efficient path to the destination</span>
+                    <span class="rq-answer">It modifies the MAC addresses in the packet to get it to the next router</span>
+                </div>
+                <div class="rq" marks="1">
+                    <span class="question">What is the difference between a router and a gateway?</span>
+                    <span class="rq-answer">A router connects networks using the same protocols, while a gateway provides an interface for protocol conversion</span>
+                </div>
+                <div class="rq" marks="6">
+                    <span class="question">
+                        Computer A wants to send a message to Computer B using asymmetric encryption. A digital signature
+                        will also be sent to verify that the message was sent by Computer A. Describe the entire process,
+                        of encryption and decryption.
+                    </span>
+                    <span class="rq-answer">The message is hashed and this hash is encrypted using A's private key</span>
+                    <span class="rq-answer">The encrypted hash (known as the digital signature) is appended to the message</span>
+                    <span class="rq-answer">The full message (along with the signature) is encrypted using B's public key</span>
+                    <span class="rq-answer">B's private key is used to decrypt the full message (and digital signature)</span>
+                    <span class="rq-answer">A's public key is used to decrypt the encrypted hash</span>
+                    <span class="rq-answer">The hash is recalculated from just the message</span>
+                    <span class="rq-answer">If they match, B knows that the message was sent by A</span>
+                </div>
+                <div class="rq" marks="2">
+                    <span class="question">Describe how domain names are organised.</span>
+                    <span class="rq-answer">Domain names are slit into top-level domains, second-level domains, and so on</span>
+                    <span class="rq-answer">For example, cs.rujulnayak.com: the TLD is com, the 2LD is rujulnayak, and the 3LD is cs</span>
+                </div>
+                <div class="rq" marks="2">
+                    <span class="question">Describe how the Simple Mail Transfer Protocol works.</span>
+                    <span class="rq-answer">When an email is sent, SMTP passes it to a mail server</span>
+                    <span class="rq-answer">This message may then be passed to other mail servers</span>
+                </div>
+                <div class="rq" marks="2">
+                    <span class="question">Describe two advantages of JSON over XML.</span>
+                    <span class="rq-answer">JSON is more compact</span>
+                    <span class="rq-answer">JSON is quicker for a computer to parse</span>
+                    <span class="rq-answer">JSON is easier for humans to read</span>
+                    <span class="rq-answer">JSON has native support for arrays</span>
+                </div>
+            </div>
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+        <script src="../../scripts/rqs.js"></script>
+
+    </body>
+</html>

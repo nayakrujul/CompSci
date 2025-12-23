@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>Section 17 Revision Questions | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Revise Section 17 (Regular Languages) with exam-style A Level Computer Science questions on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+
+            <h1 id="score">Score: 0/0</h1>
+
+            <h2 id="q-num">Question 1 of &infin;</h2>
+    
+            <div id="revision-questions">
+                <div class="rq" marks="1">
+                    <span class="question">Write a regular expression to represent the union of the sets <code>{b<sup>n</sup> | n > 0}</code> and <code>{a, ab}</code>.</span>
+                    <span class="rq-answer"><code>a|ab|b+</code> or <code>ab?|b+</code></span>
+                </div>
+                <div class="rq" marks="1">
+                    <span class="question">What is meant by the cardinality of a set?</span>
+                    <span class="rq-answer">The number of elements in the set</span>
+                </div>
+                <div class="rq" marks="4">
+                    <span class="question">
+                        Describe the functionality of each of the following regular expression characters:
+                        <code>+</code>, <code>*</code>, <code>></code>, <code>?</code>.
+                    </span>
+                    <span class="rq-answer"><code>+</code>: match the previous character/group one or more times</span>
+                    <span class="rq-answer"><code>*</code>: match the previous character/group zero or more times</span>
+                    <span class="rq-answer"><code>?</code>: optionally match the previous character/group (i.e. zero or one times)</span>
+                    <span class="rq-answer"><code>|</code>: match either the left hand side or the right hand side</span>
+                </div>
+                <div class="rq" marks="2">
+                    <span class="pretext">
+                        A software engineer wants to design a new language. The syntax is defined using Backus-Naur Form.
+                    </span>
+                    <pre><code>
+&lt;digit&gt; ::= 0 | 1 | 2 | ... | 9
+&lt;upper&gt; ::= A | B | C | ... | Z
+&lt;lower&gt; ::= a | b | c | ... | z
+                    </code></pre>
+                    <span class="pretext">
+                        A variable in the language must be a lowercase letter followed by any combination of uppercase
+                        letters and digits. It must be at least two characters long
+                    </span>
+                    <br />
+                    <span class="question">Write a BNF rule to define the syntax for a variable identifier.</span>
+                    <span class="rq-answer"><code>&lt;variable&gt; ::= &lt;lower&gt; &lt;upper&gt; | &lt;lower&gt; &lt;digit&gt;</code></span>
+                    <span class="rq-answer"><code>&ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;| &lt;variable&gt; &lt;upper&gt; | &lt;variable&gt; &lt;digit&gt;</code></span>
+                </div>
+                <div class="rq" marks="2">
+                    <span class="question">What is a Universal Turing Machine?</span>
+                    <span class="rq-answer">A Turing machine that can simulate the behaviour of any other Turing machine</span>
+                    <span class="rq-answer">It is given the Turing machine's instructions and input,</span>
+                    <span class="rq-answer">and it executes operations on the data exactly as the simulated Turing machine does</span>
+                </div>
+            </div>
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+        <script src="../../scripts/rqs.js"></script>
+
+    </body>
+</html>
