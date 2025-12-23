@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>Section 12 Revision Questions | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Revise Section 12 (Computer Systems) with exam-style A Level Computer Science questions on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+
+            <h1 id="score">Score: 0/0</h1>
+
+            <h2 id="q-num">Question 1 of &infin;</h2>
+    
+            <div id="revision-questions">
+                <div class="rq" marks="2">
+                    <span class="question">Explain the difference between general-purpose and special-purpose application software.</span>
+                    <span class="rq-answer">General-purpose software can be used for many different purposes</span>
+                    <span class="rq-answer">Special-purpose software is used for one specific task</span>
+                </div>
+                <div class="rq" marks="5">
+                    <span class="question">State and describe five functions of the Operating System.</span>
+                    <span class="rq-answer">Processor management: controls the execution of programs by allocating CPU time to different processes</span>
+                    <span class="rq-answer">Memory management: manages main memory by allocating RAM to processes as needed</span>
+                    <span class="rq-answer">Input/Output device management: controls and coordinates hardware devices through device drivers</span>
+                    <span class="rq-answer">Application management: provides an interface through which applications can be accessed</span>
+                    <span class="rq-answer">Disk management: organises data storage by managing files and directories</span>
+                    <span class="rq-answer">Security management: protects the system by managing user authentication and file encryption</span>
+                </div>
+                <div class="rq" marks="3">
+                    <span class="question">
+                        Explain why some compilers produce bytecode as the final output instead of executable code, and
+                        describe how bytecode programs are executed after the bytecode has been produced.
+                    </span>
+                    <span class="rq-answer">
+                        Executable machine code is specific to a single processor architecture, and therefore bytecode
+                        is more portable than machine code
+                    </span>
+                    <span class="rq-answer">Bytecode is executed by a virtual machine, either by interpreting it line by line,</span>
+                    <span class="rq-answer">or by using just-in-time compilation</span>
+                </div>
+                <div class="rq" marks="1">
+                    <span class="pretext">A smart home heating system controls a heater:</span>
+                    <ul class="spaced-out less-padding-left" style="display: inline-block; text-align: left;">
+                        <li><code class="other">Q</code> represents the output signal which turns the heater on</li>
+                        <li><code class="other">A</code> is a sensor which outputs true if the room temperature is at the desired point</li>
+                        <li><code class="other">B</code> is a sensor which outputs true if a window in the room is open</li>
+                        <li><code class="other">C</code> is a sensor which outputs true if the house is occupied</li>
+                        <li><code class="other">D</code> is a sensor which outputs true if the override switch has been pressed</li>
+                    </ul>
+                    <span class="pretext">
+                        The heater should turn on if the house is occupied, the temperature is not at the desired point
+                        and the window is not open. Alternatively, the heater should turn on if the override switch is pressed.
+                        <br /> &nbsp;
+                    </span>
+                    <span class="question">Write a Boolean expression to determine if the heater should be turned on</span>
+                    <span class="rq-answer"><code>
+                        <span class="other">Q</span> = <span class="other">D</span> + (<span class="other">C</span>
+                        &CenterDot; <span class="other overbar">A</span> &CenterDot; <span class="other overbar">B</span>)
+                    </code></span>
+                </div>
+                <div class="rq" marks="5">
+                    <span class="question">Simplify the Boolean expression <code>
+                        <span class="overbar">(A + B)</span> &CenterDot; (<span class="overbar">C</span> + D) +
+                        <span class="overbar">(A&#x0305; &CenterDot; D)</span>
+                    </code></span>
+                    <span class="rq-answer">
+                        Use De Morgan's Laws on the first and last terms to get <code>
+                            (<span class="overbar">A</span>&CenterDot;<span class="overbar">B</span>)&CenterDot;(<span class="overbar">C</span>
+                            + D) + (A + <span class="overbar">D</span>)
+                        </code>
+                    </span>
+                    <span class="rq-answer">
+                        Use the distributive property of AND over the first two terms to get <code>
+                            (<span class="overbar">A</span>&CenterDot;<span class="overbar">B</span>&CenterDot;<span class="overbar">C</span>)
+                            + (<span class="overbar">A</span>&CenterDot;<span class="overbar">B</span>&CenterDot;D) + A + <span class="overbar">D</span>
+                        </code>
+                    </span>
+                    <span class="rq-answer">
+                        Simplify the last two terms using the absorption formula: <code>
+                            (<span class="overbar">A</span>&CenterDot;<span class="overbar">B</span>&CenterDot;D) +
+                            <span class="overbar">D</span> = (<span class="overbar">A</span>&CenterDot;<span class="overbar">B</span>)
+                            + <span class="overbar">D</span>
+                        </code>; so the full expression is <code>
+                            (<span class="overbar">A</span>&CenterDot;<span class="overbar">B</span>&CenterDot;<span class="overbar">C</span>)
+                            + (<span class="overbar">A</span>&CenterDot;<span class="overbar">B</span>) + <span class="overbar">D</span> + A
+                        </code>
+                    </span>
+                    <span class="rq-answer">
+                        Factorise the first two terms and simplify: <code>
+                            (<span class="overbar">A</span>&CenterDot;<span class="overbar">B</span>&CenterDot;<span class="overbar">C</span>)
+                            + (<span class="overbar">A</span>&CenterDot;<span class="overbar">B</span>) =
+                            (<span class="overbar">A</span>&CenterDot;<span class="overbar">B</span>)&CenterDot;(1 + <span class="overbar">C</span>)
+                            =<span class="overbar">A</span>&CenterDot;<span class="overbar">B</span>
+                        </code>; so the full expression is <code>
+                            <span class="overbar">A</span>&CenterDot;<span class="overbar">B</span> + <span class="overbar">D</span> + A
+                        </code>
+                    </span>
+                    <span class="rq-answer">
+                        Apply the absorption formula again to the first and last terms, giving a final answer of
+                        <code>
+                            A + <span class="overbar">B</span> + <span class="overbar">D</span>
+                        </code>
+                    </span>
+                </div>
+                <div class="rq" marks="4">
+                    <span class="question">Explain two advantages of using a high-level language instead of a low-level language.</span>
+                    <span class="rq-answer">They are easier to read and understand</span>
+                    <span class="rq-answer">because they use English keywords and have more flexible syntax</span>
+                    <span class="rq-answer">They are more portable</span>
+                    <span class="rq-answer">as the same code can run on different processor types</span>
+                    <span class="rq-answer">They are easier to maintain and debug</span>
+                    <span class="rq-answer">as they are more structured and readable</span>
+                </div>
+            </div>
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+        <script src="../../scripts/rqs.js"></script>
+
+    </body>
+</html>
