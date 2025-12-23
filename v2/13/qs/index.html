@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>Section 13 Revision Questions | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Revise Section 13 (Computer Architecture) with exam-style A Level Computer Science questions on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+
+            <h1 id="score">Score: 0/0</h1>
+
+            <h2 id="q-num">Question 1 of &infin;</h2>
+    
+            <div id="revision-questions">
+                <div class="rq" marks="4">
+                    <span class="question">Explain how each of the three buses are used when writing to main memory.</span>
+                    <span class="rq-answer">The memory address to be written to is placed on the address bus</span>
+                    <span class="rq-answer">The data to be written is placed on the data bus</span>
+                    <span class="rq-answer">The write signal is placed on the control bus</span>
+                    <span class="rq-answer">Then a clock signal is carried by the control bus</span>
+                    <span class="rq-answer">While the write signal is received by the memory, the data from the data bus is stored in the address specified by the address bus</span>
+                </div>
+                <div class="rq" marks="2">
+                    <span class="question">State two differences between the Harvard and von Neumann architectures.</span>
+                    <span class="rq-answer">In the von Neumann architecture, instructions and data are stored in the same memory</span>
+                    <span class="rq-answer">and are transmitted using the same buses</span>
+                    <span class="rq-answer">In the Harvard architecture, instructions and data can be fetched simultaneously</span>
+                </div>
+                <div class="rq" marks="2">
+                    <span class="question">
+                        A computer's address bus has a width of 32 bits, and each memory location holds a 16-bit data value.
+                        Calculate the maximum amount of main memory that could be installed in the computer in gibibytes.
+                    </span>
+                    <span class="rq-answer">First mark for the calculation of <code>2<sup>32</sup> &times; 16 &div; 8 =</code> 2<sup>33</sup> bytes</span>
+                    <span class="rq-answer">Second mark for the final answer of <code>2<sup>33</sup> &div; 2<sup>30</sup> =</code> 8 gibibytes</span>
+                </div>
+                <div class="rq" marks="4">
+                    <span class="question">Name four special-purpose registers, and describe their purpose</span>
+                    <span class="rq-answer">Program Counter: holds the memory address of the next instruction to be fetched and executed</span>
+                    <span class="rq-answer">Current Instruction Register: holds the current instruction which is to be decoded</span>
+                    <span class="rq-answer">Memory Address Register: holds the memory address of data which is to be read from or written to main memory</span>
+                    <span class="rq-answer">Memory Buffer Register: holds the data which has been read from or is to be written to main memory</span>
+                    <span class="rq-answer">Status Register: holds status codes relating to the executed instruction</span>
+                </div>
+                <div class="rq" marks="2">
+                    <span class="question">What is the stored program concept?</span>
+                    <span class="rq-answer">Instructions are treated as data and stored in main memory</span>
+                    <span class="rq-answer">Programs can be easily loaded, changed or executed in any order</span>
+                </div>
+                <div class="rq" marks="6">
+                    <span class="question">
+                        Describe and explain three steps that a processor goes through during the fetch stage of the Fetch-Execute cycle.
+                    </span>
+                    <span class="rq-answer">The contents of the Program Counter are copied onto the Memory Address Register</span>
+                    <span class="rq-answer">so that the next instruction can be fetched from main memory</span>
+                    <span class="rq-answer">The contents of the Memory Address Register are placed onto the address bus</span>
+                    <span class="rq-answer">so that the correct memory location can be accessed</span>
+                    <span class="rq-answer">The value received on the data bus is loaded into the Memory Buffer Register</span>
+                    <span class="rq-answer">because it cannot be directly loaded into the Current Instruction Register</span>
+                    <span class="rq-answer">The contents of the Memory Buffer Register are copied into the Current Instruction Register</span>
+                    <span class="rq-answer">to allow other data to be fetched during the execute phase</span>
+                    <span class="rq-answer">The Program Counter is incremented</span>
+                    <span class="rq-answer">so that it points to the next instruction to be fetched</span>
+                </div>
+                <div class="rq" marks="6">
+                    <span class="question">
+                        Write an Assembly language program which takes two positive integer inputs A and B, in memory
+                        locations 101 and 102, and performs the integer division of A/B, storing the result in memory
+                        location 103. You may use the table of commands provided on page <a href="../05/">13.05</a>.
+                    </span>
+                    <span class="rq-answer"><code>
+                        &ensp; <span class="keyword">LDR</span> R<span class="string">0</span>, <span class="function">101</span> <br />
+                        &ensp; &ensp;&ensp; <span class="keyword">LDR</span> R<span class="string">1</span>, <span class="function">102</span> <br />
+                    </code></span>
+                    <span class="rq-answer"><code>
+                        &ensp; <span class="keyword">MOV</span> R<span class="string">2</span>, <span class="number">#0</span>
+                    </code></span>
+                    <span class="rq-answer"><code>
+                        <span class="other">loop:</span>
+                    </code></span>
+                    <span class="rq-answer"><code>
+                        &ensp; <span class="keyword">CMP</span> R<span class="string">0</span>, R<span class="string">1</span> <br />
+                        &ensp; &ensp;&ensp; <span class="keyword">BLT</span> <span class="other">end</span>
+                    </code></span>
+                    <span class="rq-answer"><code>
+                        &ensp; <span class="keyword">SUB</span> R<span class="string">0</span>, R<span class="string">0</span>, R<span class="string">1</span> <br />
+                        &ensp; &ensp;&ensp; <span class="keyword">ADD</span> R<span class="string">2</span>, R<span class="string">2</span>, <span class="number">#1</span> <br />
+                        &ensp; &ensp;&ensp; <span class="keyword">B</span> <span class="other">loop</span>
+                    </code></span>
+                    <span class="rq-answer"><code>
+                        <span class="other">end:</span> <br />
+                        &ensp; &ensp;&ensp; <span class="keyword">STR</span> R<span class="string">2</span>, <span class="function">103</span> <br />
+                        &ensp; &ensp;&ensp; <span class="keyword">HALT</span>
+                    </code></span>
+                </div>
+                <div class="rq" marks="4">
+                    <span class="question">
+                        Explain why a laser printer with a built-in wireless network adapter is likely to be a suitable
+                        choice of printer for a small office.
+                    </span>
+                    <span class="rq-answer">Since toner is cheaper than ink, the laser printer will be cheaper (per page) than an inkjet printer</span>
+                    <span class="rq-answer">The laser printer can print faster than an inkjet printer</span>
+                    <span class="rq-answer">Toner does not dry out</span>
+                    <span class="rq-answer">The network adapter allows the printer to be shared between many devices</span>
+                    <span class="rq-answer">There would be no need to install cables to connect the computers to the printer</span>
+                    <span class="rq-answer">Wi-Fi will be fast enough and have sufficient range for the small office</span>
+                </div>
+                <div class="rq" marks="4">
+                    <span class="question">Explain how a Solid State Drive stores data.</span>
+                    <span class="rq-answer">Data is stored electronically (there are no moving parts)</span>
+                    <span class="rq-answer">Data is stored in transistor that do not lose their charge when power is lost</span>
+                    <span class="rq-answer">The presence or absence of trapped electrons indicates 0 and 1</span>
+                    <span class="rq-answer">NAND flash memory is used</span>
+                    <span class="rq-answer">Data is organised into pages and blocks</span>
+                    <span class="rq-answer">Data is written in pages and erased in blocks</span>
+                    <span class="rq-answer">A controller manages the reading and writing of data</span>
+                </div>
+            </div>
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+        <script src="../../scripts/rqs.js"></script>
+
+    </body>
+</html>
