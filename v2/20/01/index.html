@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>20.01 - Functions | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn about">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p><i>GCSE Link: None</i></p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>function</strong> is a rule that maps elements of one set (the domain) to elements of another (the co-domain).
+            </p>
+
+            <p>
+                Every element of the <b>domain</b> must have an associated output value in the <b>co-domain</b>, however
+                not every element of the co-domain must be used, and multiple inputs may map to the same output. The
+                notation <code><span class="function">f</span>: <span class="other">A</span> &rarr;
+                <span class="other">B</span></code> means that the function with identifier <code class="function">f</code>
+                has domain <code class="other">A</code> and co-domain <code class="other">B</code>. Passing in particular
+                inputs to a function is called <b>function application</b>: the arguments are simply written after the
+                function identifier, for example <code><span class="function">f</span> <span class="string">&quot;Hello&quot;</span></code>.
+            </p>
+
+            <p>
+                For example, consider the function <code><span class="function">square</span>: <span class="other">Int</span>
+                &rarr; <span class="other">Int</span></code>. Given an integer as input, it will output the square of
+                the input. Each element of the domain (the integers) is <b>mapped to an element of the co-domain</b>
+                (also the integers), but <b>not every element of the co-domain is used</b> (for example, no input maps to
+                <code class="number">2</code>). Also, multiple inputs can map to the same output (e.g. both
+                <code class="number">5</code> and <code class="number">-5</code> map to <code class="number">25</code>).
+            </p>
+
+            <br />
+
+            <p>
+                Some functions may have multiple arguments, in which case its domain is the <b>Cartesian product of the
+                types of its arguments</b>. For example, if we have a function called <code class="function">mult</code>
+                which multiplies two integers together, its type is <code><span class="other">Int</span> &times;
+                <span class="other">Int</span> &rarr; <span class="other">Int</span></code>. Although we would say that
+                it takes two arguments, the function can be thought of as <b>taking a single argument</b> which is a tuple
+                of two real numbers, for example <code>(<span class="number">3</span>, <span class="number">4</span>)</code>.
+            </p>
+
+            <p>
+                In reality however, a function with multiple arguments is <b>not actually evaluated all at once</b>.
+                Instead, the function is first <b>partially applied</b> to its first argument, which returns another
+                function which is then applied to the second argument. For example, if we are calling
+                <code><span class="function">mult</span> <span class="number">3 4</span></code>, this is first partially
+                applied to <code class="number">3</code>, which gives a new function <code class="function">mult3</code>
+                that takes a single argument and multiplies it by <code class="number">3</code>. This new function is
+                then applied to <code class="number">4</code> which returns <code class="number">12</code>. Therefore,
+                the <b>type signature</b> of the function can be viewed as <code><span class="other">Int</span> &rarr;
+                (<span class="other">Int</span> &rarr; <span class="other">Int</span>)</code>, i.e. a function which
+                takes an integer and returns [a function which takes an integer and returns an integer]. We can drop the
+                brackets to simply get <code><span class="other">Int</span> &rarr; <span class="other">Int</span> &rarr;
+                <span class="other">Int</span></code>.
+            </p>
+
+            <br />
+
+            <p>
+                <b>Function composition</b> means chaining two functions <code class="function">f</code> and
+                <code class="function">g</code> together such that the output of <code class="function">f</code>
+                becomes the input of <code class="function">g</code>. Note that the co-domain of
+                <code class="function">f</code> must be the same as the domain of <code class="function">g</code> for
+                this to work. For example, we could compose our <code class="function">mult</code> function from before
+                with a new <code class="function">isEven</code> function with type <code><span class="other">Int</span>
+                &rarr; <span class="other">Bool</span></code>. This works because the co-domain of
+                <code class="function">mult</code> and the domain of <code class="function">isEven</code> are both
+                <code class="other">Int</code>. This composition <b>creates a new function</b> which we write as
+                <code><span class="function">isEven</span>&compfn;<span class="function">mult</span></code> (or in
+                Haskell, <code><span class="function">isEven</span>.<span class="function">mult</span></code>).
+            </p>
+
+            <br />
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>first-class object</strong> is one that can appear in expressions, be assigned to variables, be assigned as arguments, and be returned in function calls.
+            </p>
+
+            <p>
+                In functional programming languages, <b>functions are first-class objects</b>, just like integers, reals,
+                strings and booleans.
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                What is the type and signature of a function which takes the three <code class="other small-code">Real</code>
+                side lengths of a cuboid and outputs the volume?
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    The type is <code>
+                        <span class="other">Real</span> &times; <span class="other">Real</span> &times;
+                        <span class="other">Real</span> &rarr; <span class="other">Real</span>
+                    </code>. The signature is <code>
+                        <span class="other">Real</span> &rarr; <span class="other">Real</span> &rarr;
+                        <span class="other">Real</span> &rarr; <span class="other">Real</span> 
+                    </code>.
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>

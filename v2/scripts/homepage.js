@@ -3,26 +3,48 @@ const items = [...carousel.querySelectorAll("div.carousel-item")];
 
 let active = -1;
 
-function next_item() {
-    items[active]?.classList.remove("active");
-    active = (++active) % items.length;
-    items[active].classList.add("active");
+function countUp(elem, target, duration=1000) {
+    let start = 1;
+    let startTime = performance.now();
+    const easeOut = t => 1 - (1 - t) ** 3;
 
+    function frame(now) {
+        let elapsed = now - startTime;
+        let progress = Math.min(elapsed / duration, 1);
+        let eased = easeOut(progress);
+        elem.innerHTML = (
+            "" + Math.round(start + (target - start) * eased)
+        ).padStart(("" + target).length).replaceAll(" ", "<span class='transparent'>0</span>");
+
+        if (progress < 1) requestAnimationFrame(frame);
+    }
+
+    requestAnimationFrame(frame);
+}
+
+function animate() {
     let highlight = items[active].querySelector("h1 span.highlight");
     highlight.style.animation = "";
     highlight.offsetWidth;
     highlight.style.animation = "highlight 1s forwards";
+
+    let fig = highlight.querySelector("span.figure");
+    fig.innerHTML = "1";
+    countUp(fig, +fig.getAttribute("num"));
+}
+
+function next_item() {
+    items[active]?.classList.remove("active");
+    active = (++active) % items.length;
+    items[active].classList.add("active");
+    animate();
 }
 
 function prev_item() {
     items[active]?.classList.remove("active");
     active = (--active + items.length) % items.length;
     items[active].classList.add("active");
-
-    let highlight = items[active].querySelector("h1 span.highlight");
-    highlight.style.animation = "";
-    highlight.offsetWidth;
-    highlight.style.animation = "highlight 1s forwards";
+    animate();
 }
 
 next_item();

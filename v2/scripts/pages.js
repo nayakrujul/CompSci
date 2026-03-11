@@ -330,7 +330,10 @@ const pageNames = [
         "Client-Server Databases",
         "qs"
     ],
-    []
+    [
+        "Functions",
+        
+    ]
 ];
 
 const [_, section, page] = location.href.match(/^.*v2\/(\d\d?)\/(\d\d|qs).*$/);
