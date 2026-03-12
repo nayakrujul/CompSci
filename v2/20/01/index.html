@@ -4,7 +4,7 @@
     <head>
         <link rel="stylesheet" href="../../main.css">
 
-        <title>20.01 - Functions | CS.RN v2</title>
+        <title>20.01 - Functional Programming | CS.RN v2</title>
 
         <link rel="icon" type="image/png" href="../../logos/square.png"/>
         <meta property="og:image" content="../../logos/square.png" />
@@ -14,7 +14,7 @@
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Learn about">
+        <meta name="description" content="Learn about the basics of functional programming for A Level Computer Science on CS.RN v2.">
     </head>
 
     <body>
@@ -99,6 +99,46 @@
             <p>
                 In functional programming languages, <b>functions are first-class objects</b>, just like integers, reals,
                 strings and booleans.
+            </p>
+
+            <br />
+
+            <p>
+                In functional programming languages, <b>lists</b> are implemented as the concatenation of a <b>head</b>
+                (the first element in the list) and a <b>tail</b> (the rest of the list). In Haskell, this is written
+                as <code>head:tail</code>.
+            </p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                A <strong>higher-order function</strong> is one that takes a function as an argument, or returns a function as a result.
+            </p>
+
+            <p>There are three main higher-order functions that you need to know:</p>
+
+            <ul class="spaced-out less-padding-left">
+                <li>
+                    <code class="function">map</code> takes a function <code class="function">func</code> and a list
+                    <code class="other">lst</code>, and applies <code class="function">func</code> to each item in 
+                    <code class="other">lst</code>. It returns a new list (of the same length as <code class="other">lst</code>).
+                </li>
+                <li>
+                    <code class="function">filter</code> takes a function <code class="function">func</code> and a list
+                    <code class="other">lst</code>, and returns only the elements of <code class="other">lst</code> for
+                    which <code class="function">func</code> applied to that item is <code class="number">True</code>.
+                </li>
+                <li>
+                    <code class="function">fold</code> (or <code class="function">reduce</code>) takes a function
+                    <code class="function">func</code>, a list <code class="other">lst</code>, and a starting value
+                    <code class="other">val</code>. It repeatedly applies the function to <code class="other">val</code>
+                    and each item in <code class="other">lst</code>, and then assigns the value back to
+                    <code class="other">val</code>. The final result is a single value.
+                </li>
+            </ul>
+
+            <p>
+                For example, <code class="other">fold</code>ing a list on addition starting from <code class="number">0</code>
+                is the same as summing the list.
             </p>
 
             <br />

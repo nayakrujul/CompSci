@@ -331,8 +331,8 @@ const pageNames = [
         "qs"
     ],
     [
-        "Functions",
-        
+        "Functional Programming",
+        "Big Data"
     ]
 ];
 

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../../main.css">
+
+        <title>20.02 - Big Data | CS.RN v2</title>
+
+        <link rel="icon" type="image/png" href="../../logos/square.png"/>
+        <meta property="og:image" content="../../logos/square.png" />
+        <meta property="og:image:width" content="880" />
+        <meta property="og:image:height" content="880" />
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn about big data and how it can be handled for A Level Computer Science on CS.RN v2.">
+    </head>
+
+    <body>
+
+        <div id="header"><a href="/"><img id="logo" alt="CS.RN v2" /></a></div>
+        <div id="page">
+            <p><i>GCSE Link: None</i></p>
+
+            <p class="definition">
+                <img src="../../icons/book.svg" class="icon" />
+                <strong>Big data</strong> is a catch-all term for data that doesn't fit the usual containers.
+            </p>
+
+            <p>The three main features of big data are the <b>three 'V's</b>:</p>
+
+            <ul class="less-padding-left">
+                <li><b>Volume</b> - data that is too big to fit onto a single server</li>
+                <li><b>Velocity</b> - data which is rapidly created, modified and processed (within milliseconds)</li>
+                <li><b>Variety</b> - data in many different forms, from text to videos</li>
+            </ul>
+
+            <p>
+                The lack of structure makes big data <b>difficult to store</b> in conventional formats like relational
+                databases, and also <b>difficult to analyse</b>. Also, since big data is too large to fit onto a single
+                server, the processing must be <b>distributed across multiple machines</b>.
+            </p>
+
+            <p>
+                <b>Functional programming languages</b> are perfect for processing big data as they are <b>stateless</b>
+                (functions have no side-effects), use <b>immutable data structures</b> (which cannot be changed), and
+                support <b>higher-order functions</b>. This makes it easier to write <b>correct, efficient code</b> that
+                can be distributed to <b>run across multiple servers</b>.
+            </p>
+
+            <p>
+                Since we can't represent big data in a relational database, we instead use the <b>fact-based model</b>,
+                where each individual piece of information is stored as a single immutable (unchangeable) <b>fact</b>.
+                Since facts <b>can't be changed or deleted</b>, they each have a <b>timestamp</b>: if two facts have
+                contradictory information, the one with the more recent timestamp is used.
+            </p>
+
+            <p>
+                We can show the structure of these facts with <b>graph schema</b>, where <b>circles</b> represent
+                entities, <b>rectangles</b> represent properties of those entities (joined to the circles using
+                <b>dashed lines</b>), and <b>solid lines</b> represent relationships between the entities.
+            </p>
+
+            <p>Diagram 1 shows the graph schema representation of some example data.</p>
+
+            <p class="diagram">
+                <img src="../../icons/image.svg" class="icon" />
+                Diagram 1 <br /> <br />
+                <img src="./diagram1.png" style="width: 500px;" />
+            </p>
+
+            <br />
+    
+            <hr />
+    
+            <p class="question">
+                <img src="../../icons/question.svg" class="icon" />
+                The red velvet cake is distributed by Lucid Logistics, which has an annual revenue of £73,000. Add this new information to the graph schema.
+            </p>
+    
+            <p class="summary-question">
+                <span class="answer">
+                    <img src="./diagram2.png" style="width: 500px;" />
+                </span>
+            </p>
+
+            <hr />
+
+            <div id="margin"></div>
+        </div>
+        <div id="footer"></div>
+
+        <script>let v1 = null;</script>
+        <script src="../../scripts/version.js"></script>
+        <script src="../../scripts/footer.js"></script>
+        <script src="../../scripts/pages.js"></script>
+
+    </body>
+</html>
